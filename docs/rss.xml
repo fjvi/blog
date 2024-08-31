@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://hst1189.github.io/</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://hst1189.github.io/</link></image><lastBuildDate>Sat, 31 Aug 2024 14:07:14 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Test</title><link>https://hst1189.github.io//post/Test.html</link><description># h1&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://hst1189.github.io/</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://hst1189.github.io/</link></image><lastBuildDate>Sat, 31 Aug 2024 14:11:35 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Test</title><link>https://hst1189.github.io//post/Test.html</link><description># h1&#13;
 ## h2&#13;
 ### h3&#13;
 #### h4&#13;
@@ -15,6 +15,22 @@
 &#13;
 # 内嵌框架iframe-视频&#13;
 `Gmeek-html&lt;iframe src='//player.bilibili.com/player.html?isOutside=true&amp;aid=1604800941&amp;bvid=BV1qm421M7Xs&amp;cid=1557311907&amp;p=1&amp;autoplay=0' scrolling='no' border='0' frameborder='no' framespacing='0' allowfullscreen='true' width='100%' height='460px'&gt;&lt;/iframe&gt;`&#13;
+&#13;
+&#13;
+&gt; [!NOTE]&#13;
+&gt; Useful information that users should know, even when skimming content.&#13;
+&#13;
+&gt; [!TIP]&#13;
+&gt; Helpful advice for doing things better or more easily.&#13;
+&#13;
+&gt; [!IMPORTANT]&#13;
+&gt; Key information users need to know to achieve their goal.&#13;
+&#13;
+&gt; [!WARNING]&#13;
+&gt; Urgent info that needs immediate user attention to avoid problems.&#13;
+&#13;
+&gt; [!CAUTION]&#13;
+&gt; Advises about risks or negative outcomes of certain actions.&#13;
 &#13;
 &#13;
 。</description><guid isPermaLink="true">https://hst1189.github.io//post/Test.html</guid><pubDate>Sat, 31 Aug 2024 09:59:06 +0000</pubDate></item></channel></rss>
