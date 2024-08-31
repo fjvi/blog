@@ -1,6 +1,6 @@
 {
     "title":"小饅頭の部屋",
-    "subTitle":"問題は未来だ。だから私は、過去を振り返らない。 --ビル・ゲイツ",
+    "subTitle":"Stay hungry. Stay foolish. --Steven Jobs",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "GMEEK_VERSION":"last",
     
@@ -10,7 +10,7 @@
     
     "email":"",
     "startSite":"08/31/2024",
-    "filingNum":"Stay hungry. Stay foolish.",
+    "filingNum":"",
     "onePageListNum":30,
     
     "singlePage":["music","link","about"],
