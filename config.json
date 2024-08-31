@@ -3,43 +3,34 @@
     "subTitle":"夢が届かなくても高い空を羽ばたく",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "GMEEK_VERSION":"last",
-    
     "displayTitle":"小饅頭の部屋",
     "homeUrl":"https://hst1189.github.io/",
     "faviconUrl":"https://github.githubassets.com/favicons/favicon.svg",
-    
     "email":"",
     "startSite":"08/31/2024",
     "filingNum":"",
     "onePageListNum":30,
-    
     "singlePage":["music","link","about"],
     "iconList":{"music":"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"},
     "exlink":{"music":"https://music.meekdai.com"},
-    
     "commentLabelColor":"#006b75",
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
     "i18n":"CN",
     "UTC":8,
-    
     "themeMode":"manual",
     "dayTheme":"light",
     "nightTheme":"dark_colorblind",
-    
     "urlMode":"pinyin",
-    
     "style":"<style>#postBody{font-size:20px}</style>",
     "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
     "head":"",
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
     "indexStyle":"",
     "indexScript":"",
-    
     "showPostSource":0,
     "rssSplit":"sentence",
     "bottomText":"转载请注明出处",
     "ogImage":"https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg",
     "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
     "needComment":1,
-
 }
