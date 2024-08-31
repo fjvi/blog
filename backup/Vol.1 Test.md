@@ -1,6 +1,14 @@
 [Gmeek基礎](https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html)
-
 [Gmeek进阶](https://blog.meekdai.com/tag.html#Gmeek)
+
+<details>
+    <summary>点我展开看代码</summary>
+    <pre><code>
+# 这里空一行，下面开始写代码
+# 在这里写折叠的代码
+# 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
+</code></pre>
+</details>
 
 
 # MarkDown
