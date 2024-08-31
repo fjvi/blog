@@ -28,9 +28,9 @@
     "urlMode":"pinyin",
     
     "style":"<style>#postBody{font-size:20px}</style>",
-    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
+    "script":"<script src="https://blog.liyifan.xyz/assets/yifantheme_index.js"></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
     "head":"",
-    "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script><script src="https://blog.liyifan.xyz/assets/yifantheme_index.js"></script>",
+    "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
     "indexStyle":"",
     "indexScript":"",
     
