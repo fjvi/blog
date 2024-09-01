@@ -1,4 +1,4 @@
-👀 ## 一、主题配置
+## 一、主题配置 👀 
 
 ### 1. 手动模式（默认）
 这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。
@@ -39,8 +39,7 @@
 
 
 
-
-👀 ## 二、右上角的按钮配置
+## 二、右上角的按钮配置 👀 
 在博客首页的右上角有一些圆形的按钮，介绍一下配置的方式。
 
 ### 1. 站内链接
@@ -81,7 +80,7 @@
 
 
 
-👀 ## 三、提示标签
+## 三、提示标签 👀 
 Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTANT` `WARNING` `CAUTION` 。在写文章的时候，适当使用可以提高文章的可读性
 
 ### 使用方式：
@@ -119,8 +118,7 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
 > Advises about risks or negative outcomes of certain actions.
 
 
-
-👀 ## 四、折叠显示
+## 四、折叠显示 👀 
 ### 使用方式：
 ```
 <details>
@@ -143,8 +141,7 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
 </details>
 
 
-
-👀 ## 五、文章插入html标签
+## 五、文章插入html标签 👀 
 Github由于安全考虑，是不允许使用`iframe`等标签的，而且在issues插入的图片也会自动转换为github的地址。
 为了文章的多样性，在Gmeek的`v2.19`版本中添加了支持html标签的功能。
 
@@ -213,8 +210,7 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 
 
 
-
-👀 ## 六、特殊设置
+## 六、特殊设置 👀 
 ### 1. 导入以前的文章 
 如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
 ```html
@@ -251,50 +247,10 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 只需要`Close issue`或者`Delete issue`后，再手动全局生成一次即可。
 
 
-## 四、进阶教程
-
 Gmeek的可定制化功能非常高，下面的链接是一些更加高级的设置教程，还有插件的使用等。
 https://meekdai.github.io/tag.html#Gmeek
 
 <!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"}## -->
 
-
-
-
-
-
-
-
-
-
----
-
-
-<details>
-    <summary>点我展开看代码</summary>
-    <pre><code>
-# 这里空一行，下面开始写代码
-# 在这里写折叠的代码
-# 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
-</code></pre>
-</details>
-
-
-# MarkDown
-## h2
-### h3
-#### h4
-
-# 图片img
-`Gmeek-html<img src="https://picsum.photos/200">`
-
-# 内嵌框架iframe-网站
-`Gmeek-html<iframe src="https://music.meekdai.com/#61" width="100%" height="460px" frameborder="0" allowfullscreen="true"></iframe>`
-
-# 内嵌框架iframe-歌曲
-`Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
-
-# 内嵌框架iframe-视频
-`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="460px"></iframe>`
 
 
