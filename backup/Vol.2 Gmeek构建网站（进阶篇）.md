@@ -40,7 +40,7 @@
 
 
 ## 二、右上角的按钮配置 👀 
-在博客首页的右上角有一些圆形的按钮，介绍一下配置的方式。
+在博客首页的右上角有一些圆形的按钮，下面为配置方式。
 
 ### 1. 站内链接
 例如[关于页面](https://grapehut.us.kg/about.html)和[友情链接](https://grapehut.us.kg/link.html)
@@ -72,7 +72,7 @@
 
 ### 3. SVG图标格式
 使用`iconList`自定义SVG图标必须是`16px`大小的，建议使用github的`Octicons`[图标](https://primer.style/foundations/icons/#16px)
-<!-- ##{"head":"<script src='https://blog.meekdai.com/assets/GmeekTOC.js'></script>"}## -->
+
 
 
 
@@ -101,7 +101,7 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
 > Advises about risks or negative outcomes of certain actions.
 ```
 
-### 效果
+### 效果：
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
 
@@ -130,7 +130,7 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
     </code></pre>
 </details>
 ```
-### 效果
+### 效果：
 <details>
     <summary>展开</summary>
     <pre><code>
@@ -180,6 +180,20 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 
 
 
+## 六、static文件夹使用 👀 
+如果需要在docs文件内上传一些自己的文件，比如图片、js、css等，所以在`v2.20`版本添加了这个功能。下面为使用方法。
+
+### 使用方式：
+1. 在自己的仓库根目录下新建一个文件夹，名称必须是`static`。
+2. 然后在`static`文件内上传一些自己的文件，比如`avatar.svg`文件。
+3. 通过手动全局生成一次成功后，你就可以通过 xxx.github.io/avatar.svg 访问了。
+
+### 例子：
+我新建的[static文件夹](https://github.com/Meekdai/meekdai.github.io/tree/main/static)
+通过链接访问static文件夹内的文件：https://meekdai.github.io/avatar.svg
+
+### 备注：
+在全局生成的时候，Actions会自动把`static`文件夹的所有内容拷贝到`docs`文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。
 
 
 
@@ -209,8 +223,7 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 
 
 
-
-## 六、特殊设置 👀 
+## 七、特殊设置 👀 
 ### 1. 导入以前的文章 
 如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
 ```html
@@ -246,11 +259,6 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 ### 6. 删除文章
 只需要`Close issue`或者`Delete issue`后，再手动全局生成一次即可。
 
-
-Gmeek的可定制化功能非常高，下面的链接是一些更加高级的设置教程，还有插件的使用等。
-https://meekdai.github.io/tag.html#Gmeek
-
-<!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"}## -->
 
 
 
