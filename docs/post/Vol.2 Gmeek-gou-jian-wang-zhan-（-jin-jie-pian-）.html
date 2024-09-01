@@ -7,12 +7,12 @@
     <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <script src='https://hst1189.github.io/assets/RonanTheme.js'></script><script src='https://hst1189.github.io/assets/GmeekVercount.js'></script>
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="## 一、主题配置方式
+<meta name="description" content="## 一、主题配置
 
 ### 1. 手动模式（默认）
 这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。">
 <meta property="og:title" content="Vol.2 Gmeek构建网站（进阶篇）">
-<meta property="og:description" content="## 一、主题配置方式
+<meta property="og:description" content="## 一、主题配置
 
 ### 1. 手动模式（默认）
 这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。">
@@ -80,7 +80,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>一、主题配置方式</h2>
+<div class="markdown-body" id="postBody"><h2>一、主题配置</h2>
 <h3>1. 手动模式（默认）</h3>
 <p>这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。<br>
 访问者可以通过页面右上角的按钮随意切换（亮/暗/跟随系统），当切换过后，会自动在浏览器存储目前的选择，之后访问者用同一浏览器再打开博客任何页面，则自动为上次选择的模式。</p>
@@ -88,16 +88,16 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 "dayTheme":"light",
 "nightTheme":"dark",
 </code></pre>
-<h2>2. 固定模式</h2>
+<h3>2. 固定模式</h3>
 <p><code class="notranslate">themeMode</code>为<code class="notranslate">fix</code>，<br>
 <code class="notranslate">dayTheme</code>定义想要固定的主题，可以定义为<code class="notranslate">light</code>则永远为亮主题，定义为<code class="notranslate">dark</code>则永远为暗主题，用户无法切换<br>
 <code class="notranslate">nightTheme</code>定义的就是<code class="notranslate">utterances</code>评论框的永久固定主题。</p>
-<h3>2.1. 固定亮主题</h3>
+<h4>2.1. 固定亮主题</h4>
 <pre class="notranslate"><code class="notranslate">"themeMode":"fix",
 "dayTheme":"light",
 "nightTheme":"github-light",
 </code></pre>
-<h3>2.2. 固定暗主题</h3>
+<h4>2.2. 固定暗主题</h4>
 <pre class="notranslate"><code class="notranslate">"themeMode":"fix",
 "dayTheme":"dark",
 "nightTheme":"dark-blue",
@@ -108,10 +108,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>亮主题：<code class="notranslate">light</code> <code class="notranslate">light_high_contrast</code> <code class="notranslate">light_colorblind </code> <code class="notranslate">light_tritanopia </code></li>
 <li>暗主题：<code class="notranslate">dark</code> <code class="notranslate">dark_high_contrast</code> <code class="notranslate">dark_colorblind</code> <code class="notranslate">dark_tritanopia</code> <code class="notranslate">dark_dimmed</code></li>
 </ul>
-<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p><a href="https://utteranc.es/" rel="nofollow">utterances</a>评论框的主题选择有<br>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p><a href="https://utteranc.es/" rel="nofollow">utterances</a>评论框的主题选择有：<br>
 <code class="notranslate">github-light</code> <code class="notranslate">github-dark</code> <code class="notranslate">preferred-color-scheme</code> <code class="notranslate">github-dark-orange</code> <code class="notranslate">icy-dark</code> <code class="notranslate">dark-blue</code> <code class="notranslate">photon-dark</code> <code class="notranslate">boxy-light</code> <code class="notranslate">gruvbox-dark</code></p>
 </div>
-<h2>四、特殊设置</h2>
+<h2>二、特殊设置</h2>
 <h3>1. 导入以前的文章</h3>
 <p>如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下<a href="https://tool.lu/timestamp" rel="nofollow">时间形式转换网站</a>转换。</p>
 <div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!-- ##{"timestamp":1490764800}## --&gt;</span></pre></div>

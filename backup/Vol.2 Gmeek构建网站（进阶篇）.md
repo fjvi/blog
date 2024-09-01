@@ -1,4 +1,4 @@
-## 一、主题配置方式
+## 一、主题配置
 
 ### 1. 手动模式（默认）
 这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。
@@ -9,19 +9,18 @@
 "nightTheme":"dark",
 ```
 
-## 2. 固定模式
+### 2. 固定模式
 `themeMode`为`fix`，
 `dayTheme`定义想要固定的主题，可以定义为`light`则永远为亮主题，定义为`dark`则永远为暗主题，用户无法切换
 `nightTheme`定义的就是`utterances`评论框的永久固定主题。
 
-### 2.1. 固定亮主题
+#### 2.1. 固定亮主题
 ```
 "themeMode":"fix",
 "dayTheme":"light",
 "nightTheme":"github-light",
 ```
-
-### 2.2. 固定暗主题
+#### 2.2. 固定暗主题
 ```
 "themeMode":"fix",
 "dayTheme":"dark",
@@ -33,13 +32,13 @@
 - 暗主题：`dark` `dark_high_contrast` `dark_colorblind` `dark_tritanopia` `dark_dimmed`
 
 > [!TIP]
-> [utterances](https://utteranc.es/)评论框的主题选择有
+> [utterances](https://utteranc.es/)评论框的主题选择有：
 `github-light` `github-dark` `preferred-color-scheme` `github-dark-orange` `icy-dark` `dark-blue` `photon-dark` `boxy-light` `gruvbox-dark`
 
 
 
 
-## 四、特殊设置
+## 二、特殊设置
 ### 1. 导入以前的文章 
 如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
 ```html
