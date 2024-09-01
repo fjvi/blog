@@ -56,7 +56,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     font-size: 12px;
 }
 </style>
-<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style><style>.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}</style><style>.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}</style><style>.markdown-alert.markdown-alert-caution {border-left-color:var(--borderColor-danger-emphasis, var(--color-danger-emphasis));background-color:var(--color-danger-subtle);}.markdown-alert.markdown-alert-caution .markdown-alert-title {color: var(--fgColor-danger,var(--color-danger-fg));}</style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style><style>.markdown-alert.markdown-alert-important {border-left-color:var(--borderColor-done-emphasis, var(--color-done-emphasis));background-color:var(--color-done-subtle);}.markdown-alert.markdown-alert-important .markdown-alert-title {color: var(--fgColor-done,var(--color-done-fg));}</style>
 
 
 
@@ -114,40 +114,67 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>亮主题：<code class="notranslate">github-light</code> <code class="notranslate">boxy-light</code> <code class="notranslate">preferred-color-scheme</code></li>
 <li>暗主题：<code class="notranslate">github-dark</code> <code class="notranslate">github-dark-orange</code> <code class="notranslate">icy-dark</code> <code class="notranslate">dark-blue</code> <code class="notranslate">photon-dark</code> <code class="notranslate">gruvbox-dark</code></li>
 </ul>
-<br>
-## 二、提示标签
-Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTANT` `WARNING` `CAUTION` 。在写文章的时候，适当使用可以提高文章的可读性
+<h2>二、右上角的按钮配置</h2>
+<p>在博客首页的右上角有一些圆形的按钮，介绍一下配置的方式。</p>
+<h3>1. 站内链接</h3>
+<p>例如<a href="https://grapehut.us.kg/about.html" rel="nofollow">关于页面</a>和<a href="https://grapehut.us.kg/link.html" rel="nofollow">友情链接</a></p>
+<h4>1.1. 添加config.json配置</h4>
+<pre class="notranslate"><code class="notranslate">"singlePage":["about"],
+</code></pre>
+<h4>1.2. 添加一个Labels标签为<code class="notranslate">about</code>，在你的issue里面写一个文章，然后配置Labels为<code class="notranslate">about</code>即可。</h4>
+<h4>1.3. 手动全局生成一次。</h4>
+<div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p><code class="notranslate">about</code>标签只可以添加给唯一一篇issue<br>
+如果有多个<code class="notranslate">singlePage</code>，可以这样定义<code class="notranslate">"singlePage":["link","about"],</code><br>
+<code class="notranslate">about</code>和<code class="notranslate">link</code>这两个图标的SVG是内置的无需定义<code class="notranslate">iconList</code>，其他则需要自己定义</p>
+</div>
+<h3>2. 站外链接</h3>
+<p>如果你的<code class="notranslate">about</code>页面是站外的，或者想定义其他的站外链接，例如<a href="https://music.meekdai.com/" rel="nofollow">music</a>。下面以添加music页面按钮为示例。</p>
+<h4>2.1. 添加config.json配置</h4>
+<p>此处<code class="notranslate">iconList</code>自定义了图标的SVG，<code class="notranslate">exlink</code>定义了外部链接的地址</p>
+<pre class="notranslate"><code class="notranslate">"iconList":{"music":"M12.7 0.9L7.3 0.9C6 0.9 4.9 2 4.9 3.3L4.9 10.1C4.5 9.9 4.1 9.8 3.6 9.8C2.1 9.8 0.9 11 0.9 12.4C0.9 13.9 2.1 15.1 3.6 15.1C5 15.1 6.2 13.9 6.2 12.4L6.2 3.3C6.2 2.7 6.7 2.2 7.3 2.2L12.7 2.2C13.3 2.2 13.8 2.7 13.8 3.3L13.8 7.5C13.4 7.3 12.9 7.1 12.4 7.1C11 7.1 9.8 8.3 9.8 9.8C9.8 11.2 11 12.4 12.4 12.4C13.9 12.4 15.1 11.2 15.1 9.8L15.1 3.3C15.1 2 14 0.9 12.7 0.9ZM3.6 13.8C2.8 13.8 2.2 13.2 2.2 12.4C2.2 11.7 2.8 11.1 3.6 11.1C4.3 11.1 4.9 11.7 4.9 12.4C4.9 13.2 4.3 13.8 3.6 13.8ZM12.4 11.1C11.7 11.1 11.1 10.5 11.1 9.8C11.1 9 11.7 8.4 12.4 8.4C13.2 8.4 13.8 9 13.8 9.8C13.8 10.5 13.2 11.1 12.4 11.1ZM12.4 11.1"},
+"exlink":{"music":"https://music.meekdai.com"},
+</code></pre>
+<h4>2.2. 手动全局生成一次。</h4>
+<h3>3. SVG图标格式</h3>
+<p>使用<code class="notranslate">iconList</code>自定义SVG图标必须是<code class="notranslate">16px</code>大小的，建议使用github的<code class="notranslate">Octicons</code><a href="https://primer.style/foundations/icons/#16px" rel="nofollow">图标</a></p>
+
+<h2>三、提示标签</h2>
+<p>Github的语法里面有5中警报强调信息，分别是<code class="notranslate">NOTE</code> <code class="notranslate">TIP</code> <code class="notranslate">IMPORTANT</code> <code class="notranslate">WARNING</code> <code class="notranslate">CAUTION</code> 。在写文章的时候，适当使用可以提高文章的可读性</p>
 <h3>使用方式：</h3>
 <pre class="notranslate"><code class="notranslate">&gt; [!NOTE]
 &gt; Useful information that users should know, even when skimming content.
-
 &gt; [!TIP]
 &gt; Helpful advice for doing things better or more easily.
-
 &gt; [!IMPORTANT]
 &gt; Key information users need to know to achieve their goal.
-
 &gt; [!WARNING]
 &gt; Urgent info that needs immediate user attention to avoid problems.
-
 &gt; [!CAUTION]
 &gt; Advises about risks or negative outcomes of certain actions.
 </code></pre>
 <h3>效果</h3>
-<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>Useful information that users should know, even when skimming content.</p>
+<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>Useful information that users should know, even when skimming content.<br>
+[!TIP]<br>
+Helpful advice for doing things better or more easily.<br>
+[!IMPORTANT]<br>
+Key information users need to know to achieve their goal.<br>
+[!WARNING]<br>
+Urgent info that needs immediate user attention to avoid problems.<br>
+[!CAUTION]<br>
+Advises about risks or negative outcomes of certain actions.</p>
 </div>
-<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>Helpful advice for doing things better or more easily.</p>
-</div>
-<div class="markdown-alert markdown-alert-important"><p class="markdown-alert-title"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p><p>Key information users need to know to achieve their goal.</p>
-</div>
-<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>Urgent info that needs immediate user attention to avoid problems.</p>
-</div>
-<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>Advises about risks or negative outcomes of certain actions.</p>
-</div>
-<br>
-## 三、折叠显示
-### 使用方式：
-```
+<h2>四、折叠显示</h2>
+<h3>使用方式：</h3>
+<pre class="notranslate"><code class="notranslate">&lt;details&gt;
+    &lt;summary&gt;展开&lt;/summary&gt;
+    &lt;pre&gt;&lt;code&gt;
+    # 这里空一行，下面开始写代码
+    # 在这里写折叠的代码
+    # 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
+    &lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+</code></pre>
+<h3>效果</h3>
 <details>
     <summary>展开</summary>
     <pre class="notranslate"><code class="notranslate">
@@ -156,46 +183,30 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
     # 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
     </code></pre>
 </details>
-```
-### 效果
-<details>
-    <summary>展开</summary>
-    <pre class="notranslate"><code class="notranslate">
-    # 这里空一行，下面开始写代码
-    # 在这里写折叠的代码
-    # 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
-    </code></pre>
-</details>
-<br>
-## 四、文章插入html标签
-Github由于安全考虑，是不允许使用`iframe`等标签的，而且在issues插入的图片也会自动转换为github的地址。
-为了文章的多样性，在Gmeek的`v2.19`版本中添加了支持html标签的功能。
+<h2>五、文章插入html标签</h2>
+<p>Github由于安全考虑，是不允许使用<code class="notranslate">iframe</code>等标签的，而且在issues插入的图片也会自动转换为github的地址。<br>
+为了文章的多样性，在Gmeek的<code class="notranslate">v2.19</code>版本中添加了支持html标签的功能。</p>
 <h3>使用方式：</h3>
 <p>在需要添加html标签的位置使用<code class="notranslate">code</code>方式，并且后面紧跟着Gmeek-html，然后才是html标签。</p>
 <h4>1. 图片</h4>
 <p><img src="https://picsum.photos/400"></p>
 <pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;img src="https://picsum.photos/400"&gt;`
 </code></pre>
-<br>
 <h4>2. 内嵌框架iframe-网站</h4>
 <p><iframe src="https://music.meekdai.com/" width="100%" height="460px" frameborder="0" allowfullscreen="true"></iframe></p>
 <pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;iframe src="https://music.meekdai.com/#61" width="100%" height="460px" frameborder="0" allowfullscreen="true"&gt;&lt;/iframe&gt;`
 </code></pre>
-<br>
 <h4>3. 内嵌框架iframe-音乐</h4>
 <p><iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe></p>
 <pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'&gt;&lt;/iframe&gt;`
 </code></pre>
-<br>
 <h4>4. 内嵌框架iframe-视频</h4>
 <p><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="460px"></iframe></p>
 <pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;iframe src="//player.bilibili.com/player.html?isOutside=true&amp;aid=1604800941&amp;bvid=BV1qm421M7Xs&amp;cid=1557311907&amp;p=1&amp;autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="460px"&gt;&lt;/iframe&gt;`
 </code></pre>
-<br>
 <h4>5. 其他</h4>
-<p>上面仅仅是示例了一些经常会使用到的html标签，其他html标签同样也是支持的，大家可以尝试添加到自己的文章中。 👀<br>
-<br></p>
-<h2>三、特殊设置</h2>
+<p>上面仅仅是示例了一些经常会使用到的html标签，其他html标签同样也是支持的，大家可以尝试添加到自己的文章中。 👀</p>
+<h2>六、特殊设置</h2>
 <h3>1. 导入以前的文章</h3>
 <p>如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下<a href="https://tool.lu/timestamp" rel="nofollow">时间形式转换网站</a>转换。</p>
 <div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!-- ##{"timestamp":1490764800}## --&gt;</span></pre></div>

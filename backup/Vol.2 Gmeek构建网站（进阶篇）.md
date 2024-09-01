@@ -36,47 +36,82 @@
 - 亮主题：`github-light` `boxy-light` `preferred-color-scheme`
 - 暗主题：`github-dark` `github-dark-orange` `icy-dark` `dark-blue` `photon-dark` `gruvbox-dark`
 
-<br>
-## 二、提示标签
+
+
+
+
+## 二、右上角的按钮配置
+在博客首页的右上角有一些圆形的按钮，介绍一下配置的方式。
+
+### 1. 站内链接
+例如[关于页面](https://grapehut.us.kg/about.html)和[友情链接](https://grapehut.us.kg/link.html)
+
+#### 1.1. 添加config.json配置
+```
+"singlePage":["about"],
+```
+#### 1.2. 添加一个Labels标签为`about`，在你的issue里面写一个文章，然后配置Labels为`about`即可。
+#### 1.3. 手动全局生成一次。
+
+> [!IMPORTANT]
+> `about`标签只可以添加给唯一一篇issue
+> 如果有多个`singlePage`，可以这样定义`"singlePage":["link","about"],`
+> `about`和`link`这两个图标的SVG是内置的无需定义`iconList`，其他则需要自己定义
+
+
+### 2. 站外链接
+如果你的`about`页面是站外的，或者想定义其他的站外链接，例如[music](https://music.meekdai.com/)。下面以添加music页面按钮为示例。
+
+#### 2.1. 添加config.json配置
+此处`iconList`自定义了图标的SVG，`exlink`定义了外部链接的地址
+```
+"iconList":{"music":"M12.7 0.9L7.3 0.9C6 0.9 4.9 2 4.9 3.3L4.9 10.1C4.5 9.9 4.1 9.8 3.6 9.8C2.1 9.8 0.9 11 0.9 12.4C0.9 13.9 2.1 15.1 3.6 15.1C5 15.1 6.2 13.9 6.2 12.4L6.2 3.3C6.2 2.7 6.7 2.2 7.3 2.2L12.7 2.2C13.3 2.2 13.8 2.7 13.8 3.3L13.8 7.5C13.4 7.3 12.9 7.1 12.4 7.1C11 7.1 9.8 8.3 9.8 9.8C9.8 11.2 11 12.4 12.4 12.4C13.9 12.4 15.1 11.2 15.1 9.8L15.1 3.3C15.1 2 14 0.9 12.7 0.9ZM3.6 13.8C2.8 13.8 2.2 13.2 2.2 12.4C2.2 11.7 2.8 11.1 3.6 11.1C4.3 11.1 4.9 11.7 4.9 12.4C4.9 13.2 4.3 13.8 3.6 13.8ZM12.4 11.1C11.7 11.1 11.1 10.5 11.1 9.8C11.1 9 11.7 8.4 12.4 8.4C13.2 8.4 13.8 9 13.8 9.8C13.8 10.5 13.2 11.1 12.4 11.1ZM12.4 11.1"},
+"exlink":{"music":"https://music.meekdai.com"},
+```
+#### 2.2. 手动全局生成一次。
+
+
+### 3. SVG图标格式
+使用`iconList`自定义SVG图标必须是`16px`大小的，建议使用github的`Octicons`[图标](https://primer.style/foundations/icons/#16px)
+<!-- ##{"head":"<script src='https://blog.meekdai.com/assets/GmeekTOC.js'></script>"}## -->
+
+
+
+
+
+
+
+## 三、提示标签
 Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTANT` `WARNING` `CAUTION` 。在写文章的时候，适当使用可以提高文章的可读性
 
 ### 使用方式：
 ```
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
-
 > [!TIP]
 > Helpful advice for doing things better or more easily.
-
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
-
 > [!WARNING]
 > Urgent info that needs immediate user attention to avoid problems.
-
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 ```
 
 ### 效果
-
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
-
 > [!TIP]
 > Helpful advice for doing things better or more easily.
-
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
-
 > [!WARNING]
 > Urgent info that needs immediate user attention to avoid problems.
-
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 
-<br>
-## 三、折叠显示
+
+## 四、折叠显示
 ### 使用方式：
 ```
 <details>
@@ -99,8 +134,8 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
 </details>
 
 
-<br>
-## 四、文章插入html标签
+
+## 五、文章插入html标签
 Github由于安全考虑，是不允许使用`iframe`等标签的，而且在issues插入的图片也会自动转换为github的地址。
 为了文章的多样性，在Gmeek的`v2.19`版本中添加了支持html标签的功能。
 
@@ -112,33 +147,27 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 ```
 `Gmeek-html<img src="https://picsum.photos/400">`
 ```
-<br>
 
 #### 2. 内嵌框架iframe-网站
 `Gmeek-html<iframe src="https://music.meekdai.com/" width="100%" height="460px" frameborder="0" allowfullscreen="true"></iframe>`
 ```
 `Gmeek-html<iframe src="https://music.meekdai.com/#61" width="100%" height="460px" frameborder="0" allowfullscreen="true"></iframe>`
 ```
-<br>
 
 #### 3. 内嵌框架iframe-音乐
 `Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
 ```
 `Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
 ```
-<br>
-
 
 #### 4. 内嵌框架iframe-视频
 `Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="460px"></iframe>`
 ```
 `Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="460px"></iframe>`
 ```
-<br>
 
 #### 5. 其他
 上面仅仅是示例了一些经常会使用到的html标签，其他html标签同样也是支持的，大家可以尝试添加到自己的文章中。 👀 
-<br>
 
 
 
@@ -175,7 +204,8 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 
 
 
-## 三、特殊设置
+
+## 六、特殊设置
 ### 1. 导入以前的文章 
 如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
 ```html
