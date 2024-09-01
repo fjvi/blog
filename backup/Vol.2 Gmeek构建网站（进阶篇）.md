@@ -198,39 +198,63 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 
 
 
+## 七、static文件夹使用 👀 
+为了使得Gmeek的功能更加的丰富，添加了插件功能，目前已经有几个插件可以使用。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 七、特殊设置 👀 
-### 1. 导入以前的文章 
-如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
-```html
-<!-- ##{"timestamp":1490764800}## -->
+### 1. Vercount浏览计数
+#### 全站添加，只需要在config.json文件内添加配置
+```
+"allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
+```
+#### 单个文章页添加，只需要在文章最后一行添加如下
+```
+<!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>"}## -->
 ```
 
-### 2. 单篇文章自定义参数
+### 2, TOC目录
+#### 全站添加，只需要在config.json文件内添加配置
+```
+"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>",
+```
+#### 单个文章页添加，只需要在文章最后一行添加如下
+```
+<!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"}## -->
+```
+
+### 3. ArticleTOC目录
+本插件由[Tiengming](https://code.buxiantang.top/)编写，也是一个非常不错的TOC目录插件。配置方式和上面一样，只需要替换地址为如下地址即可。
+```
+https://blog.meekdai.com/Gmeek/plugins/articletoc.js
+```
+
+### 4. 灯箱插件
+本插件由[Tiengming](https://code.buxiantang.top/)编写，可以放大浏览文章中的图片，适合一些图片较多的文章。
+
+#### 全站添加，只需要在config.json文件内添加配置
+```
+"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
+```
+
+#### 单个文章页添加，只需要在文章最后一行添加如下
+```
+<!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>"}## -->
+```
+
+### 5. 多插件使用
+
+全站添加，所有文章页使用`TOC目录`和`灯箱插件`，需要这样添加配置文件：
+```
+"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
+```
+单个文章页添加，单个文章使用`TOC目录`和`灯箱插件`，需要这样添加配置文件：
+```
+<!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>"}## -->
+```
+
+> [!CAUTION]
+> 需要特别注意区分`script` `head` `allHead` 等这些键的用途
+
+### I. 单篇文章自定义参数
 自定义单篇文章页面的`style`和`script`
 ```html
 <!-- ##{"style":"<style>#postBody{font-size:20px}</style>"}## -->
@@ -239,26 +263,33 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 <!-- ##{"script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>"}## -->
 ```
 
-### 3. 单篇文章多种自定义参数
+### II. 单篇文章多种自定义参数
 可同时一起添加多种自定义参数：  
 ```html
 <!-- ##{"script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>","style":"<style>#postBody{font-size:20px}</style>","timestamp":1490764800}## -->
 ```
 
-### 4. 全局文章自定义参数
+### III. 全局文章自定义参数
 添加全局文章页面的`style`和`script`，在`config.json`文件中添加
 ```javascript
 "style":"<style>#postBody{font-size:20px}</style>",
 "script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>",
 ```
 
-### 5. 置顶博客文章
+
+
+## 八、其他设置 👀 
+### 1. 导入以前的文章 
+如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
+```html
+<!-- ##{"timestamp":1490764800}## -->
+```
+
+### 2. 置顶博客文章
 只需要`Pin issue`后，手动全局生成一次即可。
 
-
-### 6. 删除文章
+### 3. 删除文章
 只需要`Close issue`或者`Delete issue`后，再手动全局生成一次即可。
-
 
 
 
