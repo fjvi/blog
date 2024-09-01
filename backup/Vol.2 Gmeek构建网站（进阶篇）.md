@@ -33,7 +33,8 @@
 
 > [!TIP]
 > [utterances](https://utteranc.es/)评论框的主题选择有：
-`github-light` `github-dark` `preferred-color-scheme` `github-dark-orange` `icy-dark` `dark-blue` `photon-dark` `boxy-light` `gruvbox-dark`
+- 亮主题：`github-light` `boxy-light` `preferred-color-scheme`
+- 暗主题：`github-dark` `github-dark-orange` `icy-dark` `dark-blue` `photon-dark` `gruvbox-dark`
 
 
 ## 二、提示标签
@@ -73,6 +74,86 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
 
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
+
+
+## 三、折叠显示
+### 使用方式：
+```
+<details>
+    <summary>展开</summary>
+    <pre><code>
+    # 这里空一行，下面开始写代码
+    # 在这里写折叠的代码
+    # 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
+    </code></pre>
+</details>
+```
+### 效果
+<details>
+    <summary>展开</summary>
+    <pre><code>
+    # 这里空一行，下面开始写代码
+    # 在这里写折叠的代码
+    # 最后这两行结束标签一定要顶格写且不能接在代码后面！！！
+    </code></pre>
+</details>
+
+
+## 四、文章插入html标签
+Github由于安全考虑，是不允许使用`iframe`等标签的，而且在issues插入的图片也会自动转换为github的地址。
+为了文章的多样性，在Gmeek的`v2.19`版本中添加了支持html标签的功能。
+
+### 使用方式：
+在需要添加html标签的位置使用`code`方式，并且后面紧跟着Gmeek-html，然后才是html标签。
+
+#### 1. 图片
+```
+`Gmeek-html<img src="https://picsum.photos/200">`
+```
+`Gmeek-html<img src="https://picsum.photos/200">`
+
+#### 2. 内嵌框架iframe-网站
+```
+`Gmeek-html<iframe src="https://music.meekdai.com/#61" width="100%" height="460px" frameborder="0" allowfullscreen="true"></iframe>`
+```
+`Gmeek-html<iframe src="https://music.meekdai.com/" width="100%" height="460px" frameborder="0" allowfullscreen="true"></iframe>`
+
+#### 3. 内嵌框架iframe-音乐
+```
+`Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
+```
+`Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
+
+#### 4. 内嵌框架iframe-视频
+```
+`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="460px"></iframe>`
+```
+`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="460px"></iframe>`
+
+#### 5. 其他
+上面仅仅是示例了一些经常会使用到的html标签，其他html标签同样也是支持的，大家可以尝试添加到自己的文章中。 :clinking_glasses:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -142,8 +223,7 @@ https://meekdai.github.io/tag.html#Gmeek
 
 
 ---
-[Gmeek基礎](https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html)
-[Gmeek进阶](https://blog.meekdai.com/tag.html#Gmeek)
+
 
 <details>
     <summary>点我展开看代码</summary>
