@@ -7,7 +7,7 @@
 ## 三、配置域名的NS服务
 在cloudflare里选择DNS服务栏，add domain，填入域名，获取Name Serve，
 复制，粘贴到域名服务商的网站，进行关联，稍等片刻cloudflare会自动check完成
-![](https://grapehut.us.kg/imgs/cloudflare_dns.png)
+`Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns.png">`
 
 ## 四、配置cloudflare关联github
 
@@ -15,8 +15,9 @@
 > IP地址  （出典：github官网）
 > https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain
 
-![](https://grapehut.us.kg/imgs/cloudflare_dns2.png)
-![](https://grapehut.us.kg/imgs/cloudflare_dns3.png)
+`Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns2.png">`
+`Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns3.png">`
+
 
 如图所示，填入IP，然后一路yes & 保存，另外SSL开启，证明书用的是默认的，稍等片刻后，
 就是见证奇迹的时刻！[小饅頭の部屋](https://grapehut.us.kg/)
