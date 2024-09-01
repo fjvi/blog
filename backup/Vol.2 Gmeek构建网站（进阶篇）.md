@@ -1,6 +1,6 @@
-## 目前Gmeek支持的亮暗主题配置方式
+## 一、主题配置方式
 
-### 手动模式（默认）
+### 1. 手动模式（默认）
 这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。
 访问者可以通过页面右上角的按钮随意切换（亮/暗/跟随系统），当切换过后，会自动在浏览器存储目前的选择，之后访问者用同一浏览器再打开博客任何页面，则自动为上次选择的模式。
 ```
@@ -9,31 +9,32 @@
 "nightTheme":"dark",
 ```
 
-## 固定模式
-设置`themeMode`为`fix`，
+## 2. 固定模式
+`themeMode`为`fix`，
 `dayTheme`定义想要固定的主题，可以定义为`light`则永远为亮主题，定义为`dark`则永远为暗主题，用户无法切换
 `nightTheme`定义的就是`utterances`评论框的永久固定主题。
 
-### 固定亮主题
+### 2.1. 固定亮主题
 ```
 "themeMode":"fix",
 "dayTheme":"light",
 "nightTheme":"github-light",
 ```
 
-### 固定暗主题
+### 2.2. 固定暗主题
 ```
 "themeMode":"fix",
 "dayTheme":"dark",
 "nightTheme":"dark-blue",
 ```
-
-亮暗主题可以查看[github官方](https://github.com/settings/appearance)支持的主题，这里都支持
+> [!TIP]
+> 亮暗主题可以查看[github官方](https://github.com/settings/appearance)支持的主题，这里都支持
 - 亮主题：`light` `light_high_contrast` `light_colorblind ` `light_tritanopia `
 - 暗主题：`dark` `dark_high_contrast` `dark_colorblind` `dark_tritanopia` `dark_dimmed`
 
-[utterances](https://utteranc.es/)评论框的主题选择有
-`github-light``github-dark``preferred-color-scheme``github-dark-orange``icy-dark``dark-blue``photon-dark``boxy-light``gruvbox-dark`
+> [!TIP]
+> [utterances](https://utteranc.es/)评论框的主题选择有
+`github-light` `github-dark` `preferred-color-scheme` `github-dark-orange` `icy-dark` `dark-blue` `photon-dark` `boxy-light` `gruvbox-dark`
 
 
 
