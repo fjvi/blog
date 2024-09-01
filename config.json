@@ -22,9 +22,11 @@
     
     "i18n":"CN",
     "UTC":8,
-    "themeMode":"manual",
-    "dayTheme":"light",
-    "nightTheme":"dark_colorblind",
+    
+    "themeMode":"fix",
+    "dayTheme":"dark",
+    "nightTheme":"dark-blue",
+    
     "urlMode":"pinyin",
     
     "style":"",
