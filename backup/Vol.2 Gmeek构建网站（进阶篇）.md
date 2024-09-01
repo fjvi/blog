@@ -155,25 +155,25 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 ```
 
 #### 2. 内嵌框架iframe-网站
-`Gmeek-html<iframe src="https://music.meekdai.com/" width="100%" height="300px" frameborder="0" allowfullscreen="true"></iframe>`
+`Gmeek-html<iframe src="https://music.meekdai.com/" width="100%" height="200px" frameborder="0" allowfullscreen="true"></iframe>`
 ```
-`Gmeek-html<iframe src="https://music.meekdai.com/#61" width="100%" height="300px" frameborder="0" allowfullscreen="true"></iframe>`
+`Gmeek-html<iframe src="https://music.meekdai.com/#61" width="100%" height="200px" frameborder="0" allowfullscreen="true"></iframe>`
 ```
 
 #### 3. 内嵌框架iframe-音乐
-`Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
+`Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='100' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
 ```
-`Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='152' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
+`Gmeek-html<iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/0U3fV7K4WFfVRgLGEAKh3g?utm_source=generator' width='100%' height='100' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>`
 ```
 
 #### 4. 内嵌框架iframe-视频
-`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="300px"></iframe>`
+`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
 ```
-`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="300px"></iframe>`
+`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
 ```
 
 #### 5. 其他
-上面仅仅是示例了一些经常会使用到的html标签，其他html标签同样也是支持的，大家可以尝试添加到自己的文章中。 
+上面仅仅是示例了一些常用的html标签，其他html标签同样也支持，可以尝试添加到自己的文章中。 
 
 
 
@@ -181,16 +181,12 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 
 
 ## 六、static文件夹使用 👀 
-如果需要在docs文件内上传一些自己的文件，比如图片、js、css等，所以在`v2.20`版本添加了这个功能。下面为使用方法。
+如果需要在docs文件内上传一些自己的文件，比如图片、js、css等，所以在`v2.20`版本添加了这个功能。
 
 ### 使用方式：
 1. 在自己的仓库根目录下新建一个文件夹，名称必须是`static`。
 2. 然后在`static`文件内上传一些自己的文件，比如`avatar.svg`文件。
 3. 通过手动全局生成一次成功后，你就可以通过 xxx.github.io/avatar.svg 访问了。
-
-### 例子：
-我新建的[static文件夹](https://github.com/Meekdai/meekdai.github.io/tree/main/static)
-通过链接访问static文件夹内的文件：https://meekdai.github.io/avatar.svg
 
 ### 备注：
 在全局生成的时候，Actions会自动把`static`文件夹的所有内容拷贝到`docs`文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。
@@ -198,25 +194,25 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 
 
 
-## 七、static文件夹使用 👀 
+## 七、插件 👀 
 为了使得Gmeek的功能更加的丰富，添加了插件功能，目前已经有几个插件可以使用。
 
 ### 1. Vercount浏览计数
-#### 全站添加，只需要在config.json文件内添加配置
+全站添加，只需要在config.json文件内添加配置
 ```
 "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
 ```
-#### 单个文章页添加，只需要在文章最后一行添加如下
+单个文章页添加，只需要在文章最后一行添加如下
 ```
 <!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>"}## -->
 ```
 
 ### 2, TOC目录
-#### 全站添加，只需要在config.json文件内添加配置
+全站添加，只需要在config.json文件内添加配置
 ```
 "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>",
 ```
-#### 单个文章页添加，只需要在文章最后一行添加如下
+单个文章页添加，只需要在文章最后一行添加如下
 ```
 <!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"}## -->
 ```
@@ -230,12 +226,11 @@ https://blog.meekdai.com/Gmeek/plugins/articletoc.js
 ### 4. 灯箱插件
 本插件由[Tiengming](https://code.buxiantang.top/)编写，可以放大浏览文章中的图片，适合一些图片较多的文章。
 
-#### 全站添加，只需要在config.json文件内添加配置
+全站添加，只需要在config.json文件内添加配置
 ```
 "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
 ```
-
-#### 单个文章页添加，只需要在文章最后一行添加如下
+单个文章页添加，只需要在文章最后一行添加如下
 ```
 <!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>"}## -->
 ```
@@ -254,8 +249,7 @@ https://blog.meekdai.com/Gmeek/plugins/articletoc.js
 > [!CAUTION]
 > 需要特别注意区分`script` `head` `allHead` 等这些键的用途
 
-### I. 单篇文章自定义参数
-自定义单篇文章页面的`style`和`script`
+I. 单篇文章自定义参数，自定义单篇文章页面的`style`和`script`
 ```html
 <!-- ##{"style":"<style>#postBody{font-size:20px}</style>"}## -->
 ```
@@ -263,14 +257,12 @@ https://blog.meekdai.com/Gmeek/plugins/articletoc.js
 <!-- ##{"script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>"}## -->
 ```
 
-### II. 单篇文章多种自定义参数
-可同时一起添加多种自定义参数：  
+II. 单篇文章多种自定义参数，可同时一起添加多种自定义参数：  
 ```html
 <!-- ##{"script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>","style":"<style>#postBody{font-size:20px}</style>","timestamp":1490764800}## -->
 ```
 
-### III. 全局文章自定义参数
-添加全局文章页面的`style`和`script`，在`config.json`文件中添加
+III. 全局文章自定义参数，添加全局文章页面的`style`和`script`，在`config.json`文件中添加
 ```javascript
 "style":"<style>#postBody{font-size:20px}</style>",
 "script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>",
@@ -283,6 +275,7 @@ https://blog.meekdai.com/Gmeek/plugins/articletoc.js
 如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
 ```html
 <!-- ##{"timestamp":1490764800}## -->
+<!-- ##{"script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>","style":"<style>#postBody{font-size:20px}</style>","timestamp":1490764800}## -->
 ```
 
 ### 2. 置顶博客文章
