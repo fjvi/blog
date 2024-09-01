@@ -1,5 +1,5 @@
 [Gmeek](https://github.com/Meekdai/Gmeek) 一个博客框架
-超轻量级个人博客模板，完全基于`Github Pages `、 `Github Issues` 和 `Github Actions`，可以称作`All in Github`，不需要本地部署，从搭建到写作，只需要18秒，2步搭建好博客，第3步就是写作。
+超轻量级个人博客模板，完全基于`Github Pages `、 `Github Issues` 和 `Github Actions`，可以称作`All in Github`
 > 引用：https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html
 
 
@@ -14,7 +14,7 @@
 在`Settings`左侧栏中选择`Pages`  ->右侧栏中找到 `Build and deployment->Source` ->选择`Github Actions`
 
 ### 3. 生成文章
-Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕来临啦！自动生成的文章可通过https://XXX.github.io 访问
+Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕来啦！通过https://XXX.github.io 即可访问自动生成的文章
 > [!IMPORTANT]
 > issue**必须添加**`标签Label`（至少一个）
 
