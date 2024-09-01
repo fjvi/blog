@@ -24,7 +24,7 @@
     "UTC":8,
     
     "themeMode":"fix",
-    "dayTheme":"dark",
+    "dayTheme":"light",
     "nightTheme":"dark-blue",
     
     "urlMode":"pinyin",
