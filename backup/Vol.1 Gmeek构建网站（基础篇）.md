@@ -33,6 +33,9 @@ Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕�
 > 修改配置文件后，一定要手动全局生成一次，不然会报错
 > 配置文件为`json`格式
 
+> [!CAUTION]
+> 最后一行配置末尾不需要逗号，其他行末尾都需要逗号（英文逗号）
+
 `config.json` 就是配置文件，具体说明如下：
 ```javascript
 {
@@ -40,53 +43,50 @@ Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕�
     "subTitle":"网站的小标题，可以引用一些名人名言",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "GMEEK_VERSION":"last"
+
+    ↑ 以上是必须字段
+    ↓ 以下是自定义字段，可以选择添加到`config.json`中
+
+    "displayTitle":"头像后面的标题",
+    "homeUrl":"http://blog.xxx.com",
+    "faviconUrl":"https://github.githubassets.com/favicons/favicon.svg",
+    "email":"abc@abc.com",
+    "startSite":"01/01/2000",
+    "filingNum":"",
+    "onePageListNum":30,
+    "singlePage":["about"],
+    "iconList":{"music":"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"},
+    "exlink":{"music":"https://music.xxx.com"},
+    "commentLabelColor":"#006b75",
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "i18n":"CN",
+    "UTC":8,
+    "themeMode":"manual",
+    "dayTheme":"light",
+    "nightTheme":"dark_colorblind",
+    "urlMode":"pinyin",
+    "style":"",
+    "script":"",
+    "head":"",
+    "allHead":"",
+    "indexStyle":"",
+    "indexScript":"",
+    "showPostSource":0,
+    "rssSplit":"sentence",
+    "bottomText":"转载请注明出处",
+    "ogImage":"https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg",
+    "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
+    "needComment":1
 }
 ```
-↑ 以上是必须字段
 
-↓ 以下是自定义字段，可以选择添加到`config.json`中。
 
-```javascript
-"displayTitle":"头像后面的标题",
-"homeUrl":"http://blog.xxx.com",
-"faviconUrl":"https://github.githubassets.com/favicons/favicon.svg",
-"email":"abc@abc.com",
-"startSite":"01/01/2000",
-"filingNum":"",
-"onePageListNum":30,
-"singlePage":["about"],
-"iconList":{"music":"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"},
-"exlink":{"music":"https://music.xxx.com"},
-"commentLabelColor":"#006b75",
-"yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
-"i18n":"CN",
-"UTC":8,
-"themeMode":"manual",
-"dayTheme":"light",
-"nightTheme":"dark_colorblind",
-"urlMode":"pinyin",
-"style":"",
-"script":"",
-"head":"",
-"allHead":"",
-"indexStyle":"",
-"indexScript":"",
-"showPostSource":0,
-"rssSplit":"sentence",
-"bottomText":"转载请注明出处",
-"ogImage":"https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg",
-"primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
-"needComment":1,
-```
-
-> [!CAUTION]
-> 最后一行配置末尾不需要逗号，其他行末尾都需要逗号（英文逗号）
 
 | **配置参数** | **说明** | 
 |---|---|
 | title | 【必须】博客标题 |
 | subTitle | 【必须】博客描述&自述 |
-| avatarUrl | 【bixu】博客头像 |
+| avatarUrl | 【必须】博客头像 |
 | GMEEK_VERSION | 【必须】Gmeek版本，一般写`last`也可以用具体tag版本 |
 | displayTitle | 用于头像后面的标题展示，如果和`title`一致则不用添加 |
 | homeUrl | 博客的主页地址，自定义域名时需要配置 |
@@ -138,41 +138,4 @@ Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕�
 ```
 Error: utterances is not installed on xxx/xxx.github.io. If you own this repo, install the app. Read more about this change in the PR.
 ```
-
-
-## 四、特殊设置
-### 1. 导入以前的文章 
-如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
-```html
-<!-- ##{"timestamp":1490764800}## -->
-```
-
-### 2. 单篇文章自定义参数
-自定义单篇文章页面的`style`和`script`
-```html
-<!-- ##{"style":"<style>#postBody{font-size:20px}</style>"}## -->
-```
-```html
-<!-- ##{"script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>"}## -->
-```
-
-### 3. 单篇文章多种自定义参数
-可同时一起添加多种自定义参数：  
-```html
-<!-- ##{"script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>","style":"<style>#postBody{font-size:20px}</style>","timestamp":1490764800}## -->
-```
-
-### 4. 全局文章自定义参数
-添加全局文章页面的`style`和`script`，在`config.json`文件中添加
-```javascript
-"style":"<style>#postBody{font-size:20px}</style>",
-"script":"<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>",
-```
-
-### 5. 置顶博客文章
-只需要`Pin issue`后，手动全局生成一次即可。
-
-
-### 6. 删除文章
-只需要`Close issue`或者`Delete issue`后，再手动全局生成一次即可。
 

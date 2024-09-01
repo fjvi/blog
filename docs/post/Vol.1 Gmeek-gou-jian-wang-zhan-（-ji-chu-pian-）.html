@@ -108,47 +108,49 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 修改配置文件后，一定要手动全局生成一次，不然会报错<br>
 配置文件为<code class="notranslate">json</code>格式</p>
 </div>
+<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>最后一行配置末尾不需要逗号，其他行末尾都需要逗号（英文逗号）</p>
+</div>
 <p><code class="notranslate">config.json</code> 就是配置文件，具体说明如下：</p>
 <div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-kos">{</span>
     <span class="pl-s">"title"</span>:<span class="pl-s">"网站的大标题"</span><span class="pl-kos">,</span>
     <span class="pl-s">"subTitle"</span>:<span class="pl-s">"网站的小标题，可以引用一些名人名言"</span><span class="pl-kos">,</span>
     <span class="pl-s">"avatarUrl"</span>:<span class="pl-s">"https://github.githubassets.com/favicons/favicon.svg"</span><span class="pl-kos">,</span>
     <span class="pl-s">"GMEEK_VERSION"</span>:<span class="pl-s">"last"</span>
+
+    <span class="pl-s1">↑</span> <span class="pl-s1">以上是必须字段</span>
+    <span class="pl-s1">↓</span> <span class="pl-en">以下是自定义字段，可以选择添加到</span><span class="pl-s">`config.json`</span><span class="pl-s1">中</span>
+
+    <span class="pl-s">"displayTitle"</span>:<span class="pl-s">"头像后面的标题"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"homeUrl"</span>:<span class="pl-s">"http://blog.xxx.com"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"faviconUrl"</span>:<span class="pl-s">"https://github.githubassets.com/favicons/favicon.svg"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"email"</span>:<span class="pl-s">"abc@abc.com"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"startSite"</span>:<span class="pl-s">"01/01/2000"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"filingNum"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
+    <span class="pl-s">"onePageListNum"</span>:<span class="pl-c1">30</span><span class="pl-kos">,</span>
+    <span class="pl-s">"singlePage"</span>:<span class="pl-kos">[</span><span class="pl-s">"about"</span><span class="pl-kos">]</span><span class="pl-kos">,</span>
+    <span class="pl-s">"iconList"</span>:<span class="pl-kos">{</span><span class="pl-s">"music"</span>:<span class="pl-s">"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"</span><span class="pl-kos">}</span><span class="pl-kos">,</span>
+    <span class="pl-s">"exlink"</span>:<span class="pl-kos">{</span><span class="pl-s">"music"</span>:<span class="pl-s">"https://music.xxx.com"</span><span class="pl-kos">}</span><span class="pl-kos">,</span>
+    <span class="pl-s">"commentLabelColor"</span>:<span class="pl-s">"#006b75"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"yearColorList"</span>:<span class="pl-kos">[</span><span class="pl-s">"#bc4c00"</span><span class="pl-kos">,</span> <span class="pl-s">"#0969da"</span><span class="pl-kos">,</span> <span class="pl-s">"#1f883d"</span><span class="pl-kos">,</span> <span class="pl-s">"#A333D0"</span><span class="pl-kos">]</span><span class="pl-kos">,</span>
+    <span class="pl-s">"i18n"</span>:<span class="pl-s">"CN"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"UTC"</span>:<span class="pl-c1">8</span><span class="pl-kos">,</span>
+    <span class="pl-s">"themeMode"</span>:<span class="pl-s">"manual"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"dayTheme"</span>:<span class="pl-s">"light"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"nightTheme"</span>:<span class="pl-s">"dark_colorblind"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"urlMode"</span>:<span class="pl-s">"pinyin"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"style"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
+    <span class="pl-s">"script"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
+    <span class="pl-s">"head"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
+    <span class="pl-s">"allHead"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
+    <span class="pl-s">"indexStyle"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
+    <span class="pl-s">"indexScript"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
+    <span class="pl-s">"showPostSource"</span>:<span class="pl-c1">0</span><span class="pl-kos">,</span>
+    <span class="pl-s">"rssSplit"</span>:<span class="pl-s">"sentence"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"bottomText"</span>:<span class="pl-s">"转载请注明出处"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"ogImage"</span>:<span class="pl-s">"https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"primerCSS"</span>:<span class="pl-s">"&lt;link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' /&gt;"</span><span class="pl-kos">,</span>
+    <span class="pl-s">"needComment"</span>:<span class="pl-c1">1</span>
 <span class="pl-kos">}</span></pre></div>
-<p>↑ 以上是必须字段</p>
-<p>↓ 以下是自定义字段，可以选择添加到<code class="notranslate">config.json</code>中。</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s">"displayTitle"</span>:<span class="pl-s">"头像后面的标题"</span><span class="pl-kos">,</span>
-<span class="pl-s">"homeUrl"</span>:<span class="pl-s">"http://blog.xxx.com"</span><span class="pl-kos">,</span>
-<span class="pl-s">"faviconUrl"</span>:<span class="pl-s">"https://github.githubassets.com/favicons/favicon.svg"</span><span class="pl-kos">,</span>
-<span class="pl-s">"email"</span>:<span class="pl-s">"abc@abc.com"</span><span class="pl-kos">,</span>
-<span class="pl-s">"startSite"</span>:<span class="pl-s">"01/01/2000"</span><span class="pl-kos">,</span>
-<span class="pl-s">"filingNum"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
-<span class="pl-s">"onePageListNum"</span>:<span class="pl-c1">30</span><span class="pl-kos">,</span>
-<span class="pl-s">"singlePage"</span>:<span class="pl-kos">[</span><span class="pl-s">"about"</span><span class="pl-kos">]</span><span class="pl-kos">,</span>
-<span class="pl-s">"iconList"</span>:<span class="pl-kos">{</span><span class="pl-s">"music"</span>:<span class="pl-s">"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"</span><span class="pl-kos">}</span><span class="pl-kos">,</span>
-<span class="pl-s">"exlink"</span>:<span class="pl-kos">{</span><span class="pl-s">"music"</span>:<span class="pl-s">"https://music.xxx.com"</span><span class="pl-kos">}</span><span class="pl-kos">,</span>
-<span class="pl-s">"commentLabelColor"</span>:<span class="pl-s">"#006b75"</span><span class="pl-kos">,</span>
-<span class="pl-s">"yearColorList"</span>:<span class="pl-kos">[</span><span class="pl-s">"#bc4c00"</span><span class="pl-kos">,</span> <span class="pl-s">"#0969da"</span><span class="pl-kos">,</span> <span class="pl-s">"#1f883d"</span><span class="pl-kos">,</span> <span class="pl-s">"#A333D0"</span><span class="pl-kos">]</span><span class="pl-kos">,</span>
-<span class="pl-s">"i18n"</span>:<span class="pl-s">"CN"</span><span class="pl-kos">,</span>
-<span class="pl-s">"UTC"</span>:<span class="pl-c1">8</span><span class="pl-kos">,</span>
-<span class="pl-s">"themeMode"</span>:<span class="pl-s">"manual"</span><span class="pl-kos">,</span>
-<span class="pl-s">"dayTheme"</span>:<span class="pl-s">"light"</span><span class="pl-kos">,</span>
-<span class="pl-s">"nightTheme"</span>:<span class="pl-s">"dark_colorblind"</span><span class="pl-kos">,</span>
-<span class="pl-s">"urlMode"</span>:<span class="pl-s">"pinyin"</span><span class="pl-kos">,</span>
-<span class="pl-s">"style"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
-<span class="pl-s">"script"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
-<span class="pl-s">"head"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
-<span class="pl-s">"allHead"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
-<span class="pl-s">"indexStyle"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
-<span class="pl-s">"indexScript"</span>:<span class="pl-s">""</span><span class="pl-kos">,</span>
-<span class="pl-s">"showPostSource"</span>:<span class="pl-c1">0</span><span class="pl-kos">,</span>
-<span class="pl-s">"rssSplit"</span>:<span class="pl-s">"sentence"</span><span class="pl-kos">,</span>
-<span class="pl-s">"bottomText"</span>:<span class="pl-s">"转载请注明出处"</span><span class="pl-kos">,</span>
-<span class="pl-s">"ogImage"</span>:<span class="pl-s">"https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg"</span><span class="pl-kos">,</span>
-<span class="pl-s">"primerCSS"</span>:<span class="pl-s">"&lt;link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' /&gt;"</span><span class="pl-kos">,</span>
-<span class="pl-s">"needComment"</span>:<span class="pl-c1">1</span><span class="pl-kos">,</span></pre></div>
-<div class="markdown-alert markdown-alert-caution"><p class="markdown-alert-title"><svg class="octicon octicon-stop mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</p><p>最后一行配置末尾不需要逗号，其他行末尾都需要逗号（英文逗号）</p>
-</div>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -167,7 +169,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 <tr>
 <td>avatarUrl</td>
-<td>【bixu】博客头像</td>
+<td>【必须】博客头像</td>
 </tr>
 <tr>
 <td>GMEEK_VERSION</td>
@@ -313,26 +315,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>3. utteranc报错</h3>
 <p>如果在评论里面登录后评论报错，可直接按照提示安装<code class="notranslate">utteranc app</code>即可</p>
 <pre class="notranslate"><code class="notranslate">Error: utterances is not installed on xxx/xxx.github.io. If you own this repo, install the app. Read more about this change in the PR.
-</code></pre>
-<h2>四、特殊设置</h2>
-<h3>1. 导入以前的文章</h3>
-<p>如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下<a href="https://tool.lu/timestamp" rel="nofollow">时间形式转换网站</a>转换。</p>
-<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!-- ##{"timestamp":1490764800}## --&gt;</span></pre></div>
-<h3>2. 单篇文章自定义参数</h3>
-<p>自定义单篇文章页面的<code class="notranslate">style</code>和<code class="notranslate">script</code></p>
-<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!-- ##{"style":"&lt;style&gt;#postBody{font-size:20px}&lt;/style&gt;"}## --&gt;</span></pre></div>
-<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!-- ##{"script":"&lt;script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'&gt;&lt;/script&gt;"}## --&gt;</span></pre></div>
-<h3>3. 单篇文章多种自定义参数</h3>
-<p>可同时一起添加多种自定义参数：</p>
-<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!-- ##{"script":"&lt;script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'&gt;&lt;/script&gt;","style":"&lt;style&gt;#postBody{font-size:20px}&lt;/style&gt;","timestamp":1490764800}## --&gt;</span></pre></div>
-<h3>4. 全局文章自定义参数</h3>
-<p>添加全局文章页面的<code class="notranslate">style</code>和<code class="notranslate">script</code>，在<code class="notranslate">config.json</code>文件中添加</p>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-s">"style"</span>:<span class="pl-s">"&lt;style&gt;#postBody{font-size:20px}&lt;/style&gt;"</span><span class="pl-kos">,</span>
-<span class="pl-s">"script"</span>:<span class="pl-s">"&lt;script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'&gt;&lt;/script&gt;"</span><span class="pl-kos">,</span></pre></div>
-<h3>5. 置顶博客文章</h3>
-<p>只需要<code class="notranslate">Pin issue</code>后，手动全局生成一次即可。</p>
-<h3>6. 删除文章</h3>
-<p>只需要<code class="notranslate">Close issue</code>或者<code class="notranslate">Delete issue</code>后，再手动全局生成一次即可。</p></div>
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
