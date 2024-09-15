@@ -15,4 +15,5 @@ https://github.com/stevenjoezhang/live2d-widget?tab=readme-ov-file#%E9%85%8D%E7%
 
 # 添加效果
 https://grapehut.us.kg/
+`Gmeek-html<img src="https://github.com/stevenjoezhang/live2d-widget/blob/master/assets/screenshot-2.png">`
 
