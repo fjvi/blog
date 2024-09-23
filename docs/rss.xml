@@ -1,18 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Mon, 23 Sep 2024 02:45:45 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.7 常用VM虚拟机软件一览</title><link>https://grapehut.us.kg/post/Vol.7%20-chang-yong-VM-xu-ni-ji-ruan-jian-yi-lan.html</link><description>#常用虚拟机软件一览&#13;
-VMware家族&#13;
-VMware Worstation Pro&#13;
-VMware Workstation Player&#13;
-VMware Fusion&#13;
-VirtualBox&#13;
-KVM&#13;
-Parallels Desktop&#13;
-QEMU&#13;
-Citrix Hypervisor&#13;
-Xen&#13;
-Microsoft Hyper-V&#13;
-Multipass&#13;
-提到虚拟机，相信小伙伴们不会感到陌生。</description><guid isPermaLink="true">https://grapehut.us.kg/post/Vol.7%20-chang-yong-VM-xu-ni-ji-ruan-jian-yi-lan.html</guid><pubDate>Mon, 23 Sep 2024 02:36:28 +0000</pubDate></item><item><title>Vol.6 PowerShell基礎知識</title><link>https://grapehut.us.kg/post/Vol.6%20PowerShell-ji-chu-zhi-shi.html</link><description>`Gmeek-html&lt;img src='https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png'&gt;`&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Mon, 23 Sep 2024 02:58:15 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.7 常用VM虚拟机软件一览</title><link>https://grapehut.us.kg/post/Vol.7%20-chang-yong-VM-xu-ni-ji-ruan-jian-yi-lan.html</link><description># 常用虚拟机软件一览&#13;
+虚拟机的使用场景很多，如搭建测试环境、在Windows系统中安装Linux或在Mac机器上运行Windows系统、甚至还可以用来进行安全实验。</description><guid isPermaLink="true">https://grapehut.us.kg/post/Vol.7%20-chang-yong-VM-xu-ni-ji-ruan-jian-yi-lan.html</guid><pubDate>Mon, 23 Sep 2024 02:36:28 +0000</pubDate></item><item><title>Vol.6 PowerShell基礎知識</title><link>https://grapehut.us.kg/post/Vol.6%20PowerShell-ji-chu-zhi-shi.html</link><description>`Gmeek-html&lt;img src='https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png'&gt;`&#13;
 &#13;
 &#13;
 ## 获取 PowerShell Alias&#13;
