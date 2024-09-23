@@ -18,22 +18,23 @@
 <br>
 
 
+
 # 比较
 |软件|操作系统|官方地址|费用|
 |---|---|---|---|
 |VMware Workstation|Windows、Linux|https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion|免费|
 |VMware Fusion|MacOS|https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion|有料|
-|VirtualBox|Windows、Linux、MacOS|https://www.virtualbox.org|免费开源|
+|VirtualBox|Windows、Linux、MacOS|https://www.virtualbox.org|免费&开源|
 |Microsoft Hyper-V|	Windows|https://learn.microsoft.com/zh-cn/virtualization|免费|
 |Parallels Desktop|MacOS|https://www.parallels.com/products/desktop|有料|
-|KVM|Linux|https://www.linux-kvm.org/page/Main_Page|免费|
-|Xen|Windows、Linux|https://xenproject.org/|免费|
-
+|KVM|Linux|https://www.linux-kvm.org/page/Main_Page|免费&开源|
+|Xen|Windows、Linux|https://xenproject.org/|免费&开源|
 
 <br>
 
 
-## 🧮 VMware家族
+
+## 🧮 VMware家族 🔥主流
 
 `Gmeek-html<img src="https://techvccloud.mediacdn.vn/2018/11/27/vmware-15433146204021816551093-crop-15433146245501198372620.jpg">`
 
@@ -50,7 +51,7 @@ VMWare Fusion 13 Pro 是 macOS 优秀的虚拟机软件「同类软件 Parallels
 
 
 
-## 🧮 VirtualBox 🔥
+## 🧮 VirtualBox 🔥主流
 
 `Gmeek-html<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png">`
 
@@ -60,7 +61,7 @@ VirtualBox是一款免费开源的虚拟化软件，由Oracle公司开发。Virt
 
 
 
-## 🧮 Microsoft Hyper-V 🔥 
+## 🧮 Microsoft Hyper-V 🔥主流 
 
 `Gmeek-html<img src="https://www.netzen.co.uk/wp-content/uploads/2017/09/Microsoft-Hyper-V-Windows10.png">`
 
@@ -85,9 +86,10 @@ KVM是Kernel-based Virtual Machine的简称，是一个开源的系统虚拟化�
 
 
 ## 🧮 Xen
-XEN最初是剑桥大学Xensource的一个开源研究项目，2003年9月发布了首个版本Xen 1.0，2007年Xensource被Citrix公司收购，开源Xen转由http://www.xen.org继续推进，该组织成员包括个人和公司（如Citrix、Oracle等）。2014年03月11日，Xen发布4.4版本，更好地支持ARM架构。Xen是运行在裸机上的虚拟化管理程序（HyperVisor），是半虚拟化（Para-Virtualization）技术的典型代表。Xen是一种开源虚拟化软件，运行在Linux等多种操作系统上。它可以在同一台物理服务器上运行多个虚拟机，并使用虚拟化技术将不同的操作系统隔离开来。Xen具有高性能、高可靠性、高安全性等特点，并支持多种虚拟化技术，如硬件辅助虚拟化、半虚拟化等。Xen还支持动态配置和迁移，可以在不停机的情况下调整虚拟机的资源和配置，提高了用户的便利性和灵活性。
+XEN最初是剑桥大学Xensource的一个开源虚拟化项目，2003年9月发布了首个版本Xen 1.0，2007年Xensource被Citrix公司收购，2014年03月11日，Xen发布4.4版本，更好地支持ARM架构。Xen是运行在裸机上的虚拟化管理程序（HyperVisor），是半虚拟化（Para-Virtualization）技术的典型代表。主要运行在Linux等多种操作系统上，它可以在同一台物理服务器上运行多个虚拟机，并使用虚拟化技术将不同的操作系统隔离开来。Xen具有高性能、高可靠性、高安全性等特点，并支持多种虚拟化技术，如硬件辅助虚拟化、半虚拟化等。Xen还支持动态配置和迁移，可以在不停机的情况下调整虚拟机的资源和配置，提高了用户的便利性和灵活性。
 
 <br>
+
 
 
 
