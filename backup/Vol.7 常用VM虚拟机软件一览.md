@@ -20,21 +20,21 @@
 
 
 # 比较
-|软件|操作系统|官方地址|费用|
-|---|---|---|---|
-|VMware Workstation|Windows、Linux|https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion|免费|
-|VMware Fusion|MacOS|https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion|有料|
-|VirtualBox|Windows、Linux、MacOS|https://www.virtualbox.org|免费&开源|
-|Microsoft Hyper-V|	Windows|https://learn.microsoft.com/zh-cn/virtualization|免费|
-|Parallels Desktop|MacOS|https://www.parallels.com/products/desktop|有料|
-|KVM|Linux|https://www.linux-kvm.org/page/Main_Page|免费&开源|
-|Xen|Windows、Linux|https://xenproject.org/|免费&开源|
+|软件|操作系统|官方地址|费用|稳定性|性能|
+|---|---|---|---|---|---|
+|VMware Workstation🔥|Windows、Linux|https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion|免费|中|中|
+|VMware Fusion|MacOS|https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion|有料|||
+|VirtualBox🔥|Windows、Linux、MacOS|https://www.virtualbox.org|免费&开源|低|低|
+|Microsoft Hyper-V🔥|	Windows|https://learn.microsoft.com/zh-cn/virtualization|免费|高|高|
+|Parallels Desktop|MacOS|https://www.parallels.com/products/desktop|有料|||
+|KVM|Linux|https://www.linux-kvm.org/page/Main_Page|免费&开源|||
+|Xen|Windows、Linux|https://xenproject.org/|免费&开源|||
 
 <br>
 
 
 
-## 🧮 VMware家族 🔥主流
+## 🧮 VMware家族
 
 `Gmeek-html<img src="https://techvccloud.mediacdn.vn/2018/11/27/vmware-15433146204021816551093-crop-15433146245501198372620.jpg">`
 
@@ -51,7 +51,7 @@ VMWare Fusion 13 Pro 是 macOS 优秀的虚拟机软件「同类软件 Parallels
 
 
 
-## 🧮 VirtualBox 🔥主流
+## 🧮 VirtualBox
 
 `Gmeek-html<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png">`
 
@@ -61,7 +61,7 @@ VirtualBox是一款免费开源的虚拟化软件，由Oracle公司开发。Virt
 
 
 
-## 🧮 Microsoft Hyper-V 🔥主流 
+## 🧮 Microsoft Hyper-V
 
 `Gmeek-html<img src="https://www.netzen.co.uk/wp-content/uploads/2017/09/Microsoft-Hyper-V-Windows10.png">`
 
