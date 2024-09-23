@@ -39,7 +39,35 @@ CreateObject('InternetExplorer.Application').Visible=true
 sfc /scannow
 ```
 
+# 切换成Win10的右键菜单
+```
+reg add 'HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32' /f /ve
+````
 
+# 恢复成Win11的右键菜单
+```
+reg delete 'HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}' /f 
+```
+
+# 永久暂停Windows自动更新
+```
+reg add 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings' /v FlightSettingsMaxPauseDays /t reg_dword /d 9999 /f
+```
+
+# Windows家庭版开启hyper-v
+```
+pushd '%~dp0'
+dir /b %SystemRoot%servicingPackages*Hyper-V*.mum >hv.txt
+for /f %%i in ('findstr /i . hv.txt 2^>nul') do dism /online /norestart /add-package:'%SystemRoot%servicingPackages%%i'
+del hv.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL
+pause
+```
+
+`Gmeek-html<img src='https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png'>`
+
+将文本文档改名为'xxx.bat'，需注意.bat是扩展名
+完成后重启电脑
 。">
 <meta property="og:title" content="Vol.9 Windows命令">
 <meta property="og:description" content="# 查看内网IP
@@ -74,7 +102,35 @@ CreateObject('InternetExplorer.Application').Visible=true
 sfc /scannow
 ```
 
+# 切换成Win10的右键菜单
+```
+reg add 'HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32' /f /ve
+````
 
+# 恢复成Win11的右键菜单
+```
+reg delete 'HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}' /f 
+```
+
+# 永久暂停Windows自动更新
+```
+reg add 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings' /v FlightSettingsMaxPauseDays /t reg_dword /d 9999 /f
+```
+
+# Windows家庭版开启hyper-v
+```
+pushd '%~dp0'
+dir /b %SystemRoot%servicingPackages*Hyper-V*.mum >hv.txt
+for /f %%i in ('findstr /i . hv.txt 2^>nul') do dism /online /norestart /add-package:'%SystemRoot%servicingPackages%%i'
+del hv.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL
+pause
+```
+
+`Gmeek-html<img src='https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png'>`
+
+将文本文档改名为'xxx.bat'，需注意.bat是扩展名
+完成后重启电脑
 。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://grapehut.us.kg/post/Vol.9%20Windows-ming-ling.html">
@@ -159,7 +215,27 @@ netsh wlan show profiles name=xxxx key=clear        ←名字代入
 </code></pre>
 <h1>修复系统文件</h1>
 <pre class="notranslate"><code class="notranslate">sfc /scannow
-</code></pre></div>
+</code></pre>
+<h1>切换成Win10的右键菜单</h1>
+<pre class="notranslate"><code class="notranslate">reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+</code></pre>
+<h1>恢复成Win11的右键菜单</h1>
+<pre class="notranslate"><code class="notranslate">reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f 
+</code></pre>
+<h1>永久暂停Windows自动更新</h1>
+<pre class="notranslate"><code class="notranslate">reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v FlightSettingsMaxPauseDays /t reg_dword /d 9999 /f
+</code></pre>
+<h1>Windows家庭版开启hyper-v</h1>
+<pre class="notranslate"><code class="notranslate">pushd "%~dp0"
+dir /b %SystemRoot%servicingPackages*Hyper-V*.mum &gt;hv.txt
+for /f %%i in ('findstr /i . hv.txt 2^&gt;nul') do dism /online /norestart /add-package:"%SystemRoot%servicingPackages%%i"
+del hv.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL
+pause
+</code></pre>
+<p><img src="https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png"></p>
+<p>将文本文档改名为"xxx.bat"，需注意.bat是扩展名<br>
+完成后重启电脑</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
