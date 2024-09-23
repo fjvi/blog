@@ -15,25 +15,27 @@
 - QEMU
 - Multipass
 
+<br>
 
-◆比较
-|软件|系统支持|易用程度|
-|---|---|---|
-|VMware Workstation|Windows、Linux、MacOS|简单|
-|VirtualBox|Windows、Linux、MacOS|简单|
-|Microsoft Hyper-V|	Windows|简单|
-|Parallels Desktop|MacOS|简单|
-|KVM|Linux|简单|
-|Xen|Windows、Linux|复杂|
+
+# 比较
+|软件|操作系统|官方地址|费用|
+|---|---|---|---|
+|VMware Workstation|Windows、Linux|https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion|免费|
+|VMware Fusion|MacOS|https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion|有料|
+|VirtualBox|Windows、Linux、MacOS|https://www.virtualbox.org|免费开源|
+|Microsoft Hyper-V|	Windows|https://learn.microsoft.com/zh-cn/virtualization|免费|
+|Parallels Desktop|MacOS|https://www.parallels.com/products/desktop|有料|
+|KVM|Linux|https://www.linux-kvm.org/page/Main_Page|免费|
+|Xen|Windows、Linux|https://xenproject.org/|免费|
 
 
 <br>
 
 
-## 🧮 VMware家族 🔥 
-> 官方地址： https://www.vmware.com/
+## 🧮 VMware家族
 
-`Gmeek-html<img src="https://ttc-infotech.com.vn/wp-content/uploads/2020/08/vmware.png">`
+`Gmeek-html<img src="https://techvccloud.mediacdn.vn/2018/11/27/vmware-15433146204021816551093-crop-15433146245501198372620.jpg">`
 
 ### VMware Worstation Pro
 VMware Workstation Pro 是行业标准桌面 Hypervisor，使用它可在 Windows 或 Linux 桌面上运行 Windows、Linux 和 BSD 虚拟机。
@@ -44,165 +46,64 @@ VMware Workstation Pro 是行业标准桌面 Hypervisor，使用它可在 Window
 ### VMware Fusion
 VMWare Fusion 13 Pro 是 macOS 优秀的虚拟机软件「同类软件 Parallels Desktop」，兼容 macOS Ventura 和苹果 M 系列芯片，可以直接在 Mac 下运行 Windows 11、Linux 等系统。
 
-#### ◆优点
-1. 界面美观，易于操作。
-2. 支持多种操作系统，用于多平台开发及测试。
-3. 内置多种虚拟机交互方式，如桥接、NAT和Host-Only等。
-4. 可以创建快照，方便恢复、备份和测试。
-5. 可以创建多台虚拟机，实现多虚机之间的互通交流。
-6. 支持虚拟GPU硬件，提供更好的虚拟化实验和测试体验。
-
-#### ◆缺点
-1. 价格较高，收费模式为许可证购买，适合企业用户使用。
-2. 资源占用较大，需要较高的电脑配置和系统性能。
-3. 若虚拟机数量过多，可能导致系统资源不足，造成虚拟机运行缓慢。
-4. 可能存在安全隐患，虚拟机共享宿主机硬件，可能会被恶意攻击。
-5. 不支持一些特殊的硬件设备，如信号处理器等。
-
 <br>
 
 
 
 ## 🧮 VirtualBox 🔥
-> 官方地址：https://www.virtualbox.org/
 
 `Gmeek-html<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png">`
 
 VirtualBox是一款免费开源的虚拟化软件，由Oracle公司开发。VirtualBox 是一个用于 x86 硬件的通用全虚拟器，面向服务器、桌面和嵌入式应用，相对 VMware 来说 ，VirtualBox 是轻量级的虚拟软件。它可以在同一台电脑上运行多个操作系统，使用户可以在不同的操作系统之间切换，并且创建不同的虚拟机。它支持Windows、Linux、MacOS和Solaris等多种操作系统，并提供多种虚拟化技术，如桥接、NAT和Host-Only等。VirtualBox是一款功能强大的虚拟化软件，被广泛应用于开发、测试、学习等领域。 
 
-#### ◆优点
-1. 免费开源，适合个人和中小型企业使用。
-2. 支持多种操作系统，用于多平台开发及测试。
-3. 内置多种虚拟机交互方式，如桥接、NAT和Host-Only等。
-4. 可以创建快照，方便恢复、备份和测试。
-5. 可以创建多台虚拟机，实现多虚机之间的互相通信和数据传输。
-6. 资源占用较小，可以在低配置电脑上运行。
-7. 插件丰富，可以安装增强功能包，如虚拟GPU、共享文件夹等功能。
-
-#### ◆缺点
-1. 用户界面不太直观，需要一定的学习成本。
-2. 创建虚拟机的过程比较繁琐，需要了解一些虚拟化技术的知识。
-3. 如果虚拟机数量过多，可能导致系统资源不足，造成虚拟机运行缓慢。
-4. 在某些情况下，虚拟机的性能和宿主机存在一定差距。
-5. 不支持一些特殊的硬件设备，如信号处理器等。
-
 <br>
+
 
 
 ## 🧮 Microsoft Hyper-V 🔥 
-> 官方地址：https://learn.microsoft.com/zh-cn/virtualization/
 
-`Gmeek-html<img src="https://techframework.com/wp-content/uploads/2014/01/Microsoft_Hyper_V.jpg">`
+`Gmeek-html<img src="https://www.netzen.co.uk/wp-content/uploads/2017/09/Microsoft-Hyper-V-Windows10.png">`
 
 Microsoft Hyper-V是一款虚拟化软件，内置于Windows Server 2008及其以后的服务器操作系统中。它可以在同一台物理服务器上运行多个虚拟机，支持Windows和Linux等多种操作系统，并提供多种虚拟化技术，如动态内存、动态磁盘等。Microsoft Hyper-V还具有卓越的可靠性、性能和安全性，并且具有高度的适应性，可以在各种企业环境中广泛应用。
 
-
-#### ◆优点
-1. 内置于Windows操作系统中，兼容性好，安装简便。
-2. 多个虚拟机可以共享同一台物理服务器的资源，方便管理和维护。
-3. 支持多种虚拟化技术，如动态内存、动态磁盘等，提高性能和效率。
-4. 具有卓越的可靠性、性能和安全性，得到了广泛应用。
-5. 提供多种虚拟机管理工具和功能，如虚拟机快照、动态VHD等。
-6. 可以实现物理服务器的高可用性和容错性，确保业务的连续性。
-
-#### ◆缺点
-1. 可能需要较高的电脑配置和系统性能。
-2. 学习成本较大，需要了解一些虚拟化技术的知识。
-3. 不支持其他操作系统，如macOS等。
-4. 由于是Microsoft Hyper-V是Windows内核的一部分，因此在使用时对系统本身有一定的依赖性。
-5. 有些虚拟化功能需要额外的组件或扩展，需要安装相应程序。
-6. 很多企业可能需要配套的工具和支持来使用Microsoft Hyper-V，造成额外的费用和学习成本。
-
-
-
 <br>
+
+
 
 ## 🧮 Parallels Desktop
-> 官方地址：https://www.parallels.com/products/desktop/
 Parallels Desktop是由Parallels推出的一款为苹果电脑提供硬件虚拟化的软件，产品于2006年6月发布，它是第一款能在苹果-英特尔架构的苹果电脑上使用的虚拟化软件。如果你想在Mac上运行Windows系统，那么Parallels Desktop 会是你的最佳选择。它可以在Intel 或 Apple M 系列 Mac 计算机上无缝运行 Windows 应用，最大限度地解决了 MacOS 与 Windows 软件生态差距方面的问题。
 
-#### ◆优点
-1. 专门针对Mac电脑，兼容性好，支持多种操作系统，用于多平台开发及测试。
-2. 内置多种虚拟机交互方式，如桥接、NAT和Host-Only等。
-3. 支持虚拟GPU硬件，提供更好的虚拟化实验和测试体验。
-4. 提供多种虚拟机管理工具和功能，如“一键开机”、“即时备份”、“虚拟机快照”等。
-5. 可以创建多台虚拟机，实现多虚机之间的互相通信和数据传输。
-6. 可以与Mac电脑进行深度整合，如文件系统、打印机、网卡等，用户体验更加舒适。
-
-#### ◆缺点
-1. 价格较高，收费模式为许可证购买，适合企业用户和高端用户使用。
-2. 资源占用较大，需要较高的电脑配置和系统性能。
-3. 可能存在安全隐患，虚拟机共享宿主机硬件，可能会被恶意攻击。
-4. 如果虚拟机数量过多，可能导致系统资源不足，造成虚拟机运行缓慢。
-5. 在某些情况下，虚拟机的性能和宿主机存在一定差距。
-6. 不支持一些特殊的硬件设备，如信号处理器等。
-
-
-
 <br>
+
 
 
 ## 🧮 KVM
-> 官网地址：https://www.linux-kvm.org/page/Main_Page
-
 KVM是Kernel-based Virtual Machine的简称，是一个开源的系统虚拟化模块，自Linux 2.6.20之后集成在Linux的各个主要发行版本中，它使用Linux自身的调度器进行管理，所以相对于Xen，其核心源码很少，相对VMWare的管理方式来说是比较麻烦，但从性能上并不比VMWare差。KVM（Kernel-based Virtual Machine）是一种基于Linux内核的虚拟化软件，可以在同一台物理服务器上运行多个虚拟机。KVM使用硬件辅助虚拟化技术，将不同的操作系统和应用程序隔离开来，提高了安全性和可靠性，并可以提高系统资源的利用率和效率。KVM具有高性能、高可靠性等优点，是一款广泛应用于企业级应用和云计算领域的虚拟化软件。
 
-#### ◆优点
-1. 基于Linux内核的开源虚拟化软件，具有强大的扩展性和灵活性。
-2. 使用硬件辅助虚拟化技术，提高了性能和效率，并且可以同时支持多种操作系统。
-3. 支持动态内存管理、动态磁盘、热备份等高级功能，提高了用户的便利性和灵活性。
-4. 具有高可靠性和高安全性，提供了完整的虚拟化管理和监控工具，可以方便地管理和维护虚拟机。
-5. 可以轻松地集成到云计算平台中，支持自动部署和调度，可以提供强大的云计算服务。
-6. 可以支持多种硬件平台和网络架构，具有广泛的适用范围和可扩展性。
-
-#### ◆缺点
-1. 可能需要较高的电脑配置和系统性能。
-2. 学习成本较高，需要了解一些虚拟化技术的知识。
-3. 可能存在安全隐患，虚拟机共享宿主机硬件，可能会被恶意攻击。
-4. 在一些特定的硬件平台上可能不太稳定，需要不断优化和调整。
-5. 一些高级功能需要额外的组件或扩展，需要安装相应程序。
-6. 对于一些高密度和高并发的应用场景，可能不能满足用户的要求。
-
-
 <br>
+
 
 
 ## 🧮 Xen
-> 官网地址：https://xenproject.org/
-
 XEN最初是剑桥大学Xensource的一个开源研究项目，2003年9月发布了首个版本Xen 1.0，2007年Xensource被Citrix公司收购，开源Xen转由http://www.xen.org继续推进，该组织成员包括个人和公司（如Citrix、Oracle等）。2014年03月11日，Xen发布4.4版本，更好地支持ARM架构。Xen是运行在裸机上的虚拟化管理程序（HyperVisor），是半虚拟化（Para-Virtualization）技术的典型代表。Xen是一种开源虚拟化软件，运行在Linux等多种操作系统上。它可以在同一台物理服务器上运行多个虚拟机，并使用虚拟化技术将不同的操作系统隔离开来。Xen具有高性能、高可靠性、高安全性等特点，并支持多种虚拟化技术，如硬件辅助虚拟化、半虚拟化等。Xen还支持动态配置和迁移，可以在不停机的情况下调整虚拟机的资源和配置，提高了用户的便利性和灵活性。
 
-
-#### ◆优点
-1. 开源免费，用户可以自由使用和修改。
-2. 支持多种虚拟化技术，如硬件辅助虚拟化、半虚拟化等，提高了性能和效率。
-3. 具有高性能、高可靠性、高安全性等特点，得到用户的广泛认可。
-4. 支持动态配置和迁移，可以在不停机的情况下调整虚拟机的资源和配置。
-5. 支持多个操作系统和硬件平台，具有良好的兼容性和灵活性。
-6. 提供完整的虚拟机管理工具和命令行工具，使用户方便地管理和使用虚拟机。
-
-#### ◆缺点
-1. 学习成本较高，需要了解一些虚拟化技术的知识。
-2. 可能需要较高的电脑配置和系统性能。
-3. 可能存在安全隐患，虚拟机共享宿主机硬件，可能会被恶意攻击。
-4. 其他虚拟化技术如KVM已经逐渐取代Xen。
-5. 缺乏一些高级的管理和监控功能，如虚拟机的自动备份和恢复等。
-6. 异构虚拟化支持较差，不太适合在异构的环境中使用。
-
-
 <br>
+
+
 
 ## 🧮 Citrix Hypervisor
 Citrix Hypervisor 支持任意规模或类型的组织整合计算资源，以及将计算资源转换为虚拟工作负载，从而满足现今数据中心的要求。同时可以确保将工作负载无缝移动到云中。
 
-
 <br>
+
+
 
 ## 🧮 QEMU
 QEMU是一款由法布里斯·贝拉等人编写，可执行硬件虚拟化的（hardware virtualization）开源仿真器（Emulator）。QEMU与其他VM 解决方案不同的地方在于，它既是虚拟机，也是机器模拟器。QEMU可以通过动态的二进制转换，模拟CPU，并且提供一组设备模型，使它能够运行多种未修改的客户机OS。QEMU还可以通过与KVM一起使用，从而以接近真实电脑的速度来运行虚拟机。
 
-
 <br>
+
+
 
 ## 🧮 Multipass
 Multipass 是一个轻量虚拟机管理器，是由 Ubuntu 运营公司 Canonical 所推出的开源项目。运行环境支持 Linux、Windows、macOS。在不同的操作系统上，使用的是不同的虚拟化技术。在 Linux 上使用的是 KVM、Window 上使用 Hyper-V、macOS 中使用 HyperKit 以最小开销运行VM，支持在笔记本模拟小型云。同时，Multipass 提供了一个命令行界面来启动和管理 Linux 实例。下载一个全新的镜像需要几秒钟的时间，并且在几分钟内就可以启动并运行 VM。
