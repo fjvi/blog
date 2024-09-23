@@ -59,3 +59,134 @@ pause
 
 将文本文档改名为"xxx.bat"，需注意.bat是扩展名
 完成后重启电脑
+
+# Windows特殊文件夹
+- System.Environmentを使って特殊フォルダ一覧リストを出力
+```
+[Environment+SpecialFolder]::GetNames([Environment+SpecialFolder]) | Sort-Object
+
+↓↓特殊フォルダの一覧
+AdminTools
+ApplicationData
+CDBurning
+CommonAdminTools
+CommonApplicationData
+CommonDesktopDirectory
+CommonDocuments
+CommonMusic
+CommonOemLinks
+CommonPictures
+CommonProgramFiles
+CommonProgramFilesX86
+CommonPrograms
+CommonStartMenu
+CommonStartup
+CommonTemplates
+CommonVideos
+Cookies
+Desktop
+DesktopDirectory
+Favorites
+Fonts
+History
+InternetCache
+LocalApplicationData
+LocalizedResources
+MyComputer
+MyDocuments
+MyMusic
+MyPictures
+MyVideos
+NetworkShortcuts
+Personal
+PrinterShortcuts
+ProgramFiles
+ProgramFilesX86
+Programs
+Recent
+Resources
+SendTo
+StartMenu
+Startup
+System
+SystemX86
+Templates
+UserProfile
+Windows
+```
+
+- 各特殊フォルダのパスの取得方法は、Enviroment.GetFolderPath() メソッドを使用
+```
+[Environment]::GetFolderPath("Desktop")
+> C:\Users\xyz\Desktop
+
+[Environment]::GetFolderPath("AdminTools")
+> C:\Users\xyz\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+
+[Environment]::GetFolderPath("ProgramFiles")
+> C:\Program Files (x86)
+```
+
+
+- 特殊フォルダのパス一覧を出力
+```
+$SpecialFolders = @{}
+$names = [Environment+SpecialFolder]::GetNames([Environment+SpecialFolder]) | Sort-Object
+$names | Format-Table
+
+foreach($name in $names)
+{
+  if($path = [Environment]::GetFolderPath($name)){
+    $SpecialFolders[$name] = $path
+  }
+}
+$SpecialFolders | Format-Table
+
+# ↓↓パス一覧
+Name                           Value
+----                           -----
+AdminTools                     C:\Users\win11\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative T...
+Windows                        C:\WINDOWS
+CommonApplicationData          C:\ProgramData
+CommonVideos                   C:\Users\Public\Videos
+CDBurning                      C:\Users\win11\AppData\Local\Microsoft\Windows\Burn\Burn
+MyVideos                       C:\Users\win11\Videos
+ProgramFilesX86                C:\Program Files (x86)
+CommonDocuments                C:\Users\Public\Documents
+Templates                      C:\Users\win11\AppData\Roaming\Microsoft\Windows\Templates
+CommonDesktopDirectory         C:\Users\Public\Desktop
+InternetCache                  C:\Users\win11\AppData\Local\Microsoft\Windows\INetCache
+UserProfile                    C:\Users\win11
+StartMenu                      C:\Users\win11\AppData\Roaming\Microsoft\Windows\Start Menu
+CommonStartMenu                C:\ProgramData\Microsoft\Windows\Start Menu
+Recent                         C:\Users\win11\AppData\Roaming\Microsoft\Windows\Recent
+Fonts                          C:\WINDOWS\Fonts
+SendTo                         C:\Users\win11\AppData\Roaming\Microsoft\Windows\SendTo
+MyPictures                     C:\Users\win11\Pictures
+History                        C:\Users\win11\AppData\Local\Microsoft\Windows\History
+ProgramFiles                   C:\Program Files
+Favorites                      C:\Users\win11\Favorites
+ApplicationData                C:\Users\win11\AppData\Roaming
+DesktopDirectory               C:\Users\win11\Desktop
+MyDocuments                    C:\Users\win11\Documents
+MyMusic                        C:\Users\win11\Music
+CommonStartup                  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
+CommonPictures                 C:\Users\Public\Pictures
+CommonPrograms                 C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+Desktop                        C:\Users\win11\Desktop
+System                         C:\WINDOWS\system32
+PrinterShortcuts               C:\Users\win11\AppData\Roaming\Microsoft\Windows\Printer Shortcuts
+CommonAdminTools               C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+NetworkShortcuts               C:\Users\win11\AppData\Roaming\Microsoft\Windows\Network Shortcuts
+CommonMusic                    C:\Users\Public\Music
+CommonProgramFilesX86          C:\Program Files (x86)\Common Files
+Programs                       C:\Users\win11\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+SystemX86                      C:\WINDOWS\SysWOW64
+Resources                      C:\WINDOWS\resources
+CommonTemplates                C:\ProgramData\Microsoft\Windows\Templates
+CommonProgramFiles             C:\Program Files\Common Files
+Startup                        C:\Users\win11\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+Cookies                        C:\Users\win11\AppData\Local\Microsoft\Windows\INetCookies
+LocalApplicationData           C:\Users\win11\AppData\Local
+Personal                       C:\Users\win11\Documents
+```
