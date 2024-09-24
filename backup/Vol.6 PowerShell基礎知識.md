@@ -171,3 +171,10 @@ $ gal　或者   $ Get-Alias
 |where|  Where-Object|
 |wjb|  Wait-Job|
 |write|  Write-Output|
+
+
+## 获取 PowerShell Command一覧
+
+```
+$ gcm　或者   $ get-command
+```

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Tue, 24 Sep 2024 14:55:06 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.10 WSL（Windows Subsystem for Linux）</title><link>https://grapehut.us.kg/post/Vol.10%20WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</link><description># 查看可安装的Linux版本&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Tue, 24 Sep 2024 14:59:35 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.10 WSL（Windows Subsystem for Linux）</title><link>https://grapehut.us.kg/post/Vol.10%20WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</link><description># 查看可安装的Linux版本&#13;
 &#13;
 ```&#13;
 $ wsl --list --online　或者　$ wsl -l -o&#13;
@@ -411,7 +411,13 @@ $ gal　或者   $ Get-Alias&#13;
 |where|  Where-Object|&#13;
 |wjb|  Wait-Job|&#13;
 |write|  Write-Output|&#13;
-。</description><guid isPermaLink="true">https://grapehut.us.kg/post/Vol.6%20PowerShell-ji-chu-zhi-shi.html</guid><pubDate>Sat, 21 Sep 2024 15:13:50 +0000</pubDate></item><item><title>Vol.5 网站锦上添花（把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform）</title><link>https://grapehut.us.kg/post/Vol.5%20-wang-zhan-jin-shang-tian-hua-%EF%BC%88-ba-meng-meng-da-de-kan-ban-niang-bao-hui-jia-%20%28%E3%83%8E%E2%89%A7%E2%88%87%E2%89%A6%29%E3%83%8E%20-%20Live2D%20widget%20for%20web%20platform%EF%BC%89.html</link><description># 内容简介&#13;
+&#13;
+&#13;
+## 获取 PowerShell Command一覧&#13;
+&#13;
+```&#13;
+$ gcm　或者   $ get-command&#13;
+```。</description><guid isPermaLink="true">https://grapehut.us.kg/post/Vol.6%20PowerShell-ji-chu-zhi-shi.html</guid><pubDate>Sat, 21 Sep 2024 15:13:50 +0000</pubDate></item><item><title>Vol.5 网站锦上添花（把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform）</title><link>https://grapehut.us.kg/post/Vol.5%20-wang-zhan-jin-shang-tian-hua-%EF%BC%88-ba-meng-meng-da-de-kan-ban-niang-bao-hui-jia-%20%28%E3%83%8E%E2%89%A7%E2%88%87%E2%89%A6%29%E3%83%8E%20-%20Live2D%20widget%20for%20web%20platform%EF%BC%89.html</link><description># 内容简介&#13;
 把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform&#13;
 引用：https://github.com/stevenjoezhang/live2d-widget&#13;
 &#13;
