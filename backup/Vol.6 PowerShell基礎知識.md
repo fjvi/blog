@@ -30,8 +30,8 @@ $ gal　或者   $ Get-Alias
 |`del`🔥|  Remove-Item|
 |`rm`🔥|  Remove-Item|
 |`rmdir`🔥|  Remove-Item|
-|`cat`🔥|  Get-Content|
-|`type`🔥|  Get-Content|
+|`cat`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
+|`type`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
 |`compare`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
 |`ps`🔥|  Get-Process|获取所有运行中的进程|
