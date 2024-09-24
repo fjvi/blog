@@ -36,6 +36,10 @@ $ gal　或者   $ Get-Alias
 |`curl`🔥|  Invoke-WebRequest|
 |`man`🌛|  help|
 |`ise`🌛|  powershell_ise.exe|
+|`clear`🌛|Clear-Host|
+|`cls`🌛|  Clear-Host|
+
+
 |%|    ForEach-Object|
 |?|    Where-Object|
 |ac|   Add-Content|
@@ -43,11 +47,9 @@ $ gal　或者   $ Get-Alias
 |CFS|  ConvertFrom-String|
 |chdir|Set-Location|
 |clc|  Clear-Content|
-|clear|Clear-Host|
 |clhy| Clear-History|
 |cli|  Clear-Item|
 |clp|  Clear-ItemProperty|
-|cls|  Clear-Host|
 |clv|  Clear-Variable|
 |cnsn| Connect-PSSession|
 |cpi|  Copy-Item|
