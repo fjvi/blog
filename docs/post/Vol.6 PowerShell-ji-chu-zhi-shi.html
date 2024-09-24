@@ -56,7 +56,7 @@ $ gal　或者   $ Get-Alias
 |`man`🌛|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |`ise`🌛|  powershell_ise.exe|
 |%|    ForEach-Object|
-|?|    Where-Object|
+|?|    Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
@@ -267,7 +267,7 @@ $ gal　或者   $ Get-Alias
 |`man`🌛|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |`ise`🌛|  powershell_ise.exe|
 |%|    ForEach-Object|
-|?|    Where-Object|
+|?|    Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
@@ -658,7 +658,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>?</td>
 <td>Where-Object</td>
-<td></td>
+<td>例：<code class="notranslate">Get-Process \ Where-Object { $_.CPU -gt 10 }</code>  获取 CPU 占用率大于 10% 的所有进程</td>
 </tr>
 <tr>
 <td>ac</td>

@@ -47,7 +47,7 @@ $ gal　或者   $ Get-Alias
 |`man`🌛|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |`ise`🌛|  powershell_ise.exe|
 |%|    ForEach-Object|
-|?|    Where-Object|
+|?|    Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
