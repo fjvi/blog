@@ -40,10 +40,12 @@ $ gal　或者   $ Get-Alias
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |`curl`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |`iwr`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
+|`write`🔥|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
+|`echo`🔥|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
+|`clear`🔥|Clear-Host|清除控制台屏幕|
+|`cls`🔥|  Clear-Host|清除控制台屏幕|
 |`man`🌛|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |`ise`🌛|  powershell_ise.exe|
-|`clear`🌛|Clear-Host|清除控制台屏幕|
-|`cls`🌛|  Clear-Host|清除控制台屏幕|
 |%|    ForEach-Object|
 |?|    Where-Object|
 |ac|   Add-Content|
@@ -62,9 +64,10 @@ $ gal　或者   $ Get-Alias
 |dbp|  Disable-PSBreakpoint|
 |dnsn|  Disconnect-PSSession|
 |ebp|  Enable-PSBreakpoint|
-|echo|  Write-Output|
+|ipal|  Import-Alias|
 |epal|  Export-Alias|
-|epcsv|  Export-Csv|例：`$data  Export-Csv -Path "C:\temp\output.csv" -NoTypeInformation`  将数据导出为 CSV 文件|
+|ipcsv|  Import-Csv|例：`$data = Import-Csv -Path "C:\temp\data.csv"`  从 CSV 文件导入数据|
+|epcsv|  Export-Csv|例：`$data \ Export-Csv -Path "C:\temp\output.csv" -NoTypeInformatio`  将数据导出为 CSV 文件|
 |epsn|  Export-PSSession|
 |erase|  Remove-Item|
 |etsn|  Enter-PSSession|
@@ -77,6 +80,7 @@ $ gal　或者   $ Get-Alias
 |fw|  Format-Wide|
 |`gal`🔥|  Get-Alias|
 |`gbp`🌛|  Get-PSBreakpoint|
+|sc|  Set-Content|例：`"Hello, world!" \ Set-Content -Path "C:\temp\output.txt"`  写入文件内容|
 |`gc`🌛|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`gcb`🌛|  Get-Clipboard|
 |`gci`🌛|  Get-ChildItem|
@@ -102,13 +106,11 @@ $ gal　或者   $ Get-Alias
 |`ghy`🌛|  Get-History|
 |`h`🌛|  Get-History|
 |`history`🌛|  Get-History|
-|group|  Group-Object|例：`Get-Process | Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
+|group|  Group-Object|例：`Get-Process \Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
 |icm|  Invoke-Command|
 |iex|  Invoke-Expression|
 |ihy|  Invoke-History|
 |ii|  Invoke-Item|
-|ipal|  Import-Alias|
-|ipcsv|  Import-Csv|例：`$data = Import-Csv -Path "C:\temp\data.csv"`  从 CSV 文件导入数据|
 |ipmo|  Import-Module|
 |ipsn|  Import-PSSession|
 |irm|  Invoke-RestMethod|
@@ -150,7 +152,6 @@ $ gal　或者   $ Get-Alias
 |rwmi|  Remove-WmiObject|
 |sal|  Set-Alias|
 |sbp|  Set-PSBreakpoint|
-|sc|  Set-Content|例：`"Hello, world!" | Set-Content -Path "C:\temp\output.txt"`  写入文件内容|
 |scb|  Set-Clipboard|
 |select|  Select-Object|
 |set|  Set-Variable|
@@ -159,12 +160,12 @@ $ gal　或者   $ Get-Alias
 |sl|  Set-Location|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
-|sort|  Sort-Object例：`Get-Process | Sort-Object -Property CPU -Descending`   按 CPU 占用率降序排列所有进程|
+|sort|  Sort-Object|例：`Get-Process \ Sort-Object -Property CPU -Descending`   按 CPU 占用率降序排列所有进程|
 |sp|  Set-ItemProperty|
 |`sajb`✨️|  Start-Job|
 |`spjb`✨️|  Stop-Job|
-|`saps`✨️|  Start-Process|
-|`spps`✨️|  Stop-Process|
+|`saps`✨️|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
+|`spps`✨️|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
 |`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
 |`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |`rssv`✨️|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
@@ -174,10 +175,9 @@ $ gal　或者   $ Get-Alias
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 |tee|  Tee-Object|
 |trcm|  Trace-Command|
-|where|  Where-Object|例：`Get-Process | Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
+|where|  Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
 |wjb|  Wait-Job|
-|write|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
-|write|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
+
 
 
 
@@ -192,9 +192,6 @@ $ gal　或者   $ Get-Alias
 　　6. 递归一系列的目录或文件夹——Get-ChildItem –Force c:\directory –Recurse
 　　7. 在目录里移除所有文件而不需要单个移除——Remove-Item C:\tobedeleted –Recurse
 　　8. 重启当前计算机——(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
-
-　　收集信息
-
 　　9. 获取计算机组成或模型信息——Get-WmiObject -Class Win32_ComputerSystem
 　　10. 获取当前计算机的BIOS信息——Get-WmiObject -Class Win32_BIOS -ComputerName .
 　　11. 列出所安装的修复程序（如QFE或Windows Update文件）——Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName .
@@ -204,13 +201,9 @@ $ gal　或者   $ Get-Alias
 　　15. 获取当前机器详细的IP配置报道——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*
 　　16. 找到当前计算机上使用DHCP启用的网络卡——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=true" -ComputerName .
 　　17. 在当前计算机上的所有网络适配器上启用DHCP——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}
-
-　　软件管理
-
 　　18. 在远程计算机上安装MSI包——(Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq "Win32_Product"}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi)
 　　19. 使用基于MSI的应用升级包升级所安装的应用——(Get-WmiObject -Class Win32_Product -ComputerName . -Filter "Name='name_of_app_to_be_upgraded'").Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi)
 　　20. 从当前计算机移除MSI包——(Get-WmiObject -Class Win32_Product -Filter "Name='product_to_remove'" -ComputerName . ).Uninstall()
-　　机器管理
 　　21. 一分钟后远程关闭另一台机器——Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE
 　　22. 添加打印机——(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3)
 　　23. 移除打印机——(New-Object -ComObject WScript.Network).RemovePrinterConnection("\printerserver\hplaser3 ")
