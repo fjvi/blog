@@ -38,8 +38,6 @@ $ gal　或者   $ Get-Alias
 |`ise`🌛|  powershell_ise.exe|
 |`clear`🌛|Clear-Host|
 |`cls`🌛|  Clear-Host|
-
-
 |%|    ForEach-Object|
 |?|    Where-Object|
 |ac|   Add-Content|
