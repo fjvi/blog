@@ -176,7 +176,7 @@ $ gal　或者   $ Get-Alias
 |si|  Set-Item|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
-|sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Descending`   按 CPU 占用率降序排列所有进程|
+|sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
 |sp|  Set-ItemProperty|
 
 |stz|  Set-TimeZone|
