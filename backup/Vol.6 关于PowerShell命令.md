@@ -106,40 +106,40 @@ PS>  gal　或者   PS>  Get-Alias
 |shcm|  Show-Command|
 |trcm|  Trace-Command|
 |**别名**|**Alias**|**⇣⇣⇣⇣⇣**|
-|gal👙 |  Get-Alias|显示PowerShell Alias一覧|
+|gal 👙 |  Get-Alias|显示PowerShell Alias一覧|
 |nal|  New-Alias|
 |sal|  Set-Alias|
 |ipal|  Import-Alias|
 |epal|  Export-Alias|
 |**磁盘**|**PSDrive**|**⇣⇣⇣⇣⇣**|
-|gdr 👙|  Get-PSDrive|
-|mount👙|  New-PSDrive|
+|gdr 👙 |  Get-PSDrive|
+|mount 👙 |  New-PSDrive|
 |ndr|  New-PSDrive|
 |rdr|  Remove-PSDrive|
 |**目录**|**Location**|**⇣⇣⇣⇣⇣**|
-|`pwd`🔥|  Get-Location|显示当前所在目录|
+|pwd 👙 |  Get-Location|显示当前所在目录|
 |gl|  Get-Location|同上|
-|`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换文档目录|
+|cd 👙 |   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换文档目录|
 |chdir|Set-Location|同上|
 |sl|  Set-Location|同上|
 |popd|  Pop-Location|？|
 |pushd|  Push-Location|？|
 |**子目录或文件**|**ChildItem**|**⇣⇣⇣⇣⇣**|
-|`ls`🔥|  Get-ChildItem|列出当前目录下的所有文件和目录|
-|`dir`🔥|  Get-ChildItem|同上|
+|ls 👙 |  Get-ChildItem|列出当前目录下的所有文件和目录|
+|dir 👙 |  Get-ChildItem|同上|
 |gci|  Get-ChildItem|同上|
 |**操作目录或文件**|**Item**|**⇣⇣⇣⇣⇣**|
-|`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
-|`cp`🔥|  Copy-Item|同上|
+|copy 👙 |  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
+|cp 👙 |  Copy-Item|同上|
 |cpi|  Copy-Item|同上|
-|`mv`🔥| Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
+|mv 👙 | Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |move|  Move-Item|同上|
 |mi|  Move-Item|同上|
-|`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
+|ren 👙 |  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |rni|  Rename-Item|同上|
-|`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
-|`rm`🔥|  Remove-Item|同上|
-|`rmdir`🔥|  Remove-Item|同上|
+|del 👙 |  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
+|rm 👙 |  Remove-Item|同上|
+|rmdir 👙 |  Remove-Item|同上|
 |erase|  Remove-Item|同上|
 |rd|  Remove-Item|同上|
 |ri|  Remove-Item|同上|
@@ -148,7 +148,7 @@ PS>  gal　或者   PS>  Get-Alias
 |si|  Set-Item|？|
 |ii|  Invoke-Item|？|
 |cli|  Clear-Item|？|
-|`md`🔥|  mkdir|创建文件夹|
+|md 👙 |  mkdir|创建文件夹|
 |**操作目录或文件属性**|**ItemProperty**|**⇣⇣⇣⇣⇣**|
 |gp|  Get-ItemProperty|
 |sp|  Set-ItemProperty|
@@ -165,11 +165,26 @@ PS>  gal　或者   PS>  Get-Alias
 |nv|  New-Variable|
 |clv|  Clear-Variable|
 |rv|  Remove-Variable|
+|**对象**|**Object**|**⇣⇣⇣⇣⇣**|
+|%|    ForEach-Object|
+|foreach|  ForEach-Object|
+|?|    Where-Object|
+|where|  Where-Object|例：`Get-Process \| Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
+|group|  Group-Object|例：`Get-Process \| Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
+|sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
+|measure|  Measure-Object|
+|select|  Select-Object|
+|tee|  Tee-Object|
+|gwmi|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
+|rwmi|  Remove-WmiObject|
+|**比較**|**Compare**|**⇣⇣⇣⇣⇣**|
+|diff 👙 |  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
+|compare 👙 |  Compare-Object|同上|
 |**屏幕**|**Host**|**⇣⇣⇣⇣⇣**|
-|`write`🔥|  Write-Output|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
-|`echo`🔥|  Write-Output|同上|
-|`clear`🔥|Clear-Host|清除控制台屏幕|
-|`cls`🔥|  Clear-Host|同上|
+|write 👙 |  Write-Output|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
+|echo 👙 |  Write-Output|同上|
+|clear 👙 |Clear-Host|清除控制台屏幕|
+|cls 👙 |  Clear-Host|同上|
 |**屏幕记录**|**History**|**⇣⇣⇣⇣⇣**|
 |clhy| Clear-History|
 |ghy|  Get-History|
@@ -177,23 +192,20 @@ PS>  gal　或者   PS>  Get-Alias
 |history|  Get-History|
 |ihy|  Invoke-History|
 |r|  Invoke-History|
-|**比較**|**Compare**|**⇣⇣⇣⇣⇣**|
-|`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
-|`compare`🔥|  Compare-Object|同上|
 |**进程**|**Process**|**⇣⇣⇣⇣⇣**|
-|`ps`🔥|  Get-Process|获取所有运行中的进程|
+|ps 👙 |  Get-Process|获取所有运行中的进程|
 |gps|  Get-Process|同上|
 |start|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
 |saps|  Start-Process|同上|
 |kill|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
 |spps|  Stop-Process|同上|
 |**服务**|**Service**|**⇣⇣⇣⇣⇣**|
-|`gsv`🔥|  Get-Service|获取所有服务的状态|
+|gsv 👙 |  Get-Service|获取所有服务的状态|
 |sasv|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
 |spsv|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |ー|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
 |**任務**|**Job**|**⇣⇣⇣⇣⇣**|
-|`gjb`🔥|  Get-Job|
+|gjb 👙 |  Get-Job|
 |sajb|  Start-Job|
 |spjb|  Stop-Job|
 |wjb|  Wait-Job|
@@ -202,8 +214,8 @@ PS>  gal　或者   PS>  Get-Alias
 |rujb|  Resume-Job|
 |sujb|  Suspend-Job|
 |**文件操作**|**Content**|**⇣⇣⇣⇣⇣**|
-|`cat`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
-|`type`🔥|  Get-Content|同上|
+|cat 👙 |  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
+|type 👙 |  Get-Content|同上|
 |gc|  Get-Content|同上|
 |sc|  Set-Content|例：`"Hello, world!" \| Set-Content -Path "C:\temp\output.txt"`  写入文件内容|
 |ac|  Add-Content|例：`"Another line" \| Add-Content -Path "C:\temp\output.txt"` 添加文件内容|
@@ -212,8 +224,8 @@ PS>  gal　或者   PS>  Get-Alias
 |ipcsv|  Import-Csv|例：`$data = Import-Csv -Path "C:\temp\data.csv"`  从 CSV 文件导入数据|
 |epcsv|  Export-Csv|例：`$data \| Export-Csv -Path "C:\temp\output.csv" -NoTypeInformatio`  将数据导出为 CSV 文件|
 |**网络请求**|**WebRequest**|**⇣⇣⇣⇣⇣**|
-|`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
-|`curl`🔥|  Invoke-WebRequest|同上|
+|wget 👙 |  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
+|curl 👙 |  Invoke-WebRequest|同上|
 |iwr|  Invoke-WebRequest|同上|
 |**Session**|**PSSession**|**⇣⇣⇣⇣⇣**|
 |cnsn| Connect-PSSession|
@@ -234,12 +246,8 @@ PS>  gal　或者   PS>  Get-Alias
 |sbp|  Set-PSBreakpoint|
 |rbp|  Remove-PSBreakpoint|
 |**その他**|**Others**|**⇣⇣⇣⇣⇣**|
-|`man`🔥|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
+|man 👙 |  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |ise|  powershell_ise.exe|
-|%|    ForEach-Object|
-|foreach|  ForEach-Object|
-|where|  Where-Object|例：`Get-Process \| Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
-|?|    Where-Object|同上|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
 |cvpa|  Convert-Path|
@@ -248,37 +256,30 @@ PS>  gal　或者   PS>  Get-Alias
 |fl|  Format-List|
 |ft|  Format-Table|
 |fw|  Format-Wide|
-|`gcb`🌛|  Get-Clipboard|
-|`gcs`🌛|  Get-PSCallStack|
-|`gin`🌛|  Get-ComputerInfo|
-|`gm`🌛|  Get-Member|
-|`gmo`🌛|  Get-Module|
-|`gsnp`🌛|  Get-PSSnapin|
-|`gtz`🌛|  Get-TimeZone|
-|`gu`🌛|  Get-Unique|
-|`gwmi`🌛|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
-|group|  Group-Object|例：`Get-Process \| Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
-|`iex` 🔥 |  Invoke-Expression|
+|gcb|  Get-Clipboard|
+|gcs|  Get-PSCallStack|
+|gin 👙 |  Get-ComputerInfo|
+|gm|  Get-Member|
+|gmo|  Get-Module|
+|gsnp|  Get-PSSnapin|
+|gtz|  Get-TimeZone|
+|gu|  Get-Unique|
+|iex 👙 |  Invoke-Expression|
 |ipmo|  Import-Module|
 |irm|  Invoke-RestMethod|
 |iwmi|  Invoke-WmiMethod|
 |lp|  Out-Printer|
-|measure|  Measure-Object|
 |nmo|  New-Module|
 |ogv|  Out-GridView|
 |oh|  Out-Host|
 |rmo|  Remove-Module|
 |rsnp|  Remove-PSSnapin|
 |rvpa|  Resolve-Path|
-|rwmi|  Remove-WmiObject|
 |scb|  Set-Clipboard|
-|select|  Select-Object|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
-|sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
 |stz|  Set-TimeZone|
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
-|tee|  Tee-Object|
 
 
 
