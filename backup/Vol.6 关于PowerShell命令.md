@@ -286,6 +286,20 @@ PS>  gal　或者   PS>  Get-Alias
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 
 
+# PowerShellでWMIクラスの一覧を取得
+```
+Get-WmiObject -list | Sort-Object
+```
+
+## WMIオブジェクトを検索することができます
+```
+Get-WmiObject -list | Select-String キーワード
+例：Get-WmiObject -list | Select-String Win32_Disk
+　　Get-WmiObject -list | Select-String Win32_System
+　　Get-WmiObject -list | Select-String Win32_Oper
+```
+
+---
 ## 示例：获取本地PC的信息（保存为`getPCInfo.ps1`）
 ```
 function global:getPCInfo ($pcname) {

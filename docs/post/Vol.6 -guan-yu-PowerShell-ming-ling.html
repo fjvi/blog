@@ -1105,6 +1105,16 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<h1>PowerShellでWMIクラスの一覧を取得</h1>
+<pre class="notranslate"><code class="notranslate">Get-WmiObject -list | Sort-Object
+</code></pre>
+<h2>WMIオブジェクトを検索することができます</h2>
+<pre class="notranslate"><code class="notranslate">Get-WmiObject -list | Select-String キーワード
+例：Get-WmiObject -list | Select-String Win32_Disk
+　　Get-WmiObject -list | Select-String Win32_System
+　　Get-WmiObject -list | Select-String Win32_Oper
+</code></pre>
+<hr>
 <h2>示例：获取本地PC的信息（保存为<code class="notranslate">getPCInfo.ps1</code>）</h2>
 <pre class="notranslate"><code class="notranslate">function global:getPCInfo ($pcname) {
     if ($pcname -eq $null) {
