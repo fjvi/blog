@@ -33,9 +33,12 @@ $ gal　或者   $ Get-Alias
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |`md`🔥|  mkdir|
-|`del`🔥|  Remove-Item|
-|`rm`🔥|  Remove-Item|
-|`rmdir`🔥|  Remove-Item|
+|`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
+|`rm`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
+|`rmdir`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
+|erase|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
+|rd|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
+|ri|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
 |`cat`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`type`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
@@ -75,7 +78,6 @@ $ gal　或者   $ Get-Alias
 |ipcsv|  Import-Csv|例：`$data = Import-Csv -Path "C:\temp\data.csv"`  从 CSV 文件导入数据|
 |epcsv|  Export-Csv|例：`$data \ Export-Csv -Path "C:\temp\output.csv" -NoTypeInformatio`  将数据导出为 CSV 文件|
 |epsn|  Export-PSSession|
-|erase|  Remove-Item|
 |etsn|  Enter-PSSession|
 |exsn|  Exit-PSSession|
 |fc|  Format-Custom|
@@ -138,9 +140,7 @@ $ gal　或者   $ Get-Alias
 |rbp|  Remove-PSBreakpoint|
 |rcjb|  Receive-Job|
 |rcsn|  Receive-PSSession|
-|rd|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件，如果文件不存在则不会抛出错误|
 |rdr|  Remove-PSDrive|
-|ri|  Remove-Item|
 |rjb|  Remove-Job|
 |rmo|  Remove-Module|
 |rni|  Rename-Item|
