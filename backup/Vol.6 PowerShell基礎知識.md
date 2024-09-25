@@ -18,15 +18,15 @@ $ gal　或者   $ Get-Alias
 
 |PowerShell Alias|PowerShell Command|例子|
 |---|---|---|
-|`gcm`🌛|  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
-|`gal`🔥|  Get-Alias|显示PowerShell Alias一覧|
+|gcm|  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
+|gal|  Get-Alias|显示PowerShell Alias一覧|
 |`pwd`🔥|  Get-Location|显示当前所在目录|
-|`gl`🌛|  Get-Location|显示当前所在目录|
+|gl|  Get-Location|显示当前所在目录|
 |`ls`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`dir`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
-|`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
+|gci|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
-|`chdir`🌛|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
+|chdir|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
@@ -45,15 +45,16 @@ $ gal　或者   $ Get-Alias
 |`kill`🔥|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |`curl`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
-|`iwr`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
+|iwr|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |`write`🔥|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
 |`echo`🔥|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
 |`clear`🔥|Clear-Host|清除控制台屏幕|
 |`cls`🔥|  Clear-Host|清除控制台屏幕|
-|`man`🌛|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
-|`ise`🌛|  powershell_ise.exe|
+|`man`🔥|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
+|ise|  powershell_ise.exe|
 |%|    ForEach-Object|
 |?|    Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
+|where|  Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
@@ -175,7 +176,6 @@ $ gal　或者   $ Get-Alias
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 |tee|  Tee-Object|
 |trcm|  Trace-Command|
-|where|  Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
 |wjb|  Wait-Job|
 
 
