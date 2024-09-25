@@ -7,7 +7,13 @@
     <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <script src='https://grapehut.us.kg/assets/RonanTheme.js'></script><script src='https://grapehut.us.kg/assets/GmeekVercount.js'></script><script src='https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js'></script><script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9661896697976587' crossorigin='anonymous'></script>
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="# 查看可安装的Linux版本
+<meta name="description" content="# 前提条件
+开启以下2个功能 （系统 > 附加功能 > 其他功能 ） 
+- WSL（Windows Subsystem for Linux）
+- 虚拟机平台
+
+
+# 查看可安装的Linux版本
 
 ```
 $ wsl --list --online　或者　$ wsl -l -o
@@ -45,10 +51,39 @@ $ wsl --list -v　或者　$ wsl -l -v
 ```
 $ wsl -s <DistributionName>　或者　$ wsl --set-default <DistributionName>
 ```
+
+# 启动Linux
+```
+$ wsl -d <DistributionName>
+```
+
+# 卸载Linux
+```
+$ wsl --unregister <DistributionName>
+```
+
+# 备份Linux
+```
+$ wsl --export <DistributionName> xxxx.tar
+```
+
+# 导入Linux
+```
+$ wsl --import <DistributionName> to-path   xxxx.tar
+```
+
+
+
 
 。">
 <meta property="og:title" content="Vol.10 关于WSL（Windows Subsystem for Linux）">
-<meta property="og:description" content="# 查看可安装的Linux版本
+<meta property="og:description" content="# 前提条件
+开启以下2个功能 （系统 > 附加功能 > 其他功能 ） 
+- WSL（Windows Subsystem for Linux）
+- 虚拟机平台
+
+
+# 查看可安装的Linux版本
 
 ```
 $ wsl --list --online　或者　$ wsl -l -o
@@ -86,6 +121,29 @@ $ wsl --list -v　或者　$ wsl -l -v
 ```
 $ wsl -s <DistributionName>　或者　$ wsl --set-default <DistributionName>
 ```
+
+# 启动Linux
+```
+$ wsl -d <DistributionName>
+```
+
+# 卸载Linux
+```
+$ wsl --unregister <DistributionName>
+```
+
+# 备份Linux
+```
+$ wsl --export <DistributionName> xxxx.tar
+```
+
+# 导入Linux
+```
+$ wsl --import <DistributionName> to-path   xxxx.tar
+```
+
+
+
 
 。">
 <meta property="og:type" content="article">
@@ -152,7 +210,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>查看可安装的Linux版本</h1>
+<div class="markdown-body" id="postBody"><h1>前提条件</h1>
+<p>开启以下2个功能 （系统 &gt; 附加功能 &gt; 其他功能 ）</p>
+<ul>
+<li>WSL（Windows Subsystem for Linux）</li>
+<li>虚拟机平台</li>
+</ul>
+<h1>查看可安装的Linux版本</h1>
 <pre class="notranslate"><code class="notranslate">$ wsl --list --online　或者　$ wsl -l -o
 </code></pre>
 <markdown-accessiblity-table><table role="table">
@@ -244,6 +308,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </code></pre>
 <h1>切换默认Linux版本</h1>
 <pre class="notranslate"><code class="notranslate">$ wsl -s &lt;DistributionName&gt;　或者　$ wsl --set-default &lt;DistributionName&gt;
+</code></pre>
+<h1>启动Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl -d &lt;DistributionName&gt;
+</code></pre>
+<h1>卸载Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --unregister &lt;DistributionName&gt;
+</code></pre>
+<h1>备份Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --export &lt;DistributionName&gt; xxxx.tar
+</code></pre>
+<h1>导入Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --import &lt;DistributionName&gt; to-path   xxxx.tar
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 

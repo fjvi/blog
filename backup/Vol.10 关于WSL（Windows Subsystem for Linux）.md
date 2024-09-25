@@ -1,3 +1,9 @@
+# 前提条件
+开启以下2个功能 （系统 > 附加功能 > 其他功能 ） 
+- WSL（Windows Subsystem for Linux）
+- 虚拟机平台
+
+
 # 查看可安装的Linux版本
 
 ```
@@ -36,4 +42,27 @@ $ wsl --list -v　或者　$ wsl -l -v
 ```
 $ wsl -s <DistributionName>　或者　$ wsl --set-default <DistributionName>
 ```
+
+# 启动Linux
+```
+$ wsl -d <DistributionName>
+```
+
+# 卸载Linux
+```
+$ wsl --unregister <DistributionName>
+```
+
+# 备份Linux
+```
+$ wsl --export <DistributionName> xxxx.tar
+```
+
+# 导入Linux
+```
+$ wsl --import <DistributionName> to-path   xxxx.tar
+```
+
+
+
 
