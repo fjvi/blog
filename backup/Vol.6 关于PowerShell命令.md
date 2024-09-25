@@ -161,6 +161,13 @@ PS>  gal　或者   PS>  Get-Alias
 |`echo`🔥|  Write-Output|同上|
 |`clear`🔥|Clear-Host|清除控制台屏幕|
 |`cls`🔥|  Clear-Host|同上|
+|**屏幕记录**|**History**|**⇣⇣⇣⇣⇣**|
+|clhy| Clear-History|
+|ghy|  Get-History|
+|h|  Get-History|
+|history|  Get-History|
+|ihy|  Invoke-History|
+|r|  Invoke-History|
 |**比較**|**Compare**|**⇣⇣⇣⇣⇣**|
 |`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
 |`compare`🔥|  Compare-Object|同上|
@@ -226,7 +233,6 @@ PS>  gal　或者   PS>  Get-Alias
 |?|    Where-Object|同上|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
-|clhy| Clear-History|
 |cvpa|  Convert-Path|
 |fc|  Format-Custom|
 |fhx|  Format-Hex|
@@ -243,13 +249,9 @@ PS>  gal　或者   PS>  Get-Alias
 |`gtz`🌛|  Get-TimeZone|
 |`gu`🌛|  Get-Unique|
 |`gwmi`🌛|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
-|`ghy`🌛|  Get-History|
-|`h`🌛|  Get-History|
-|`history`🌛|  Get-History|
 |group|  Group-Object|例：`Get-Process \| Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
 |icm|  Invoke-Command|
-|iex|  Invoke-Expression|
-|ihy|  Invoke-History|
+|`iex` 🔥 |  Invoke-Expression|
 |ipmo|  Import-Module|
 |irm|  Invoke-RestMethod|
 |iwmi|  Invoke-WmiMethod|
@@ -260,7 +262,6 @@ PS>  gal　或者   PS>  Get-Alias
 |nmo|  New-Module|
 |ogv|  Out-GridView|
 |oh|  Out-Host|
-|r|  Invoke-History|
 |rdr|  Remove-PSDrive|
 |rmo|  Remove-Module|
 |rsnp|  Remove-PSSnapin|
