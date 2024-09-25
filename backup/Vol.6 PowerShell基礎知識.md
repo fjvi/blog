@@ -21,47 +21,48 @@ $ gal　或者   $ Get-Alias
 |gcm|  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
 |gal|  Get-Alias|显示PowerShell Alias一覧|
 |`pwd`🔥|  Get-Location|显示当前所在目录|
-|gl|  Get-Location|显示当前所在目录|
+|gl|  Get-Location|同上|
 |`ls`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
-|`dir`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
-|gci|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
+|`dir`🔥|  Get-ChildItem|同上|
+|gci|  Get-ChildItem|同上|
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
-|chdir|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
-|sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
+|chdir|Set-Location|同上|
+|sl|  Set-Location|同上|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
-|`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
-|cpi|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
+|`cp`🔥|  Copy-Item|同上|
+|cpi|  Copy-Item|同上|
 |`mv`🔥| Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
-|move|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
-|mi|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
+|move|  Move-Item|同上|
+|mi|  Move-Item|同上|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
-|rni|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
+|rni|  Rename-Item|同上|
 |`md`🔥|  mkdir|
 |`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
-|`rm`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
-|`rmdir`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
-|erase|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
-|rd|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
-|ri|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
+|`rm`🔥|  Remove-Item|同上|
+|`rmdir`🔥|  Remove-Item|同上|
+|erase|  Remove-Item|同上|
+|rd|  Remove-Item|同上|
+|ri|  Remove-Item|同上|
 |`cat`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
-|`type`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
+|`type`🔥|  Get-Content|同上|
 |`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
-|`compare`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
+|`compare`🔥|  Compare-Object|同上|
 |`ps`🔥|  Get-Process|获取所有运行中的进程|
+|gps|  Get-Process|同上|
 |`start`🔥|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
 |`kill`🔥|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
-|`curl`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
-|iwr|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
+|`curl`🔥|  Invoke-WebRequest|同上|
+|iwr|  Invoke-WebRequest|同上|
 |`write`🔥|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
 |`echo`🔥|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
 |`clear`🔥|Clear-Host|清除控制台屏幕|
-|`cls`🔥|  Clear-Host|清除控制台屏幕|
+|`cls`🔥|  Clear-Host|同上|
 |`man`🔥|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |ise|  powershell_ise.exe|
 |%|    ForEach-Object|
 |?|    Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
-|where|  Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
+|where|  Where-Object|同上|
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
@@ -101,7 +102,6 @@ $ gal　或者   $ Get-Alias
 |`gm`🌛|  Get-Member|
 |`gmo`🌛|  Get-Module|
 |`gp`🌛|  Get-ItemProperty|
-|`gps`🌛|  Get-Process|获取所有运行中的进程|
 |`gpv`🌛|  Get-ItemPropertyValue|
 |`gsn`🌛|  Get-PSSession|
 |`gsnp`🌛|  Get-PSSnapin|
