@@ -43,8 +43,6 @@ $ gal　或者   $ Get-Alias
 |erase|  Remove-Item|同上|
 |rd|  Remove-Item|同上|
 |ri|  Remove-Item|同上|
-|`cat`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
-|`type`🔥|  Get-Content|同上|
 |`write`🔥|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
 |`echo`🔥|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
 |`clear`🔥|Clear-Host|清除控制台屏幕|
@@ -69,9 +67,12 @@ $ gal　或者   $ Get-Alias
 |spjb|  Stop-Job|
 |wjb|  Wait-Job|
 |**文件操作**|**Content**|**⇣⇣⇣⇣⇣**|
-|ac|  Add-Content|例：`"Another line" \| Add-Content -Path "C:\temp\output.txt"` 添加文件内容|
+|`cat`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
+|`type`🔥|  Get-Content|同上|
+|gc|  Get-Content|同上|
 |sc|  Set-Content|例：`"Hello, world!" \| Set-Content -Path "C:\temp\output.txt"`  写入文件内容|
-|gc|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
+|ac|  Add-Content|例：`"Another line" \| Add-Content -Path "C:\temp\output.txt"` 添加文件内容|
+|clc|  Clear-Content|
 |**CSV操作**|**CSV**|**⇣⇣⇣⇣⇣**|
 |ipcsv|  Import-Csv|例：`$data = Import-Csv -Path "C:\temp\data.csv"`  从 CSV 文件导入数据|
 |epcsv|  Export-Csv|例：`$data \| Export-Csv -Path "C:\temp\output.csv" -NoTypeInformatio`  将数据导出为 CSV 文件|
@@ -87,7 +88,6 @@ $ gal　或者   $ Get-Alias
 |?|    Where-Object|同上|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
-|clc|  Clear-Content|
 |clhy| Clear-History|
 |cli|  Clear-Item|
 |clp|  Clear-ItemProperty|
