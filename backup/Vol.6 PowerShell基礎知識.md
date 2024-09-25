@@ -35,6 +35,7 @@ $ gal　或者   $ Get-Alias
 |move|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |mi|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
+|rni|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |`md`🔥|  mkdir|
 |`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
 |`rm`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
@@ -143,7 +144,6 @@ $ gal　或者   $ Get-Alias
 |rdr|  Remove-PSDrive|
 |rjb|  Remove-Job|
 |rmo|  Remove-Module|
-|rni|  Rename-Item|
 |rnp|  Rename-ItemProperty|
 |rp|  Remove-ItemProperty|
 |rsn|  Remove-PSSession|

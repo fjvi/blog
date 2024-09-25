@@ -44,6 +44,7 @@ $ gal　或者   $ Get-Alias
 |move|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |mi|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
+|rni|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |`md`🔥|  mkdir|
 |`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
 |`rm`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
@@ -152,7 +153,6 @@ $ gal　或者   $ Get-Alias
 |rdr|  Remove-PSDrive|
 |rjb|  Remove-Job|
 |rmo|  Remove-Module|
-|rni|  Rename-Item|
 |rnp|  Rename-ItemProperty|
 |rp|  Remove-ItemProperty|
 |rsn|  Remove-PSSession|
@@ -255,6 +255,7 @@ $ gal　或者   $ Get-Alias
 |move|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |mi|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
+|rni|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |`md`🔥|  mkdir|
 |`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
 |`rm`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
@@ -363,7 +364,6 @@ $ gal　或者   $ Get-Alias
 |rdr|  Remove-PSDrive|
 |rjb|  Remove-Job|
 |rmo|  Remove-Module|
-|rni|  Rename-Item|
 |rnp|  Rename-ItemProperty|
 |rp|  Remove-ItemProperty|
 |rsn|  Remove-PSSession|
@@ -592,6 +592,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 <tr>
 <td><code class="notranslate">ren</code>🔥</td>
+<td>Rename-Item</td>
+<td>例：<code class="notranslate">Rename-Item C:\temp\oldname.txt C:\temp\newname.txt</code>  将文件 oldname.txt 重命名为 newname.txt</td>
+</tr>
+<tr>
+<td>rni</td>
 <td>Rename-Item</td>
 <td>例：<code class="notranslate">Rename-Item C:\temp\oldname.txt C:\temp\newname.txt</code>  将文件 oldname.txt 重命名为 newname.txt</td>
 </tr>
@@ -1133,11 +1138,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>rmo</td>
 <td>Remove-Module</td>
-<td></td>
-</tr>
-<tr>
-<td>rni</td>
-<td>Rename-Item</td>
 <td></td>
 </tr>
 <tr>
