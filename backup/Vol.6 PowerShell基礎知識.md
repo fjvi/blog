@@ -83,7 +83,7 @@ $ gal　或者   $ Get-Alias
 |sc|  Set-Content|例：`"Hello, world!" \ Set-Content -Path "C:\temp\output.txt"`  写入文件内容|
 |`gc`🌛|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`gcb`🌛|  Get-Clipboard|
-|`gci`🌛|  Get-ChildItem|
+|`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`gcm`🌛|  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
 |`gcs`🌛|  Get-PSCallStack|
 |`gdr`🌛|  Get-PSDrive|
