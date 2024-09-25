@@ -19,9 +19,12 @@ $ gal　或者   $ Get-Alias
 |PowerShell Alias|PowerShell Command|例子|
 |---|---|---|
 |`pwd`🔥|  Get-Location|显示当前所在目录|
+|`gl`🌛|  Get-Location|显示当前所在目录|
 |`ls`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`dir`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
+|`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
+|`chdir`🌛|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
@@ -51,7 +54,6 @@ $ gal　或者   $ Get-Alias
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
-|chdir|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |clc|  Clear-Content|
 |clhy| Clear-History|
 |cli|  Clear-Item|
@@ -83,14 +85,13 @@ $ gal　或者   $ Get-Alias
 |sc|  Set-Content|例：`"Hello, world!" \ Set-Content -Path "C:\temp\output.txt"`  写入文件内容|
 |`gc`🌛|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`gcb`🌛|  Get-Clipboard|
-|`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`gcm`🌛|  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
 |`gcs`🌛|  Get-PSCallStack|
 |`gdr`🌛|  Get-PSDrive|
 |`gi`🌛|  Get-Item|
 |`gin`🌛|  Get-ComputerInfo|
 |`gjb`🌛|  Get-Job|
-|`gl`🌛|  Get-Location|
+
 |`gm`🌛|  Get-Member|
 |`gmo`🌛|  Get-Module|
 |`gp`🌛|  Get-ItemProperty|

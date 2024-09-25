@@ -28,9 +28,12 @@ $ gal　或者   $ Get-Alias
 |PowerShell Alias|PowerShell Command|例子|
 |---|---|---|
 |`pwd`🔥|  Get-Location|显示当前所在目录|
+|`gl`🌛|  Get-Location|显示当前所在目录|
 |`ls`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`dir`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
+|`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
+|`chdir`🌛|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
@@ -60,7 +63,6 @@ $ gal　或者   $ Get-Alias
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
-|chdir|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |clc|  Clear-Content|
 |clhy| Clear-History|
 |cli|  Clear-Item|
@@ -92,14 +94,13 @@ $ gal　或者   $ Get-Alias
 |sc|  Set-Content|例：`'Hello, world!' \ Set-Content -Path 'C:\temp\output.txt'`  写入文件内容|
 |`gc`🌛|  Get-Content|例：`$content = Get-Content -Path 'C:\temp\input.txt'`  读取文件内容|
 |`gcb`🌛|  Get-Clipboard|
-|`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`gcm`🌛|  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
 |`gcs`🌛|  Get-PSCallStack|
 |`gdr`🌛|  Get-PSDrive|
 |`gi`🌛|  Get-Item|
 |`gin`🌛|  Get-ComputerInfo|
 |`gjb`🌛|  Get-Job|
-|`gl`🌛|  Get-Location|
+
 |`gm`🌛|  Get-Member|
 |`gmo`🌛|  Get-Module|
 |`gp`🌛|  Get-ItemProperty|
@@ -239,9 +240,12 @@ $ gal　或者   $ Get-Alias
 |PowerShell Alias|PowerShell Command|例子|
 |---|---|---|
 |`pwd`🔥|  Get-Location|显示当前所在目录|
+|`gl`🌛|  Get-Location|显示当前所在目录|
 |`ls`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`dir`🔥|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
+|`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
+|`chdir`🌛|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
@@ -271,7 +275,6 @@ $ gal　或者   $ Get-Alias
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
-|chdir|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |clc|  Clear-Content|
 |clhy| Clear-History|
 |cli|  Clear-Item|
@@ -303,14 +306,13 @@ $ gal　或者   $ Get-Alias
 |sc|  Set-Content|例：`'Hello, world!' \ Set-Content -Path 'C:\temp\output.txt'`  写入文件内容|
 |`gc`🌛|  Get-Content|例：`$content = Get-Content -Path 'C:\temp\input.txt'`  读取文件内容|
 |`gcb`🌛|  Get-Clipboard|
-|`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`gcm`🌛|  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
 |`gcs`🌛|  Get-PSCallStack|
 |`gdr`🌛|  Get-PSDrive|
 |`gi`🌛|  Get-Item|
 |`gin`🌛|  Get-ComputerInfo|
 |`gjb`🌛|  Get-Job|
-|`gl`🌛|  Get-Location|
+
 |`gm`🌛|  Get-Member|
 |`gmo`🌛|  Get-Module|
 |`gp`🌛|  Get-ItemProperty|
@@ -516,6 +518,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>显示当前所在目录</td>
 </tr>
 <tr>
+<td><code class="notranslate">gl</code>🌛</td>
+<td>Get-Location</td>
+<td>显示当前所在目录</td>
+</tr>
+<tr>
 <td><code class="notranslate">ls</code>🔥</td>
 <td>Get-ChildItem</td>
 <td>例：<code class="notranslate">Get-ChildItem -Path .</code>　 列出当前目录下的所有文件和目录</td>
@@ -526,7 +533,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>例：<code class="notranslate">Get-ChildItem -Path .</code>　 列出当前目录下的所有文件和目录</td>
 </tr>
 <tr>
+<td><code class="notranslate">gci</code>🌛</td>
+<td>Get-ChildItem</td>
+<td>例：<code class="notranslate">Get-ChildItem -Path .</code>　 列出当前目录下的所有文件和目录</td>
+</tr>
+<tr>
 <td><code class="notranslate">cd</code>🔥</td>
+<td>Set-Location</td>
+<td>例：<code class="notranslate">Set-Location C:\Users\YourName\Documents</code>  切换到用户的文档目录</td>
+</tr>
+<tr>
+<td><code class="notranslate">chdir</code>🌛</td>
 <td>Set-Location</td>
 <td>例：<code class="notranslate">Set-Location C:\Users\YourName\Documents</code>  切换到用户的文档目录</td>
 </tr>
@@ -674,11 +691,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>CFS</td>
 <td>ConvertFrom-String</td>
 <td></td>
-</tr>
-<tr>
-<td>chdir</td>
-<td>Set-Location</td>
-<td>例：<code class="notranslate">Set-Location C:\Users\YourName\Documents</code>  切换到用户的文档目录</td>
 </tr>
 <tr>
 <td>clc</td>
@@ -836,11 +848,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td></td>
 </tr>
 <tr>
-<td><code class="notranslate">gci</code>🌛</td>
-<td>Get-ChildItem</td>
-<td>例：<code class="notranslate">Get-ChildItem -Path .</code>　 列出当前目录下的所有文件和目录</td>
-</tr>
-<tr>
 <td><code class="notranslate">gcm</code>🌛</td>
 <td>Get-Command</td>
 <td>例：<code class="notranslate">Get-Command Get-*</code>　查找所有以 Get- 开头的 cmdlets</td>
@@ -870,443 +877,94 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>Get-Job</td>
 <td></td>
 </tr>
-<tr>
-<td><code class="notranslate">gl</code>🌛</td>
-<td>Get-Location</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gm</code>🌛</td>
-<td>Get-Member</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gmo</code>🌛</td>
-<td>Get-Module</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gp</code>🌛</td>
-<td>Get-ItemProperty</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gps</code>🌛</td>
-<td>Get-Process</td>
-<td>获取所有运行中的进程</td>
-</tr>
-<tr>
-<td><code class="notranslate">gpv</code>🌛</td>
-<td>Get-ItemPropertyValue</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gsn</code>🌛</td>
-<td>Get-PSSession</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gsnp</code>🌛</td>
-<td>Get-PSSnapin</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gsv</code>🌛</td>
-<td>Get-Service</td>
-<td>获取所有服务的状态</td>
-</tr>
-<tr>
-<td><code class="notranslate">gtz</code>🌛</td>
-<td>Get-TimeZone</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gu</code>🌛</td>
-<td>Get-Unique</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gv</code>🌛</td>
-<td>Get-Variable</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gwmi</code>🌛</td>
-<td>Get-WmiObject</td>
-<td>例：<code class="notranslate">Get-WmiObject -Class Win32_OperatingSystem</code>  获取操作系统信息</td>
-</tr>
-<tr>
-<td><code class="notranslate">ghy</code>🌛</td>
-<td>Get-History</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">h</code>🌛</td>
-<td>Get-History</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">history</code>🌛</td>
-<td>Get-History</td>
-<td></td>
-</tr>
-<tr>
-<td>group</td>
-<td>Group-Object</td>
-<td>例：<code class="notranslate">Get-Process \Group-Object -Property MainModule.FileName</code>  按主模块的文件名分组进程</td>
-</tr>
-<tr>
-<td>icm</td>
-<td>Invoke-Command</td>
-<td></td>
-</tr>
-<tr>
-<td>iex</td>
-<td>Invoke-Expression</td>
-<td></td>
-</tr>
-<tr>
-<td>ihy</td>
-<td>Invoke-History</td>
-<td></td>
-</tr>
-<tr>
-<td>ii</td>
-<td>Invoke-Item</td>
-<td></td>
-</tr>
-<tr>
-<td>ipmo</td>
-<td>Import-Module</td>
-<td></td>
-</tr>
-<tr>
-<td>ipsn</td>
-<td>Import-PSSession</td>
-<td></td>
-</tr>
-<tr>
-<td>irm</td>
-<td>Invoke-RestMethod</td>
-<td></td>
-</tr>
-<tr>
-<td>iwmi</td>
-<td>Invoke-WmiMethod</td>
-<td></td>
-</tr>
-<tr>
-<td>lp</td>
-<td>Out-Printer</td>
-<td></td>
-</tr>
-<tr>
-<td>measure</td>
-<td>Measure-Object</td>
-<td></td>
-</tr>
-<tr>
-<td>mi</td>
-<td>Move-Item</td>
-<td></td>
-</tr>
-<tr>
-<td>mount</td>
-<td>New-PSDrive</td>
-<td></td>
-</tr>
-<tr>
-<td>move</td>
-<td>Move-Item</td>
-<td></td>
-</tr>
-<tr>
-<td>mp</td>
-<td>Move-ItemProperty</td>
-<td></td>
-</tr>
-<tr>
-<td>nal</td>
-<td>New-Alias</td>
-<td></td>
-</tr>
-<tr>
-<td>ndr</td>
-<td>New-PSDrive</td>
-<td></td>
-</tr>
-<tr>
-<td>ni</td>
-<td>New-Item</td>
-<td>例：<code class="notranslate">New-Item -ItemType Directory -Path .\myFolder</code>  在当前目录下创建一个名为 myFolder 的新目录</td>
-</tr>
-<tr>
-<td>nmo</td>
-<td>New-Module</td>
-<td></td>
-</tr>
-<tr>
-<td>npssc</td>
-<td>New-PSSessionConfigur</td>
-<td></td>
-</tr>
-<tr>
-<td>nsn</td>
-<td>New-PSSession</td>
-<td></td>
-</tr>
-<tr>
-<td>nv</td>
-<td>New-Variable</td>
-<td></td>
-</tr>
-<tr>
-<td>ogv</td>
-<td>Out-GridView</td>
-<td></td>
-</tr>
-<tr>
-<td>oh</td>
-<td>Out-Host</td>
-<td></td>
-</tr>
-<tr>
-<td>popd</td>
-<td>Pop-Location</td>
-<td></td>
-</tr>
-<tr>
-<td>pushd</td>
-<td>Push-Location</td>
-<td></td>
-</tr>
-<tr>
-<td>r</td>
-<td>Invoke-History</td>
-<td></td>
-</tr>
-<tr>
-<td>rbp</td>
-<td>Remove-PSBreakpoint</td>
-<td></td>
-</tr>
-<tr>
-<td>rcjb</td>
-<td>Receive-Job</td>
-<td></td>
-</tr>
-<tr>
-<td>rcsn</td>
-<td>Receive-PSSession</td>
-<td></td>
-</tr>
-<tr>
-<td>rd</td>
-<td>Remove-Item</td>
-<td>例：<code class="notranslate">Remove-Item C:\temp\test.txt -Force</code>  删除名为 test.txt 的文件，如果文件不存在则不会抛出错误</td>
-</tr>
-<tr>
-<td>rdr</td>
-<td>Remove-PSDrive</td>
-<td></td>
-</tr>
-<tr>
-<td>ri</td>
-<td>Remove-Item</td>
-<td></td>
-</tr>
-<tr>
-<td>rjb</td>
-<td>Remove-Job</td>
-<td></td>
-</tr>
-<tr>
-<td>rmo</td>
-<td>Remove-Module</td>
-<td></td>
-</tr>
-<tr>
-<td>rni</td>
-<td>Rename-Item</td>
-<td></td>
-</tr>
-<tr>
-<td>rnp</td>
-<td>Rename-ItemProperty</td>
-<td></td>
-</tr>
-<tr>
-<td>rp</td>
-<td>Remove-ItemProperty</td>
-<td></td>
-</tr>
-<tr>
-<td>rsn</td>
-<td>Remove-PSSession</td>
-<td></td>
-</tr>
-<tr>
-<td>rsnp</td>
-<td>Remove-PSSnapin</td>
-<td></td>
-</tr>
-<tr>
-<td>rujb</td>
-<td>Resume-Job</td>
-<td></td>
-</tr>
-<tr>
-<td>rv</td>
-<td>Remove-Variable</td>
-<td></td>
-</tr>
-<tr>
-<td>rvpa</td>
-<td>Resolve-Path</td>
-<td></td>
-</tr>
-<tr>
-<td>rwmi</td>
-<td>Remove-WmiObject</td>
-<td></td>
-</tr>
-<tr>
-<td>sal</td>
-<td>Set-Alias</td>
-<td></td>
-</tr>
-<tr>
-<td>sbp</td>
-<td>Set-PSBreakpoint</td>
-<td></td>
-</tr>
-<tr>
-<td>scb</td>
-<td>Set-Clipboard</td>
-<td></td>
-</tr>
-<tr>
-<td>select</td>
-<td>Select-Object</td>
-<td></td>
-</tr>
-<tr>
-<td>set</td>
-<td>Set-Variable</td>
-<td></td>
-</tr>
-<tr>
-<td>shcm</td>
-<td>Show-Command</td>
-<td></td>
-</tr>
-<tr>
-<td>si</td>
-<td>Set-Item</td>
-<td></td>
-</tr>
-<tr>
-<td>sl</td>
-<td>Set-Location</td>
-<td>例：<code class="notranslate">Set-Location C:\Users\YourName\Documents</code>  切换到用户的文档目录</td>
-</tr>
-<tr>
-<td>sleep</td>
-<td>Start-Sleep</td>
-<td></td>
-</tr>
-<tr>
-<td>sls</td>
-<td>Select-String</td>
-<td>例：<code class="notranslate">Select-String -Path "C:\temp\log.txt" -Pattern "error"</code>  在日志文件中搜索含有 "error" 的行</td>
-</tr>
-<tr>
-<td>sort</td>
-<td>Sort-Object</td>
-<td>例：<code class="notranslate">Get-Process \ Sort-Object -Property CPU -Descending</code>   按 CPU 占用率降序排列所有进程</td>
-</tr>
-<tr>
-<td>sp</td>
-<td>Set-ItemProperty</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">sajb</code>✨️</td>
-<td>Start-Job</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">spjb</code>✨️</td>
-<td>Stop-Job</td>
-<td></td>
-</tr>
-<tr>
-<td><code class="notranslate">saps</code>✨️</td>
-<td>Start-Process</td>
-<td>例：<code class="notranslate">Start-Process notepad</code>  启动记事本应用程序</td>
-</tr>
-<tr>
-<td><code class="notranslate">spps</code>✨️</td>
-<td>Stop-Process</td>
-<td>例：<code class="notranslate">Stop-Process -Name notepad</code>  终止所有名为 notepad 的进程</td>
-</tr>
-<tr>
-<td><code class="notranslate">sasv</code>✨️</td>
-<td>Start-Service</td>
-<td>例：<code class="notranslate">Start-Service -Name spooler</code>  启动 Print Spooler 服务</td>
-</tr>
-<tr>
-<td><code class="notranslate">spsv</code>✨️</td>
-<td>Stop-Service</td>
-<td>例：<code class="notranslate">Stop-Service -Name spooler</code>  停止 Print Spooler 服务</td>
-</tr>
-<tr>
-<td><code class="notranslate">rssv</code>✨️</td>
-<td>Restart-Service</td>
-<td>例：<code class="notranslate">Restart-Service -Name spooler</code>  重启 Print Spooler 服务</td>
-</tr>
-<tr>
-<td>stz</td>
-<td>Set-TimeZone</td>
-<td></td>
-</tr>
-<tr>
-<td>sujb</td>
-<td>Suspend-Job</td>
-<td></td>
-</tr>
-<tr>
-<td>sv</td>
-<td>Set-Variable</td>
-<td></td>
-</tr>
-<tr>
-<td>swmi</td>
-<td>Set-WmiInstance</td>
-<td>在 WMI 中创建或修改实例</td>
-</tr>
-<tr>
-<td>tee</td>
-<td>Tee-Object</td>
-<td></td>
-</tr>
-<tr>
-<td>trcm</td>
-<td>Trace-Command</td>
-<td></td>
-</tr>
-<tr>
-<td>where</td>
-<td>Where-Object</td>
-<td>例：<code class="notranslate">Get-Process \ Where-Object { $_.CPU -gt 10 }</code>  获取 CPU 占用率大于 10% 的所有进程</td>
-</tr>
-<tr>
-<td>wjb</td>
-<td>Wait-Job</td>
-<td></td>
-</tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<p>|<code class="notranslate">gm</code>🌛|  Get-Member|<br>
+|<code class="notranslate">gmo</code>🌛|  Get-Module|<br>
+|<code class="notranslate">gp</code>🌛|  Get-ItemProperty|<br>
+|<code class="notranslate">gps</code>🌛|  Get-Process|获取所有运行中的进程|<br>
+|<code class="notranslate">gpv</code>🌛|  Get-ItemPropertyValue|<br>
+|<code class="notranslate">gsn</code>🌛|  Get-PSSession|<br>
+|<code class="notranslate">gsnp</code>🌛|  Get-PSSnapin|<br>
+|<code class="notranslate">gsv</code>🌛|  Get-Service|获取所有服务的状态|<br>
+|<code class="notranslate">gtz</code>🌛|  Get-TimeZone|<br>
+|<code class="notranslate">gu</code>🌛|  Get-Unique|<br>
+|<code class="notranslate">gv</code>🌛|  Get-Variable|<br>
+|<code class="notranslate">gwmi</code>🌛|  Get-WmiObject|例：<code class="notranslate">Get-WmiObject -Class Win32_OperatingSystem</code>  获取操作系统信息|<br>
+|<code class="notranslate">ghy</code>🌛|  Get-History|<br>
+|<code class="notranslate">h</code>🌛|  Get-History|<br>
+|<code class="notranslate">history</code>🌛|  Get-History|<br>
+|group|  Group-Object|例：<code class="notranslate">Get-Process \Group-Object -Property MainModule.FileName</code>  按主模块的文件名分组进程|<br>
+|icm|  Invoke-Command|<br>
+|iex|  Invoke-Expression|<br>
+|ihy|  Invoke-History|<br>
+|ii|  Invoke-Item|<br>
+|ipmo|  Import-Module|<br>
+|ipsn|  Import-PSSession|<br>
+|irm|  Invoke-RestMethod|<br>
+|iwmi|  Invoke-WmiMethod|<br>
+|lp|  Out-Printer|<br>
+|measure|  Measure-Object|<br>
+|mi|  Move-Item|<br>
+|mount|  New-PSDrive|<br>
+|move|  Move-Item|<br>
+|mp|  Move-ItemProperty|<br>
+|nal|  New-Alias|<br>
+|ndr|  New-PSDrive|<br>
+|ni|  New-Item|例：<code class="notranslate">New-Item -ItemType Directory -Path .\myFolder</code>  在当前目录下创建一个名为 myFolder 的新目录|<br>
+|nmo|  New-Module|<br>
+|npssc|  New-PSSessionConfigur|<br>
+|nsn|  New-PSSession|<br>
+|nv|  New-Variable|<br>
+|ogv|  Out-GridView|<br>
+|oh|  Out-Host|<br>
+|popd|  Pop-Location|<br>
+|pushd|  Push-Location|<br>
+|r|  Invoke-History|<br>
+|rbp|  Remove-PSBreakpoint|<br>
+|rcjb|  Receive-Job|<br>
+|rcsn|  Receive-PSSession|<br>
+|rd|  Remove-Item|例：<code class="notranslate">Remove-Item C:\temp\test.txt -Force</code>  删除名为 test.txt 的文件，如果文件不存在则不会抛出错误|<br>
+|rdr|  Remove-PSDrive|<br>
+|ri|  Remove-Item|<br>
+|rjb|  Remove-Job|<br>
+|rmo|  Remove-Module|<br>
+|rni|  Rename-Item|<br>
+|rnp|  Rename-ItemProperty|<br>
+|rp|  Remove-ItemProperty|<br>
+|rsn|  Remove-PSSession|<br>
+|rsnp|  Remove-PSSnapin|<br>
+|rujb|  Resume-Job|<br>
+|rv|  Remove-Variable|<br>
+|rvpa|  Resolve-Path|<br>
+|rwmi|  Remove-WmiObject|<br>
+|sal|  Set-Alias|<br>
+|sbp|  Set-PSBreakpoint|<br>
+|scb|  Set-Clipboard|<br>
+|select|  Select-Object|<br>
+|set|  Set-Variable|<br>
+|shcm|  Show-Command|<br>
+|si|  Set-Item|<br>
+|sl|  Set-Location|例：<code class="notranslate">Set-Location C:\Users\YourName\Documents</code>  切换到用户的文档目录|<br>
+|sleep|  Start-Sleep|<br>
+|sls|  Select-String|例：<code class="notranslate">Select-String -Path "C:\temp\log.txt" -Pattern "error"</code>  在日志文件中搜索含有 "error" 的行|<br>
+|sort|  Sort-Object|例：<code class="notranslate">Get-Process \ Sort-Object -Property CPU -Descending</code>   按 CPU 占用率降序排列所有进程|<br>
+|sp|  Set-ItemProperty|<br>
+|<code class="notranslate">sajb</code>✨️|  Start-Job|<br>
+|<code class="notranslate">spjb</code>✨️|  Stop-Job|<br>
+|<code class="notranslate">saps</code>✨️|  Start-Process|例：<code class="notranslate">Start-Process notepad</code>  启动记事本应用程序|<br>
+|<code class="notranslate">spps</code>✨️|  Stop-Process|例：<code class="notranslate">Stop-Process -Name notepad</code>  终止所有名为 notepad 的进程|<br>
+|<code class="notranslate">sasv</code>✨️|  Start-Service|例：<code class="notranslate">Start-Service -Name spooler</code>  启动 Print Spooler 服务|<br>
+|<code class="notranslate">spsv</code>✨️|  Stop-Service|例：<code class="notranslate">Stop-Service -Name spooler</code>  停止 Print Spooler 服务|<br>
+|<code class="notranslate">rssv</code>✨️|  Restart-Service|例：<code class="notranslate">Restart-Service -Name spooler</code>  重启 Print Spooler 服务|<br>
+|stz|  Set-TimeZone|<br>
+|sujb|  Suspend-Job|<br>
+|sv|  Set-Variable|<br>
+|swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|<br>
+|tee|  Tee-Object|<br>
+|trcm|  Trace-Command|<br>
+|where|  Where-Object|例：<code class="notranslate">Get-Process \ Where-Object { $_.CPU -gt 10 }</code>  获取 CPU 占用率大于 10% 的所有进程|<br>
+|wjb|  Wait-Job|</p>
 <h2>常用PowerShell命令</h2>
 <p>　　1. 像文件系统那样操作Windows Registry——cd hkcu:<br>
 　　2. 在文件里递回地搜索某个字符串——dir –r | select string "searchforthis"<br>
