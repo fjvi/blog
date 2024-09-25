@@ -159,6 +159,10 @@ PS>  gal　或者   PS>  Get-Alias
 |sajb|  Start-Job|
 |spjb|  Stop-Job|
 |wjb|  Wait-Job|
+|rjb|  Remove-Job|
+|rcjb|  Receive-Job|
+|rujb|  Resume-Job|
+|sujb|  Suspend-Job|
 |**文件操作**|**Content**|**⇣⇣⇣⇣⇣**|
 |`cat`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`type`🔥|  Get-Content|同上|
@@ -242,16 +246,13 @@ PS>  gal　或者   PS>  Get-Alias
 |oh|  Out-Host|
 |r|  Invoke-History|
 |rbp|  Remove-PSBreakpoint|
-|rcjb|  Receive-Job|
 |rcsn|  Receive-PSSession|
 |rdr|  Remove-PSDrive|
-|rjb|  Remove-Job|
 |rmo|  Remove-Module|
 |rnp|  Rename-ItemProperty|
 |rp|  Remove-ItemProperty|
 |rsn|  Remove-PSSession|
 |rsnp|  Remove-PSSnapin|
-|rujb|  Resume-Job|
 |rv|  Remove-Variable|
 |rvpa|  Resolve-Path|
 |rwmi|  Remove-WmiObject|
@@ -266,7 +267,6 @@ PS>  gal　或者   PS>  Get-Alias
 |sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
 |sp|  Set-ItemProperty|
 |stz|  Set-TimeZone|
-|sujb|  Suspend-Job|
 |sv|  Set-Variable|
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 |tee|  Tee-Object|
