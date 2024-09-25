@@ -50,7 +50,12 @@ $ gal　或者   $ Get-Alias
 |`ps`🔥|  Get-Process|获取所有运行中的进程|
 |gps|  Get-Process|同上|
 |`start`🔥|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
+|`saps`✨️|  Start-Process|同上|
 |`kill`🔥|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
+|`spps`✨️|  Stop-Process|同上|
+|`gsv`🔥|  Get-Service|获取所有服务的状态|
+|`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
+|`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |`curl`🔥|  Invoke-WebRequest|同上|
 |iwr|  Invoke-WebRequest|同上|
@@ -105,7 +110,6 @@ $ gal　或者   $ Get-Alias
 |`gpv`🌛|  Get-ItemPropertyValue|
 |`gsn`🌛|  Get-PSSession|
 |`gsnp`🌛|  Get-PSSnapin|
-|`gsv`🌛|  Get-Service|获取所有服务的状态|
 |`gtz`🌛|  Get-TimeZone|
 |`gu`🌛|  Get-Unique|
 |`gv`🌛|  Get-Variable|
@@ -165,10 +169,6 @@ $ gal　或者   $ Get-Alias
 |sp|  Set-ItemProperty|
 |`sajb`✨️|  Start-Job|
 |`spjb`✨️|  Stop-Job|
-|`saps`✨️|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
-|`spps`✨️|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
-|`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
-|`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |`rssv`✨️|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
 |stz|  Set-TimeZone|
 |sujb|  Suspend-Job|

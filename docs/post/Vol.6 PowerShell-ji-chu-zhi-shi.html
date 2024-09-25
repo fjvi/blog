@@ -59,7 +59,12 @@ $ gal　或者   $ Get-Alias
 |`ps`🔥|  Get-Process|获取所有运行中的进程|
 |gps|  Get-Process|同上|
 |`start`🔥|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
+|`saps`✨️|  Start-Process|同上|
 |`kill`🔥|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
+|`spps`✨️|  Stop-Process|同上|
+|`gsv`🔥|  Get-Service|获取所有服务的状态|
+|`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
+|`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri 'https://api.github.com/repos/powershell/powershell/releases/latest'`  获取 GitHub 上最新发布的版本信息|
 |`curl`🔥|  Invoke-WebRequest|同上|
 |iwr|  Invoke-WebRequest|同上|
@@ -114,7 +119,6 @@ $ gal　或者   $ Get-Alias
 |`gpv`🌛|  Get-ItemPropertyValue|
 |`gsn`🌛|  Get-PSSession|
 |`gsnp`🌛|  Get-PSSnapin|
-|`gsv`🌛|  Get-Service|获取所有服务的状态|
 |`gtz`🌛|  Get-TimeZone|
 |`gu`🌛|  Get-Unique|
 |`gv`🌛|  Get-Variable|
@@ -174,10 +178,6 @@ $ gal　或者   $ Get-Alias
 |sp|  Set-ItemProperty|
 |`sajb`✨️|  Start-Job|
 |`spjb`✨️|  Stop-Job|
-|`saps`✨️|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
-|`spps`✨️|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
-|`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
-|`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |`rssv`✨️|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
 |stz|  Set-TimeZone|
 |sujb|  Suspend-Job|
@@ -270,7 +270,12 @@ $ gal　或者   $ Get-Alias
 |`ps`🔥|  Get-Process|获取所有运行中的进程|
 |gps|  Get-Process|同上|
 |`start`🔥|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
+|`saps`✨️|  Start-Process|同上|
 |`kill`🔥|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
+|`spps`✨️|  Stop-Process|同上|
+|`gsv`🔥|  Get-Service|获取所有服务的状态|
+|`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
+|`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri 'https://api.github.com/repos/powershell/powershell/releases/latest'`  获取 GitHub 上最新发布的版本信息|
 |`curl`🔥|  Invoke-WebRequest|同上|
 |iwr|  Invoke-WebRequest|同上|
@@ -325,7 +330,6 @@ $ gal　或者   $ Get-Alias
 |`gpv`🌛|  Get-ItemPropertyValue|
 |`gsn`🌛|  Get-PSSession|
 |`gsnp`🌛|  Get-PSSnapin|
-|`gsv`🌛|  Get-Service|获取所有服务的状态|
 |`gtz`🌛|  Get-TimeZone|
 |`gu`🌛|  Get-Unique|
 |`gv`🌛|  Get-Variable|
@@ -385,10 +389,6 @@ $ gal　或者   $ Get-Alias
 |sp|  Set-ItemProperty|
 |`sajb`✨️|  Start-Job|
 |`spjb`✨️|  Stop-Job|
-|`saps`✨️|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
-|`spps`✨️|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
-|`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
-|`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |`rssv`✨️|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
 |stz|  Set-TimeZone|
 |sujb|  Suspend-Job|
@@ -671,9 +671,34 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>例：<code class="notranslate">Start-Process notepad</code>  启动记事本应用程序</td>
 </tr>
 <tr>
+<td><code class="notranslate">saps</code>✨️</td>
+<td>Start-Process</td>
+<td>同上</td>
+</tr>
+<tr>
 <td><code class="notranslate">kill</code>🔥</td>
 <td>Stop-Process</td>
 <td>例：<code class="notranslate">Stop-Process -Name notepad</code>  终止所有名为 notepad 的进程</td>
+</tr>
+<tr>
+<td><code class="notranslate">spps</code>✨️</td>
+<td>Stop-Process</td>
+<td>同上</td>
+</tr>
+<tr>
+<td><code class="notranslate">gsv</code>🔥</td>
+<td>Get-Service</td>
+<td>获取所有服务的状态</td>
+</tr>
+<tr>
+<td><code class="notranslate">sasv</code>✨️</td>
+<td>Start-Service</td>
+<td>例：<code class="notranslate">Start-Service -Name spooler</code>  启动 Print Spooler 服务</td>
+</tr>
+<tr>
+<td><code class="notranslate">spsv</code>✨️</td>
+<td>Stop-Service</td>
+<td>例：<code class="notranslate">Stop-Service -Name spooler</code>  停止 Print Spooler 服务</td>
 </tr>
 <tr>
 <td><code class="notranslate">wget</code>🔥</td>
@@ -944,11 +969,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td><code class="notranslate">gsnp</code>🌛</td>
 <td>Get-PSSnapin</td>
 <td></td>
-</tr>
-<tr>
-<td><code class="notranslate">gsv</code>🌛</td>
-<td>Get-Service</td>
-<td>获取所有服务的状态</td>
 </tr>
 <tr>
 <td><code class="notranslate">gtz</code>🌛</td>
@@ -1244,26 +1264,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td><code class="notranslate">spjb</code>✨️</td>
 <td>Stop-Job</td>
 <td></td>
-</tr>
-<tr>
-<td><code class="notranslate">saps</code>✨️</td>
-<td>Start-Process</td>
-<td>例：<code class="notranslate">Start-Process notepad</code>  启动记事本应用程序</td>
-</tr>
-<tr>
-<td><code class="notranslate">spps</code>✨️</td>
-<td>Stop-Process</td>
-<td>例：<code class="notranslate">Stop-Process -Name notepad</code>  终止所有名为 notepad 的进程</td>
-</tr>
-<tr>
-<td><code class="notranslate">sasv</code>✨️</td>
-<td>Start-Service</td>
-<td>例：<code class="notranslate">Start-Service -Name spooler</code>  启动 Print Spooler 服务</td>
-</tr>
-<tr>
-<td><code class="notranslate">spsv</code>✨️</td>
-<td>Stop-Service</td>
-<td>例：<code class="notranslate">Stop-Service -Name spooler</code>  停止 Print Spooler 服务</td>
 </tr>
 <tr>
 <td><code class="notranslate">rssv</code>✨️</td>
