@@ -101,7 +101,12 @@ PS>  gal　或者   PS>  Get-Alias
 |PowerShell Alias|PowerShell Command|例子|
 |---|---|---|
 |`gcm` 👙 |  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
+|**别名**|**Alias**|**⇣⇣⇣⇣⇣**|
 |`gal`👙 |  Get-Alias|显示PowerShell Alias一覧|
+|nal|  New-Alias|
+|sal|  Set-Alias|
+|ipal|  Import-Alias|
+|epal|  Export-Alias|
 |**目录**|**Location**|**⇣⇣⇣⇣⇣**|
 |`pwd`🔥|  Get-Location|显示当前所在目录|
 |gl|  Get-Location|同上|
@@ -144,6 +149,13 @@ PS>  gal　或者   PS>  Get-Alias
 |cpp|  Copy-ItemProperty|
 |mp|  Move-ItemProperty|
 |gpv|  Get-ItemPropertyValue|
+|**变量**|**Variable**|**⇣⇣⇣⇣⇣**|
+|set|  Set-Variable|
+|sv|  Set-Variable|
+|gv|  Get-Variable|
+|nv|  New-Variable|
+|clv|  Clear-Variable|
+|rv|  Remove-Variable|
 |**屏幕**|**Host**|**⇣⇣⇣⇣⇣**|
 |`write`🔥|  Write-Output|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
 |`echo`🔥|  Write-Output|同上|
@@ -187,6 +199,24 @@ PS>  gal　或者   PS>  Get-Alias
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |`curl`🔥|  Invoke-WebRequest|同上|
 |iwr|  Invoke-WebRequest|同上|
+|**Session**|**PSSession**|**⇣⇣⇣⇣⇣**|
+|cnsn| Connect-PSSession|
+|dnsn|  Disconnect-PSSession|
+|epsn|  Export-PSSession|
+|etsn|  Enter-PSSession|
+|exsn|  Exit-PSSession|
+|gsn|  Get-PSSession|
+|ipsn|  Import-PSSession|
+|rcsn|  Receive-PSSession|
+|rsn|  Remove-PSSession|
+|nsn|  New-PSSession|
+|npssc|  New-PSSessionConfigur|
+|**Breakpoint**|**PSBreakpoint**|**⇣⇣⇣⇣⇣**|
+|dbp|  Disable-PSBreakpoint|
+|ebp|  Enable-PSBreakpoint|
+|gbp|  Get-PSBreakpoint|
+|sbp|  Set-PSBreakpoint|
+|rbp|  Remove-PSBreakpoint|
 |**その他**|**Others**|**⇣⇣⇣⇣⇣**|
 |`man`🔥|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |ise|  powershell_ise.exe|
@@ -197,34 +227,21 @@ PS>  gal　或者   PS>  Get-Alias
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
 |clhy| Clear-History|
-|clv|  Clear-Variable|
-|cnsn| Connect-PSSession|
 |cvpa|  Convert-Path|
-|dbp|  Disable-PSBreakpoint|
-|dnsn|  Disconnect-PSSession|
-|ebp|  Enable-PSBreakpoint|
-|ipal|  Import-Alias|
-|epal|  Export-Alias|
-|epsn|  Export-PSSession|
-|etsn|  Enter-PSSession|
-|exsn|  Exit-PSSession|
 |fc|  Format-Custom|
 |fhx|  Format-Hex|
 |fl|  Format-List|
 |ft|  Format-Table|
 |fw|  Format-Wide|
-|`gbp`🌛|  Get-PSBreakpoint|
 |`gcb`🌛|  Get-Clipboard|
 |`gcs`🌛|  Get-PSCallStack|
 |`gdr`🌛|  Get-PSDrive|
 |`gin`🌛|  Get-ComputerInfo|
 |`gm`🌛|  Get-Member|
 |`gmo`🌛|  Get-Module|
-|`gsn`🌛|  Get-PSSession|
 |`gsnp`🌛|  Get-PSSnapin|
 |`gtz`🌛|  Get-TimeZone|
 |`gu`🌛|  Get-Unique|
-|`gv`🌛|  Get-Variable|
 |`gwmi`🌛|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
 |`ghy`🌛|  Get-History|
 |`h`🌛|  Get-History|
@@ -234,41 +251,28 @@ PS>  gal　或者   PS>  Get-Alias
 |iex|  Invoke-Expression|
 |ihy|  Invoke-History|
 |ipmo|  Import-Module|
-|ipsn|  Import-PSSession|
 |irm|  Invoke-RestMethod|
 |iwmi|  Invoke-WmiMethod|
 |lp|  Out-Printer|
 |measure|  Measure-Object|
 |mount|  New-PSDrive|
-|nal|  New-Alias|
 |ndr|  New-PSDrive|
 |nmo|  New-Module|
-|npssc|  New-PSSessionConfigur|
-|nsn|  New-PSSession|
-|nv|  New-Variable|
 |ogv|  Out-GridView|
 |oh|  Out-Host|
 |r|  Invoke-History|
-|rbp|  Remove-PSBreakpoint|
-|rcsn|  Receive-PSSession|
 |rdr|  Remove-PSDrive|
 |rmo|  Remove-Module|
-|rsn|  Remove-PSSession|
 |rsnp|  Remove-PSSnapin|
-|rv|  Remove-Variable|
 |rvpa|  Resolve-Path|
 |rwmi|  Remove-WmiObject|
-|sal|  Set-Alias|
-|sbp|  Set-PSBreakpoint|
 |scb|  Set-Clipboard|
 |select|  Select-Object|
-|set|  Set-Variable|
 |shcm|  Show-Command|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
 |sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
 |stz|  Set-TimeZone|
-|sv|  Set-Variable|
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 |tee|  Tee-Object|
 |trcm|  Trace-Command|
