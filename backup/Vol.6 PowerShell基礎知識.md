@@ -51,7 +51,7 @@ $ gal　或者   $ Get-Alias
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
-|chdir|Set-Location|
+|chdir|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |clc|  Clear-Content|
 |clhy| Clear-History|
 |cli|  Clear-Item|
