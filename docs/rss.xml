@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Wed, 25 Sep 2024 02:28:40 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.10 WSL（Windows Subsystem for Linux）</title><link>https://grapehut.us.kg/post/Vol.10%20WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</link><description># 查看可安装的Linux版本&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Wed, 25 Sep 2024 02:36:02 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.10 WSL（Windows Subsystem for Linux）</title><link>https://grapehut.us.kg/post/Vol.10%20WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</link><description># 查看可安装的Linux版本&#13;
 &#13;
 ```&#13;
 $ wsl --list --online　或者　$ wsl -l -o&#13;
@@ -267,6 +267,7 @@ $ gal　或者   $ Get-Alias&#13;
 |`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|&#13;
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|&#13;
 |`chdir`🌛|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|&#13;
+|sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|&#13;
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|&#13;
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|&#13;
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|&#13;
@@ -397,7 +398,6 @@ $ gal　或者   $ Get-Alias&#13;
 |set|  Set-Variable|&#13;
 |shcm|  Show-Command|&#13;
 |si|  Set-Item|&#13;
-|sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|&#13;
 |sleep|  Start-Sleep|&#13;
 |sls|  Select-String|例：`Select-String -Path 'C:\temp\log.txt' -Pattern 'error'`  在日志文件中搜索含有 'error' 的行|&#13;
 |sort|  Sort-Object|例：`Get-Process \ Sort-Object -Property CPU -Descending`   按 CPU 占用率降序排列所有进程|&#13;

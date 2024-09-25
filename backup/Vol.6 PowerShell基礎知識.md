@@ -27,6 +27,7 @@ $ gal　或者   $ Get-Alias
 |`gci`🌛|  Get-ChildItem|例：`Get-ChildItem -Path .`　 列出当前目录下的所有文件和目录|
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`chdir`🌛|Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
+|sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
@@ -157,7 +158,6 @@ $ gal　或者   $ Get-Alias
 |set|  Set-Variable|
 |shcm|  Show-Command|
 |si|  Set-Item|
-|sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
 |sort|  Sort-Object|例：`Get-Process \ Sort-Object -Property CPU -Descending`   按 CPU 占用率降序排列所有进程|
