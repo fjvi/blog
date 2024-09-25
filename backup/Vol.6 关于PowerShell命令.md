@@ -101,19 +101,19 @@ PS>  gal　或者   PS>  Get-Alias
 |PowerShell Alias|PowerShell Command|例子|
 |---|---|---|
 |**命令**|**Command**|**⇣⇣⇣⇣⇣**|
-|`gcm` 👙 |  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
+|gcm 👙 |  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
 |icm|  Invoke-Command|
 |shcm|  Show-Command|
 |trcm|  Trace-Command|
 |**别名**|**Alias**|**⇣⇣⇣⇣⇣**|
-|`gal`👙 |  Get-Alias|显示PowerShell Alias一覧|
+|gal👙 |  Get-Alias|显示PowerShell Alias一覧|
 |nal|  New-Alias|
 |sal|  Set-Alias|
 |ipal|  Import-Alias|
 |epal|  Export-Alias|
 |**磁盘**|**PSDrive**|**⇣⇣⇣⇣⇣**|
-|gdr|  Get-PSDrive|
-|mount|  New-PSDrive|
+|gdr 👙|  Get-PSDrive|
+|mount👙|  New-PSDrive|
 |ndr|  New-PSDrive|
 |rdr|  Remove-PSDrive|
 |**目录**|**Location**|**⇣⇣⇣⇣⇣**|
