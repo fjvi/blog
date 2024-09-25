@@ -100,7 +100,11 @@ PS>  gal　或者   PS>  Get-Alias
 
 |PowerShell Alias|PowerShell Command|例子|
 |---|---|---|
+|**命令**|**Command**|**⇣⇣⇣⇣⇣**|
 |`gcm` 👙 |  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
+|icm|  Invoke-Command|
+|shcm|  Show-Command|
+|trcm|  Trace-Command|
 |**别名**|**Alias**|**⇣⇣⇣⇣⇣**|
 |`gal`👙 |  Get-Alias|显示PowerShell Alias一覧|
 |nal|  New-Alias|
@@ -250,7 +254,6 @@ PS>  gal　或者   PS>  Get-Alias
 |`gu`🌛|  Get-Unique|
 |`gwmi`🌛|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
 |group|  Group-Object|例：`Get-Process \| Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
-|icm|  Invoke-Command|
 |`iex` 🔥 |  Invoke-Expression|
 |ipmo|  Import-Module|
 |irm|  Invoke-RestMethod|
@@ -269,14 +272,12 @@ PS>  gal　或者   PS>  Get-Alias
 |rwmi|  Remove-WmiObject|
 |scb|  Set-Clipboard|
 |select|  Select-Object|
-|shcm|  Show-Command|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
 |sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
 |stz|  Set-TimeZone|
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 |tee|  Tee-Object|
-|trcm|  Trace-Command|
 
 
 
