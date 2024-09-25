@@ -56,6 +56,7 @@ $ gal　或者   $ Get-Alias
 |`gsv`🔥|  Get-Service|获取所有服务的状态|
 |`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
 |`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
+|`rssv`✨️|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |`curl`🔥|  Invoke-WebRequest|同上|
 |iwr|  Invoke-WebRequest|同上|
@@ -169,7 +170,6 @@ $ gal　或者   $ Get-Alias
 |sp|  Set-ItemProperty|
 |`sajb`✨️|  Start-Job|
 |`spjb`✨️|  Stop-Job|
-|`rssv`✨️|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
 |stz|  Set-TimeZone|
 |sujb|  Suspend-Job|
 |sv|  Set-Variable|
