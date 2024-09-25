@@ -89,13 +89,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands</a></p>
 </blockquote>
 <h1>WSL 的版本</h1>
-<pre class="notranslate"><code class="notranslate">wsl --version
+<pre class="notranslate"><code class="notranslate">$ wsl --version
 </code></pre>
 <h1>WSL 的状態</h1>
-<pre class="notranslate"><code class="notranslate">wsl --status
+<pre class="notranslate"><code class="notranslate">$ wsl --status
 </code></pre>
 <h1>帮助</h1>
-<pre class="notranslate"><code class="notranslate">wsl --help
+<pre class="notranslate"><code class="notranslate">$ wsl --help
 </code></pre>
 <h1>查看可安装的Linux版本</h1>
 <pre class="notranslate"><code class="notranslate">$ wsl --list --online　或者　$ wsl -l -o
@@ -182,30 +182,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tbody>
 </table></markdown-accessiblity-table>
 <h1>安装 WSL</h1>
-<pre class="notranslate"><code class="notranslate">$ wsl --install -d &lt;Distribution Name&gt;　或者　$ wsl --install　**默认安装Ubuntu**
+<pre class="notranslate"><code class="notranslate">$ wsl --install -d &lt;DistributionName&gt;　或者　$ wsl --install　**默认安装Ubuntu**
 </code></pre>
 <h1>查看已安装的Linux版本</h1>
 <pre class="notranslate"><code class="notranslate">$ wsl --list --verbose　或者　$ wsl -l -v
-</code></pre>
-<h1>全部关闭</h1>
-<pre class="notranslate"><code class="notranslate">wsl --shutdown
-</code></pre>
-<h1>关闭指定Linux版本</h1>
-<pre class="notranslate"><code class="notranslate">wsl --terminate &lt;Distribution Name&gt;
-</code></pre>
-<h1>查看IP</h1>
-<ul>
-<li>WSL 2 経由でインストールされた Linux ディストリビューションの IP アドレスを返します (WSL 2 VM アドレス)</li>
-</ul>
-<pre class="notranslate"><code class="notranslate">wsl hostname -I
-</code></pre>
-<ul>
-<li>WSL 2 から見た Windows マシンの IP アドレスを返します (WSL 2 VM)</li>
-</ul>
-<pre class="notranslate"><code class="notranslate">ip route show | grep -i default | awk '{ print $3}'
-</code></pre>
-<h1>切换默认Linux版本</h1>
-<pre class="notranslate"><code class="notranslate">$ wsl -s &lt;DistributionName&gt;　或者　$ wsl --set-default &lt;Distribution Name&gt;
 </code></pre>
 <h1>快速启动默认Linux版本</h1>
 <pre class="notranslate"><code class="notranslate">$ wsl ~
@@ -213,20 +193,43 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h1>启动指定Linux版本</h1>
 <pre class="notranslate"><code class="notranslate">$ wsl -d &lt;DistributionName&gt;
 </code></pre>
+<h1>切换默认Linux版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl -s &lt;DistributionName&gt;　或者　$ wsl --set-default &lt;DistributionName&gt;
+</code></pre>
+<h1>全部关闭</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --shutdown
+</code></pre>
+<h1>关闭指定Linux版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --terminate &lt;DistributionName&gt;
+</code></pre>
+<h1>备份Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --export &lt;DistributionName&gt; xxx.tar
+</code></pre>
+<h1>导入Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --import &lt;DistributionName&gt; &lt;Install-Location&gt; xxx.tar
+</code></pre>
 <h1>卸载Linux</h1>
 <pre class="notranslate"><code class="notranslate">$ wsl --unregister &lt;DistributionName&gt;
 </code></pre>
-<h1>备份Linux</h1>
-<pre class="notranslate"><code class="notranslate">$ wsl --export &lt;Distribution Name&gt; xxx.tar
+<h1>查看IP</h1>
+<ul>
+<li>Linux ディストリビューションの IP アドレスを返します (WSL 2 VM アドレス)</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">$ wsl hostname -I
 </code></pre>
-<h1>导入Linux</h1>
-<pre class="notranslate"><code class="notranslate">$ wsl --import &lt;Distribution Name&gt; &lt;Install-Location&gt; xxx.tar
+<ul>
+<li>WSL 2 から見た Windows マシンの IP アドレスを返します</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">$ ip route show | grep -i default | awk '{ print $3}'
 </code></pre>
 <h1>マウント</h1>
-<pre class="notranslate"><code class="notranslate">wsl --mount &lt;DiskPath&gt;
+<blockquote>
+<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk</a></p>
+</blockquote>
+<pre class="notranslate"><code class="notranslate">$ wsl --mount &lt;DiskPath&gt;
 </code></pre>
 <h1>マウント解除</h1>
-<pre class="notranslate"><code class="notranslate">wsl --unmount &lt;DiskPath&gt;
+<pre class="notranslate"><code class="notranslate">$ wsl --unmount &lt;DiskPath&gt;
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
