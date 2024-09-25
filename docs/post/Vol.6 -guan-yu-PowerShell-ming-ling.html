@@ -193,30 +193,32 @@ $ gal　或者   $ Get-Alias
 
 
 ## 常用PowerShell命令
-　　1. 像文件系统那样操作Windows Registry——cd hkcu:
-　　2. 在文件里递回地搜索某个字符串——dir –r | select string 'searchforthis' 
-　　3. 使用内存找到五个进程——ps | sort –p ws | select –last 5
-　　4. 循环（停止，然后重启）一个服务，如DHCP——Restart-Service DHCP
-　　5. 在文件夹里列出所有条目——Get-ChildItem – Force
-　　6. 递归一系列的目录或文件夹——Get-ChildItem –Force c:\directory –Recurse
-　　7. 在目录里移除所有文件而不需要单个移除——Remove-Item C:\tobedeleted –Recurse
-　　8. 重启当前计算机——(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
-　　9. 获取计算机组成或模型信息——Get-WmiObject -Class Win32_ComputerSystem
-　　10. 获取当前计算机的BIOS信息——Get-WmiObject -Class Win32_BIOS -ComputerName .
-　　11. 列出所安装的修复程序（如QFE或Windows Update文件）——Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName .
-　　12. 获取当前登录计算机的用户的用户名—— Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName .
-　　13. 获取当前计算机所安装的应用的名字——Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1
-　　14. 获取分配给当前计算机的IP地址——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress
-　　15. 获取当前机器详细的IP配置报道——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*
-　　16. 找到当前计算机上使用DHCP启用的网络卡——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter 'DHCPEnabled=true' -ComputerName .
-　　17. 在当前计算机上的所有网络适配器上启用DHCP——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}
-　　18. 在远程计算机上安装MSI包——(Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq 'Win32_Product'}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi)
-　　19. 使用基于MSI的应用升级包升级所安装的应用——(Get-WmiObject -Class Win32_Product -ComputerName . -Filter 'Name='name_of_app_to_be_upgraded'').Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi)
-　　20. 从当前计算机移除MSI包——(Get-WmiObject -Class Win32_Product -Filter 'Name='product_to_remove'' -ComputerName . ).Uninstall()
-　　21. 一分钟后远程关闭另一台机器——Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE
-　　22. 添加打印机——(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3)
-　　23. 移除打印机——(New-Object -ComObject WScript.Network).RemovePrinterConnection('\printerserver\hplaser3 ')
-　　24. 进入PowerShell会话——invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1。">
+- `cd hkcu`　　像文件系统那样操作Windows Registry
+- `dir –r | select string 'searchforthis'`　在文件里递回地搜索某个字符串
+- `ps | sort –p ws | select –last 5`　使用内存找到五个进程
+- `Restart-Service DHCP`　　重启一个服务，如DHCP
+- `Get-ChildItem – Force`　　在文件夹里列出所有条目
+- `Get-ChildItem –Force c:\directory –Recurse`　　递归一系列的目录或文件夹
+-`Remove-Item C:\tobedeleted –Recurse`　　在目录里移除所有文件而不需要单个移除
+
+- `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
+- `Get-WmiObject -Class Win32_ComputerSystem` 获取计算机组成或模型信息
+- `Get-WmiObject -Class Win32_BIOS -ComputerName` 获取当前计算机的BIOS信息
+- `Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName` 列出所安装的修复程序（如QFE或Windows Update文件）
+- `Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName` 获取当前登录计算机的用户的用户名
+- `Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1` 获取当前计算机所安装的应用的名字
+- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress` 获取分配给当前计算机的IP地址
+- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*`  获取当前机器详细的IP配置报道
+- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter 'DHCPEnabled=true' -ComputerName`  找到当前计算机上使用DHCP启用的网络卡
+- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}` 在当前计算机上的所有网络适配器上启用DHCP
+- `Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq 'Win32_Product'}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi`  在远程计算机上安装MSI包
+- `Get-WmiObject -Class Win32_Product -ComputerName . -Filter 'Name='name_of_app_to_be_upgraded'').Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi`　使用基于MSI的应用升级包升级所安装的应用
+- `Get-WmiObject -Class Win32_Product -Filter 'Name='product_to_remove'' -ComputerName . ).Uninstall()` 从当前计算机移除MSI包
+
+- `Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE` 一分钟后远程关闭另一台机器
+- `New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3`　添加打印机
+- `New-Object -ComObject WScript.Network).RemovePrinterConnection('\printerserver\hplaser3 '`  移除打印机
+- `invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1`　进入PowerShell会话。">
 <meta property="og:title" content="Vol.6 关于PowerShell命令">
 <meta property="og:description" content="`Gmeek-html<img src='https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png'>`
 
@@ -404,30 +406,32 @@ $ gal　或者   $ Get-Alias
 
 
 ## 常用PowerShell命令
-　　1. 像文件系统那样操作Windows Registry——cd hkcu:
-　　2. 在文件里递回地搜索某个字符串——dir –r | select string 'searchforthis' 
-　　3. 使用内存找到五个进程——ps | sort –p ws | select –last 5
-　　4. 循环（停止，然后重启）一个服务，如DHCP——Restart-Service DHCP
-　　5. 在文件夹里列出所有条目——Get-ChildItem – Force
-　　6. 递归一系列的目录或文件夹——Get-ChildItem –Force c:\directory –Recurse
-　　7. 在目录里移除所有文件而不需要单个移除——Remove-Item C:\tobedeleted –Recurse
-　　8. 重启当前计算机——(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
-　　9. 获取计算机组成或模型信息——Get-WmiObject -Class Win32_ComputerSystem
-　　10. 获取当前计算机的BIOS信息——Get-WmiObject -Class Win32_BIOS -ComputerName .
-　　11. 列出所安装的修复程序（如QFE或Windows Update文件）——Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName .
-　　12. 获取当前登录计算机的用户的用户名—— Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName .
-　　13. 获取当前计算机所安装的应用的名字——Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1
-　　14. 获取分配给当前计算机的IP地址——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress
-　　15. 获取当前机器详细的IP配置报道——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*
-　　16. 找到当前计算机上使用DHCP启用的网络卡——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter 'DHCPEnabled=true' -ComputerName .
-　　17. 在当前计算机上的所有网络适配器上启用DHCP——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}
-　　18. 在远程计算机上安装MSI包——(Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq 'Win32_Product'}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi)
-　　19. 使用基于MSI的应用升级包升级所安装的应用——(Get-WmiObject -Class Win32_Product -ComputerName . -Filter 'Name='name_of_app_to_be_upgraded'').Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi)
-　　20. 从当前计算机移除MSI包——(Get-WmiObject -Class Win32_Product -Filter 'Name='product_to_remove'' -ComputerName . ).Uninstall()
-　　21. 一分钟后远程关闭另一台机器——Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE
-　　22. 添加打印机——(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3)
-　　23. 移除打印机——(New-Object -ComObject WScript.Network).RemovePrinterConnection('\printerserver\hplaser3 ')
-　　24. 进入PowerShell会话——invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1。">
+- `cd hkcu`　　像文件系统那样操作Windows Registry
+- `dir –r | select string 'searchforthis'`　在文件里递回地搜索某个字符串
+- `ps | sort –p ws | select –last 5`　使用内存找到五个进程
+- `Restart-Service DHCP`　　重启一个服务，如DHCP
+- `Get-ChildItem – Force`　　在文件夹里列出所有条目
+- `Get-ChildItem –Force c:\directory –Recurse`　　递归一系列的目录或文件夹
+-`Remove-Item C:\tobedeleted –Recurse`　　在目录里移除所有文件而不需要单个移除
+
+- `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
+- `Get-WmiObject -Class Win32_ComputerSystem` 获取计算机组成或模型信息
+- `Get-WmiObject -Class Win32_BIOS -ComputerName` 获取当前计算机的BIOS信息
+- `Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName` 列出所安装的修复程序（如QFE或Windows Update文件）
+- `Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName` 获取当前登录计算机的用户的用户名
+- `Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1` 获取当前计算机所安装的应用的名字
+- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress` 获取分配给当前计算机的IP地址
+- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*`  获取当前机器详细的IP配置报道
+- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter 'DHCPEnabled=true' -ComputerName`  找到当前计算机上使用DHCP启用的网络卡
+- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}` 在当前计算机上的所有网络适配器上启用DHCP
+- `Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq 'Win32_Product'}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi`  在远程计算机上安装MSI包
+- `Get-WmiObject -Class Win32_Product -ComputerName . -Filter 'Name='name_of_app_to_be_upgraded'').Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi`　使用基于MSI的应用升级包升级所安装的应用
+- `Get-WmiObject -Class Win32_Product -Filter 'Name='product_to_remove'' -ComputerName . ).Uninstall()` 从当前计算机移除MSI包
+
+- `Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE` 一分钟后远程关闭另一台机器
+- `New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3`　添加打印机
+- `New-Object -ComObject WScript.Network).RemovePrinterConnection('\printerserver\hplaser3 '`  移除打印机
+- `invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1`　进入PowerShell会话。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://grapehut.us.kg/post/Vol.6%20-guan-yu-PowerShell-ming-ling.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg">
@@ -1308,30 +1312,78 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tbody>
 </table></markdown-accessiblity-table>
 <h2>常用PowerShell命令</h2>
-<p>　　1. 像文件系统那样操作Windows Registry——cd hkcu:<br>
-　　2. 在文件里递回地搜索某个字符串——dir –r | select string "searchforthis"<br>
-　　3. 使用内存找到五个进程——ps | sort –p ws | select –last 5<br>
-　　4. 循环（停止，然后重启）一个服务，如DHCP——Restart-Service DHCP<br>
-　　5. 在文件夹里列出所有条目——Get-ChildItem – Force<br>
-　　6. 递归一系列的目录或文件夹——Get-ChildItem –Force c:\directory –Recurse<br>
-　　7. 在目录里移除所有文件而不需要单个移除——Remove-Item C:\tobedeleted –Recurse<br>
-　　8. 重启当前计算机——(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)<br>
-　　9. 获取计算机组成或模型信息——Get-WmiObject -Class Win32_ComputerSystem<br>
-　　10. 获取当前计算机的BIOS信息——Get-WmiObject -Class Win32_BIOS -ComputerName .<br>
-　　11. 列出所安装的修复程序（如QFE或Windows Update文件）——Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName .<br>
-　　12. 获取当前登录计算机的用户的用户名—— Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName .<br>
-　　13. 获取当前计算机所安装的应用的名字——Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1<br>
-　　14. 获取分配给当前计算机的IP地址——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress<br>
-　　15. 获取当前机器详细的IP配置报道——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*<br>
-　　16. 找到当前计算机上使用DHCP启用的网络卡——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=true" -ComputerName .<br>
-　　17. 在当前计算机上的所有网络适配器上启用DHCP——Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$<em>.EnableDHCP()}<br>
-　　18. 在远程计算机上安装MSI包——(Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$</em>.Name -eq "Win32_Product"}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi)<br>
-　　19. 使用基于MSI的应用升级包升级所安装的应用——(Get-WmiObject -Class Win32_Product -ComputerName . -Filter "Name='name_of_app_to_be_upgraded'").Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi)<br>
-　　20. 从当前计算机移除MSI包——(Get-WmiObject -Class Win32_Product -Filter "Name='product_to_remove'" -ComputerName . ).Uninstall()<br>
-　　21. 一分钟后远程关闭另一台机器——Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE<br>
-　　22. 添加打印机——(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3)<br>
-　　23. 移除打印机——(New-Object -ComObject WScript.Network).RemovePrinterConnection("\printerserver\hplaser3 ")<br>
-　　24. 进入PowerShell会话——invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1</p></div>
+<ul>
+<li>
+<p><code class="notranslate">cd hkcu</code>　　像文件系统那样操作Windows Registry</p>
+</li>
+<li>
+<p><code class="notranslate">dir –r | select string "searchforthis"</code>　在文件里递回地搜索某个字符串</p>
+</li>
+<li>
+<p><code class="notranslate">ps | sort –p ws | select –last 5</code>　使用内存找到五个进程</p>
+</li>
+<li>
+<p><code class="notranslate">Restart-Service DHCP</code>　　重启一个服务，如DHCP</p>
+</li>
+<li>
+<p><code class="notranslate">Get-ChildItem – Force</code>　　在文件夹里列出所有条目</p>
+</li>
+<li>
+<p><code class="notranslate">Get-ChildItem –Force c:\directory –Recurse</code>　　递归一系列的目录或文件夹<br>
+-<code class="notranslate">Remove-Item C:\tobedeleted –Recurse</code>　　在目录里移除所有文件而不需要单个移除</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)</code> 重启当前计算机</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_ComputerSystem</code> 获取计算机组成或模型信息</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_BIOS -ComputerName</code> 获取当前计算机的BIOS信息</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName</code> 列出所安装的修复程序（如QFE或Windows Update文件）</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName</code> 获取当前登录计算机的用户的用户名</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1</code> 获取当前计算机所安装的应用的名字</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress</code> 获取分配给当前计算机的IP地址</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*</code>  获取当前机器详细的IP配置报道</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=true" -ComputerName</code>  找到当前计算机上使用DHCP启用的网络卡</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}</code> 在当前计算机上的所有网络适配器上启用DHCP</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq "Win32_Product"}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi</code>  在远程计算机上安装MSI包</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_Product -ComputerName . -Filter "Name='name_of_app_to_be_upgraded'").Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi</code>　使用基于MSI的应用升级包升级所安装的应用</p>
+</li>
+<li>
+<p><code class="notranslate">Get-WmiObject -Class Win32_Product -Filter "Name='product_to_remove'" -ComputerName . ).Uninstall()</code> 从当前计算机移除MSI包</p>
+</li>
+<li>
+<p><code class="notranslate">Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE</code> 一分钟后远程关闭另一台机器</p>
+</li>
+<li>
+<p><code class="notranslate">New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3</code>　添加打印机</p>
+</li>
+<li>
+<p><code class="notranslate">New-Object -ComObject WScript.Network).RemovePrinterConnection("\printerserver\hplaser3 "</code>  移除打印机</p>
+</li>
+<li>
+<p><code class="notranslate">invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1</code>　进入PowerShell会话</p>
+</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
