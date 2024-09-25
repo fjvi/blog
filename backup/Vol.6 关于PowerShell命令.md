@@ -111,6 +111,11 @@ PS>  gal　或者   PS>  Get-Alias
 |sal|  Set-Alias|
 |ipal|  Import-Alias|
 |epal|  Export-Alias|
+|**磁盘**|**PSDrive**|**⇣⇣⇣⇣⇣**|
+|gdr|  Get-PSDrive|
+|mount|  New-PSDrive|
+|ndr|  New-PSDrive|
+|rdr|  Remove-PSDrive|
 |**目录**|**Location**|**⇣⇣⇣⇣⇣**|
 |`pwd`🔥|  Get-Location|显示当前所在目录|
 |gl|  Get-Location|同上|
@@ -143,7 +148,7 @@ PS>  gal　或者   PS>  Get-Alias
 |si|  Set-Item|？|
 |ii|  Invoke-Item|？|
 |cli|  Clear-Item|？|
-|`md`🔥|  mkdir|
+|`md`🔥|  mkdir|创建文件夹|
 |**操作目录或文件属性**|**ItemProperty**|**⇣⇣⇣⇣⇣**|
 |gp|  Get-ItemProperty|
 |sp|  Set-ItemProperty|
@@ -245,7 +250,6 @@ PS>  gal　或者   PS>  Get-Alias
 |fw|  Format-Wide|
 |`gcb`🌛|  Get-Clipboard|
 |`gcs`🌛|  Get-PSCallStack|
-|`gdr`🌛|  Get-PSDrive|
 |`gin`🌛|  Get-ComputerInfo|
 |`gm`🌛|  Get-Member|
 |`gmo`🌛|  Get-Module|
@@ -260,12 +264,9 @@ PS>  gal　或者   PS>  Get-Alias
 |iwmi|  Invoke-WmiMethod|
 |lp|  Out-Printer|
 |measure|  Measure-Object|
-|mount|  New-PSDrive|
-|ndr|  New-PSDrive|
 |nmo|  New-Module|
 |ogv|  Out-GridView|
 |oh|  Out-Host|
-|rdr|  Remove-PSDrive|
 |rmo|  Remove-Module|
 |rsnp|  Remove-PSSnapin|
 |rvpa|  Resolve-Path|
