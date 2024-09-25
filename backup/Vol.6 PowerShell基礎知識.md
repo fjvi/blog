@@ -157,7 +157,7 @@ $ gal　或者   $ Get-Alias
 |set|  Set-Variable|
 |shcm|  Show-Command|
 |si|  Set-Item|
-|sl|  Set-Location|
+|sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
 |sort|  Sort-Object|例：`Get-Process \ Sort-Object -Property CPU -Descending`   按 CPU 占用率降序排列所有进程|
