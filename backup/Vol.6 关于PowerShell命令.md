@@ -45,30 +45,33 @@ $ gal　或者   $ Get-Alias
 |ri|  Remove-Item|同上|
 |`cat`🔥|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`type`🔥|  Get-Content|同上|
+|`write`🔥|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
+|`echo`🔥|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
+|`clear`🔥|Clear-Host|清除控制台屏幕|
+|`cls`🔥|  Clear-Host|同上|
 |`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
 |`compare`🔥|  Compare-Object|同上|
+|进程|Process|⇣⇣⇣⇣⇣|
 |`ps`🔥|  Get-Process|获取所有运行中的进程|
 |gps|  Get-Process|同上|
 |`start`🔥|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
 |`saps`✨️|  Start-Process|同上|
 |`kill`🔥|  Stop-Process|例：`Stop-Process -Name notepad`  终止所有名为 notepad 的进程|
 |`spps`✨️|  Stop-Process|同上|
+|服务|Service|⇣⇣⇣⇣⇣|
 |`gsv`🔥|  Get-Service|获取所有服务的状态|
 |`sasv`✨️|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
 |`spsv`✨️|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
 |`rssv`✨️|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
+|网络请求|WebRequest|⇣⇣⇣⇣⇣|
 |`wget`🔥|  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |`curl`🔥|  Invoke-WebRequest|同上|
 |iwr|  Invoke-WebRequest|同上|
-|`write`🔥|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
-|`echo`🔥|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
-|`clear`🔥|Clear-Host|清除控制台屏幕|
-|`cls`🔥|  Clear-Host|同上|
 |`man`🔥|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |ise|  powershell_ise.exe|
 |%|    ForEach-Object|
-|?|    Where-Object|例：`Get-Process \ Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
-|where|  Where-Object|同上|
+|where|  Where-Object|例：`Get-Process \| Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
+|?|    Where-Object|同上|
 |ac|   Add-Content|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
@@ -86,7 +89,7 @@ $ gal　或者   $ Get-Alias
 |ipal|  Import-Alias|
 |epal|  Export-Alias|
 |ipcsv|  Import-Csv|例：`$data = Import-Csv -Path "C:\temp\data.csv"`  从 CSV 文件导入数据|
-|epcsv|  Export-Csv|例：`$data \ Export-Csv -Path "C:\temp\output.csv" -NoTypeInformatio`  将数据导出为 CSV 文件|
+|epcsv|  Export-Csv|例：`$data \| Export-Csv -Path "C:\temp\output.csv" -NoTypeInformatio`  将数据导出为 CSV 文件|
 |epsn|  Export-PSSession|
 |etsn|  Enter-PSSession|
 |exsn|  Exit-PSSession|
@@ -97,7 +100,7 @@ $ gal　或者   $ Get-Alias
 |ft|  Format-Table|
 |fw|  Format-Wide|
 |`gbp`🌛|  Get-PSBreakpoint|
-|sc|  Set-Content|例：`"Hello, world!" \ Set-Content -Path "C:\temp\output.txt"`  写入文件内容|
+|sc|  Set-Content|例：`"Hello, world!" | Set-Content -Path "C:\temp\output.txt"`  写入文件内容|
 |`gc`🌛|  Get-Content|例：`$content = Get-Content -Path "C:\temp\input.txt"`  读取文件内容|
 |`gcb`🌛|  Get-Clipboard|
 |`gcs`🌛|  Get-PSCallStack|
@@ -118,7 +121,7 @@ $ gal　或者   $ Get-Alias
 |`ghy`🌛|  Get-History|
 |`h`🌛|  Get-History|
 |`history`🌛|  Get-History|
-|group|  Group-Object|例：`Get-Process \Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
+|group|  Group-Object|例：`Get-Process \| Group-Object -Property MainModule.FileName`  按主模块的文件名分组进程|
 |icm|  Invoke-Command|
 |iex|  Invoke-Expression|
 |ihy|  Invoke-History|
@@ -166,7 +169,7 @@ $ gal　或者   $ Get-Alias
 |si|  Set-Item|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
-|sort|  Sort-Object|例：`Get-Process \ Sort-Object -Property CPU -Descending`   按 CPU 占用率降序排列所有进程|
+|sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Descending`   按 CPU 占用率降序排列所有进程|
 |sp|  Set-ItemProperty|
 |`sajb`✨️|  Start-Job|
 |`spjb`✨️|  Stop-Job|
