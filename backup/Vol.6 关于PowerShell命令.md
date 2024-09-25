@@ -153,7 +153,7 @@ PS>  gal　或者   PS>  Get-Alias
 |`gsv`🔥|  Get-Service|获取所有服务的状态|
 |sasv|  Start-Service|例：`Start-Service -Name spooler`  启动 Print Spooler 服务|
 |spsv|  Stop-Service|例：`Stop-Service -Name spooler`  停止 Print Spooler 服务|
-|rssv|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
+|ー|  Restart-Service|例：`Restart-Service -Name spooler`  重启 Print Spooler 服务|
 |**任務**|**Job**|**⇣⇣⇣⇣⇣**|
 |`gjb`🔥|  Get-Job|
 |sajb|  Start-Job|
