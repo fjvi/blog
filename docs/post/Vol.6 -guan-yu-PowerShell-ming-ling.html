@@ -10,12 +10,14 @@
 <meta name="description" content="`Gmeek-html<img src='https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png'>`
 
 # Powershell的基本概念
+
 ## ps1文件
 一个PowerShell脚本其实就是一个简单的文本文件， 这个文件包含了一系列PowerShell命令，每个命令显示为独立的一行，文件名需要加上.ps1的扩展名。">
 <meta property="og:title" content="Vol.6 关于PowerShell命令">
 <meta property="og:description" content="`Gmeek-html<img src='https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png'>`
 
 # Powershell的基本概念
+
 ## ps1文件
 一个PowerShell脚本其实就是一个简单的文本文件， 这个文件包含了一系列PowerShell命令，每个命令显示为独立的一行，文件名需要加上.ps1的扩展名。">
 <meta property="og:type" content="article">
@@ -86,6 +88,29 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h1>Powershell的基本概念</h1>
 <h2>ps1文件</h2>
 <p>一个PowerShell脚本其实就是一个简单的文本文件， 这个文件包含了一系列PowerShell命令，每个命令显示为独立的一行，文件名需要加上.ps1的扩展名。</p>
+<h2>运行脚本</h2>
+<p>运行PowerShell脚本，必须键入完整的路径和文件名，例如，你要运行一个名为a.ps1的脚本，可以键入C:\Scripts\a.ps1</p>
+<h2>获取 PowerShell Command一覧</h2>
+<pre class="notranslate"><code class="notranslate">PS&gt;  gcm　或者   PS&gt;  get-command
+</code></pre>
+<h2>Powershell的常用命令</h2>
+<p>在PowerShell下，类似“cmd命令"叫作"cmdlet" ，其命名规范相当一致，都采用"动词-名词”的形式，如New-ltem，动词部分般为Add、 New、Get、Remove、Set等， 命名的别名一般兼容Windows Command和Linux Shell,如Get-Childltem命令使用dir或|s均可，而且<strong>PowerShell命令不区分大小写</strong></p>
+<p>下面以文件操作为例讲解PowerShell命令的基本用法</p>
+<ul>
+<li>新建目录: New-Item -Path 'E:\Test Folder' -ItemType Directory</li>
+<li>新建文件: New-Item -Path new.txt -ItemType File</li>
+<li>删除目录: Remove-Item 'E:\Test Folder'</li>
+<li>显示文本内容: Get-Content new.txt</li>
+<li>置文本内容: Set-Content new.txt -Value "hello, word! "</li>
+<li>追加内容: Add-Content new.txt -Value "i love you"</li>
+<li>清除内容: Clear-Content new.txt</li>
+</ul>
+<h2>管道</h2>
+<p>管道的作用是将一个命令的输出作为另一个命令的输入， 两个命令之间用管道符号<code class="notranslate">|</code> 连接。<br>
+举一个例子、停止所有目前运行中的，以"p"字符开头命名的程序，命令如下所示。</p>
+<pre class="notranslate"><code class="notranslate">PS&gt; get-process p* | stop-process
+</code></pre>
+<h1>Powershell进阶篇</h1>
 <h2>执行策略</h2>
 <p>为防止恶意脚本的执行，PowerShell的执行策略，默认情况下，Restricted:脚本不能运行，可以通过以下命令查看当前的执行策略。</p>
 <ul>
@@ -129,36 +154,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li><code class="notranslate">NoProfile (-NoP) </code>　PowerShell控制台不加载当前用户的配置文件。</li>
 <li><code class="notranslate">Noexit</code>　执行后不退出Shell。这在使用键盘记录脚本时非常重要。</li>
 </ul>
-<h2>运行脚本</h2>
-<p>运行PowerShell脚本，必须键入完整的路径和文件名，例如，你要运行一个名为a.ps1的脚本，可以键入C:\Scripts\a.ps1</p>
-<h2>管道</h2>
-<p>管道的作用是将一个命令的输出作为另一个命令的输入， 两个命令之间用管道符号<code class="notranslate">|</code> 连接。<br>
-举一个例子、停止所有目前运行中的，以"p"字符开头命名的程序，命令如下所示。</p>
-<pre class="notranslate"><code class="notranslate">PS&gt; get-process p* | stop-process
-</code></pre>
-<h2>Powershell的常用命令</h2>
-<p>在PowerShell下，类似“cmd命令"叫作"cmdlet" ，其命名规范相当一致，都采用"动词-名词”的形式，如New-ltem，动词部分般为Add、 New、Get、Remove、Set等， 命名的别名一般兼容Windows Command和Linux Shell,如Get-Childltem命令使用dir或|s均可，<strong>而且PowerShell命令不区分大小写</strong></p>
-<p>下面以文件操作为例讲解PowerShell命令的基本用法</p>
+<h2>常用的PowerShel攻击工具有以下这几种</h2>
 <ul>
-<li>新建目录: New-Item -Path 'E:\Test Folder' -ItemType Directory</li>
-<li>新建文件: New-Item -Path new.txt -ItemType File</li>
-<li>删除目录: Remove-Item 'E:\Test Folder'</li>
-<li>显示文本内容: Get-Content new.txt</li>
-<li>置文本内容: Set-Content new.txt -Value "hello, word! "</li>
-<li>追加内容: Add-Content new.txt -Value "i love you"</li>
-<li>清除内容: Clear-Content new.txt</li>
+<li>
+<p><code class="notranslate">PowerSplit</code>　这是众多PowerShell攻击工具中被广泛使用的PowerShel后期漏洞利用框架，常用于信息探测、特权提升、凭证窃取、持久化等操作。</p>
+</li>
+<li>
+<p><code class="notranslate">Nishang</code>　基于PowerShell的渗透测试专用工具， 集成了框架、脚本和各种Payload,包含下载和执行、键盘记录、DNS、 延时命令等脚本。</p>
+</li>
+<li>
+<p><code class="notranslate">Empire</code>　基于PowerShel的远程控制木马，可以从凭证数据库中导出和跟踪凭证信息，常用于提供前期漏洞利用的集成模块、信息探测、凭据窃取、持久化控制。</p>
+</li>
+<li>
+<p><code class="notranslate">PowerCat</code>　Powershell版的NetCat, 有着网络工具中的"瑞士军刀”美誉，它能通过TCP和UDP在网络中读写数据。通过与其他工具结合和重定向，可以在脚本中以多种方式使用它。</p>
+</li>
 </ul>
-<h1>Powershell进阶篇</h1>
-<p>常用的PowerShel攻击工具有以下这几种</p>
-<ul>
-<li><code class="notranslate">PowerSplit</code>　这是众多PowerShell攻击工具中被广泛使用的PowerShel后期漏洞利用框架，常用于信息探测、特权提升、凭证窃取、持久化等操作。</li>
-<li><code class="notranslate">Nishang</code>　基于PowerShell的渗透测试专用工具， 集成了框架、脚本和各种Payload,包含下载和执行、键盘记录、DNS、 延时命令等脚本。</li>
-<li><code class="notranslate">Empire</code>　基于PowerShel的远程控制木马，可以从凭证数据库中导出和跟踪凭证信息，常用于提供前期漏洞利用的集成模块、信息探测、凭据窃取、持久化控制。</li>
-<li><code class="notranslate">PowerCat</code>　Powershel版的NetCat, 有着网络工具中的"瑞士军刀”美誉，它能通过TCP和UDP在网络中读写数据。通过与其他工具结合和重定向，读者可以在脚本中以多种方式使用它。</li>
-</ul>
-<h1>获取 PowerShell Command一覧</h1>
-<pre class="notranslate"><code class="notranslate">PS&gt;  gcm　或者   PS&gt;  get-command
-</code></pre>
 <h1>获取 PowerShell Alias一覧</h1>
 <pre class="notranslate"><code class="notranslate">PS&gt;  gal　或者   PS&gt;  Get-Alias
 </code></pre>
@@ -973,15 +983,39 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>Set-ItemProperty</td>
 <td></td>
 </tr>
+<tr>
+<td>stz</td>
+<td>Set-TimeZone</td>
+<td></td>
+</tr>
+<tr>
+<td>sujb</td>
+<td>Suspend-Job</td>
+<td></td>
+</tr>
+<tr>
+<td>sv</td>
+<td>Set-Variable</td>
+<td></td>
+</tr>
+<tr>
+<td>swmi</td>
+<td>Set-WmiInstance</td>
+<td>在 WMI 中创建或修改实例</td>
+</tr>
+<tr>
+<td>tee</td>
+<td>Tee-Object</td>
+<td></td>
+</tr>
+<tr>
+<td>trcm</td>
+<td>Trace-Command</td>
+<td></td>
+</tr>
 </tbody>
 </table></markdown-accessiblity-table>
-<p>|stz|  Set-TimeZone|<br>
-|sujb|  Suspend-Job|<br>
-|sv|  Set-Variable|<br>
-|swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|<br>
-|tee|  Tee-Object|<br>
-|trcm|  Trace-Command|</p>
-<h2>常用PowerShell命令</h2>
+<h2>PowerShell命令特殊用法</h2>
 <ul>
 <li>
 <p><code class="notranslate">cd hkcu</code>　　像文件系统那样操作Windows Registry</p>
