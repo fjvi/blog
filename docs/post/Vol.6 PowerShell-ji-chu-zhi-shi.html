@@ -39,6 +39,7 @@ $ gal　或者   $ Get-Alias
 |sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
+|cpi|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |`md`🔥|  mkdir|
@@ -76,7 +77,6 @@ $ gal　或者   $ Get-Alias
 |clp|  Clear-ItemProperty|
 |clv|  Clear-Variable|
 |cnsn| Connect-PSSession|
-|cpi|  Copy-Item|
 |cpp|  Copy-ItemProperty|
 |cvpa|  Convert-Path|
 |dbp|  Disable-PSBreakpoint|
@@ -250,6 +250,7 @@ $ gal　或者   $ Get-Alias
 |sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
+|cpi|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |`md`🔥|  mkdir|
@@ -287,7 +288,6 @@ $ gal　或者   $ Get-Alias
 |clp|  Clear-ItemProperty|
 |clv|  Clear-Variable|
 |cnsn| Connect-PSSession|
-|cpi|  Copy-Item|
 |cpp|  Copy-ItemProperty|
 |cvpa|  Convert-Path|
 |dbp|  Disable-PSBreakpoint|
@@ -571,6 +571,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>例：<code class="notranslate">Copy-Item C:\source\test.txt C:\destination\</code>  复制文件 test.txt 到另一个目录</td>
 </tr>
 <tr>
+<td>cpi</td>
+<td>Copy-Item</td>
+<td>例：<code class="notranslate">Copy-Item C:\source\test.txt C:\destination\</code>  复制文件 test.txt 到另一个目录</td>
+</tr>
+<tr>
 <td><code class="notranslate">mv</code>🔥</td>
 <td>Move-Item</td>
 <td>例：<code class="notranslate">Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt</code>  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt</td>
@@ -753,11 +758,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>cnsn</td>
 <td>Connect-PSSession</td>
-<td></td>
-</tr>
-<tr>
-<td>cpi</td>
-<td>Copy-Item</td>
 <td></td>
 </tr>
 <tr>

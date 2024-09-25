@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Wed, 25 Sep 2024 02:42:13 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.10 WSL（Windows Subsystem for Linux）</title><link>https://grapehut.us.kg/post/Vol.10%20WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</link><description># 查看可安装的Linux版本&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Wed, 25 Sep 2024 02:43:41 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.10 WSL（Windows Subsystem for Linux）</title><link>https://grapehut.us.kg/post/Vol.10%20WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</link><description># 查看可安装的Linux版本&#13;
 &#13;
 ```&#13;
 $ wsl --list --online　或者　$ wsl -l -o&#13;
@@ -270,6 +270,7 @@ $ gal　或者   $ Get-Alias&#13;
 |sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|&#13;
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|&#13;
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|&#13;
+|cpi|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|&#13;
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|&#13;
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|&#13;
 |`md`🔥|  mkdir|&#13;
@@ -307,7 +308,6 @@ $ gal　或者   $ Get-Alias&#13;
 |clp|  Clear-ItemProperty|&#13;
 |clv|  Clear-Variable|&#13;
 |cnsn| Connect-PSSession|&#13;
-|cpi|  Copy-Item|&#13;
 |cpp|  Copy-ItemProperty|&#13;
 |cvpa|  Convert-Path|&#13;
 |dbp|  Disable-PSBreakpoint|&#13;

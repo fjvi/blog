@@ -30,6 +30,7 @@ $ gal　或者   $ Get-Alias
 |sl|  Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换到用户的文档目录|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
+|cpi|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`mv`🔥|  Move-Item|例：`Move-Item C:\temp\oldname.txt C:\temp\newfolder\newname.txt`  将文件 oldname.txt 移动到 newfolder 并重命名为 newname.txt|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |`md`🔥|  mkdir|
@@ -67,7 +68,6 @@ $ gal　或者   $ Get-Alias
 |clp|  Clear-ItemProperty|
 |clv|  Clear-Variable|
 |cnsn| Connect-PSSession|
-|cpi|  Copy-Item|
 |cpp|  Copy-ItemProperty|
 |cvpa|  Convert-Path|
 |dbp|  Disable-PSBreakpoint|
