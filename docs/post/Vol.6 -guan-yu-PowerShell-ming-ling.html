@@ -559,7 +559,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td></td>
 </tr>
 <tr>
-<td>gwmi</td>
+<td>gwmi 👙</td>
 <td>Get-WmiObject</td>
 <td>例：<code class="notranslate">Get-WmiObject -Class Win32_OperatingSystem</code>  获取操作系统信息</td>
 </tr>
@@ -676,7 +676,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>ps 👙</td>
 <td>Get-Process</td>
-<td>获取所有运行中的进程</td>
+<td>获取所有运行中的进程　`ps</td>
 </tr>
 <tr>
 <td>gps</td>
@@ -844,6 +844,36 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>同上</td>
 </tr>
 <tr>
+<td><strong>剪贴板</strong></td>
+<td><strong>Clipboard</strong></td>
+<td><strong>⇣⇣⇣⇣⇣</strong></td>
+</tr>
+<tr>
+<td>gcb</td>
+<td>Get-Clipboard</td>
+<td></td>
+</tr>
+<tr>
+<td>scb</td>
+<td>Set-Clipboard</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>时间地域</strong></td>
+<td><strong>TimeZone</strong></td>
+<td><strong>⇣⇣⇣⇣⇣</strong></td>
+</tr>
+<tr>
+<td>gtz</td>
+<td>Get-TimeZone</td>
+<td></td>
+</tr>
+<tr>
+<td>stz</td>
+<td>Set-TimeZone</td>
+<td></td>
+</tr>
+<tr>
 <td><strong>Session</strong></td>
 <td><strong>PSSession</strong></td>
 <td><strong>⇣⇣⇣⇣⇣</strong></td>
@@ -934,6 +964,26 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td></td>
 </tr>
 <tr>
+<td><strong>Snapin</strong></td>
+<td><strong>PSSnapin</strong></td>
+<td><strong>⇣⇣⇣⇣⇣</strong></td>
+</tr>
+<tr>
+<td>gsnp</td>
+<td>Get-PSSnapin</td>
+<td></td>
+</tr>
+<tr>
+<td>asnp</td>
+<td>Add-PSSnapin</td>
+<td></td>
+</tr>
+<tr>
+<td>rsnp</td>
+<td>Remove-PSSnapin</td>
+<td></td>
+</tr>
+<tr>
 <td><strong>その他</strong></td>
 <td><strong>Others</strong></td>
 <td><strong>⇣⇣⇣⇣⇣</strong></td>
@@ -946,11 +996,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>ise</td>
 <td>powershell_ise.exe</td>
-<td></td>
-</tr>
-<tr>
-<td>asnp</td>
-<td>Add-PSSnapin</td>
 <td></td>
 </tr>
 <tr>
@@ -989,11 +1034,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td></td>
 </tr>
 <tr>
-<td>gcb</td>
-<td>Get-Clipboard</td>
-<td></td>
-</tr>
-<tr>
 <td>gcs</td>
 <td>Get-PSCallStack</td>
 <td></td>
@@ -1006,16 +1046,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>gm</td>
 <td>Get-Member</td>
-<td></td>
-</tr>
-<tr>
-<td>gsnp</td>
-<td>Get-PSSnapin</td>
-<td></td>
-</tr>
-<tr>
-<td>gtz</td>
-<td>Get-TimeZone</td>
 <td></td>
 </tr>
 <tr>
@@ -1054,18 +1084,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td></td>
 </tr>
 <tr>
-<td>rsnp</td>
-<td>Remove-PSSnapin</td>
-<td></td>
-</tr>
-<tr>
 <td>rvpa</td>
 <td>Resolve-Path</td>
-<td></td>
-</tr>
-<tr>
-<td>scb</td>
-<td>Set-Clipboard</td>
 <td></td>
 </tr>
 <tr>
@@ -1079,11 +1099,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>例：<code class="notranslate">Select-String -Path "C:\temp\log.txt" -Pattern "error"</code>  在日志文件中搜索含有 "error" 的行</td>
 </tr>
 <tr>
-<td>stz</td>
-<td>Set-TimeZone</td>
-<td></td>
-</tr>
-<tr>
 <td>swmi</td>
 <td>Set-WmiInstance</td>
 <td>在 WMI 中创建或修改实例</td>
@@ -1092,25 +1107,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </table></markdown-accessiblity-table>
 <h2>PowerShell命令特殊用法</h2>
 <ul>
-<li>
-<p><code class="notranslate">cd hkcu</code>　　像文件系统那样操作Windows Registry</p>
-</li>
-<li>
-<p><code class="notranslate">dir –r | select string "searchforthis"</code>　在文件里递回地搜索某个字符串</p>
-</li>
-<li>
-<p><code class="notranslate">ps | sort –p ws | select –last 5</code>　使用内存找到五个进程</p>
-</li>
-<li>
-<p><code class="notranslate">Restart-Service DHCP</code>　　重启一个服务，如DHCP</p>
-</li>
-<li>
-<p><code class="notranslate">Get-ChildItem – Force</code>　　在文件夹里列出所有条目</p>
-</li>
-<li>
-<p><code class="notranslate">Get-ChildItem –Force c:\directory –Recurse</code>　　递归一系列的目录或文件夹<br>
--<code class="notranslate">Remove-Item C:\tobedeleted –Recurse</code>　　在目录里移除所有文件而不需要单个移除</p>
-</li>
 <li>
 <p><code class="notranslate">Get-Content Env:COMPUTERNAME</code> 获取计算机名</p>
 </li>

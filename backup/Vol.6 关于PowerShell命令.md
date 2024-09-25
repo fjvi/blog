@@ -175,7 +175,7 @@ PS>  gal　或者   PS>  Get-Alias
 |measure|  Measure-Object|
 |select|  Select-Object|
 |tee|  Tee-Object|
-|gwmi|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
+|gwmi 👙 |  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
 |rwmi|  Remove-WmiObject|
 |**模型**|**Module**|**⇣⇣⇣⇣⇣**|
 |gmo|  Get-Module|
@@ -198,7 +198,7 @@ PS>  gal　或者   PS>  Get-Alias
 |ihy|  Invoke-History|
 |r|  Invoke-History|
 |**进程**|**Process**|**⇣⇣⇣⇣⇣**|
-|ps 👙 |  Get-Process|获取所有运行中的进程|
+|ps 👙 |  Get-Process|获取所有运行中的进程　`ps | sort –p ws | select –last 5`使用内存找到五个进程|
 |gps|  Get-Process|同上|
 |start|  Start-Process|例：`Start-Process notepad`  启动记事本应用程序|
 |saps|  Start-Process|同上|
@@ -232,6 +232,12 @@ PS>  gal　或者   PS>  Get-Alias
 |wget 👙 |  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |curl 👙 |  Invoke-WebRequest|同上|
 |iwr|  Invoke-WebRequest|同上|
+|**剪贴板**|**Clipboard**|**⇣⇣⇣⇣⇣**|
+|gcb|  Get-Clipboard|
+|scb|  Set-Clipboard|
+|**时间地域**|**TimeZone**|**⇣⇣⇣⇣⇣**|
+|gtz|  Get-TimeZone|
+|stz|  Set-TimeZone|
 |**Session**|**PSSession**|**⇣⇣⇣⇣⇣**|
 |cnsn| Connect-PSSession|
 |dnsn|  Disconnect-PSSession|
@@ -250,10 +256,13 @@ PS>  gal　或者   PS>  Get-Alias
 |gbp|  Get-PSBreakpoint|
 |sbp|  Set-PSBreakpoint|
 |rbp|  Remove-PSBreakpoint|
+|**Snapin**|**PSSnapin**|**⇣⇣⇣⇣⇣**|
+|gsnp|  Get-PSSnapin|
+|asnp| Add-PSSnapin|
+|rsnp|  Remove-PSSnapin|
 |**その他**|**Others**|**⇣⇣⇣⇣⇣**|
 |man 👙 |  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |ise|  powershell_ise.exe|
-|asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
 |cvpa|  Convert-Path|
 |fc|  Format-Custom|
@@ -261,12 +270,9 @@ PS>  gal　或者   PS>  Get-Alias
 |fl|  Format-List|
 |ft|  Format-Table|
 |fw|  Format-Wide|
-|gcb|  Get-Clipboard|
 |gcs|  Get-PSCallStack|
 |gin 👙 |  Get-ComputerInfo|
 |gm|  Get-Member|
-|gsnp|  Get-PSSnapin|
-|gtz|  Get-TimeZone|
 |gu|  Get-Unique|
 |iex 👙 |  Invoke-Expression|
 |irm|  Invoke-RestMethod|
@@ -274,25 +280,13 @@ PS>  gal　或者   PS>  Get-Alias
 |lp|  Out-Printer|
 |ogv|  Out-GridView|
 |oh|  Out-Host|
-|rsnp|  Remove-PSSnapin|
 |rvpa|  Resolve-Path|
-|scb|  Set-Clipboard|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
-|stz|  Set-TimeZone|
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 
 
-
 ## PowerShell命令特殊用法
-- `cd hkcu`　　像文件系统那样操作Windows Registry
-- `dir –r | select string "searchforthis"`　在文件里递回地搜索某个字符串
-- `ps | sort –p ws | select –last 5`　使用内存找到五个进程
-- `Restart-Service DHCP`　　重启一个服务，如DHCP
-- `Get-ChildItem – Force`　　在文件夹里列出所有条目
-- `Get-ChildItem –Force c:\directory –Recurse`　　递归一系列的目录或文件夹
--`Remove-Item C:\tobedeleted –Recurse`　　在目录里移除所有文件而不需要单个移除
-
 - `Get-Content Env:COMPUTERNAME` 获取计算机名
 
 - `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
