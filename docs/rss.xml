@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Wed, 25 Sep 2024 10:09:19 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.10 WSL（Windows Subsystem for Linux）</title><link>https://grapehut.us.kg/post/Vol.10%20WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</link><description># 查看可安装的Linux版本&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Wed, 25 Sep 2024 10:12:27 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.10 关于WSL（Windows Subsystem for Linux）</title><link>https://grapehut.us.kg/post/Vol.10%20-guan-yu-WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</link><description># 查看可安装的Linux版本&#13;
 &#13;
 ```&#13;
 $ wsl --list --online　或者　$ wsl -l -o&#13;
@@ -38,7 +38,7 @@ $ wsl --list -v　或者　$ wsl -l -v&#13;
 $ wsl -s &lt;DistributionName&gt;　或者　$ wsl --set-default &lt;DistributionName&gt;&#13;
 ```&#13;
 &#13;
-。</description><guid isPermaLink="true">https://grapehut.us.kg/post/Vol.10%20WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</guid><pubDate>Tue, 24 Sep 2024 14:36:27 +0000</pubDate></item><item><title>Vol.9 《备忘录》一些Windows命令</title><link>https://grapehut.us.kg/post/Vol.9%20%E3%80%8A-bei-wang-lu-%E3%80%8B-yi-xie-Windows-ming-ling.html</link><description># 查看内网IP&#13;
+。</description><guid isPermaLink="true">https://grapehut.us.kg/post/Vol.10%20-guan-yu-WSL%EF%BC%88Windows%20Subsystem%20for%20Linux%EF%BC%89.html</guid><pubDate>Tue, 24 Sep 2024 14:36:27 +0000</pubDate></item><item><title>Vol.9 《备忘录》一些Windows命令</title><link>https://grapehut.us.kg/post/Vol.9%20%E3%80%8A-bei-wang-lu-%E3%80%8B-yi-xie-Windows-ming-ling.html</link><description># 查看内网IP&#13;
 ```&#13;
 ipconfig&#13;
 ```&#13;
