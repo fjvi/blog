@@ -133,7 +133,17 @@ PS>  gal　或者   PS>  Get-Alias
 |gi|  Get-Item|？|
 |si|  Set-Item|？|
 |ii|  Invoke-Item|？|
+|cli|  Clear-Item|？|
 |`md`🔥|  mkdir|
+|**操作目录或文件属性**|**ItemProperty**|**⇣⇣⇣⇣⇣**|
+|gp|  Get-ItemProperty|
+|sp|  Set-ItemProperty|
+|clp|  Clear-ItemProperty|
+|rnp|  Rename-ItemProperty|
+|rp|  Remove-ItemProperty|
+|cpp|  Copy-ItemProperty|
+|mp|  Move-ItemProperty|
+|gpv|  Get-ItemPropertyValue|
 |**屏幕**|**Host**|**⇣⇣⇣⇣⇣**|
 |`write`🔥|  Write-Output|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
 |`echo`🔥|  Write-Output|同上|
@@ -181,16 +191,14 @@ PS>  gal　或者   PS>  Get-Alias
 |`man`🔥|  help|例：`Get-Help Get-Process`  获取 Get-Process 的帮助文档|
 |ise|  powershell_ise.exe|
 |%|    ForEach-Object|
+|foreach|  ForEach-Object|
 |where|  Where-Object|例：`Get-Process \| Where-Object { $_.CPU -gt 10 }`  获取 CPU 占用率大于 10% 的所有进程|
 |?|    Where-Object|同上|
 |asnp| Add-PSSnapin|
 |CFS|  ConvertFrom-String|
 |clhy| Clear-History|
-|cli|  Clear-Item|
-|clp|  Clear-ItemProperty|
 |clv|  Clear-Variable|
 |cnsn| Connect-PSSession|
-|cpp|  Copy-ItemProperty|
 |cvpa|  Convert-Path|
 |dbp|  Disable-PSBreakpoint|
 |dnsn|  Disconnect-PSSession|
@@ -203,7 +211,6 @@ PS>  gal　或者   PS>  Get-Alias
 |fc|  Format-Custom|
 |fhx|  Format-Hex|
 |fl|  Format-List|
-|foreach|  ForEach-Object|
 |ft|  Format-Table|
 |fw|  Format-Wide|
 |`gbp`🌛|  Get-PSBreakpoint|
@@ -213,8 +220,6 @@ PS>  gal　或者   PS>  Get-Alias
 |`gin`🌛|  Get-ComputerInfo|
 |`gm`🌛|  Get-Member|
 |`gmo`🌛|  Get-Module|
-|`gp`🌛|  Get-ItemProperty|
-|`gpv`🌛|  Get-ItemPropertyValue|
 |`gsn`🌛|  Get-PSSession|
 |`gsnp`🌛|  Get-PSSnapin|
 |`gtz`🌛|  Get-TimeZone|
@@ -235,7 +240,6 @@ PS>  gal　或者   PS>  Get-Alias
 |lp|  Out-Printer|
 |measure|  Measure-Object|
 |mount|  New-PSDrive|
-|mp|  Move-ItemProperty|
 |nal|  New-Alias|
 |ndr|  New-PSDrive|
 |nmo|  New-Module|
@@ -249,8 +253,6 @@ PS>  gal　或者   PS>  Get-Alias
 |rcsn|  Receive-PSSession|
 |rdr|  Remove-PSDrive|
 |rmo|  Remove-Module|
-|rnp|  Rename-ItemProperty|
-|rp|  Remove-ItemProperty|
 |rsn|  Remove-PSSession|
 |rsnp|  Remove-PSSnapin|
 |rv|  Remove-Variable|
@@ -265,7 +267,6 @@ PS>  gal　或者   PS>  Get-Alias
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
 |sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|
-|sp|  Set-ItemProperty|
 |stz|  Set-TimeZone|
 |sv|  Set-Variable|
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
