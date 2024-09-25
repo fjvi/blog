@@ -177,6 +177,11 @@ PS>  gal　或者   PS>  Get-Alias
 |tee|  Tee-Object|
 |gwmi|  Get-WmiObject|例：`Get-WmiObject -Class Win32_OperatingSystem`  获取操作系统信息|
 |rwmi|  Remove-WmiObject|
+|**模型**|**Module**|**⇣⇣⇣⇣⇣**|
+|gmo|  Get-Module|
+|ipmo|  Import-Module|
+|nmo|  New-Module|
+|rmo|  Remove-Module|
 |**比較**|**Compare**|**⇣⇣⇣⇣⇣**|
 |diff 👙 |  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
 |compare 👙 |  Compare-Object|同上|
@@ -260,19 +265,15 @@ PS>  gal　或者   PS>  Get-Alias
 |gcs|  Get-PSCallStack|
 |gin 👙 |  Get-ComputerInfo|
 |gm|  Get-Member|
-|gmo|  Get-Module|
 |gsnp|  Get-PSSnapin|
 |gtz|  Get-TimeZone|
 |gu|  Get-Unique|
 |iex 👙 |  Invoke-Expression|
-|ipmo|  Import-Module|
 |irm|  Invoke-RestMethod|
 |iwmi|  Invoke-WmiMethod|
 |lp|  Out-Printer|
-|nmo|  New-Module|
 |ogv|  Out-GridView|
 |oh|  Out-Host|
-|rmo|  Remove-Module|
 |rsnp|  Remove-PSSnapin|
 |rvpa|  Resolve-Path|
 |scb|  Set-Clipboard|
