@@ -286,26 +286,136 @@ PS>  gal　或者   PS>  Get-Alias
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 
 
-## PowerShell命令特殊用法
-- `Get-Content Env:COMPUTERNAME` 获取计算机名
+## 示例：获取本地PC的信息（保存为`getPCInfo.ps1`）
+```
+function global:getPCInfo ($pcname) {
+    if ($pcname -eq $null) {
+        $pcname = 'localhost'
+    }
 
-- `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
-- `Get-WmiObject -Class Win32_ComputerSystem` 获取计算机组成或模型信息
-- `Get-WmiObject -Class Win32_BIOS -ComputerName` 获取当前计算机的BIOS信息
-- `Get-WmiObject -Class Win32_QuickFixEngineering -ComputerName` 列出所安装的修复程序（如QFE或Windows Update文件）
-- `Get-WmiObject -Class Win32_ComputerSystem -Property UserName -ComputerName` 获取当前登录计算机的用户的用户名
-- `Get-WmiObject -Class Win32_Product -ComputerName . | Format-Wide -Column 1` 获取当前计算机所安装的应用的名字
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Format-Table -Property IPAddress` 获取分配给当前计算机的IP地址
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Select-Object -Property [a-z]* -ExcludeProperty IPX*,WINS*`  获取当前机器详细的IP配置报道
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=true" -ComputerName`  找到当前计算机上使用DHCP启用的网络卡
-- `Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -ComputerName . | ForEach-Object -Process {$_.EnableDHCP()}` 在当前计算机上的所有网络适配器上启用DHCP
-- `Get-WMIObject -ComputerName TARGETMACHINE -List | Where-Object -FilterScript {$_.Name -eq "Win32_Product"}).Install(\MACHINEWHEREMSIRESIDES\path\package.msi`  在远程计算机上安装MSI包
-- `Get-WmiObject -Class Win32_Product -ComputerName . -Filter "Name='name_of_app_to_be_upgraded'").Upgrade(\MACHINEWHEREMSIRESIDES\path\upgrade_package.msi`　使用基于MSI的应用升级包升级所安装的应用
-- `Get-WmiObject -Class Win32_Product -Filter "Name='product_to_remove'" -ComputerName . ).Uninstall()` 从当前计算机移除MSI包
+    $ErrorActionPreference = "silentlycontinue"
+    $outputString = ""
 
-- `Start-Sleep 60; Restart-Computer –Force –ComputerName TARGETMACHINE` 一分钟后远程关闭另一台机器
-- `New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\printerserver\hplaser3`　添加打印机
-- `New-Object -ComObject WScript.Network).RemovePrinterConnection("\printerserver\hplaser3 "`  移除打印机
-- `invoke-command -computername machine1, machine2 -filepath c:\Script\script.ps1`　进入PowerShell会话
+    if (Test-Connection $pcname -count 1) {
+        $outputString += "====================================================`n"
+        $outputString += $pcname + "`n"
+        $outputString += "--------------------------`n"
+        
+        $ComputerSystem = Get-WmiObject Win32_ComputerSystem -computername $pcname
 
+        # ComputerName
+        $outputString += ("ComputerName   : " + $ComputerSystem.Name + "`n")
+
+        # IPAddress
+        $IPAddressArray = (Get-WmiObject Win32_NetworkAdapterConfiguration -computername $pcname).IPAddress
+        $IPAddress = ""
+        foreach ($ip in $IPAddressArray) {
+            if ($ip -ne $null){
+                $IPAddress = $ip
+            }
+        }
+        $outputString += ("IPAddress      : " + $IPAddress + "`n")
+        
+        # Model
+        $outputString += ("Model          : " + $ComputerSystem.Model + "`n")
+
+        # BaseBoard
+        $BaseBoard = Get-WmiObject Win32_BaseBoard -computername $pcname
+        $outputString += ("MotherBoard    : " + $BaseBoard.Manufacturer + " " + $BaseBoard.Product + "`n")
+
+        # OS
+        $OS = Get-WmiObject Win32_OperatingSystem -computername $pcname
+        $outputString += ("OS             : " + $OS.Caption + "`n")
+
+        # CPU
+        $Processor = Get-WmiObject Win32_Processor -computername $pcname
+        if ($Processor.GetType().Name -eq "Object[]"){
+            $Processor = $Processor[0]
+        }
+        $outputString += ("CPU            : " + $Processor.Name + "`n")
+        
+        # RAM
+        $Capacitys = (Get-WmiObject Win32_PhysicalMemory -computername $pcname).Capacity
+        for ($i = 0; $i -lt $Capacitys.length; $i++) {
+            $Capacitys[$i] = [string][int]($Capacitys[$i]/1GB)
+        }
+        $TotalPhysicalMemory = [int]($ComputerSystem.TotalPhysicalMemory/1GB)
+        $outputString += ("RAM            : " + $TotalPhysicalMemory + " GB [" + ($Capacitys -join "/") + "]`n")
+        
+        # VideoController
+        $VideoController = Get-WmiObject Win32_VideoController -computername $pcname
+        
+        if ($VideoController.GetType().Name -ne "Object[]"){
+            $VideoController = @($VideoController)
+        }
+        
+        $outputString += ("VideoController:`n")
+        for ($i = 0; $i -lt $VideoController.length; $i++) {
+            $outputString += ("    " + $VideoController[$i].Name + "  [" + $VideoController[$i].CurrentHorizontalResolution + " x " + $VideoController[$i].CurrentVerticalResolution + "]`n")
+        }
+        
+        # NetworkAdapter
+        $NetworkAdapterNames = (Get-WmiObject Win32_NetworkAdapter -Filter "NetConnectionStatus = 2" -computername $pcname).Name
+        if ($NetworkAdapterNames.GetType().Name -ne "Object[]"){
+            $NetworkAdapterNames = @($NetworkAdapterNames)
+        }
+        $outputString += "NetworkAdapter :`n"
+        foreach ($n in $NetworkAdapterNames) {
+            $outputString += ("    " + $n + "`n")
+        }
+        
+        # LogicalDisk
+        $LocalDisk = Get-WmiObject Win32_LogicalDisk -Filter "DriveType = 3" -computername $pcname
+        
+        if ($LocalDisk.GetType().Name -ne "Object[]"){
+            $LocalDisk = @($LocalDisk)
+        }
+
+        $outputString += "LocalDisk      :`n"
+        $disks = $LocalDisk
+        for ($i = 0; $i -lt $LocalDisk.length; $i++) {
+            $outputString += ("    " + $LocalDisk[$i].DeviceID + " " + [int]($LocalDisk[$i].Size/1GB) + " GB [FreeSpace:" + [int]($LocalDisk[$i].FreeSpace/1GB) + " GB]`n")
+            $disks[$i] = ($LocalDisk[$i].DeviceID + " " + [int]($LocalDisk[$i].Size/1GB) + " GB [Free:" + [int]($LocalDisk[$i].FreeSpace/1GB) + " GB]")
+        }
+    } else {
+        $outputString += "====================================================`n"
+        $outputString += ($pcname + " not responding...`n")
+    }
+    
+    echo $outputString
+    $ErrorActionPreference = "continue"
+}
+```
+
+调用：
+```
+$ .\getPCInfo.ps1
+
+// localhost
+$ getPCInfo
+
+// network
+$ getPCInfo <computername>
+```
+
+结果：
+```
+====================================================
+localhost
+--------------------------
+ComputerName   : COMPUTERNAME
+IPAddress      : XXX.XXX.XXX.XXX
+Model          : B460M
+MotherBoard    : MouseComputer B460M
+OS             : Microsoft Windows 11 Home
+CPU            : Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+RAM            : 16 GB [8/8]
+VideoController:
+    NVIDIA GeForce RTX 3060  [1920 x 1200]
+NetworkAdapter :
+    Intel(R) Ethernet Connection (12) I219-V
+LocalDisk      :
+    C: 476 GB [FreeSpace:88 GB]
+    D: 1863 GB [FreeSpace:1151 GB]
+```
 
