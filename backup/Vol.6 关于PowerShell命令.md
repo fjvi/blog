@@ -135,8 +135,8 @@ PS>  gal　或者   PS>  Get-Alias
 |ii|  Invoke-Item|？|
 |`md`🔥|  mkdir|
 |**屏幕**|**Host**|**⇣⇣⇣⇣⇣**|
-|`write`🔥|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
-|`echo`🔥|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
+|`write`🔥|  Write-Output|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
+|`echo`🔥|  Write-Output|同上|
 |`clear`🔥|Clear-Host|清除控制台屏幕|
 |`cls`🔥|  Clear-Host|同上|
 |**比較**|**Compare**|**⇣⇣⇣⇣⇣**|
