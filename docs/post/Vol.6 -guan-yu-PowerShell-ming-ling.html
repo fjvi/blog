@@ -201,6 +201,8 @@ $ gal　或者   $ Get-Alias
 - `Get-ChildItem –Force c:\directory –Recurse`　　递归一系列的目录或文件夹
 -`Remove-Item C:\tobedeleted –Recurse`　　在目录里移除所有文件而不需要单个移除
 
+- `Get-Content Env:COMPUTERNAME` 获取计算机名
+
 - `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
 - `Get-WmiObject -Class Win32_ComputerSystem` 获取计算机组成或模型信息
 - `Get-WmiObject -Class Win32_BIOS -ComputerName` 获取当前计算机的BIOS信息
@@ -413,6 +415,8 @@ $ gal　或者   $ Get-Alias
 - `Get-ChildItem – Force`　　在文件夹里列出所有条目
 - `Get-ChildItem –Force c:\directory –Recurse`　　递归一系列的目录或文件夹
 -`Remove-Item C:\tobedeleted –Recurse`　　在目录里移除所有文件而不需要单个移除
+
+- `Get-Content Env:COMPUTERNAME` 获取计算机名
 
 - `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
 - `Get-WmiObject -Class Win32_ComputerSystem` 获取计算机组成或模型信息
@@ -1331,6 +1335,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>
 <p><code class="notranslate">Get-ChildItem –Force c:\directory –Recurse</code>　　递归一系列的目录或文件夹<br>
 -<code class="notranslate">Remove-Item C:\tobedeleted –Recurse</code>　　在目录里移除所有文件而不需要单个移除</p>
+</li>
+<li>
+<p><code class="notranslate">Get-Content Env:COMPUTERNAME</code> 获取计算机名</p>
 </li>
 <li>
 <p><code class="notranslate">Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)</code> 重启当前计算机</p>

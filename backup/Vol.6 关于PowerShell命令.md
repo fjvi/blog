@@ -192,6 +192,8 @@ $ gal　或者   $ Get-Alias
 - `Get-ChildItem –Force c:\directory –Recurse`　　递归一系列的目录或文件夹
 -`Remove-Item C:\tobedeleted –Recurse`　　在目录里移除所有文件而不需要单个移除
 
+- `Get-Content Env:COMPUTERNAME` 获取计算机名
+
 - `Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)` 重启当前计算机
 - `Get-WmiObject -Class Win32_ComputerSystem` 获取计算机组成或模型信息
 - `Get-WmiObject -Class Win32_BIOS -ComputerName` 获取当前计算机的BIOS信息
