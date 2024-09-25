@@ -108,12 +108,13 @@ PS>  gal　或者   PS>  Get-Alias
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换文档目录|
 |chdir|Set-Location|同上|
 |sl|  Set-Location|同上|
-|popd|  Pop-Location|
-|pushd|  Push-Location|
+|popd|  Pop-Location|？|
+|pushd|  Push-Location|？|
 |**子目录或文件**|**ChildItem**|**⇣⇣⇣⇣⇣**|
 |`ls`🔥|  Get-ChildItem|列出当前目录下的所有文件和目录|
 |`dir`🔥|  Get-ChildItem|同上|
 |gci|  Get-ChildItem|同上|
+|**操作目录或文件**|**Item**|**⇣⇣⇣⇣⇣**|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|同上|
 |cpi|  Copy-Item|同上|
@@ -122,17 +123,23 @@ PS>  gal　或者   PS>  Get-Alias
 |mi|  Move-Item|同上|
 |`ren`🔥|  Rename-Item|例：`Rename-Item C:\temp\oldname.txt C:\temp\newname.txt`  将文件 oldname.txt 重命名为 newname.txt|
 |rni|  Rename-Item|同上|
-|`md`🔥|  mkdir|
 |`del`🔥|  Remove-Item|例：`Remove-Item C:\temp\test.txt -Force`  删除名为 test.txt 的文件|
 |`rm`🔥|  Remove-Item|同上|
 |`rmdir`🔥|  Remove-Item|同上|
 |erase|  Remove-Item|同上|
 |rd|  Remove-Item|同上|
 |ri|  Remove-Item|同上|
+|ni|  New-Item|例：`New-Item -ItemType Directory -Path .\myFolder`  在当前目录下创建一个名为 myFolder 的新目录|
+|gi|  Get-Item|？|
+|si|  Set-Item|？|
+|ii|  Invoke-Item|？|
+|`md`🔥|  mkdir|
+|**屏幕**|**Host**|**⇣⇣⇣⇣⇣**|
 |`write`🔥|  Write-Host|例：`Write-Host "Hello, world!"`  输出 Hello, world!|
 |`echo`🔥|  Write-Output|例：`Write-Output "Hello, world!"`  输出 Hello, world!|
 |`clear`🔥|Clear-Host|清除控制台屏幕|
 |`cls`🔥|  Clear-Host|同上|
+|**比較**|**Compare**|**⇣⇣⇣⇣⇣**|
 |`diff`🔥|  Compare-Object|例：`$list1 = 1..5 $list2 = 2..6 Compare-Object -ReferenceObject $list1 -DifferenceObject $list2`  比较两个数字列表的不同之处|
 |`compare`🔥|  Compare-Object|同上|
 |**进程**|**Process**|**⇣⇣⇣⇣⇣**|
@@ -199,7 +206,6 @@ PS>  gal　或者   PS>  Get-Alias
 |`gcb`🌛|  Get-Clipboard|
 |`gcs`🌛|  Get-PSCallStack|
 |`gdr`🌛|  Get-PSDrive|
-|`gi`🌛|  Get-Item|
 |`gin`🌛|  Get-ComputerInfo|
 |`gm`🌛|  Get-Member|
 |`gmo`🌛|  Get-Module|
@@ -218,7 +224,6 @@ PS>  gal　或者   PS>  Get-Alias
 |icm|  Invoke-Command|
 |iex|  Invoke-Expression|
 |ihy|  Invoke-History|
-|ii|  Invoke-Item|
 |ipmo|  Import-Module|
 |ipsn|  Import-PSSession|
 |irm|  Invoke-RestMethod|
@@ -229,7 +234,6 @@ PS>  gal　或者   PS>  Get-Alias
 |mp|  Move-ItemProperty|
 |nal|  New-Alias|
 |ndr|  New-PSDrive|
-|ni|  New-Item|例：`New-Item -ItemType Directory -Path .\myFolder`  在当前目录下创建一个名为 myFolder 的新目录|
 |nmo|  New-Module|
 |npssc|  New-PSSessionConfigur|
 |nsn|  New-PSSession|
@@ -257,7 +261,6 @@ PS>  gal　或者   PS>  Get-Alias
 |select|  Select-Object|
 |set|  Set-Variable|
 |shcm|  Show-Command|
-|si|  Set-Item|
 |sleep|  Start-Sleep|
 |sls|  Select-String|例：`Select-String -Path "C:\temp\log.txt" -Pattern "error"`  在日志文件中搜索含有 "error" 的行|
 |sort|  Sort-Object|例：`Get-Process \| Sort-Object -Property CPU -Desc`   按 CPU 占用率降序排列所有进程|

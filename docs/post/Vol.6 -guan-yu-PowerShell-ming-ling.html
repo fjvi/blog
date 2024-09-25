@@ -226,12 +226,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>popd</td>
 <td>Pop-Location</td>
-<td></td>
+<td>？</td>
 </tr>
 <tr>
 <td>pushd</td>
 <td>Push-Location</td>
-<td></td>
+<td>？</td>
 </tr>
 <tr>
 <td><strong>子目录或文件</strong></td>
@@ -252,6 +252,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>gci</td>
 <td>Get-ChildItem</td>
 <td>同上</td>
+</tr>
+<tr>
+<td><strong>操作目录或文件</strong></td>
+<td><strong>Item</strong></td>
+<td><strong>⇣⇣⇣⇣⇣</strong></td>
 </tr>
 <tr>
 <td><code class="notranslate">copy</code>🔥</td>
@@ -294,11 +299,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>同上</td>
 </tr>
 <tr>
-<td><code class="notranslate">md</code>🔥</td>
-<td>mkdir</td>
-<td></td>
-</tr>
-<tr>
 <td><code class="notranslate">del</code>🔥</td>
 <td>Remove-Item</td>
 <td>例：<code class="notranslate">Remove-Item C:\temp\test.txt -Force</code>  删除名为 test.txt 的文件</td>
@@ -329,6 +329,36 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>同上</td>
 </tr>
 <tr>
+<td>ni</td>
+<td>New-Item</td>
+<td>例：<code class="notranslate">New-Item -ItemType Directory -Path .\myFolder</code>  在当前目录下创建一个名为 myFolder 的新目录</td>
+</tr>
+<tr>
+<td>gi</td>
+<td>Get-Item</td>
+<td>？</td>
+</tr>
+<tr>
+<td>si</td>
+<td>Set-Item</td>
+<td>？</td>
+</tr>
+<tr>
+<td>ii</td>
+<td>Invoke-Item</td>
+<td>？</td>
+</tr>
+<tr>
+<td><code class="notranslate">md</code>🔥</td>
+<td>mkdir</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>屏幕</strong></td>
+<td><strong>Host</strong></td>
+<td><strong>⇣⇣⇣⇣⇣</strong></td>
+</tr>
+<tr>
 <td><code class="notranslate">write</code>🔥</td>
 <td>Write-Host</td>
 <td>例：<code class="notranslate">Write-Host "Hello, world!"</code>  输出 Hello, world!</td>
@@ -347,6 +377,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td><code class="notranslate">cls</code>🔥</td>
 <td>Clear-Host</td>
 <td>同上</td>
+</tr>
+<tr>
+<td><strong>比較</strong></td>
+<td><strong>Compare</strong></td>
+<td><strong>⇣⇣⇣⇣⇣</strong></td>
 </tr>
 <tr>
 <td><code class="notranslate">diff</code>🔥</td>
@@ -679,11 +714,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td></td>
 </tr>
 <tr>
-<td><code class="notranslate">gi</code>🌛</td>
-<td>Get-Item</td>
-<td></td>
-</tr>
-<tr>
 <td><code class="notranslate">gin</code>🌛</td>
 <td>Get-ComputerInfo</td>
 <td></td>
@@ -774,11 +804,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td></td>
 </tr>
 <tr>
-<td>ii</td>
-<td>Invoke-Item</td>
-<td></td>
-</tr>
-<tr>
 <td>ipmo</td>
 <td>Import-Module</td>
 <td></td>
@@ -827,11 +852,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>ndr</td>
 <td>New-PSDrive</td>
 <td></td>
-</tr>
-<tr>
-<td>ni</td>
-<td>New-Item</td>
-<td>例：<code class="notranslate">New-Item -ItemType Directory -Path .\myFolder</code>  在当前目录下创建一个名为 myFolder 的新目录</td>
 </tr>
 <tr>
 <td>nmo</td>
@@ -966,11 +986,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>shcm</td>
 <td>Show-Command</td>
-<td></td>
-</tr>
-<tr>
-<td>si</td>
-<td>Set-Item</td>
 <td></td>
 </tr>
 <tr>
