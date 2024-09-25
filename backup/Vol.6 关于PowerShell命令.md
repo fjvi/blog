@@ -102,14 +102,18 @@ PS>  gal　或者   PS>  Get-Alias
 |---|---|---|
 |`gcm` 👙 |  Get-Command|例：`Get-Command Get-*`　查找所有以 Get- 开头的 cmdlets|
 |`gal`👙 |  Get-Alias|显示PowerShell Alias一覧|
+|**目录**|**Location**|**⇣⇣⇣⇣⇣**|
 |`pwd`🔥|  Get-Location|显示当前所在目录|
 |gl|  Get-Location|同上|
-|`ls`🔥|  Get-ChildItem|列出当前目录下的所有文件和目录|
-|`dir`🔥|  Get-ChildItem|同上|
-|gci|  Get-ChildItem|同上|
 |`cd`🔥|   Set-Location|例：`Set-Location C:\Users\YourName\Documents`  切换文档目录|
 |chdir|Set-Location|同上|
 |sl|  Set-Location|同上|
+|popd|  Pop-Location|
+|pushd|  Push-Location|
+|**子目录或文件**|**ChildItem**|**⇣⇣⇣⇣⇣**|
+|`ls`🔥|  Get-ChildItem|列出当前目录下的所有文件和目录|
+|`dir`🔥|  Get-ChildItem|同上|
+|gci|  Get-ChildItem|同上|
 |`copy`🔥|  Copy-Item|例：`Copy-Item C:\source\test.txt C:\destination\`  复制文件 test.txt 到另一个目录|
 |`cp`🔥|  Copy-Item|同上|
 |cpi|  Copy-Item|同上|
@@ -232,8 +236,6 @@ PS>  gal　或者   PS>  Get-Alias
 |nv|  New-Variable|
 |ogv|  Out-GridView|
 |oh|  Out-Host|
-|popd|  Pop-Location|
-|pushd|  Push-Location|
 |r|  Invoke-History|
 |rbp|  Remove-PSBreakpoint|
 |rcjb|  Receive-Job|
