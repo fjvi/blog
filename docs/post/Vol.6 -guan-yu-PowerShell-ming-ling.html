@@ -831,12 +831,22 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>wget 👙</td>
 <td>Invoke-WebRequest</td>
-<td>例：<code class="notranslate">Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"</code>  获取 GitHub 上最新发布的版本信息</td>
+<td>例：<code class="notranslate">Invoke-WebRequest "https://api.github.com/repos/powershell/powershell/releases/latest"</code>  获取 GitHub 上最新发布的版本信息</td>
 </tr>
 <tr>
 <td>curl 👙</td>
 <td>Invoke-WebRequest</td>
-<td>同上</td>
+<td><a href="https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.4" rel="nofollow">https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.4</a></td>
+</tr>
+<tr>
+<td>irm👙</td>
+<td>Invoke-RestMethod</td>
+<td><a href="https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.4" rel="nofollow">https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.4</a></td>
+</tr>
+<tr>
+<td>iex 👙</td>
+<td>Invoke-Expression</td>
+<td><a href="https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-7.4" rel="nofollow">https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-7.4</a></td>
 </tr>
 <tr>
 <td>iwr</td>
@@ -1051,16 +1061,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tr>
 <td>gu</td>
 <td>Get-Unique</td>
-<td></td>
-</tr>
-<tr>
-<td>iex 👙</td>
-<td>Invoke-Expression</td>
-<td></td>
-</tr>
-<tr>
-<td>irm</td>
-<td>Invoke-RestMethod</td>
 <td></td>
 </tr>
 <tr>

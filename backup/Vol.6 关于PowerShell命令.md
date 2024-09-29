@@ -229,8 +229,10 @@ PS>  gal　或者   PS>  Get-Alias
 |ipcsv|  Import-Csv|例：`$data = Import-Csv -Path "C:\temp\data.csv"`  从 CSV 文件导入数据|
 |epcsv|  Export-Csv|例：`$data \| Export-Csv -Path "C:\temp\output.csv" -NoTypeInformatio`  将数据导出为 CSV 文件|
 |**网络请求**|**WebRequest**|**⇣⇣⇣⇣⇣**|
-|wget 👙 |  Invoke-WebRequest|例：`Invoke-WebRequest -Uri "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
-|curl 👙 |  Invoke-WebRequest|同上|
+|wget 👙 |  Invoke-WebRequest|例：`Invoke-WebRequest "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
+|curl 👙 |  Invoke-WebRequest|https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.4|
+|irm👙 |  Invoke-RestMethod|https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.4|
+|iex 👙 |  Invoke-Expression|https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-7.4|
 |iwr|  Invoke-WebRequest|同上|
 |**剪贴板**|**Clipboard**|**⇣⇣⇣⇣⇣**|
 |gcb|  Get-Clipboard|
@@ -274,8 +276,6 @@ PS>  gal　或者   PS>  Get-Alias
 |gin 👙 |  Get-ComputerInfo|
 |gm|  Get-Member|
 |gu|  Get-Unique|
-|iex 👙 |  Invoke-Expression|
-|irm|  Invoke-RestMethod|
 |iwmi|  Invoke-WmiMethod|
 |lp|  Out-Printer|
 |ogv|  Out-GridView|
