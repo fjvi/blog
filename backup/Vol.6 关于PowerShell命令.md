@@ -231,7 +231,7 @@ PS>  gal　或者   PS>  Get-Alias
 |**网络请求**|**WebRequest**|**⇣⇣⇣⇣⇣**|
 |wget 👙 |  Invoke-WebRequest|例：`Invoke-WebRequest "https://api.github.com/repos/powershell/powershell/releases/latest"`  获取 GitHub 上最新发布的版本信息|
 |curl 👙 |  Invoke-WebRequest|https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.4|
-|irm👙 |  Invoke-RestMethod|https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.4|
+|irm👙 |  Invoke-RestMethod XMLやJSON扱いやすい |https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.4|
 |iex 👙 |  Invoke-Expression|https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-7.4|
 |iwr|  Invoke-WebRequest|同上|
 |**剪贴板**|**Clipboard**|**⇣⇣⇣⇣⇣**|
