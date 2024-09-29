@@ -36,12 +36,12 @@ wsreset -i
 ```
 
 
-# win11debloat https://github.com/raphire/win11debloat/
+# 删除Windows内置app [win11debloat](https://github.com/raphire/win11debloat/)
 ```
 irm "https://win11debloat.raphi.re/" | iex
 ```
 
-# ChrisTitusTech/winutil https://github.com/ChrisTitusTech/winutil/
+# 修改Win设置 [ChrisTitusTech/winutil](https://github.com/ChrisTitusTech/winutil/)
 ```
 irm "https://christitus.com/win" | iex
 ```
