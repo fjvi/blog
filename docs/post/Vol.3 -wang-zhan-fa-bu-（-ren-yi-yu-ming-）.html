@@ -127,7 +127,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 &gt; grapehut.us.kg    3600    IN A     185.199.111.153
 </code></pre>
 <p>适用于 AAAA 记录：</p>
-<pre class="notranslate"><code class="notranslate">$ dig EXAMPLE.COM +noall +answer -t AAAA
+<pre class="notranslate"><code class="notranslate">$ dig grapehut.us.kg +noall +answer -t AAAA
 &gt; grapehut.us.kg     3600    IN AAAA     2606:50c0:8000::153
 &gt; grapehut.us.kg     3600    IN AAAA     2606:50c0:8001::153
 &gt; grapehut.us.kg     3600    IN AAAA     2606:50c0:8002::153
@@ -137,7 +137,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>导航到 DNS 提供程序并为指向 GitHub Pages 默认域的 www 子域创建一条 CNAME 记录。<br>
 例如，假设网站位于 .github.io，则应创建一条将 <a href="http://www.grapehut.us.kg" rel="nofollow">www.grapehut.us.kg</a> 指向 .github.io 的 CNAME 记录。</p>
 <p>要确认 DNS 记录配置正确，请使用 dig 命令</p>
-<p>适用于 AAAA 记录：</p>
+<p>适用于 CNAME 记录：</p>
 <pre class="notranslate"><code class="notranslate">$ dig www.grapehut.us.kg +nostats +nocomments +nocmd
 &gt; ;www.grapehut.us.kg.                    IN      A
 &gt; www.grapehut.us.kg.             3592    IN      CNAME   YOUR-USERNAME.github.io.

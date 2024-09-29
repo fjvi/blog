@@ -55,7 +55,7 @@ $ dig grapehut.us.kg +noall +answer -t A
 ```
 适用于 AAAA 记录：
 ```
-$ dig EXAMPLE.COM +noall +answer -t AAAA
+$ dig grapehut.us.kg +noall +answer -t AAAA
 > grapehut.us.kg     3600    IN AAAA     2606:50c0:8000::153
 > grapehut.us.kg     3600    IN AAAA     2606:50c0:8001::153
 > grapehut.us.kg     3600    IN AAAA     2606:50c0:8002::153
@@ -70,7 +70,7 @@ $ dig EXAMPLE.COM +noall +answer -t AAAA
 
 要确认 DNS 记录配置正确，请使用 dig 命令
 
-适用于 AAAA 记录：
+适用于 CNAME 记录：
 ```
 $ dig www.grapehut.us.kg +nostats +nocomments +nocmd
 > ;www.grapehut.us.kg.                    IN      A
