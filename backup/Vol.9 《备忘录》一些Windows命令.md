@@ -19,7 +19,7 @@ netsh wlan show profiles                         　←查看名字
 netsh wlan show profiles name=xxxx key=clear        ←名字代入
 ```
 
-# 强制启动ie浏览器
+# 强制启动ie老版浏览器
 ```
 CreateObject("InternetExplorer.Application").Visible=true
 保存为vbs
