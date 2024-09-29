@@ -61,10 +61,11 @@
 ## ISO系统镜像下载
 #### 1.  [微软官网](https://www.microsoft.com/zh-cn/software-download)
 #### 2.  [msdn.itellyou](https://msdn.itellyou.cn/)
-#### 3.  [Tiny11 24H2](https://archive.org/details/tiny11-2409)
-#### 4.  [Tiny10-21h2-x64,x86](https://archive.org/details/tiny-10-21h2-x64-2209)
-#### 5  [Windows 7 Lite](https://archive.org/details/windows-7-lite_202403)
-#### 6.  [Windows XP on Fat16](https://archive.org/details/windows-xp-on-fat-16)
+#### 3.  [Tiny11（24H2）](https://archive.org/details/tiny11-2409)
+#### 4.  [Windows11（24H2）LTSC](https://archive.org/details/26100-ltsc-x64-enus)
+#### 5.  [Tiny10-21h2-x64,x86](https://archive.org/details/tiny-10-21h2-x64-2209)
+#### 6.  [Windows 7 Lite](https://archive.org/details/windows-7-lite_202403)
+#### 7.  [Windows XP on Fat16](https://archive.org/details/windows-xp-on-fat-16)
 
 
 ###  附录：Windows 11 与 Tiny11的区别
