@@ -286,6 +286,68 @@ PS>  gal　或者   PS>  Get-Alias
 |swmi|  Set-WmiInstance|在 WMI 中创建或修改实例|
 
 
+
+
+# Invoke-RestMethod与 Invoke-WebRequest的区别
+
+```
+$rest = Invoke-RestMethod "https://yesno.wtf/api"
+$web = Invoke-WebRequest "https://yesno.wtf/api"
+```
+
+```
+$rest
+answer forced image
+------ ------ -----
+yes     False https://yesno.wtf/assets/yes/2-5df1b403f2654fa77559af1bf2332d7a.gif
+
+$rest.answer
+yes
+
+```
+
+```
+$web
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"answer":"yes","forced":false,"image":"https://yesno.wtf/assets/yes/1-af11222d8d4af90bdab8fc447c8cfe
+                    bf.gif"}
+RawContent        : HTTP/1.1 200 OK
+                    Transfer-Encoding: chunked
+                    Connection: keep-alive
+                    Status: 200 OK
+                    Cache-Control: must-revalidate, max-age=0, private
+                    Access-Control-Allow-Origin: *
+                    ETag: "d5d1109b6aaeee4be8ce60e5846156…
+Headers           : {[Transfer-Encoding, System.String[]], [Connection, System.String[]], [Status, System.String[]], [Cac
+                    he-Control, System.String[]]…}
+Images            : {}
+InputFields       : {}
+Links             : {}
+RawContentLength  : 109
+RelationLink      : {}
+
+$hoge = ConvertFrom-Json $web
+$hoge.answer
+yes
+```
+
+前者（RestMethod）は PowerShell 特有の PSObject という形ですね。
+後者（WebRequest）はこのコマンドレット特有のものですね。
+
+RestMethod のほうが XML や JSON を扱いやすい
+
+単純に手間が一つ少ないというだけではありますが、Json を扱うなら RestMethod が良さそうですね。
+また、構造としてはどちらも同じらしく、出力のデータ形式が異なる以外の相違点はないそうです。
+
+
+
+
+
+
+
+
+
 # PowerShellでWMIクラスの一覧を取得
 ```
 Get-WmiObject -list | Sort-Object
