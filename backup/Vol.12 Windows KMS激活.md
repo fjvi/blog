@@ -2,7 +2,7 @@
 
 # Windows
 
-# Windows Enterprise LTSC および LTSB 
+## Windows Enterprise LTSC および LTSB 
 オペレーティング システムのエディション | KMS クライアント プロダクト キー
 -- | --
 Windows 11 Enterprise LTSC 24H2 | M7XTQ-FN8P6-TTKYV-9D4CC-J462D
