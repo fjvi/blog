@@ -30,6 +30,22 @@ CreateObject("InternetExplorer.Application").Visible=true
 sfc /scannow
 ```
 
+# 恢复应用商店
+```
+wsreset -i
+```
+
+
+# win11debloat https://github.com/raphire/win11debloat/
+```
+irm "https://win11debloat.raphi.re/" | iex
+```
+
+# ChrisTitusTech/winutil https://github.com/ChrisTitusTech/winutil/
+```
+irm "https://christitus.com/win" | iex
+```
+
 # 切换成Win10的右键菜单
 ```
 reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
