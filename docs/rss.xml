@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Sun, 29 Sep 2024 10:27:35 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.12 Windows KMS激活</title><link>https://grapehut.us.kg/post/Vol.12%20Windows%20KMS-ji-huo.html</link><description>&gt; 引用： https://learn.microsoft.com/ja-jp/windows-server/get-started/kms-client-activation-keys&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steven Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://grapehut.us.kg</link></image><lastBuildDate>Thu, 03 Oct 2024 14:36:47 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.13 虚拟机hyper-v安装openwrt软路由</title><link>https://grapehut.us.kg/post/Vol.13%20-xu-ni-ji-hyper-v-an-zhuang-openwrt-ruan-lu-you.html</link><description># 事前准备&#13;
+&#13;
+### 1. 下载 OpenWrt 镜像&#13;
+骷髅大佬版本：[DHDAXCW/OpenWRT_x86_x64](https://github.com/DHDAXCW/OpenWRT_x86_x64/releases)&#13;
+&#13;
+`ext4` 文件系统镜像可以对任何改动都进行持久化存储，&#13;
+`squashfs` 一般情况下对文件系统的改动无法持久化，每次重启都会重置更改，但便于从错误配置中重置。</description><guid isPermaLink="true">https://grapehut.us.kg/post/Vol.13%20-xu-ni-ji-hyper-v-an-zhuang-openwrt-ruan-lu-you.html</guid><pubDate>Wed, 02 Oct 2024 13:10:21 +0000</pubDate></item><item><title>Vol.12 Windows KMS激活</title><link>https://grapehut.us.kg/post/Vol.12%20Windows%20KMS-ji-huo.html</link><description>&gt; 引用： https://learn.microsoft.com/ja-jp/windows-server/get-started/kms-client-activation-keys&#13;
 &#13;
 # Windows&#13;
 &#13;
