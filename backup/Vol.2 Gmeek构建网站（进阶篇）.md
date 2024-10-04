@@ -71,10 +71,10 @@
 
 
 ### 3. SVG图标格式
-使用`iconList`自定义SVG图标必须是`16px`大小的，建议使用github的`Octicons`[图标](https://primer.style/foundations/icons/#16px)
+使用`iconList`自定义SVG图标必须是`16px`大小的，建议使用github的[Octicons 图标](https://primer.style/foundations/icons/#16px)
 
-
-
+Octicons图标链接：https://primer.style/foundations/icons/#16px
+大佬自己转换的Octicons图标path列表：https://gist.github.com/Meekdai/f6375fe2740428af39d90f1afa678fdc
 
 
 
