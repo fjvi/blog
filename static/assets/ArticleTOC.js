@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     tocIcon.classList.add('active');
     
-    tocIcon.textContent = '☰';
+    tocIcon.textContent = '✖';
     tocIcon.onclick = (e) => {
         e.stopPropagation();
         toggleTOC();
