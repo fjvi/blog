@@ -96,6 +96,126 @@ https://www.100font.com/forum-1-1.htm?tagids=10_0_0_0
 下载地址：https://www.dafont.com/new.php
 
 
+
+## 👀日语字体合集
+
+● 横浜独自のイマジン・ヨコハマフォント（フォント名表示：imagine YOKOHAMA）
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3669702d324f790000/original.jpeg">`
+
+● うつくし明朝体オールド
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3669702d1d036a0000/original.jpeg">`
+
+● こころ明朝体
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3669702d325d710000/original.jpeg">`
+
+● はんなり明朝
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3669702d1d0b9b0000/original.jpeg">`
+
+● こども丸ゴシック細め
+`Gmeek-html<img src="https://ferret.akamaized.net/images/5787540169702d7e423a0000/large.jpeg">`
+
+● ほのか丸ゴシック
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3569702d325a770000/original.jpeg">`
+
+● ほのか明朝
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3a69702d1d0b9c0000/original.jpeg">`
+
+● ロゴたいぷゴシック
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3b69702d325d720000/original.jpeg">`
+
+● ロゴたいぷゴシックコンデンスド
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3b69702d324f7a0000/original.jpeg">`
+
+● 梅フォント
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3c69702d32578b0000/original.jpeg">`
+
+● いにしえよりつづくもの
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55a3769702d1d07790000/original.jpeg">`
+
+
+● お祝いフォント
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55bfd69702d324f7e0000/original.jpeg">`
+
+● お祭りフォント
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55bfc69702d1d0b9d0000/original.jpeg">`
+
+
+● 年賀状フォント
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55c0069702d3257900000/original.jpeg">`
+
+● はつゆめすけーぷ
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55bfb69702d1cfc840000/original.jpeg">`
+
+● にまに お試し版
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55bfb69702d325a7a0000/original.jpeg">`
+
+● もじくみ仮名
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55bfa69702d1d036b0000/original.jpeg">`
+
+● 出島明朝
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55bfd69702d1d036c0000/original.jpeg">`
+
+● 墨東ルイカ
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55bff69702d325a7b0000/original.jpeg">`
+
+● 衡山毛筆フォント草書
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55cc769702d1d036d0000/original.jpeg">`
+
+● 青柳疎石フォント
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55cc769702d3257910000/original.jpeg">`
+
+● 青柳衡山フォントT
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55cc769702d1cfc860000/original.jpeg">`
+
+● 青柳隷書しも
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55cc769702d1d077c0000/original.jpeg">`
+
+● 毛筆フォント(Welina)
+`Gmeek-html<img src="https://ferret.akamaized.net/images/57874e4769702d1525030000/large.jpeg">`
+
+● 毛筆太文字(Welina)
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55cca69702d325d750000/original.jpeg">`
+
+
+● 明朝體フォント むつき
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55d5569702d325a7d0000/original.jpeg">`
+
+● 刻明朝フォント
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55d5369702d1d077d0000/original.jpeg">`
+
+● HOKKORIフォント
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55d5569702d325d760000/original.jpeg">`
+
+
+● やさしさアンチック
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55dd569702d1cfc8a0000/original.jpeg">`
+
+● 新コミック体
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55dd569702d324f830000/original.jpeg">`
+
+
+● あられ 無料お試し版
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55e0c69702d325a7e0000/original.jpeg">`
+
+● 切り絵文字
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55e0c69702d1cfc8b0000/original.jpeg">`
+
+
+● オリエンタル
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55e3f69702d1cfc8c0000/original.jpeg">`
+
+● かんじゅくゴシック
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55e4169702d325d790000/original.jpeg">`
+
+● ふぉんとうは怖い明朝体
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55e4069702d1d0ba10000/original.jpeg">`
+
+● フォントポにほんご
+`Gmeek-html<img src="https://ferret.akamaized.net/images/54e55e4169702d325a800000/original.jpeg">`
+
+
+
+
 ## 👀安装字体时一些常见问题
 
 ### ❓字体安装后找不到
