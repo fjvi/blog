@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Wed, 09 Oct 2024 07:23:22 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.13 虚拟机hyper-v安装openwrt软路由</title><link>https://www.grapehut.us.kg/post/Vol.13%20-xu-ni-ji-hyper-v-an-zhuang-openwrt-ruan-lu-you.html</link><description># 事前准备&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Wed, 09 Oct 2024 08:06:49 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.13 虚拟机hyper-v安装openwrt软路由</title><link>https://www.grapehut.us.kg/post/Vol.13%20-xu-ni-ji-hyper-v-an-zhuang-openwrt-ruan-lu-you.html</link><description># 事前准备&#13;
 &#13;
 ### 1. 下载 OpenWrt 镜像&#13;
 骷髅大佬版本：[DHDAXCW/OpenWRT_x86_x64](https://github.com/DHDAXCW/OpenWRT_x86_x64/releases)&#13;
@@ -414,5 +414,14 @@ autoload.js 会自动加载三个文件：waifu.css，live2d.min.js 和 waifu-ti
 ## 一、安装&#13;
 &gt; [!TIP]&#13;
 &gt; 安装极其简单，根据以下步骤，一步一步操作。</description><guid isPermaLink="true">https://www.grapehut.us.kg/post/Vol.1%20Gmeek-gou-jian-wang-zhan-%EF%BC%88-ji-chu-pian-%EF%BC%89.html</guid><pubDate>Sat, 31 Aug 2024 09:59:06 +0000</pubDate></item><item><title>About Me</title><link>https://www.grapehut.us.kg/about.html</link><description># Stay hungry. Stay foolish. --Steven Jobs&#13;
-。</description><guid isPermaLink="true">https://www.grapehut.us.kg/about.html</guid><pubDate>Sat, 31 Aug 2024 14:18:20 +0000</pubDate></item><item><title>友情链接</title><link>https://www.grapehut.us.kg/link.html</link><description># 网盘搜索工具导航&#13;
+。</description><guid isPermaLink="true">https://www.grapehut.us.kg/about.html</guid><pubDate>Sat, 31 Aug 2024 14:18:20 +0000</pubDate></item><item><title>友情链接</title><link>https://www.grapehut.us.kg/link.html</link><description># Youtube频道（tech博主）&#13;
+- https://www.youtube.com/@XuanLi199/videos&#13;
+- https://www.youtube.com/@%E9%9B%B6%E5%BA%A6%E8%A7%A3%E8%AF%B4/videos&#13;
+- https://www.youtube.com/@Tech_Shrimp/videos&#13;
+- https://www.youtube.com/@bulianglin/videos&#13;
+- &#13;
+&#13;
+&#13;
+&#13;
+# 网盘搜索工具导航&#13;
 https://www.pansou.vip/。</description><guid isPermaLink="true">https://www.grapehut.us.kg/link.html</guid><pubDate>Wed, 09 Oct 2024 04:44:59 +0000</pubDate></item></channel></rss>
