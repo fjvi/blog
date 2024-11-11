@@ -233,7 +233,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
-<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<!--<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>-->
 <div class="comments" id="comments"></div>
 
 </div>
@@ -279,13 +279,13 @@ document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 
 
 
-function openComments(){
+//function openComments(){
     cm=document.getElementById("comments");
-    cmButton=document.getElementById("cmButton");
-    cmButton.innerHTML="loading";
-    span=document.createElement("span");
-    span.setAttribute("class","AnimatedEllipsis");
-    cmButton.appendChild(span);
+    //cmButton=document.getElementById("cmButton");
+    //cmButton.innerHTML="loading";
+    //span=document.createElement("span");
+    //span.setAttribute("class","AnimatedEllipsis");
+    //cmButton.appendChild(span);
 
     script=document.createElement("script");
     
@@ -316,7 +316,7 @@ function openComments(){
     
     cm.appendChild(script);
     int=self.setInterval("iFrameLoading()",200);
-}
+//}
 
 function iFrameLoading(){
     var utterances=document.getElementsByClassName('giscus');

@@ -221,7 +221,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>Multipass 是一个轻量虚拟机管理器，是由 Ubuntu 运营公司 Canonical 所推出的开源项目。运行环境支持 Linux、Windows、macOS。在不同的操作系统上，使用的是不同的虚拟化技术。在 Linux 上使用的是 KVM、Window 上使用 Hyper-V、macOS 中使用 HyperKit 以最小开销运行VM，支持在笔记本模拟小型云。同时，Multipass 提供了一个命令行界面来启动和管理 Linux 实例。下载一个全新的镜像需要几秒钟的时间，并且在几分钟内就可以启动并运行 VM。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
-<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<!--<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>-->
 <div class="comments" id="comments"></div>
 
 </div>
@@ -267,13 +267,13 @@ document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 
 
 
-function openComments(){
+//function openComments(){
     cm=document.getElementById("comments");
-    cmButton=document.getElementById("cmButton");
-    cmButton.innerHTML="loading";
-    span=document.createElement("span");
-    span.setAttribute("class","AnimatedEllipsis");
-    cmButton.appendChild(span);
+    //cmButton=document.getElementById("cmButton");
+    //cmButton.innerHTML="loading";
+    //span=document.createElement("span");
+    //span.setAttribute("class","AnimatedEllipsis");
+    //cmButton.appendChild(span);
 
     script=document.createElement("script");
     
@@ -304,7 +304,7 @@ function openComments(){
     
     cm.appendChild(script);
     int=self.setInterval("iFrameLoading()",200);
-}
+//}
 
 function iFrameLoading(){
     var utterances=document.getElementsByClassName('giscus');

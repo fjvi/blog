@@ -277,7 +277,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>只需要<code class="notranslate">Close issue</code>或者<code class="notranslate">Delete issue</code>后，再手动全局生成一次即可。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
-<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<!--<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>-->
 <div class="comments" id="comments"></div>
 
 </div>
@@ -323,13 +323,13 @@ document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 
 
 
-function openComments(){
+//function openComments(){
     cm=document.getElementById("comments");
-    cmButton=document.getElementById("cmButton");
-    cmButton.innerHTML="loading";
-    span=document.createElement("span");
-    span.setAttribute("class","AnimatedEllipsis");
-    cmButton.appendChild(span);
+    //cmButton=document.getElementById("cmButton");
+    //cmButton.innerHTML="loading";
+    //span=document.createElement("span");
+    //span.setAttribute("class","AnimatedEllipsis");
+    //cmButton.appendChild(span);
 
     script=document.createElement("script");
     
@@ -360,7 +360,7 @@ function openComments(){
     
     cm.appendChild(script);
     int=self.setInterval("iFrameLoading()",200);
-}
+//}
 
 function iFrameLoading(){
     var utterances=document.getElementsByClassName('giscus');
