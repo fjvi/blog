@@ -15,9 +15,11 @@ slmgr -ato
 ```
 
 
-> 引用： https://learn.microsoft.com/ja-jp/windows-server/get-started/kms-client-activation-keys
+
 
 # Windows
+
+> 引用： https://learn.microsoft.com/ja-jp/windows-server/get-started/kms-client-activation-keys
 
 ## Windows 11 零售版 RTM 通用安装密钥
 
