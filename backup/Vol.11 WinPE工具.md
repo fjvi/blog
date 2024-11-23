@@ -1,12 +1,5 @@
 # 微 PE 工具箱
 
-
-## 特点
-- 纯净无广告：这是其非常突出的优点，不会在使用过程中弹出各种广告或捆绑其他不必要的软件，使用起来十分清爽，能让用户专注于系统维护和安装等操作。
-- 功能丰富且实用：具备硬盘分区、系统备份恢复、修改本地密码、注入驱动、修复系统引导等多种实用功能，基本可以满足用户在系统维护和安装方面的各种需求。
-- 操作简单易上手：无论是制作 PE 启动盘还是在 PE 系统中进行操作，都相对简单易懂，对于新手用户来说比较友好，容易掌握和使用。
-
-
 ## 以下是使用微 PE 安装 Windows 11 的详细教程：
 
 #### 1. 准备工作：
@@ -21,6 +14,7 @@
    - 将 U 盘插入电脑的 USB 接口。
    - 打开微 PE 工具箱软件，选择 “安装到 U 盘” 选项。
    - 在弹出的窗口中，确认选择的 U 盘盘符是否正确，然后点击 “立即安装到 U 盘” 按钮。
+   - 推荐选择2分区
    - 等待制作过程完成，制作时长通常在几分钟左右，制作完成后，将 U 盘安全拔出。
  
 `Gmeek-html<img src="https://img.iplaysoft.com/wp-content/uploads/2020/wepe/wepe_usb.png">`
@@ -48,24 +42,25 @@
    - 设置完成后，点击 “开始安装”，等待安装过程完成，这个过程中电脑可能会自动重启几次。
 
 
-## 微PE下载
-微PE官网：https://www.wepe.com.cn/download.html
+## 微PE工具箱下载
+微PE工具箱V1.3　8PE老内核 ，适合老机器，最新于 2023-06-22
+微PE工具箱V2.3　10PE新内核，全面支持当前新主机，最新于 2023-06-22
 
-#### [微PE工具箱V2.3  64bit](https://mirrors.sdu.edu.cn/wepe/WePE_64_V2.3.exe)
-  - 10PE新内核，全面支持当前新主机
+官网主页: https://www.wepe.com.cn/download.html
+山东大学镜像: https://mirrors.sdu.edu.cn/wepe/
+兰州大学镜像: https://mirrors.lzu.edu.cn/wepe/
 
-#### [微PE工具箱V1.3  32bit](https://mirrors.sdu.edu.cn/wepe/WePE_32_V1.3.exe)
-  - 8PE老内核 ，适合老机器
+例如：
+https://mirrors.sdu.edu.cn/wepe/WePE_64_V2.3.exe
+https://mirrors.sdu.edu.cn/wepe/WePE_32_V1.3.exe
 
 
-## ISO系统镜像下载
-#### 1.  [微软官网](https://www.microsoft.com/zh-cn/software-download)
-#### 2.  [msdn.itellyou](https://msdn.itellyou.cn/)
-#### 3.  [Tiny11（24H2）](https://archive.org/details/tiny11-2409)
-#### 4.  [Windows11（24H2）LTSC](https://archive.org/details/26100-ltsc-x64-enus)
-#### 5.  [Tiny10-21h2-x64,x86](https://archive.org/details/tiny-10-21h2-x64-2209)
-#### 6.  [Windows 7 Lite](https://archive.org/details/windows-7-lite_202403)
-#### 7.  [Windows XP on Fat16](https://archive.org/details/windows-xp-on-fat-16)
+## ISO镜像下载
+1.  [微软官网](https://www.microsoft.com/zh-cn/software-download)
+2.  [Tiny11（24H2）](https://archive.org/details/tiny11-2409)
+3.  [Windows11（24H2）LTSC](https://archive.org/details/26100-ltsc-x64-enus)
+4.  [msdn.itellyou](https://msdn.itellyou.cn/)
+
 
 
 ###  附录：Windows 11 与 Tiny11的区别
