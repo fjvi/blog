@@ -14,7 +14,7 @@
    - 将 U 盘插入电脑的 USB 接口。
    - 打开微 PE 工具箱软件，选择 “安装到 U 盘” 选项。
    - 在弹出的窗口中，确认选择的 U 盘盘符是否正确，然后点击 “立即安装到 U 盘” 按钮。
-   - 推荐选择2分区
+   - 推荐选择方案二：UEFI/Legacy全能二分区
    - 等待制作过程完成，制作时长通常在几分钟左右，制作完成后，将 U 盘安全拔出。
  
 `Gmeek-html<img src="https://img.iplaysoft.com/wp-content/uploads/2020/wepe/wepe_usb.png">`
