@@ -1,3 +1,17 @@
+```
+# Windows 11 LTSC 2024
+https://archive.org/details/tiny11-2409 
+certutil -hashfile tiny11_24H2_AMD64.iso SHA256
+87c926dcb9c2927a0d67c5f4084308c61a29581e259e6f4d9ebd36f44c79559a
+```
+```
+# Windows 11 （24H2）LTSC KMS激活
+slmgr -ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D
+slmgr -skms kms.0t.net.cn
+slmgr -ato
+```
+
+
 > 引用： https://learn.microsoft.com/ja-jp/windows-server/get-started/kms-client-activation-keys
 
 # Windows
