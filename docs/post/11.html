@@ -6,23 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="
-# jsdelivr 
-> https://www.jsdelivr.com/
-
-## jsdelivr CDN 和 GitHub 的关系
-jsdelivr 是一个免费且可靠的内容分发网络（CDN）服务，允许开发者将静态资源存储在 GitHub 仓库中，并通过 jsdelivr 进行全球加速访问。">
-<meta property="og:title" content="Vol.16 jsdelivr CDN">
-<meta property="og:description" content="
-# jsdelivr 
-> https://www.jsdelivr.com/
-
-## jsdelivr CDN 和 GitHub 的关系
-jsdelivr 是一个免费且可靠的内容分发网络（CDN）服务，允许开发者将静态资源存储在 GitHub 仓库中，并通过 jsdelivr 进行全球加速访问。">
+<meta name="description" content="# 关于 Linux 的 Windows 子系统 (WSL) 
+Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。">
+<meta property="og:title" content="Vol.10 WSL（Windows Subsystem for Linux）">
+<meta property="og:description" content="# 关于 Linux 的 Windows 子系统 (WSL) 
+Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.grapehut.us.kg/post/Vol.16%20jsdelivr%20CDN.html">
+<meta property="og:url" content="https://www.grapehut.us.kg/post/11.html">
 <meta property="og:image" content="">
-<title>Vol.16 jsdelivr CDN</title>
+<title>Vol.10 WSL（Windows Subsystem for Linux）</title>
 
 
 
@@ -65,7 +57,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">Vol.16 jsdelivr CDN</h1>
+<h1 class="postTitle">Vol.10 WSL（Windows Subsystem for Linux）</h1>
 <div class="title-right">
     <a href="https://www.grapehut.us.kg" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -84,29 +76,160 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
-<div class="markdown-body" id="postBody"><h1>jsdelivr</h1>
+<div class="markdown-body" id="postBody"><h1>关于 Linux 的 Windows 子系统 (WSL)</h1>
+<p>Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。 WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高效的体验。</p>
+<h1>前提条件</h1>
+<p>开启以下2个功能 （系统 &gt; 附加功能 &gt; 其他功能 ）</p>
+<ul>
+<li>WSL（Windows Subsystem for Linux）</li>
+<li>虚拟机平台</li>
+</ul>
+<h1>WSL命令</h1>
 <blockquote>
-<p><a href="https://www.jsdelivr.com/" rel="nofollow">https://www.jsdelivr.com/</a></p>
+<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands</a></p>
 </blockquote>
-<h2>jsdelivr CDN 和 GitHub 的关系</h2>
-<p>jsdelivr 是一个免费且可靠的内容分发网络（CDN）服务，允许开发者将静态资源存储在 GitHub 仓库中，并通过 jsdelivr 进行全球加速访问。jsdelivr 能够通过提供一个 CDN 地址，将存储在 GitHub 仓库中的资源进行加速，从而使这些资源在全球范围内快速加载。</p>
-<h2>如何将 GitHub 项目与 jsdelivr 对应起来</h2>
-<p>将静态资源（如图片、JavaScript 文件、CSS 文件等）上传到 公开的 GitHub 仓库中。<br>
-例如，你可能有一个名为 my-project 的 GitHub 仓库，里面有一个 images 文件夹，存储了一些图片。</p>
-<h2>使用 jsdelivr CDN 进行访问</h2>
-<p>一旦资源上传到 GitHub 仓库中，你可以通过 jsdelivr 提供的 URL 访问这些资源。jsdelivr 提供了一个与 GitHub 项目相关联的 CDN 地址，该地址遵循以下格式：</p>
-<pre class="notranslate"><code class="notranslate">https://cdn.jsdelivr.net/gh/[GitHub用户名]/[仓库名]@[标签或分支]/[文件路径]
-e.g. https://cdn.jsdelivr.net/gh/hst1189/live2d-widget/autoload.js
-
-- [GitHub用户名]：GitHub用户名
-- [仓库名]           ：GitHub仓库名称
-- [标签或分支]   ：GitHub标签或分支（例如 main 或 v1.0）
-- [文件路径]       ：文件路径
-
+<h1>WSL 的版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --version
 </code></pre>
-<h2>或者github的加速服务（raw.staticdn.net）</h2>
-<pre class="notranslate"><code class="notranslate">https://raw.staticdn.net/[GitHub用户名]/[仓库名]/[标签或分支]/[文件路径]
-e.g. https://raw.staticdn.net/hst1189/live2d-widget/autoload.js
+<h1>WSL 的状態</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --status
+</code></pre>
+<h1>帮助</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --help
+</code></pre>
+<h1>查看可安装的Linux版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --list --online　或者　$ wsl -l -o
+</code></pre>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>NAME</th>
+<th>FRIENDLY NAME</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu</td>
+<td>Ubuntu</td>
+<td>★</td>
+</tr>
+<tr>
+<td>Debian</td>
+<td>Debian GNU/Linux</td>
+<td></td>
+</tr>
+<tr>
+<td>kali-linux</td>
+<td>Kali Linux Rolling</td>
+<td></td>
+</tr>
+<tr>
+<td>Ubuntu-18.04</td>
+<td>Ubuntu 18.04 LTS</td>
+<td></td>
+</tr>
+<tr>
+<td>Ubuntu-20.04</td>
+<td>Ubuntu 20.04 LTS</td>
+<td></td>
+</tr>
+<tr>
+<td>Ubuntu-22.04</td>
+<td>Ubuntu 22.04 LTS</td>
+<td></td>
+</tr>
+<tr>
+<td>Ubuntu-24.04</td>
+<td>Ubuntu 24.04 LTS</td>
+<td></td>
+</tr>
+<tr>
+<td>OracleLinux_7_9</td>
+<td>Oracle Linux 7.9</td>
+<td></td>
+</tr>
+<tr>
+<td>OracleLinux_8_7</td>
+<td>Oracle Linux 8.7</td>
+<td></td>
+</tr>
+<tr>
+<td>OracleLinux_9_1</td>
+<td>Oracle Linux 9.1</td>
+<td></td>
+</tr>
+<tr>
+<td>openSUSE-Leap-15.6</td>
+<td>openSUSE Leap 15.6</td>
+<td></td>
+</tr>
+<tr>
+<td>SUSE-Linux-Enterprise-15-SP5</td>
+<td>SUSE Linux Enterprise 15 SP5</td>
+<td></td>
+</tr>
+<tr>
+<td>SUSE-Linux-Enterprise-15-SP6</td>
+<td>SUSE Linux Enterprise 15 SP6</td>
+<td></td>
+</tr>
+<tr>
+<td>openSUSE-Tumbleweed</td>
+<td>openSUSE Tumbleweed</td>
+<td></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h1>安装 WSL</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --install -d &lt;DistributionName&gt;　或者　$ wsl --install　**默认安装Ubuntu**
+</code></pre>
+<h1>查看已安装的Linux版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --list --verbose　或者　$ wsl -l -v
+</code></pre>
+<h1>快速启动默认Linux版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl ~
+</code></pre>
+<h1>启动指定Linux版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl -d &lt;DistributionName&gt;
+</code></pre>
+<h1>切换默认Linux版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl -s &lt;DistributionName&gt;　或者　$ wsl --set-default &lt;DistributionName&gt;
+</code></pre>
+<h1>全部关闭</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --shutdown
+</code></pre>
+<h1>关闭指定Linux版本</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --terminate &lt;DistributionName&gt;
+</code></pre>
+<h1>备份Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --export &lt;DistributionName&gt; xxx.tar
+</code></pre>
+<h1>导入Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --import &lt;DistributionName&gt; &lt;Install-Location&gt; xxx.tar
+</code></pre>
+<h1>卸载Linux</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --unregister &lt;DistributionName&gt;
+</code></pre>
+<h1>查看IP</h1>
+<ul>
+<li>Linux ディストリビューションの IP アドレスを返します (WSL 2 VM アドレス)</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">$ wsl hostname -I
+</code></pre>
+<ul>
+<li>WSL 2 から見た Windows マシンの IP アドレスを返します</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">$ ip route show | grep -i default | awk '{ print $3}'
+</code></pre>
+<h1>マウント</h1>
+<blockquote>
+<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk</a></p>
+</blockquote>
+<pre class="notranslate"><code class="notranslate">$ wsl --mount &lt;DiskPath&gt;
+</code></pre>
+<h1>マウント解除</h1>
+<pre class="notranslate"><code class="notranslate">$ wsl --unmount &lt;DiskPath&gt;
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 

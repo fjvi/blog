@@ -6,25 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="# 事前准备
+<meta name="description" content="
+# jsdelivr 
+> https://www.jsdelivr.com/
 
-### 1. 下载 OpenWrt 镜像
-骷髅大佬版本：[DHDAXCW/OpenWRT_x86_x64](https://github.com/DHDAXCW/OpenWRT_x86_x64/releases)
+## jsdelivr CDN 和 GitHub 的关系
+jsdelivr 是一个免费且可靠的内容分发网络（CDN）服务，允许开发者将静态资源存储在 GitHub 仓库中，并通过 jsdelivr 进行全球加速访问。">
+<meta property="og:title" content="Vol.16 jsdelivr CDN">
+<meta property="og:description" content="
+# jsdelivr 
+> https://www.jsdelivr.com/
 
-`ext4` 文件系统镜像可以对任何改动都进行持久化存储，
-`squashfs` 一般情况下对文件系统的改动无法持久化，每次重启都会重置更改，但便于从错误配置中重置。">
-<meta property="og:title" content="Vol.13 虚拟机hyper-v安装openwrt软路由">
-<meta property="og:description" content="# 事前准备
-
-### 1. 下载 OpenWrt 镜像
-骷髅大佬版本：[DHDAXCW/OpenWRT_x86_x64](https://github.com/DHDAXCW/OpenWRT_x86_x64/releases)
-
-`ext4` 文件系统镜像可以对任何改动都进行持久化存储，
-`squashfs` 一般情况下对文件系统的改动无法持久化，每次重启都会重置更改，但便于从错误配置中重置。">
+## jsdelivr CDN 和 GitHub 的关系
+jsdelivr 是一个免费且可靠的内容分发网络（CDN）服务，允许开发者将静态资源存储在 GitHub 仓库中，并通过 jsdelivr 进行全球加速访问。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.grapehut.us.kg/post/Vol.13%20-xu-ni-ji-hyper-v-an-zhuang-openwrt-ruan-lu-you.html">
+<meta property="og:url" content="https://www.grapehut.us.kg/post/18.html">
 <meta property="og:image" content="">
-<title>Vol.13 虚拟机hyper-v安装openwrt软路由</title>
+<title>Vol.16 jsdelivr CDN</title>
 
 
 
@@ -67,7 +65,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">Vol.13 虚拟机hyper-v安装openwrt软路由</h1>
+<h1 class="postTitle">Vol.16 jsdelivr CDN</h1>
 <div class="title-right">
     <a href="https://www.grapehut.us.kg" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -86,103 +84,30 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
-<div class="markdown-body" id="postBody"><h1>事前准备</h1>
-<h3>1. 下载 OpenWrt 镜像</h3>
-<p>骷髅大佬版本：<a href="https://github.com/DHDAXCW/OpenWRT_x86_x64/releases">DHDAXCW/OpenWRT_x86_x64</a></p>
-<p><code class="notranslate">ext4</code> 文件系统镜像可以对任何改动都进行持久化存储，<br>
-<code class="notranslate">squashfs</code> 一般情况下对文件系统的改动无法持久化，每次重启都会重置更改，但便于从错误配置中重置。推荐使用 <code class="notranslate">generic-squashfs-x.img</code></p>
-<p><code class="notranslate">generic-x-combined.img.gz</code>  传统 BIOS 引导<br>
-<code class="notranslate">generic-x-combined-efi.img.gz</code>   UEFI 引导</p>
-<h3>2. OpenWrt 镜像转换格式</h3>
-<p>解压之后，会得到一个 <code class="notranslate">.img</code> 格式的镜像文件，而 Hyper-V 不能直接识别和使用这个格式的镜像，需要把 <code class="notranslate">.img</code> 格式转换为 Hyper-V 可以识别的 <code class="notranslate">.vhd</code> 或 <code class="notranslate">.vhdx</code> 格式的镜像文件。</p>
-<p>Windows 平台下，我们有两种转换方式：</p>
-<h4>其一：使用 qemu-img</h4>
-<p>只需要它的 qemu-img 工具，所以我们只勾选 Tools 和 DLL Library 两项。<br>
-接下来一路默认，安装完成后即可关闭安装程序。注意：安装程序可能不会默认将其安装目录添加进环境变量中，所以接下来的命令可能需要你自行定位至安装目录运行，或者将其添加进你的环境变量。</p>
-<pre class="notranslate"><code class="notranslate">qemu-img convert -p -f raw -O vhdx your_image.img your_image.vhdx
+<div class="markdown-body" id="postBody"><h1>jsdelivr</h1>
+<blockquote>
+<p><a href="https://www.jsdelivr.com/" rel="nofollow">https://www.jsdelivr.com/</a></p>
+</blockquote>
+<h2>jsdelivr CDN 和 GitHub 的关系</h2>
+<p>jsdelivr 是一个免费且可靠的内容分发网络（CDN）服务，允许开发者将静态资源存储在 GitHub 仓库中，并通过 jsdelivr 进行全球加速访问。jsdelivr 能够通过提供一个 CDN 地址，将存储在 GitHub 仓库中的资源进行加速，从而使这些资源在全球范围内快速加载。</p>
+<h2>如何将 GitHub 项目与 jsdelivr 对应起来</h2>
+<p>将静态资源（如图片、JavaScript 文件、CSS 文件等）上传到 公开的 GitHub 仓库中。<br>
+例如，你可能有一个名为 my-project 的 GitHub 仓库，里面有一个 images 文件夹，存储了一些图片。</p>
+<h2>使用 jsdelivr CDN 进行访问</h2>
+<p>一旦资源上传到 GitHub 仓库中，你可以通过 jsdelivr 提供的 URL 访问这些资源。jsdelivr 提供了一个与 GitHub 项目相关联的 CDN 地址，该地址遵循以下格式：</p>
+<pre class="notranslate"><code class="notranslate">https://cdn.jsdelivr.net/gh/[GitHub用户名]/[仓库名]@[标签或分支]/[文件路径]
+e.g. https://cdn.jsdelivr.net/gh/hst1189/live2d-widget/autoload.js
+
+- [GitHub用户名]：GitHub用户名
+- [仓库名]           ：GitHub仓库名称
+- [标签或分支]   ：GitHub标签或分支（例如 main 或 v1.0）
+- [文件路径]       ：文件路径
+
 </code></pre>
-<p>命令不会输出任何结果，但实际上已经完成了转换。</p>
-<h4>其二：使用 StarWind V2V Converter</h4>
-<p>下载完成后，进入安装程序，一路默认即可。<br>
-安装完成后，进入 StarWind V2V Converter，<br>
-在”Select the location of the img to convert”页面中，选择”Local File”，然后在下一页中选择你下载的镜像，<br>
-在”Select the location of the destination image”页面选择”Local File”，<br>
-在”Select destination image format”页面中选择”VHD/VHDX”,选择”VHDX Growable Image”或者”VHDX Pre-allocated”，转换即可。</p>
-<p>两款软件的下载地址： <a href="https://github.com/RinLin-NYA/RinLin-NYA.github.io/releases">https://github.com/RinLin-NYA/RinLin-NYA.github.io/releases</a></p>
-<h3>3. 开启hyper-v</h3>
-<p>Win + R -&gt; control -&gt; 程序 -&gt; 启用或关闭 Windows 功能，然后需要勾选如下几项：</p>
-<ul>
-<li>Hyper-V</li>
-<li>虚拟机平台</li>
-</ul>
-<h1>创建虚拟网络交换机</h1>
-<h3>了解虚拟网络交换机类型</h3>
-<p>Hyper-V 一共提供了三种类型的虚拟网络交换机：</p>
-<ol>
-<li>
-<p>内部虚拟交换机：供虚拟机和物理机之间通讯的虚拟网络交换机。这种虚拟交换机可用于物理机和虚拟机的双向连接(例如，如果你希望从物理机连接到虚拟机的 ssh 或者远程桌面，那么这种虚拟交换机将很有用)。请注意：这种虚拟交换机通常情况下不可用于让虚拟机联网。</p>
-</li>
-<li>
-<p>外部虚拟交换机：将物理机的网卡直接供虚拟机使用的虚拟网络交换机。这种虚拟交换机可以直接为虚拟机提供网络连接。这种虚拟交换机的作用相当于为一台物理机装载一张物理网卡。</p>
-</li>
-<li>
-<p>专用虚拟交换机：供某一物理机上的所有虚拟机之间相互通讯的虚拟网络交换机。这种虚拟交换机只能用于各个虚拟机之间的通讯，无法同物理机或外部网络通讯。</p>
-</li>
-</ol>
-<p>由于本文配置 OpenWrt 的目的是“将其配置为旁路由以接管本机流量”，所以只要设置一个外部虚拟交换机(用于为 OpenWrt 虚拟机提供外部网络连接)。<br>
-※如果你配置 OpenWrt 的目的是将其作为与下游网络设备直接连接的软路由，请创建两个外部虚拟交换机。</p>
-<h1>创建 Hyper-V 虚拟机</h1>
-<p>回到 Hyper-V 管理器，点击“新建” -&gt; 虚拟机，进入新建虚拟机向导。</p>
-<h3>名称和位置</h3>
-<p>点击“下一步”，名称和位置任取即可</p>
-<h3>指定世代</h3>
-<p>在下一步的“指定代数”中，请依据你先前获得镜像的引导方式选择虚拟机世代类型。<br>
-如果你的镜像仅支持 BIOS 引导方式，请选择红框所示的“第一代”，<br>
-如果你的镜像支持 UEFI 引导方式，则可以任意选择世代类型，但是这里仍推荐选择“第二代”。</p>
-<h3>内存分配</h3>
-<p>内存256MB足够了，不启用动态内存</p>
-<h3>配置网络</h3>
-<p>“配置网络”页面中，选择刚才创建的外部虚拟交换机</p>
-<h3>连接虚拟硬盘</h3>
-<p>“连接虚拟硬盘”页面中，选择“使用现有虚拟硬盘”，找到先前转换好的 .vhdx 虚拟硬盘文件</p>
-<p>以上所有步骤完成后，确认信息无误后，点击“完成”，等待虚拟机创建完成。</p>
-<h1>配置 Hyper-V 虚拟机</h1>
-<p>回到“Hyper-V 管理器”，找到我们刚才创建的虚拟机，在右键后的下拉菜单中进入“设置”。<br>
-1个虚拟处理器，禁用安全启动，始终自动启动，禁用检查点，</p>
-<p>左侧的“安全”页面，取消勾选“启用安全启动”，然后应用，否则 Hyper-V 会拒绝引导 OpenWrt。<br>
-点开“+”号，进入高级功能，勾选“启用 MAC 地址欺骗”，应用设置即可。</p>
-<p>选择“添加硬件”，类型选择网络适配器，再将我们之前配置的外部虚拟交换机添加进虚拟机中。<br>
-到这里，我们已经完成了对这一 Hyper-V 虚拟机在初次开机之前的全部配置。</p>
-<h1>配置 OpenWrt</h1>
-<p>启动虚拟机，点击链接，进入 OpenWrt 终端，输入命令：</p>
-<pre class="notranslate"><code class="notranslate">vi /etc/config/network
-</code></pre>
-<p>骷髅版的默认地址：<code class="notranslate">option ipaddr '192.168.11.1'</code>  ※需要变更  例如改为'192.168.11.88'`  好记就行</p>
-<pre class="notranslate"><code class="notranslate">vi
-按下 i 键，修改为主机IP所在网段
-按下 esc 键，键入:wq 保存退出 vim
-</code></pre>
-<p>重启OpenWrt</p>
-<pre class="notranslate"><code class="notranslate">reboot
-</code></pre>
-<h1>OpenWrt 后台设置</h1>
-<p>打开浏览器，在地址栏输入我们刚才配置的静态 IP 地址， 例如<code class="notranslate">192.168.11.88</code>   进入 OpenWrt 的后台管理页面。<br>
-默认用户名为 root ，默认密码为 password。※建议在配置完成后更改 root 的密码。</p>
-<p>接下来我们需要进入“网络” -&gt; 接口，对现有的 lan 口进行配置。需要更改的配置如下：</p>
-<ol>
-<li>协议类型：“静态地址”</li>
-<li>IPv4 地址：我们可以为 OpenWrt 分配一个静态 IP 地址。例：<code class="notranslate">192.168.11.88</code></li>
-<li>IPv4 子网掩码地址：255.255.255.0</li>
-<li>IPv4 网关：网关地址应该和主路由网关一致，主路由网关通过<code class="notranslate">ipconfig</code>获取。例：192.168.11.1</li>
-<li>IPv4 广播地址：不用设置</li>
-<li>自定义 DNS 服务器：设置为主路由网关，主路由网关通过<code class="notranslate">ipconfig</code>获取。例：192.168.11.1</li>
-<li>DHCP 设置： 勾选 “忽略此接口”选项。</li>
-</ol>
-<p>上述七项完成后，我们点击“保存&amp;应用”，新的网口配置就会被立即应用。</p>
-<h1>OpenWrt 插件的使用</h1>
-<ul>
-<li>passwall</li>
-</ul></div>
+<h2>或者github的加速服务（raw.staticdn.net）</h2>
+<pre class="notranslate"><code class="notranslate">https://raw.staticdn.net/[GitHub用户名]/[仓库名]/[标签或分支]/[文件路径]
+e.g. https://raw.staticdn.net/hst1189/live2d-widget/autoload.js
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
