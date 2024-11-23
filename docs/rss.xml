@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Sat, 23 Nov 2024 07:45:18 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.17 如何找到Shopify中国卖家网站</title><link>https://www.grapehut.us.kg/post/Vol.17%20-ru-he-zhao-dao-Shopify-zhong-guo-mai-jia-wang-zhan.html</link><description>&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Sat, 23 Nov 2024 07:50:50 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.17 如何找到Shopify中国卖家网站</title><link>https://www.grapehut.us.kg/post/Vol.17%20-ru-he-zhao-dao-Shopify-zhong-guo-mai-jia-wang-zhan.html</link><description>&#13;
 ## 你想知道别人的Shopify网站怎么做的吗？&#13;
 &#13;
 一个傻瓜式的方式教大家如何找到Shopify中国卖家的网站（当然也可以找国外的）。</description><guid isPermaLink="true">https://www.grapehut.us.kg/post/Vol.17%20-ru-he-zhao-dao-Shopify-zhong-guo-mai-jia-wang-zhan.html</guid><pubDate>Sun, 03 Nov 2024 13:59:27 +0000</pubDate></item><item><title>Vol.16 jsdelivr CDN</title><link>https://www.grapehut.us.kg/post/Vol.16%20jsdelivr%20CDN.html</link><description>&#13;
@@ -165,6 +165,9 @@ chrome://restart&#13;
 https://archive.org/details/tiny11-2409 &#13;
 certutil -hashfile tiny11_24H2_AMD64.iso SHA256&#13;
 87c926dcb9c2927a0d67c5f4084308c61a29581e259e6f4d9ebd36f44c79559a&#13;
+&#13;
+https://archive.org/details/26100-ltsc-x64-enus&#13;
+&#13;
 ```&#13;
 ```&#13;
 # Windows 11 （24H2）LTSC KMS激活&#13;

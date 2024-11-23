@@ -3,6 +3,9 @@
 https://archive.org/details/tiny11-2409 
 certutil -hashfile tiny11_24H2_AMD64.iso SHA256
 87c926dcb9c2927a0d67c5f4084308c61a29581e259e6f4d9ebd36f44c79559a
+
+https://archive.org/details/26100-ltsc-x64-enus
+
 ```
 ```
 # Windows 11 （24H2）LTSC KMS激活
