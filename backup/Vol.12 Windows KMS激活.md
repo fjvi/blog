@@ -14,6 +14,12 @@ slmgr -skms kms.0t.net.cn
 slmgr -ato
 ```
 
+```
+#Office 2021 Pro plus
+https://archive.org/details/microsoft_volume_license_office_2019_202110
+https://github.com/massgravel/Microsoft-Activation-Scripts
+8WXTP-MN628-KY44G-VJWCK-C7PCF
+```
 
 
 
