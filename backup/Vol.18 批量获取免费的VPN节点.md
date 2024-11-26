@@ -2,9 +2,9 @@
 
 这个免费的代理节点主要是来自BPB-Worker-Panel 面板的漏洞利用
 
-1. 下载V2ray 客户端：【 [GitHub 开源项目](https://github.com/2dust/v2rayN)】
+- 下载V2ray 客户端：【 [GitHub 开源项目](https://github.com/2dust/v2rayN)】
 
-2. 在V2ray 导入下方的代码：　菜单「服务器」→  从剪贴板导入链接
+- 在V2ray 导入下方的代码：　菜单「服务器」→  从剪贴板导入链接
 ```
 trojan://bpb-trojan@www.vpslook.com:443?security=tls&sni=这里填域名&alpn=h3&fp=randomized&allowlnsecure=1&type=ws&host=这里填域名&path=%2Ftr%3Fed%3D2560#BPB
 
@@ -12,7 +12,7 @@ trojan://bpb-trojan@www.vpslook.com:443?security=tls&sni=这里填域名&alpn=h3
 SNI：需要替换
 ```
 
-3. 免费获取BPB面板的后台地址：
+- 免费获取BPB面板的后台地址：
 
 【[点击获取](https://fofa.info/result?qbase64=aWNvbl9oYXNoPSItMTM1NDAyNzMxOSIgJiYgYXNuPSIxMzMzNSIgJiYgcG9ydD0iNDQzIg%3D%3D)】443端口
 
@@ -20,16 +20,15 @@ SNI：需要替换
 
 打开后获取到大量的BPB-Worker-Panel 面板地址，只需在连接后面加上/login，就可以看到BBP面板的后台，`版本号是2.5.3 以上`就可以直接免费导入使用！
 
-4. 然后把获得的地址填写到V2ray客户端里，如下所示：
-
-`Gmeek-html<img src="https://www.freedidi.com/wp-content/uploads/2024/11/2fed20789620241124163317-2079x1440.webp>`
+- 然后把获得的地址填写到V2ray客户端里，如下所示：
+`Gmeek-html<img src="https://www.freedidi.com/wp-content/uploads/2024/11/2fed20789620241124163317-2079x1440.webp">`
 
 
 # 【高阶篇】
 
-1. 需要安装下Python，没有安装的可以前往【[python官网】](https://www.python.org/)进行下载安装，推荐[python3.10.3](https://www.python.org/downloads/release/python-3103/) 版本
+- 需要安装下Python，没有安装的可以前往【[python官网】](https://www.python.org/)进行下载安装，推荐[python3.10.3](https://www.python.org/downloads/release/python-3103/) 版本
 
-2. 安装下 Python 依赖库
+- 安装下 Python 依赖库
 
 ```
 pip install requests beautifulsoup4
@@ -41,7 +40,7 @@ pip install selenium
 pip install selenium requests beautifulsoup4 packaging
  ```
 
-3. 把下面的代码另存为一个vpn.py
+- 把下面的代码另存为一个vpn.py
 
 ```
 import requests
@@ -153,7 +152,7 @@ if __name__ == "__main__":
     main()
 ```
 
-4. 最后在终端下执行命令：
+- 最后在终端下执行命令：
 
 ```
 python vpn.py
@@ -169,7 +168,7 @@ python vpn.py
 > 默认我只获取了第一个页面，因为如果批量获取分页的话，会引起网站防火墙的拦截。会被屏蔽，所以如果你出现获取的结果是空的话，那么就是你的IP被拦截了，自行代理访问再获取！
 
 
-4. 如果你需要获取分页结果，可以使用下面的脚本：
+- 如果你需要获取分页结果，可以使用下面的脚本：
 ```
 from selenium import webdriver
 from selenium.webdriver.common.by import By
