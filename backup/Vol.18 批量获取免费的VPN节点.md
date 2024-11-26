@@ -1,4 +1,4 @@
-#【基礎篇】
+# 【基礎篇】
 
 这个免费的代理节点主要是来自BPB-Worker-Panel 面板的漏洞利用
 
@@ -25,7 +25,7 @@ SNI：需要替换
 `Gmeek-html<img src="https://www.freedidi.com/wp-content/uploads/2024/11/2fed20789620241124163317-2079x1440.webp>`
 
 
-#【高阶篇】
+# 【高阶篇】
 1. 需要安装下Python，没有安装的可以前往【[python官网】](https://www.python.org/)进行下载安装，推荐[python3.10.3](https://www.python.org/downloads/release/python-3103/) 版本
 
 2. 安装下 Python 依赖库
@@ -151,18 +151,22 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 最后在终端下执行命令：
 
 ```
 python vpn.py
 ```
+
 在脚本的所在目录会生成结果OK.txt，里面就是我们需要的地址！
 
 
 `Gmeek-html<img src="https://www.freedidi.com/wp-content/uploads/2024/11/c85b610e7e20241124163116-2081x1440.webp>`
 
+
 > [!CAUTION]
 > 默认我只获取了第一个页面，因为如果批量获取分页的话，会引起网站防火墙的拦截。会被屏蔽，所以如果你出现获取的结果是空的话，那么就是你的IP被拦截了，自行代理访问再获取！
+
 
 4. 如果你需要获取分页结果，可以使用下面的脚本：
 ```
