@@ -160,9 +160,7 @@ python vpn.py
 
 在脚本的所在目录会生成结果OK.txt，里面就是我们需要的地址！
 
-
-`Gmeek-html<img src="https://www.freedidi.com/wp-content/uploads/2024/11/c85b610e7e20241124163116-2081x1440.webp>`
-
+`Gmeek-html<img src="https://www.freedidi.com/wp-content/uploads/2024/11/c85b610e7e20241124163116-2081x1440.webp">`
 
 > [!CAUTION]
 > 默认我只获取了第一个页面，因为如果批量获取分页的话，会引起网站防火墙的拦截。会被屏蔽，所以如果你出现获取的结果是空的话，那么就是你的IP被拦截了，自行代理访问再获取！
