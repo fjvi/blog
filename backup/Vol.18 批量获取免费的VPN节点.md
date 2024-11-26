@@ -20,12 +20,13 @@ SNI：需要替换
 
 打开后获取到大量的BPB-Worker-Panel 面板地址，只需在连接后面加上/login，就可以看到BBP面板的后台，`版本号是2.5.3 以上`就可以直接免费导入使用！
 
-5. 然后把获得的地址填写到V2ray客户端里，如下所示：
+4. 然后把获得的地址填写到V2ray客户端里，如下所示：
 
 `Gmeek-html<img src="https://www.freedidi.com/wp-content/uploads/2024/11/2fed20789620241124163317-2079x1440.webp>`
 
 
 # 【高阶篇】
+
 1. 需要安装下Python，没有安装的可以前往【[python官网】](https://www.python.org/)进行下载安装，推荐[python3.10.3](https://www.python.org/downloads/release/python-3103/) 版本
 
 2. 安装下 Python 依赖库
@@ -152,7 +153,7 @@ if __name__ == "__main__":
     main()
 ```
 
-最后在终端下执行命令：
+4. 最后在终端下执行命令：
 
 ```
 python vpn.py
