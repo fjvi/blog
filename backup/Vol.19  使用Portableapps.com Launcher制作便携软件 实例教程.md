@@ -32,7 +32,7 @@ X:\PortableApps\NSISPortable
 Launcher启动⇒　备份本地数据⇒　导入便携数据⇒　将数据库路径写入注册表⇒　启动主程序⇒　主程序退出⇒　导出便携软件数据⇒　清理便携软件垃圾⇒　恢复本地数据⇒　Launcher退出
 
  
-## 2. AppInfo
+## 2. AppInfo.ini
 下载[PAL模板](http://portableapps.com/development)，解压后，重命名AppNamePortable为EvernotePortable。在App下新建Evernote目录，将提取出的程序文件复制到此处。
 
 创建 App\AppInfo\appinfo.ini ，此目录下的文件主要是为PortableApps.com Platform提供信息
