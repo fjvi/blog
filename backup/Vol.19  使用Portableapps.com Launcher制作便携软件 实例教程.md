@@ -7,7 +7,7 @@ PortableApps.com Launcher（以下简称PAL）是PortableApps.com开发的便携
 
 一个虚拟机软件，例如 VMWare ，[Windows Virtual PC](http://www.microsoft.com/windows/virtual-pc/)，或者免费的 [VirtualBox ](https://www.virtualbox.org/)。在虚拟机中安装 Windows XP ，Windows 7 系统，如果有条件，建议同时安装 64 位系统以便进一步测试。
 
-> ![import]
+> > [!CAUTION]
 > 装好系统后，切勿安装任何额外软件、运行库，在最纯净的环境下建立快照，此后每次测试软件，均从此快照启动。
 
 - 一个软件行为监控软件，例如 [Total Uninstall](http://www.portableapps.com/apps/utilities/total-uninstall-portable/)，或者免费的 [RegShot ](http://portableapps.com/apps/utilities/regshot_portable)。安装到虚拟机内。
