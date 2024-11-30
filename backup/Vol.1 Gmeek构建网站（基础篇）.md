@@ -101,7 +101,7 @@ Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕�
 | yearColorList | 用于自定义显示不同年份标签的颜色 |
 | i18n | 用于定义博客语言，目前支持`EN`/`CN`/`RU` |
 | UTC | 用于定义[时区](https://en.wikipedia.org/wiki/List_of_UTC_offsets) |
-| themeMode| 用于定义主题模式，默认为`manual`，也可选择`fix`[详细说明](https://grapehut.us.kg/post/Vol.2%20Gmeek-gou-jian-wang-zhan-%EF%BC%88-jin-jie-pian-%EF%BC%89.html) |
+| themeMode| 用于定义主题模式，默认为`manual`，也可选择`fix`|
 | dayTheme | 用于定义[亮主题](https://github.com/settings/appearance) |
 | nightTheme | 用于定义[暗主题](https://github.com/settings/appearance) |
 | urlMode | 用于定义文章链接生成模式，目前支持`pinyin`/`issue`/`ru_translit` |
