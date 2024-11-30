@@ -89,9 +89,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 "nightTheme":"dark",
 </code></pre>
 <h3>2. 固定模式</h3>
-<p><code class="notranslate">themeMode</code>为<code class="notranslate">fix</code>，<br>
-<code class="notranslate">dayTheme</code>定义想要固定的主题，可以定义为<code class="notranslate">light</code>则永远为亮主题，定义为<code class="notranslate">dark</code>则永远为暗主题，用户无法切换<br>
-<code class="notranslate">nightTheme</code>定义的就是<code class="notranslate">utterances</code>评论框的永久固定主题。</p>
+<pre class="notranslate"><code class="notranslate">"themeMode":"fix",    定义固定
+"dayTheme":"light",   定义固定的主题，`light`则永远为亮主题，`dark`则永远为暗主题，用户无法切换
+"nightTheme":"github-light",    定义`utterances`评论框的永久固定主题。
+</code></pre>
 <h4>2.1. 固定亮主题</h4>
 <pre class="notranslate"><code class="notranslate">"themeMode":"fix",
 "dayTheme":"light",
@@ -102,7 +103,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 "dayTheme":"dark",
 "nightTheme":"dark-blue",
 </code></pre>
-<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>亮暗主题可以查看<a href="https://github.com/settings/appearance">github官方</a>支持的主题，这里都支持<br>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>主题设置可以查看<a href="https://github.com/settings/appearance">github官方</a>支持的主题<br>
 亮主题：<code class="notranslate">light</code> <code class="notranslate">light_high_contrast</code> <code class="notranslate">light_colorblind </code> <code class="notranslate">light_tritanopia </code><br>
 暗主题：<code class="notranslate">dark</code> <code class="notranslate">dark_high_contrast</code> <code class="notranslate">dark_colorblind</code> <code class="notranslate">dark_tritanopia</code> <code class="notranslate">dark_dimmed</code></p>
 </div>
@@ -111,7 +112,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 暗主题：<code class="notranslate">github-dark</code> <code class="notranslate">github-dark-orange</code> <code class="notranslate">icy-dark</code> <code class="notranslate">dark-blue</code> <code class="notranslate">photon-dark</code> <code class="notranslate">gruvbox-dark</code></p>
 </div>
 <h2>二、右上角的按钮配置 👀</h2>
-<p>在博客首页的右上角有一些圆形的按钮，下面为配置方式。</p>
+<p>在首页上部的右侧有一些按钮，配置方式如下：</p>
 <h3>1. 站内链接</h3>
 <p>例如<a href="https://grapehut.us.kg/about.html" rel="nofollow">关于页面</a>和<a href="https://grapehut.us.kg/link.html" rel="nofollow">友情链接</a></p>
 <h4>1.1. 添加config.json配置</h4>
