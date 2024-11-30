@@ -160,9 +160,9 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 ```
 
 #### 2. 内嵌框架iframe-网站
-`Gmeek-html<iframe src="https://music.meekdai.com/#35" width="100%" height="150px" frameborder="0" allowfullscreen="true"></iframe>`
+`Gmeek-html<iframe style='border-radius:12px' src="https://music.meekdai.com/#35" width="100%" height="150px" frameborder="0" allowfullscreen="true"></iframe>`
 ```
-`Gmeek-html<iframe src="https://music.meekdai.com/#35" width="100%" height="150px" frameborder="0" allowfullscreen="true"></iframe>`
+`Gmeek-html<iframe style='border-radius:12px' src="https://music.meekdai.com/#35" width="100%" height="150px" frameborder="0" allowfullscreen="true"></iframe>`
 ```
 
 #### 3. 内嵌框架iframe-音乐
@@ -172,15 +172,15 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 ```
 
 #### 4. 内嵌框架iframe-视频
-`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
+`Gmeek-html<iframe style='border-radius:12px' src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
 ```
-`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
+`Gmeek-html<iframe style='border-radius:12px' src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
 ```
 
 
-`Gmeek-html<iframe src="https://www.youtube.com/watch?v=7P5F1EAsxKI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
+`Gmeek-html<iframe style='border-radius:12px' src="https://www.youtube.com/watch?v=7P5F1EAsxKI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
 ```
-`Gmeek-html<iframe src="https://www.youtube.com/watch?v=7P5F1EAsxKI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
+`Gmeek-html<iframe style='border-radius:12px' src="https://www.youtube.com/watch?v=7P5F1EAsxKI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
 ```
 
 
