@@ -46,7 +46,7 @@ Gmeek通过issue生成文章，在issue写作并保存，
     "GMEEK_VERSION":"last"
 
     ↑ 以上是必须字段
-    ↓ 以下是自定义字段，可以选择添加到`config.json`中
+    ↓ 以下是自定义字段，可以选择添加
 
     "displayTitle":"头像后面的标题",
     "homeUrl":"http://blog.xxx.com",
