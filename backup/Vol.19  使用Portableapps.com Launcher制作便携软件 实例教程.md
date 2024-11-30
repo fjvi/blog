@@ -152,7 +152,8 @@ Windows Registry Editor Version 5.00
 “UpdateToPreReleaseVersion”=dword:00000000
 “CheckForUpdatesAtLaunch”=dword:00000000
 ```
-※ DeafultData目录中的所有内容，会在首次运行时被复制到Data目录后导入。从而达到修改默认设置的目的
+> [!TIP]
+> DeafultData目录中的所有内容，会在首次运行时被复制到Data目录后导入。从而达到修改默认设置的目的
 
  
 # 📑 5. Custom Code
@@ -171,7 +172,8 @@ ${SegmentPostPrimary}
 KillProcDLL::KillProc “EvernoteClipper.exe”
 !macroend
 ```
-※ 在程序启动与退出时结束EvernoteClipper.exe进程（可能需要额外安装NSIS的[KillPorcDLL](http://nsis.sourceforge.net/KillProcDLL_plug-in)插件）
+> [!TIP]
+> 在程序启动与退出时结束EvernoteClipper.exe进程（可能需要额外安装NSIS的[KillPorcDLL](http://nsis.sourceforge.net/KillProcDLL_plug-in)插件）
 
 
 
