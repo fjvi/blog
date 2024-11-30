@@ -83,7 +83,8 @@ Octicons图标链接：https://primer.style/foundations/icons/#16px
 
 
 # 三、提示标签 👀 
-Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTANT` `WARNING` `CAUTION` 。在写文章的时候，适当使用可以提高文章的可读性
+Github的语法里面有5种警报强调信息，分别是`NOTE` `TIP` `IMPORTANT` `WARNING` `CAUTION` 
+在写文章的时候，适当使用可以提高文章的可读性
 
 ### 使用方式：
 ```
@@ -176,6 +177,13 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 `Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
 ```
 
+
+`Gmeek-html<iframe src="https://www.youtube.com/watch?v=7P5F1EAsxKI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
+```
+`Gmeek-html<iframe src="https://www.youtube.com/watch?v=7P5F1EAsxKI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe>`
+```
+
+
 #### 5. 其他
 上面仅仅是示例了一些常用的html标签，其他html标签同样也支持，可以尝试添加到自己的文章中。 
 
@@ -193,7 +201,6 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 3. 通过手动全局生成一次成功后，你就可以通过 xxx.github.io/avatar.svg 访问了。
 
 > [!TIP]
-> 备注：
 >在全局生成的时候，Actions会自动把`static`文件夹的所有内容拷贝到`docs`文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。
 
 

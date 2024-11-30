@@ -137,7 +137,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>Octicons图标链接：<a href="https://primer.style/foundations/icons/#16px" rel="nofollow">https://primer.style/foundations/icons/#16px</a><br>
 大佬自己转换的Octicons图标path列表：<a href="https://gist.github.com/Meekdai/f6375fe2740428af39d90f1afa678fdc">https://gist.github.com/Meekdai/f6375fe2740428af39d90f1afa678fdc</a></p>
 <h1>三、提示标签 👀</h1>
-<p>Github的语法里面有5中警报强调信息，分别是<code class="notranslate">NOTE</code> <code class="notranslate">TIP</code> <code class="notranslate">IMPORTANT</code> <code class="notranslate">WARNING</code> <code class="notranslate">CAUTION</code> 。在写文章的时候，适当使用可以提高文章的可读性</p>
+<p>Github的语法里面有5种警报强调信息，分别是<code class="notranslate">NOTE</code> <code class="notranslate">TIP</code> <code class="notranslate">IMPORTANT</code> <code class="notranslate">WARNING</code> <code class="notranslate">CAUTION</code><br>
+在写文章的时候，适当使用可以提高文章的可读性</p>
 <h3>使用方式：</h3>
 <pre class="notranslate"><code class="notranslate">&gt; [!NOTE]
 &gt; Useful information that users should know, even when skimming content.
@@ -206,6 +207,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1604800941&bvid=BV1qm421M7Xs&cid=1557311907&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe></p>
 <pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;iframe src="//player.bilibili.com/player.html?isOutside=true&amp;aid=1604800941&amp;bvid=BV1qm421M7Xs&amp;cid=1557311907&amp;p=1&amp;autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"&gt;&lt;/iframe&gt;`
 </code></pre>
+<p><iframe src="https://www.youtube.com/watch?v=7P5F1EAsxKI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"></iframe></p>
+<pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;iframe src="https://www.youtube.com/watch?v=7P5F1EAsxKI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="200px"&gt;&lt;/iframe&gt;`
+</code></pre>
 <h4>5. 其他</h4>
 <p>上面仅仅是示例了一些常用的html标签，其他html标签同样也支持，可以尝试添加到自己的文章中。</p>
 <h1>六、static文件夹使用 👀</h1>
@@ -216,8 +220,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>然后在<code class="notranslate">static</code>文件内上传一些自己的文件，比如<code class="notranslate">avatar.svg</code>文件。</li>
 <li>通过手动全局生成一次成功后，你就可以通过 xxx.github.io/avatar.svg 访问了。</li>
 </ol>
-<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>备注：<br>
-在全局生成的时候，Actions会自动把<code class="notranslate">static</code>文件夹的所有内容拷贝到<code class="notranslate">docs</code>文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。</p>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>在全局生成的时候，Actions会自动把<code class="notranslate">static</code>文件夹的所有内容拷贝到<code class="notranslate">docs</code>文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。</p>
 </div>
 <h1>七、插件 👀</h1>
 <p>为了使得Gmeek的功能更加的丰富，添加了插件功能，目前已经有几个插件可以使用。</p>
