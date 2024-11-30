@@ -136,7 +136,7 @@ $ ip route show | grep -i default | awk '{ print $3}'
 https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config
 
 [wsl.conf](https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconf) ファイル`/etc/wsl.conf`は、ディストリビューションごと (wsl.conf) にグローバルに詳細設定オプションを構成する。
- [.wslconfig](https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconfig) ファイルは、すべての WSL 2 ディストリビューション (.wslconfig) 全体で詳細設定オプションを構成する。
+ [.wslconfig](https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconfig) ファイル`%UserProfile% ディレクトリに格納`は、すべての WSL 2 ディストリビューション (.wslconfig) 全体で詳細設定オプションを構成する。
 
 
 ### wsl.conf ファイルの例
