@@ -1,4 +1,4 @@
-## 一、主题配置 👀 
+# 一、主题配置 👀 
 
 ### 1. 手动模式（默认）
 这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。
@@ -41,7 +41,7 @@
 
 
 
-## 二、右上角的按钮配置 👀 
+# 二、右上角的按钮配置 👀 
 在首页上部的右侧有一些按钮，配置方式如下：
 
 ### 1. 站内链接
@@ -82,7 +82,7 @@ Octicons图标链接：https://primer.style/foundations/icons/#16px
 
 
 
-## 三、提示标签 👀 
+# 三、提示标签 👀 
 Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTANT` `WARNING` `CAUTION` 。在写文章的时候，适当使用可以提高文章的可读性
 
 ### 使用方式：
@@ -120,7 +120,7 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
 > Advises about risks or negative outcomes of certain actions.
 
 
-## 四、折叠显示 👀 
+# 四、折叠显示 👀 
 ### 使用方式：
 ```
 <details>
@@ -143,7 +143,9 @@ Github的语法里面有5中警报强调信息，分别是`NOTE` `TIP` `IMPORTAN
 </details>
 
 
-## 五、文章插入html标签 👀 
+
+
+# 五、文章插入html标签 👀 
 Github由于安全考虑，是不允许使用`iframe`等标签的，而且在issues插入的图片也会自动转换为github的地址。
 为了文章的多样性，在Gmeek的`v2.19`版本中添加了支持html标签的功能。
 
@@ -157,9 +159,9 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 ```
 
 #### 2. 内嵌框架iframe-网站
-`Gmeek-html<iframe src="https://music.meekdai.com/" width="100%" height="200px" frameborder="0" allowfullscreen="true"></iframe>`
+`Gmeek-html<iframe src="https://music.meekdai.com/#35" width="100%" height="150px" frameborder="0" allowfullscreen="true"></iframe>`
 ```
-`Gmeek-html<iframe src="https://music.meekdai.com/#61" width="100%" height="200px" frameborder="0" allowfullscreen="true"></iframe>`
+`Gmeek-html<iframe src="https://music.meekdai.com/#35" width="100%" height="150px" frameborder="0" allowfullscreen="true"></iframe>`
 ```
 
 #### 3. 内嵌框架iframe-音乐
@@ -182,7 +184,7 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 
 
 
-## 六、static文件夹使用 👀 
+# 六、static文件夹使用 👀 
 如果需要在docs文件内上传一些自己的文件，比如图片、js、css等，所以在`v2.20`版本添加了这个功能。
 
 ### 使用方式：
@@ -190,16 +192,17 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 2. 然后在`static`文件内上传一些自己的文件，比如`avatar.svg`文件。
 3. 通过手动全局生成一次成功后，你就可以通过 xxx.github.io/avatar.svg 访问了。
 
-### 备注：
-在全局生成的时候，Actions会自动把`static`文件夹的所有内容拷贝到`docs`文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。
+> [!TIP]
+> 备注：
+>在全局生成的时候，Actions会自动把`static`文件夹的所有内容拷贝到`docs`文件夹内。方便用户把docs当成一个目录部署到CF等其他服务器中。
 
 
 
 
-## 七、插件 👀 
+# 七、插件 👀 
 为了使得Gmeek的功能更加的丰富，添加了插件功能，目前已经有几个插件可以使用。
 
-### 1. Vercount浏览计数
+### 1. Vercount浏览计数`GmeekVercount.js`
 全站添加，只需要在config.json文件内添加配置
 ```
 "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
@@ -209,7 +212,7 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 <!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>"}## -->
 ```
 
-### 2, TOC目录
+### 2, TOC目录`GmeekTOC.js`
 全站添加，只需要在config.json文件内添加配置
 ```
 "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>",
@@ -219,13 +222,13 @@ Github由于安全考虑，是不允许使用`iframe`等标签的，而且在iss
 <!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"}## -->
 ```
 
-### 3. ArticleTOC目录
+### 3. ArticleTOC目录`articletoc.js`
 本插件由[Tiengming](https://code.buxiantang.top/)编写，也是一个非常不错的TOC目录插件。配置方式和上面一样，只需要替换地址为如下地址即可。
 ```
 https://blog.meekdai.com/Gmeek/plugins/articletoc.js
 ```
 
-### 4. 灯箱插件
+### 4. 灯箱插件`lightbox.js`
 本插件由[Tiengming](https://code.buxiantang.top/)编写，可以放大浏览文章中的图片，适合一些图片较多的文章。
 
 全站添加，只需要在config.json文件内添加配置
@@ -272,7 +275,8 @@ III. 全局文章自定义参数，添加全局文章页面的`style`和`script`
 
 
 
-## 八、其他设置 👀 
+# 八、其他设置 👀 
+
 ### 1. 导入以前的文章 
 如需修改发布时间，可以在文章最后一行添加如下代码。里面的时间是采用时间戳的形式，可以用如下[时间形式转换网站](https://tool.lu/timestamp)转换。  
 ```html
@@ -285,6 +289,5 @@ III. 全局文章自定义参数，添加全局文章页面的`style`和`script`
 
 ### 3. 删除文章
 只需要`Close issue`或者`Delete issue`后，再手动全局生成一次即可。
-
 
 
