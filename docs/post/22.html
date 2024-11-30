@@ -51,7 +51,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     font-size: 12px;
 }
 </style>
-<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-caution {border-left-color:var(--borderColor-danger-emphasis, var(--color-danger-emphasis));background-color:var(--color-danger-subtle);}.markdown-alert.markdown-alert-caution .markdown-alert-title {color: var(--fgColor-danger,var(--color-danger-fg));}</style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style><style>.markdown-alert.markdown-alert-caution {border-left-color:var(--borderColor-danger-emphasis, var(--color-danger-emphasis));background-color:var(--color-danger-subtle);}.markdown-alert.markdown-alert-caution .markdown-alert-title {color: var(--fgColor-danger,var(--color-danger-fg));}</style>
 
 
 
@@ -108,14 +108,16 @@ X:\PortableApps\NSISPortable</p>
 </li>
 </ol>
 <h1>📑 1. 分析</h1>
-<p>将 Evernote 安装程序拷贝到VM虚拟机内，运行 <code class="notranslate">RegShot</code> （或 <code class="notranslate">Total Uninstall</code>）扫描系统⇒　安装程序⇒　再次扫描⇒　对比快照</p>
-<p>通过对比，可发现Evernote在  %APPDATA%  、  %LOCALAPPDATA%  以及NT6.0以上的 LocalLow 中写入文件，在注册表 HKCU\Software\Evernote 中写入键值， HKCU\Software\Evernote\Evernote\EvernotePath 的值为Evernote数据库的位置。</p>
-<p>在虚拟机中提取纯净的程序文件，位于： C:\Program Files\Evernote<br>
-我们要制作这样一个便携软件启动器（Launcher）：<br>
+<p>将 Evernote 安装程序拷贝到VM虚拟机内，<br>
+运行 <code class="notranslate">RegShot</code> （或 <code class="notranslate">Total Uninstall</code>）扫描系统⇒　安装Evernote程序⇒　再次扫描⇒　对比快照</p>
+<p>通过对比，可发现Evernote在  <code class="notranslate">%APPDATA%</code>  <code class="notranslate">%LOCALAPPDATA%</code>  以及NT6.0以上的 <code class="notranslate">LocalLow</code> 中写入文件，<br>
+在注册表 <code class="notranslate">HKCU\Software\Evernote</code> 中写入键值， <code class="notranslate">HKCU\Software\Evernote\Evernote\EvernotePath</code> 的值为Evernote数据库的位置。</p>
+<p>在虚拟机中提取纯净的程序文件，位于： <code class="notranslate">C:\Program Files\Evernote</code></p>
+<p>我们要制作这样一个便携软件启动器（Launcher）：<br>
 Launcher启动⇒　备份本地数据⇒　导入便携数据⇒　将数据库路径写入注册表⇒　启动主程序⇒　主程序退出⇒　导出便携软件数据⇒　清理便携软件垃圾⇒　恢复本地数据⇒　Launcher退出</p>
 <h1>📑 2. AppInfo.ini</h1>
 <p>下载<a href="http://portableapps.com/development" rel="nofollow">PAL模板</a>，解压后，重命名<code class="notranslate">AppNamePortable</code>为<code class="notranslate">EvernotePortable</code><br>
-在App下新建Evernote目录，将提取出的程序文件复制到此处。</p>
+在App下新建<code class="notranslate">Evernote目录</code>，将 <code class="notranslate">C:\Program Files\Evernote</code> 提取出的程序文件复制到此处。</p>
 <p>创建 <code class="notranslate">App\AppInfo\appinfo.ini</code> ，此目录下的文件主要是为<code class="notranslate">PortableApps.com Platform</code>提供信息<br>
 在appinfo.ini中这样写：</p>
 <pre class="notranslate"><code class="notranslate">[Format]
@@ -144,17 +146,21 @@ CommercialUse=false
 DisplayVersion=4.5.0.5229
 PackageVersion=4.5.0.5229
 </code></pre>
-<p>你也可以使用 <a href="http://portableapps.com/node/27502" rel="nofollow">PortableApps.com Development Toolkit</a> 方便地定制appinfo.ini。</p>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>你也可以使用 <a href="http://portableapps.com/node/27502" rel="nofollow">PortableApps.com Development Toolkit</a> 方便地定制appinfo.ini。</p>
+</div>
 <p>导出Evernote.exe的图标（推荐使用Icon Workshop），保存为 App\AppInfo\appicon.ico ，并导出为appicon_16.png（16px），appicon_32.png（32px），appicon_128.png（128px，非必须）。</p>
 <h1>📑 3. Launcher.ini</h1>
 <p>创建 <code class="notranslate">App\Appinfo\Launcher\EvernotePortable.ini</code> ，这个INI是制作便携软件的关键，它告诉PAL如何使我们的软件便携化</p>
 <pre class="notranslate"><code class="notranslate">[Launch]
 ProgramExecutable=Evernote\Evernote.exe    
 ;主程序位置
+
 CloseEXE=EvernoteTray.exe    
 ;除了Evernote.exe，当EvernoteTray.exe正在运行时，便携软件也拒绝启动。
+
 WaitForExe1=EvernoteTray.exe    
 ;当Evernote.exe关闭后，等待EvernoteTray.exe结束才真正结束便携软件。
+
 DirectoryMoveOK=yes    
 ;    路径改变并不会影响便携软件运行，因此检测到路径改变时不提示警告。
  
@@ -199,7 +205,8 @@ HKCU\Software\Evernote\Evernote\EvernotePath=REG_SZ:%PAL:DataDir%
 ;    如为空项，则在结束时删除，避免留下注册表垃圾。
 </code></pre>
 <h1>📑 4. DefaultData</h1>
-<p>Evernote便携版是不能通过官方来自动升级的，因此，我们需要修改程序的默认设置，关闭自动升级选项。通过观察注册表，可知自动升级主要由2个键值控制。在程序第一次运行时，需要将这两个键值设为0，以关闭默认升级。</p>
+<p>Evernote便携版是不能通过官方来自动升级的，因此，我们需要修改程序的默认设置，关闭自动升级选项。<br>
+通过观察注册表，可知自动升级主要由2个键值控制。在程序第一次运行时，需要将这两个键值设为0，以关闭默认升级。</p>
 <p>新建 <code class="notranslate">App\DefaultData\settings\EvernotePortable.reg</code> ，写入如下内容：</p>
 <pre class="notranslate"><code class="notranslate">Windows Registry Editor Version 5.00
  
@@ -207,9 +214,10 @@ HKCU\Software\Evernote\Evernote\EvernotePath=REG_SZ:%PAL:DataDir%
 “UpdateToPreReleaseVersion”=dword:00000000
 “CheckForUpdatesAtLaunch”=dword:00000000
 </code></pre>
-<p>DeafultData目录中的所有内容，会在首次运行时被复制到Data目录后导入。从而达到修改默认设置的目的。</p>
+<p>※ DeafultData目录中的所有内容，会在首次运行时被复制到Data目录后导入。从而达到修改默认设置的目的</p>
 <h1>📑 5. Custom Code</h1>
-<p>Evernote的便携化基本完成了。但是，Evernote有一个残余进程EvernoteClipper.exe，并不会在程序结束后自动退出。PAL并没有结束进程的功能，因此需要用到一段Custom Code</p>
+<p>Evernote的便携化基本完成了。但是，Evernote有一个残余进程EvernoteClipper.exe，并不会在程序结束后自动退出。<br>
+PAL并没有结束进程的功能，因此需要用到一段Custom Code</p>
 <p>在 <code class="notranslate">App\AppInfo\Launcher</code> 目录下新建<code class="notranslate">Custom.nsh</code>，写入如下内容：</p>
 <pre class="notranslate"><code class="notranslate">${SegmentFile}
  
@@ -221,9 +229,10 @@ ${SegmentPostPrimary}
 KillProcDLL::KillProc “EvernoteClipper.exe”
 !macroend
 </code></pre>
-<p>在程序启动与退出时结束EvernoteClipper.exe进程（可能需要额外安装NSIS的<a href="http://nsis.sourceforge.net/KillProcDLL_plug-in" rel="nofollow">KillPorcDLL</a>插件）</p>
+<p>※ 在程序启动与退出时结束EvernoteClipper.exe进程（可能需要额外安装NSIS的<a href="http://nsis.sourceforge.net/KillProcDLL_plug-in" rel="nofollow">KillPorcDLL</a>插件）</p>
 <h1>📑 6. 编译与封包</h1>
-<p>在 <code class="notranslate">PortableApps.com Launcher</code> 中载入 <code class="notranslate">EvernotePortable 目录</code>，按下一步编译。如果成功，会在 <code class="notranslate">EvernotePortable 目录</code>下生成 <code class="notranslate">EvernotePortable.exe</code>，至此便携软件已经制作完毕</p>
+<p>在 <code class="notranslate">PortableApps.com Launcher</code> 中载入 <code class="notranslate">EvernotePortable 目录</code>，按下一步编译。<br>
+如果成功，会在 <code class="notranslate">EvernotePortable 目录</code>下生成 <code class="notranslate">EvernotePortable.exe</code>，至此便携软件已经制作完毕</p>
 <p>为便于使用与分发，可使用<a href="http://portableapps.com/apps/utilities/portableapps.com_appcompactor" rel="nofollow">PortableApps.com AppCompactor</a>减小软件体积，<br>
 使用<a href="http://portableapps.com/apps/development/portableapps.com_installer" rel="nofollow">PortableApps.com Installer</a>制作成安装（自解压）包。</p>
 <h1>📑 7. 相关链接</h1>

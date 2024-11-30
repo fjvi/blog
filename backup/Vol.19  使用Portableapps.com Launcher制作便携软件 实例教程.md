@@ -29,18 +29,21 @@ X:\PortableApps\NSISPortable
 
 
 # 📑 1. 分析
-将 Evernote 安装程序拷贝到VM虚拟机内，运行 `RegShot` （或 `Total Uninstall`）扫描系统⇒　安装程序⇒　再次扫描⇒　对比快照
+将 Evernote 安装程序拷贝到VM虚拟机内，
+运行 `RegShot` （或 `Total Uninstall`）扫描系统⇒　安装Evernote程序⇒　再次扫描⇒　对比快照
 
-通过对比，可发现Evernote在  %APPDATA%  、  %LOCALAPPDATA%  以及NT6.0以上的 LocalLow 中写入文件，在注册表 HKCU\Software\Evernote 中写入键值， HKCU\Software\Evernote\Evernote\EvernotePath 的值为Evernote数据库的位置。
+通过对比，可发现Evernote在  `%APPDATA%`  `%LOCALAPPDATA%`  以及NT6.0以上的 `LocalLow` 中写入文件，
+在注册表 `HKCU\Software\Evernote` 中写入键值， `HKCU\Software\Evernote\Evernote\EvernotePath` 的值为Evernote数据库的位置。
 
-在虚拟机中提取纯净的程序文件，位于： C:\Program Files\Evernote 
+在虚拟机中提取纯净的程序文件，位于： `C:\Program Files\Evernote`
+ 
 我们要制作这样一个便携软件启动器（Launcher）：
 Launcher启动⇒　备份本地数据⇒　导入便携数据⇒　将数据库路径写入注册表⇒　启动主程序⇒　主程序退出⇒　导出便携软件数据⇒　清理便携软件垃圾⇒　恢复本地数据⇒　Launcher退出
 
  
 # 📑 2. AppInfo.ini
 下载[PAL模板](http://portableapps.com/development)，解压后，重命名`AppNamePortable`为`EvernotePortable`
-在App下新建Evernote目录，将提取出的程序文件复制到此处。
+在App下新建`Evernote目录`，将 `C:\Program Files\Evernote` 提取出的程序文件复制到此处。
 
 创建 `App\AppInfo\appinfo.ini` ，此目录下的文件主要是为`PortableApps.com Platform`提供信息
 在appinfo.ini中这样写：
@@ -71,7 +74,9 @@ CommercialUse=false
 DisplayVersion=4.5.0.5229
 PackageVersion=4.5.0.5229
 ```
-你也可以使用 [PortableApps.com Development Toolkit](http://portableapps.com/node/27502) 方便地定制appinfo.ini。
+
+> [!TIP]
+> 你也可以使用 [PortableApps.com Development Toolkit](http://portableapps.com/node/27502) 方便地定制appinfo.ini。
 
 导出Evernote.exe的图标（推荐使用Icon Workshop），保存为 App\AppInfo\appicon.ico ，并导出为appicon_16.png（16px），appicon_32.png（32px），appicon_128.png（128px，非必须）。
 
@@ -83,10 +88,13 @@ PackageVersion=4.5.0.5229
 [Launch]
 ProgramExecutable=Evernote\Evernote.exe    
 ;主程序位置
+
 CloseEXE=EvernoteTray.exe    
 ;除了Evernote.exe，当EvernoteTray.exe正在运行时，便携软件也拒绝启动。
+
 WaitForExe1=EvernoteTray.exe    
 ;当Evernote.exe关闭后，等待EvernoteTray.exe结束才真正结束便携软件。
+
 DirectoryMoveOK=yes    
 ;    路径改变并不会影响便携软件运行，因此检测到路径改变时不提示警告。
  
@@ -133,7 +141,8 @@ HKCU\Software\Evernote\Evernote\EvernotePath=REG_SZ:%PAL:DataDir%
 
 
 # 📑 4. DefaultData
-Evernote便携版是不能通过官方来自动升级的，因此，我们需要修改程序的默认设置，关闭自动升级选项。通过观察注册表，可知自动升级主要由2个键值控制。在程序第一次运行时，需要将这两个键值设为0，以关闭默认升级。
+Evernote便携版是不能通过官方来自动升级的，因此，我们需要修改程序的默认设置，关闭自动升级选项。
+通过观察注册表，可知自动升级主要由2个键值控制。在程序第一次运行时，需要将这两个键值设为0，以关闭默认升级。
 
 新建 `App\DefaultData\settings\EvernotePortable.reg` ，写入如下内容：
 ```
@@ -143,11 +152,12 @@ Windows Registry Editor Version 5.00
 “UpdateToPreReleaseVersion”=dword:00000000
 “CheckForUpdatesAtLaunch”=dword:00000000
 ```
-DeafultData目录中的所有内容，会在首次运行时被复制到Data目录后导入。从而达到修改默认设置的目的。
+※ DeafultData目录中的所有内容，会在首次运行时被复制到Data目录后导入。从而达到修改默认设置的目的
 
  
 # 📑 5. Custom Code
-Evernote的便携化基本完成了。但是，Evernote有一个残余进程EvernoteClipper.exe，并不会在程序结束后自动退出。PAL并没有结束进程的功能，因此需要用到一段Custom Code
+Evernote的便携化基本完成了。但是，Evernote有一个残余进程EvernoteClipper.exe，并不会在程序结束后自动退出。
+PAL并没有结束进程的功能，因此需要用到一段Custom Code
 
 在 `App\AppInfo\Launcher` 目录下新建`Custom.nsh`，写入如下内容： 
 ```
@@ -161,14 +171,18 @@ ${SegmentPostPrimary}
 KillProcDLL::KillProc “EvernoteClipper.exe”
 !macroend
 ```
-在程序启动与退出时结束EvernoteClipper.exe进程（可能需要额外安装NSIS的[KillPorcDLL](http://nsis.sourceforge.net/KillProcDLL_plug-in)插件）
+※ 在程序启动与退出时结束EvernoteClipper.exe进程（可能需要额外安装NSIS的[KillPorcDLL](http://nsis.sourceforge.net/KillProcDLL_plug-in)插件）
 
- 
+
+
 # 📑 6. 编译与封包
-在 `PortableApps.com Launcher` 中载入 `EvernotePortable 目录`，按下一步编译。如果成功，会在 `EvernotePortable 目录`下生成 `EvernotePortable.exe`，至此便携软件已经制作完毕
+在 `PortableApps.com Launcher` 中载入 `EvernotePortable 目录`，按下一步编译。
+如果成功，会在 `EvernotePortable 目录`下生成 `EvernotePortable.exe`，至此便携软件已经制作完毕
 
 为便于使用与分发，可使用[PortableApps.com AppCompactor](http://portableapps.com/apps/utilities/portableapps.com_appcompactor)减小软件体积，
 使用[PortableApps.com Installer](http://portableapps.com/apps/development/portableapps.com_installer)制作成安装（自解压）包。
+
+
 
 # 📑 7. 相关链接
 [PortableApps.com Launcher](http://portableapps.com/apps/development/portableapps.com_launcher)
