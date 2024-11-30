@@ -28,13 +28,13 @@
 ```
 > [!TIP]
 > 亮暗主题可以查看[github官方](https://github.com/settings/appearance)支持的主题，这里都支持
-- 亮主题：`light` `light_high_contrast` `light_colorblind ` `light_tritanopia `
-- 暗主题：`dark` `dark_high_contrast` `dark_colorblind` `dark_tritanopia` `dark_dimmed`
+> 亮主题：`light` `light_high_contrast` `light_colorblind ` `light_tritanopia `
+> 暗主题：`dark` `dark_high_contrast` `dark_colorblind` `dark_tritanopia` `dark_dimmed`
 
 > [!TIP]
 > [utterances](https://utteranc.es/)评论框的主题选择有：
-- 亮主题：`github-light` `boxy-light` `preferred-color-scheme`
-- 暗主题：`github-dark` `github-dark-orange` `icy-dark` `dark-blue` `photon-dark` `gruvbox-dark`
+> 亮主题：`github-light` `boxy-light` `preferred-color-scheme`
+> 暗主题：`github-dark` `github-dark-orange` `icy-dark` `dark-blue` `photon-dark` `gruvbox-dark`
 
 
 
