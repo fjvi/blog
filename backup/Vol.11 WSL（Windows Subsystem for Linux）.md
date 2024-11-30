@@ -228,7 +228,7 @@ systemd=true
 ```
 
 ### IP同步（window 与wsl 同一IP）
-テキスト エディターで `.wslconfig ファイルを開き、`%UserProfile%/.wslconfig` にこれらの行を追加します
+テキスト エディターで `.wslconfig` ファイルを開き、`%UserProfile%/.wslconfig` にこれらの行を追加します
 ```
 [wsl2]
 networkingMode=mirrored
