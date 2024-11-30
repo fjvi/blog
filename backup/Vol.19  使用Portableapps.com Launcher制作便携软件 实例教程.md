@@ -157,8 +157,7 @@ Windows Registry Editor Version 5.00
 
  
 # 📑 5. Custom Code
-Evernote的便携化基本完成了。但是，Evernote有一个残余进程EvernoteClipper.exe，并不会在程序结束后自动退出。
-PAL并没有结束进程的功能，因此需要用到一段Custom Code
+Evernote的便携化基本完成了。但是，Evernote有一个残余进程EvernoteClipper.exe，并不会在程序结束后自动退出。PAL并没有结束进程的功能，因此需要用到一段Custom Code
 
 在 `App\AppInfo\Launcher` 目录下新建`Custom.nsh`，写入如下内容： 
 ```
