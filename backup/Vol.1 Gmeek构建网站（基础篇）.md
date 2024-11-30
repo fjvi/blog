@@ -15,9 +15,10 @@
 在`Settings`左侧栏中选择`Pages`  ->右侧栏中找到 `Build and deployment->Source` ->选择`Github Actions`
 
 ### 3. 生成文章
-Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕来啦！通过https://XXX.github.io 即可访问自动生成的文章
+Gmeek通过issue生成文章，在issue写作并保存，
+见证奇迹的一幕来啦！通过https://XXX.github.io 即可访问自动生成的文章
 > [!IMPORTANT]
-> issue**必须添加**`标签Label`（至少一个）
+> 文章issue **必须添加** `标签Label`（至少一个）
 
 ### 4. 生成状况确认
 可进入Actions页面查看构建进度
