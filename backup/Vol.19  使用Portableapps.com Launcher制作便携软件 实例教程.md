@@ -1,27 +1,35 @@
-PortableApps.com Launcher（以下简称PAL）是PortableApps.com开发的便携软件制作工具。
-本质而言，它是一个NSIS代码生成器，让使用者不需要直接写代码便可以制作NSIS便携软件。PortableApps.com Launcher制作的便携软件每次运行时都会读取App\Appinfo\Launcher中的ini文件，因此开发者的工作主要是编写这个ini文件。
-以下由Evernote Portable的制作为例阐述一般流程。
+# 前言
+`PortableApps.com Launcher`（以下简称PAL）是`PortableApps.com`开发的便携软件制作工具。
+本质而言，它是一个`NSIS代码生成器`，让使用者不需要直接写代码便可以制作`NSIS便携软件`。
+`PortableApps.com Launcher`制作的便携软件每次运行时都会读取`App\Appinfo\Launcher`中的`ini`文件，因此开发者的工作主要是编写这个`ini`文件。
+以下、制作`Evernote Portable`为例、阐述一般流程
 
 # 0. 准备
 在制作便携软件前，我们需要准备如下工具：
 
-一个虚拟机软件，例如 VMWare ，[Windows Virtual PC](http://www.microsoft.com/windows/virtual-pc/)，或者免费的 [VirtualBox ](https://www.virtualbox.org/)。在虚拟机中安装 Windows XP ，Windows 7 系统，如果有条件，建议同时安装 64 位系统以便进一步测试。
+1. 一个虚拟机软件，在虚拟机中安装好操作系统
+[VMWare](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)
+[Microsoft Hyper-V](https://learn.microsoft.com/zh-cn/virtualization)
+[VirtualBox ](https://www.virtualbox.org)
+关于VM虚拟机可参考：https://www.grapehut.us.kg/post/8.html
 
-> > [!CAUTION]
+>  [!CAUTION]
 > 装好系统后，切勿安装任何额外软件、运行库，在最纯净的环境下建立快照，此后每次测试软件，均从此快照启动。
 
-- 一个软件行为监控软件，例如 [Total Uninstall](http://www.portableapps.com/apps/utilities/total-uninstall-portable/)，或者免费的 [RegShot ](http://portableapps.com/apps/utilities/regshot_portable)。安装到虚拟机内。
+2. 一个软件行为监控软件
+例如[RegShot ](http://portableapps.com/apps/utilities/regshot_portable)
 
--  [PortableApps.com Launcher](http://portableapps.com/apps/development/portableapps.com_launcher) 和  [NSIS Portable Unicode](http://portableapps.com/apps/development/nsis_portable)。将它们安装到同一目录。
-例如：
+3. [PortableApps.com Launcher](http://portableapps.com/apps/development/portableapps.com_launcher) 
+4. [NSIS Portable Unicode](http://portableapps.com/apps/development/nsis_portable)
+将它们安装到同一目录，例如：
 X:\PortableApps\PortableApps.comLauncher
 X:\PortableApps\NSISPortable
 
-- [PAL模板](http://portableapps.com/development) （PortableApps.com Application Template）
+5. [PAL模板](http://portableapps.com/development) （PortableApps.com Application Template）
 
 
 
-## 1. 分析
+# 1. 分析
 将 Evernote 安装程序拷贝到虚拟机内，运行 Total Uninstall （或 RegShot）扫描系统，安装程序，再次扫描，对比快照。
 
 通过对比，可发现Evernote在  %APPDATA%  、  %LOCALAPPDATA%  以及NT6.0以上的 LocalLow 中写入文件，在注册表 HKCU\Software\Evernote 中写入键值， HKCU\Software\Evernote\Evernote\EvernotePath 的值为Evernote数据库的位置。
@@ -32,7 +40,7 @@ X:\PortableApps\NSISPortable
 Launcher启动⇒　备份本地数据⇒　导入便携数据⇒　将数据库路径写入注册表⇒　启动主程序⇒　主程序退出⇒　导出便携软件数据⇒　清理便携软件垃圾⇒　恢复本地数据⇒　Launcher退出
 
  
-## 2. AppInfo.ini
+# 2. AppInfo.ini
 下载[PAL模板](http://portableapps.com/development)，解压后，重命名AppNamePortable为EvernotePortable。在App下新建Evernote目录，将提取出的程序文件复制到此处。
 
 创建 App\AppInfo\appinfo.ini ，此目录下的文件主要是为PortableApps.com Platform提供信息
@@ -69,7 +77,7 @@ PackageVersion=4.5.0.5229
 导出Evernote.exe的图标（推荐使用Icon Workshop），保存为 App\AppInfo\appicon.ico ，并导出为appicon_16.png（16px），appicon_32.png（32px），appicon_128.png（128px，非必须）。
 
  
-## 3. Launcher.ini
+# 3. Launcher.ini
 创建 App\Appinfo\Launcher\EvernotePortable.ini ，这个INI是制作便携软件的关键，它告诉PAL如何使我们的软件便携化。
 
 ``` 
@@ -125,7 +133,7 @@ HKCU\Software\Evernote\Evernote\EvernotePath=REG_SZ:%PAL:DataDir%
 ```
 
 
-## 4. DefaultData
+# 4. DefaultData
 Evernote便携版是不能通过官方来自动升级的，因此，我们需要修改程序的默认设置，关闭自动升级选项。通过观察注册表，可知自动升级主要由2个键值控制。在程序第一次运行时，需要将这两个键值设为0，以关闭默认升级。
 
 新建 App\DefaultData\settings\EvernotePortable.reg ，写入如下内容：
@@ -139,7 +147,7 @@ Windows Registry Editor Version 5.00
 DeafultData目录中的所有内容，会在首次运行时被复制到Data目录后导入。从而达到修改默认设置的目的。
 
  
-## 5. Custom Code
+# 5. Custom Code
 Evernote的便携化基本完成了。但是，Evernote有一个残余进程EvernoteClipper.exe，并不会在程序结束后自动退出。PAL并没有结束进程的功能，因此需要用到一段Custom Code
 
 在 App\AppInfo\Launcher 目录下新建Custom.nsh，写入如下内容： 
@@ -159,14 +167,14 @@ KillProcDLL::KillProc “EvernoteClipper.exe”
 [这里列出了更多可供使用的Segment](https://portableapps.chrismorgan.info/launcher/manual/advanced/segments/#segments)。
 
  
-## 6. 编译与封包
+# 6. 编译与封包
 在 PortableApps.com Launcher 中载入 EvernotePortable 目录，按下一步编译。如果成功，会在 EvernotePortable 目录下生成 EvernotePortable.exe。
 
 至此便携软件已经制作完毕，为便于使用与分发，
 可使用[PortableApps.com AppCompactor](http://portableapps.com/apps/utilities/portableapps.com_appcompactor)减小软件体积，
 使用[PortableApps.com Installer](http://portableapps.com/apps/development/portableapps.com_installer)制作成安装（自解压）包。
 
-## 7. 相关链接
+# 7. 相关链接
 [PortableApps.com Launcher](http://portableapps.com/apps/development/portableapps.com_launcher)
 [NSIS Portable](http://portableapps.com/apps/development/nsis_portable)
 [PortableApps.com AppCompactor](http://portableapps.com/apps/utilities/portableapps.com_appcompactor)
