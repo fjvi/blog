@@ -1,9 +1,10 @@
+# 前言
 [Gmeek](https://github.com/Meekdai/Gmeek) 一个博客框架
 超轻量级个人博客模板，完全基于`Github Pages `、 `Github Issues` 和 `Github Actions`，可以称作`All in Github`
 > 引用：https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html
 
 
-## 📑 一、安装
+# 📑 一、安装
 > [!TIP]
 > 安装极其简单，根据以下步骤，一步一步操作。
 
@@ -26,7 +27,7 @@ Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕�
 通过` Actions->build Gmeek->Run workflow` ->里面的按钮全局重新生成一次
 
 
-## 📑 二、配置文件
+# 📑 二、配置文件
 > [!IMPORTANT]
 > 按照安装步骤成功搭建好后，就可以阅读下面的内容修改配置文件啦
 > 修改配置文件后，一定要手动全局生成一次，不然会报错
@@ -119,7 +120,7 @@ Gmeek通过issue生成文章，在issue写作并保存，见证奇迹的一幕�
 | needComment | 用于设置是否需要评论功能，1开启评论，0关闭 |
 
 
-## 📑 三、常见问题
+# 📑 三、常见问题
 ### 1. 搭建不成功
 基本搭建就这2步，不成功的实例可以参考如下
 - 案例一：https://github.com/Meekdai/Gmeek/issues/14 
