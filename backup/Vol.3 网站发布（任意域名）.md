@@ -2,18 +2,18 @@
 域名　→　cloudflare　→　github
 ```
 
-## 一、注册域名（任意域名）
+# 一、注册域名（任意域名）
 付费的，免费的都可以，根据自身钱包的富裕程度，👀  省略若干字。。。
 
-## 二、注册cloudflare
+# 二、注册cloudflare
 注册赛博大神cloudflare，利用它的DNS服务（已有账号也可以）
 
-## 三、域名关联cloudflare的DNS服务
+# 三、域名关联cloudflare的DNS服务
 在cloudflare里选择DNS服务栏，add domain，填入域名，获取Name Serve，
 复制，粘贴到域名服务商的网站，进行关联，稍等片刻cloudflare会自动check完成
 `Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns.png">`
 
-## 四、cloudflare关联github
+# 四、cloudflare关联github
 
 > [!NOTE]
 > IP地址  （出典：github官网）
@@ -82,7 +82,7 @@ $ dig www.grapehut.us.kg +nostats +nocomments +nocmd
 
 
 
-## 五、github关联域名
+# 五、github关联域名
 `Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns4.png">`
 
 > 单击 “设置”  -> 单击 侧边栏的“ Pages”  ->  在“自定义域”下，键入自定义域，然后单击“保存”。
