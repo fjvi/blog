@@ -11,7 +11,7 @@
 [VMWare](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)
 [Microsoft Hyper-V](https://learn.microsoft.com/zh-cn/virtualization)
 [VirtualBox ](https://www.virtualbox.org)
-关于VM虚拟机可参考：https://www.grapehut.us.kg/post/8.html
+关于VM虚拟机的选择，可参考：https://www.grapehut.us.kg/post/8.html
 
 >  [!CAUTION]
 > 装好系统后，切勿安装任何额外软件、运行库，在最纯净的环境下建立快照，此后每次测试软件，均从此快照启动。
