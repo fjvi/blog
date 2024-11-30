@@ -40,7 +40,7 @@ $ wsl --help
 
 ### 安装 WSL
 ```
-$ wsl --install　**默认安装Ubuntu**   或者指定  $ wsl --install -d <DistributionName>
+$ wsl --install　※默认安装Ubuntu   或者指定  $ wsl --install -d <DistributionName>
 ```
 
 ### 查看可安装Linux版本
@@ -74,7 +74,7 @@ $ wsl -l -v　或者　$ wsl --list --verbose　
 
 ### 启动wsl
 ```
-$ wsl ~　**默认Linux版本**   或者　$ wsl -d <DistributionName>　**指定Linux版本**
+$ wsl ~　※启动默认Linux版本   或者　$ wsl -d <DistributionName>　※指定Linux版本
 ```
 
 ### 切换默认Linux版本
@@ -84,7 +84,7 @@ $ wsl -s <DistributionName>　或者　$ wsl --set-default <DistributionName>
 
 ### 关闭wsl
 ```
-$ wsl --shutdown **关闭所有wsl**   或者   $ wsl --terminate <DistributionName> **关闭指定Linux版本**
+$ wsl --shutdown 　※关闭所有wsl   或者   $ wsl --terminate <DistributionName> 　※关闭指定Linux版本
 
 ```
 
@@ -92,12 +92,7 @@ $ wsl --shutdown **关闭所有wsl**   或者   $ wsl --terminate <DistributionN
 >https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk
 
 ```
-$ wsl --mount <DiskPath>
-```
-
-### マウント解除
-```
-$ wsl --unmount <DiskPath>
+$ wsl --mount <DiskPath>　※マウント　　　$ wsl --unmount <DiskPath>　※マウント解除
 ```
 
 

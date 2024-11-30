@@ -109,7 +109,7 @@ Windows バージョン: 10.0.26100.863
 <pre class="notranslate"><code class="notranslate">$ wsl --help
 </code></pre>
 <h3>安装 WSL</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl --install　**默认安装Ubuntu**   或者指定  $ wsl --install -d &lt;DistributionName&gt;
+<pre class="notranslate"><code class="notranslate">$ wsl --install　※默认安装Ubuntu   或者指定  $ wsl --install -d &lt;DistributionName&gt;
 </code></pre>
 <h3>查看可安装Linux版本</h3>
 <pre class="notranslate"><code class="notranslate">$ wsl -l -o　或者　$ wsl --list --online
@@ -199,23 +199,20 @@ Windows バージョン: 10.0.26100.863
 <pre class="notranslate"><code class="notranslate">$ wsl -l -v　或者　$ wsl --list --verbose　
 </code></pre>
 <h3>启动wsl</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl ~　**默认Linux版本**   或者　$ wsl -d &lt;DistributionName&gt;　**指定Linux版本**
+<pre class="notranslate"><code class="notranslate">$ wsl ~　※启动默认Linux版本   或者　$ wsl -d &lt;DistributionName&gt;　※指定Linux版本
 </code></pre>
 <h3>切换默认Linux版本</h3>
 <pre class="notranslate"><code class="notranslate">$ wsl -s &lt;DistributionName&gt;　或者　$ wsl --set-default &lt;DistributionName&gt;
 </code></pre>
 <h3>关闭wsl</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl --shutdown **关闭所有wsl**   或者   $ wsl --terminate &lt;DistributionName&gt; **关闭指定Linux版本**
+<pre class="notranslate"><code class="notranslate">$ wsl --shutdown 　※关闭所有wsl   或者   $ wsl --terminate &lt;DistributionName&gt; 　※关闭指定Linux版本
 
 </code></pre>
 <h3>マウント</h3>
 <blockquote>
 <p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk</a></p>
 </blockquote>
-<pre class="notranslate"><code class="notranslate">$ wsl --mount &lt;DiskPath&gt;
-</code></pre>
-<h3>マウント解除</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl --unmount &lt;DiskPath&gt;
+<pre class="notranslate"><code class="notranslate">$ wsl --mount &lt;DiskPath&gt;　※マウント　　　$ wsl --unmount &lt;DiskPath&gt;　※マウント解除
 </code></pre>
 <h3>备份Linux</h3>
 <pre class="notranslate"><code class="notranslate">$ wsl --export &lt;DistributionName&gt; xxx.tar
