@@ -231,3 +231,11 @@ sparseVhd=true
 [boot]
 systemd=true
 ```
+
+
+# window 与 wsl 相互调用命令
+在wsl 可以调用 notepad.exe   explorer.exe 等
+在cmd 可以调用  dir  | grep 等
+
+
+
