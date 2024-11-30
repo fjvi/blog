@@ -1,6 +1,6 @@
 # 内容简介
 把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform
-https://github.com/hst1189/live2d-widget
+
 
 # 添加内容
 如果你是小白，或者只需要最基础的功能，那么只用将这下面代码加入 html 页面的 head 或 body 中，即可加载看板娘：
@@ -10,7 +10,7 @@ https://github.com/hst1189/live2d-widget
 <script src='https://cdn.jsdelivr.net/gh/hst1189/live2d-widget/autoload.js'></script>
 ```
 autoload.js 会自动加载：`live2d.min.js` `waifu.min.css` `waifu-tips.min.js` `ModelDefine.js` 
-
+详细参考：https://github.com/hst1189/live2d-widget
 
 # 添加效果
 https://grapehut.us.kg/
