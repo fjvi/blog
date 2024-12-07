@@ -17,10 +17,11 @@ Yandex Disk 同期 | × | × | 〇|×
 Initial release | 2005/03/28 | 2013/09/03 | 2010/05/26|
 
 # 脚本
-- https://greasyfork.org/scripts
-- https://sleazyfork.org/scripts
-- https://scriptcat.org/en/search
+  - https://greasyfork.org/scripts
+  - https://sleazyfork.org/scripts
+  - https://scriptcat.org/en/search
 
+---
   - https://greasyfork.org/ja/scripts/459541
   - https://greasyfork.org/ja/scripts/467776
   - https://greasyfork.org/ja/scripts/424913
@@ -37,6 +38,6 @@ Initial release | 2005/03/28 | 2013/09/03 | 2010/05/26|
   - https://sleazyfork.org/zh-CN/scripts/499213
   - https://sleazyfork.org/zh-CN/scripts/374903
   - https://sleazyfork.org/zh-CN/scripts/428639
-  
+  ---
 
 
