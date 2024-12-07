@@ -16,5 +16,6 @@ Yandex Disk 同期 | × | × | 〇
 公式サイト | [公式サイト](https://www.greasespot.net/) | [公式サイト](https://violentmonkey.github.io/) | [公式サイト](https://www.tampermonkey.net/)
 Initial release | 2005/03/28 | 2013/09/03 | 2010/05/26
 
+# 脚本
+- https://greasyfork.org/ja/scripts
 
-https://greasyfork.org/ja/scripts
