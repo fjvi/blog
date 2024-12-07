@@ -19,8 +19,24 @@ Initial release | 2005/03/28 | 2013/09/03 | 2010/05/26|
 # 脚本
 - https://greasyfork.org/scripts
 - https://sleazyfork.org/scripts
-- https://scriptcat.org/
+- https://scriptcat.org/en/search
 
-  - https://greasyfork.org/zh-CN/scripts/467776-%E6%87%92%E4%BA%BA%E4%B8%93%E7%94%A8%E7%B3%BB%E5%88%97-%E5%85%A8%E7%BD%91-vip-%E8%A7%86%E9%A2%91%E7%A0%B4%E8%A7%A3%E5%8E%BB%E5%B9%BF%E5%91%8A 
-  - https://sleazyfork.org/zh-CN/scripts/509466-%E6%B5%B7%E8%A7%92%E5%A4%A9%E6%B6%AF-%E8%A7%A3%E9%94%81%E6%B5%B7%E8%A7%92%E7%A4%BE%E5%8C%BA%E8%B5%84%E6%BA%90
+  - https://greasyfork.org/ja/scripts/459541
+  - https://greasyfork.org/ja/scripts/467776
+  - https://greasyfork.org/ja/scripts/424913
+  - https://greasyfork.org/ja/scripts/449581
+  - https://greasyfork.org/ja/scripts/446342
+  - https://greasyfork.org/ja/scripts/471333
+  - https://greasyfork.org/ja/scripts/484953
+  - https://greasyfork.org/ja/scripts/438684
+ 
+  - https://sleazyfork.org/zh-CN/scripts/432150
+  - https://sleazyfork.org/zh-CN/scripts/463305
+  - https://sleazyfork.org/zh-CN/scripts/509466
+  - https://sleazyfork.org/zh-CN/scripts/441120
+  - https://sleazyfork.org/zh-CN/scripts/499213
+  - https://sleazyfork.org/zh-CN/scripts/374903
+  - https://sleazyfork.org/zh-CN/scripts/428639
+  
+
 
