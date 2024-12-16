@@ -1,4 +1,4 @@
-# 关于 Linux 的 Windows 子系统 (WSL) 
+# 关于 WSL（Windows Subsystem for Linux）
 Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。 WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高效的体验。
 
 
@@ -16,7 +16,7 @@ Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境�
 ```
 $ wsl --version
 
-WSL バージョン: 2.3.26.0
+WSL バージョン: 2.3.26.0                    ←wsl2
 カーネル バージョン: 5.15.167.4-1
 WSLg バージョン: 1.0.65
 MSRDC バージョン: 1.2.5620
@@ -40,12 +40,14 @@ $ wsl --help
 
 ### 安装 WSL
 ```
-$ wsl --install　※默认安装Ubuntu   或者指定  $ wsl --install -d <DistributionName>
+$ wsl --install　                                      ※默认安装Ubuntu  
+$ wsl --install -d <DistributionName>   ※指定系统
 ```
 
-### 查看可安装Linux版本
+### 查看可安装系统
 ```
-$ wsl -l -o　或者　$ wsl --list --online
+$ wsl --list --online
+$ wsl -l -o　
 ```
 
 |NAME|FRIENDLY NAME|Default|
@@ -66,27 +68,46 @@ $ wsl -l -o　或者　$ wsl --list --online
 |openSUSE-Tumbleweed             |openSUSE Tumbleweed||
 
 
-### 查看已安装Linux版本
+### 查看已安装系统
 ```
-$ wsl -l -v　或者　$ wsl --list --verbose　
+$ wsl --list --verbose
+$ wsl -l -v　
+```
+
+
+### 设置默认系统
+```
+$ wsl --set-default <Distribution Name>
+$ wsl -s <DistributionName>
+
+```
+
+### 切换系统
+```
+$ wsl --set-version <distribution name> <versionNumber>　
 ```
 
 
 ### 启动wsl
 ```
-$ wsl ~　※启动默认Linux版本   或者　$ wsl -d <DistributionName>　※指定Linux版本
+$ wsl 　                                       ※启动默认版本
+$ wsl ~　                                    ※ユーザーのホーム ディレクトリから開始
+$ wsl -d <DistributionName>　※指定版本
 ```
 
-### 切换默认Linux版本
-```
-$ wsl -s <DistributionName>　或者　$ wsl --set-default <DistributionName>
-```
+
 
 ### 关闭wsl
 ```
-$ wsl --shutdown 　※关闭所有wsl   或者   $ wsl --terminate <DistributionName> 　※关闭指定Linux版本
-
+$ wsl --shutdown 　                                  ※关闭所有wsl      
+$ wsl --terminate <DistributionName> 　※关闭指定Linux版本
 ```
+
+### 卸载系统
+```
+$ wsl --unregister <DistributionName>
+```
+
 
 ### マウント
 >https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk
@@ -130,7 +151,10 @@ $ ip route show | grep -i default | awk '{ print $3}'
 # WSL 詳細設定の構成
 https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config
 
+### wsl.conf 
 [wsl.conf](https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconf) ファイル`/etc/wsl.conf`は、ディストリビューションごとに詳細設定オプションを構成する。
+
+### .wslconfig
  [.wslconfig](https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconfig) ファイル`%UserProfile% ディレクトリに格納`は、すべての WSL 2 ディストリビューション全体で詳細設定オプションを構成する。
 
 

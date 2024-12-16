@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="# 关于 Linux 的 Windows 子系统 (WSL) 
+<meta name="description" content="# 关于 WSL（Windows Subsystem for Linux）
 Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。">
 <meta property="og:title" content="Vol.11 WSL（Windows Subsystem for Linux）">
-<meta property="og:description" content="# 关于 Linux 的 Windows 子系统 (WSL) 
+<meta property="og:description" content="# 关于 WSL（Windows Subsystem for Linux）
 Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.grapehut.us.kg/post/11.html">
@@ -76,7 +76,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
-<div class="markdown-body" id="postBody"><h1>关于 Linux 的 Windows 子系统 (WSL)</h1>
+<div class="markdown-body" id="postBody"><h1>关于 WSL（Windows Subsystem for Linux）</h1>
 <p>Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。 WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高效的体验。</p>
 <h1>前提条件</h1>
 <p>开启以下2个功能 （系统 &gt; 附加功能 &gt; 其他功能 ）</p>
@@ -91,7 +91,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>查看wsl版本</h3>
 <pre class="notranslate"><code class="notranslate">$ wsl --version
 
-WSL バージョン: 2.3.26.0
+WSL バージョン: 2.3.26.0                    ←wsl2
 カーネル バージョン: 5.15.167.4-1
 WSLg バージョン: 1.0.65
 MSRDC バージョン: 1.2.5620
@@ -109,10 +109,12 @@ Windows バージョン: 10.0.26100.863
 <pre class="notranslate"><code class="notranslate">$ wsl --help
 </code></pre>
 <h3>安装 WSL</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl --install　※默认安装Ubuntu   或者指定  $ wsl --install -d &lt;DistributionName&gt;
+<pre class="notranslate"><code class="notranslate">$ wsl --install　                                      ※默认安装Ubuntu  
+$ wsl --install -d &lt;DistributionName&gt;   ※指定系统
 </code></pre>
-<h3>查看可安装Linux版本</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl -l -o　或者　$ wsl --list --online
+<h3>查看可安装系统</h3>
+<pre class="notranslate"><code class="notranslate">$ wsl --list --online
+$ wsl -l -o　
 </code></pre>
 <markdown-accessiblity-table><table role="table">
 <thead>
@@ -195,18 +197,29 @@ Windows バージョン: 10.0.26100.863
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
-<h3>查看已安装Linux版本</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl -l -v　或者　$ wsl --list --verbose　
+<h3>查看已安装系统</h3>
+<pre class="notranslate"><code class="notranslate">$ wsl --list --verbose
+$ wsl -l -v　
+</code></pre>
+<h3>设置默认系统</h3>
+<pre class="notranslate"><code class="notranslate">$ wsl --set-default &lt;Distribution Name&gt;
+$ wsl -s &lt;DistributionName&gt;
+
+</code></pre>
+<h3>切换系统</h3>
+<pre class="notranslate"><code class="notranslate">$ wsl --set-version &lt;distribution name&gt; &lt;versionNumber&gt;　
 </code></pre>
 <h3>启动wsl</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl ~　※启动默认Linux版本   或者　$ wsl -d &lt;DistributionName&gt;　※指定Linux版本
-</code></pre>
-<h3>切换默认Linux版本</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl -s &lt;DistributionName&gt;　或者　$ wsl --set-default &lt;DistributionName&gt;
+<pre class="notranslate"><code class="notranslate">$ wsl 　                                       ※启动默认版本
+$ wsl ~　                                    ※ユーザーのホーム ディレクトリから開始
+$ wsl -d &lt;DistributionName&gt;　※指定版本
 </code></pre>
 <h3>关闭wsl</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl --shutdown 　※关闭所有wsl   或者   $ wsl --terminate &lt;DistributionName&gt; 　※关闭指定Linux版本
-
+<pre class="notranslate"><code class="notranslate">$ wsl --shutdown 　                                  ※关闭所有wsl      
+$ wsl --terminate &lt;DistributionName&gt; 　※关闭指定Linux版本
+</code></pre>
+<h3>卸载系统</h3>
+<pre class="notranslate"><code class="notranslate">$ wsl --unregister &lt;DistributionName&gt;
 </code></pre>
 <h3>マウント</h3>
 <blockquote>
@@ -236,8 +249,10 @@ Windows バージョン: 10.0.26100.863
 </code></pre>
 <h1>WSL 詳細設定の構成</h1>
 <p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config</a></p>
-<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconf" rel="nofollow">wsl.conf</a> ファイル<code class="notranslate">/etc/wsl.conf</code>は、ディストリビューションごとに詳細設定オプションを構成する。<br>
-<a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconfig" rel="nofollow">.wslconfig</a> ファイル<code class="notranslate">%UserProfile% ディレクトリに格納</code>は、すべての WSL 2 ディストリビューション全体で詳細設定オプションを構成する。</p>
+<h3>wsl.conf</h3>
+<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconf" rel="nofollow">wsl.conf</a> ファイル<code class="notranslate">/etc/wsl.conf</code>は、ディストリビューションごとに詳細設定オプションを構成する。</p>
+<h3>.wslconfig</h3>
+<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl-config#wslconfig" rel="nofollow">.wslconfig</a> ファイル<code class="notranslate">%UserProfile% ディレクトリに格納</code>は、すべての WSL 2 ディストリビューション全体で詳細設定オプションを構成する。</p>
 <h3>wsl.conf ファイルの例</h3>
 <pre class="notranslate"><code class="notranslate"># Automatically mount Windows drive when the distribution is launched
 [automount]
