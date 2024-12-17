@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Tue, 17 Dec 2024 12:37:44 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.24 本地构建ChatGPT</title><link>https://www.grapehut.us.kg/post/24.html</link><description># 创建一个本地ChatGPT&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Tue, 17 Dec 2024 12:49:31 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.24 本地构建ChatGPT</title><link>https://www.grapehut.us.kg/post/24.html</link><description># 创建一个本地ChatGPT&#13;
 &#13;
 ### 0. 前提&#13;
 本地Linux（window可以利用wsl），或者VPS上构建 Linux&#13;
@@ -15,10 +15,18 @@ docker -v                                 #查看docker版本，检查是否安�
 ```&#13;
 docker pull yidadaa/chatgpt-next-web      #从docker拉取（https://hub.docker.com/r/yidadaa/chatgpt-next-web）&#13;
 &#13;
-docker run -d -p 3000:3000 \             #启动服务 端口号3000&#13;
-   -e OPENAI_API_KEY=sk-xxxx \           #通过 https://platform.openai.com/api-keys 获取&#13;
-   -e CODE=页面访问密码 \                 #可以为空&#13;
+docker run -d -p 3000:3000 \             #启动容器  端口号3000&#13;
+   -e OPENAI_API_KEY=sk-xxxx \           #KEY通过 https://platform.openai.com/api-keys 获取&#13;
+   -e CODE=页面访问密码 \                 #密码可以为空&#13;
    yidadaa/chatgpt-next-web &#13;
+&#13;
+例：&#13;
+docker run -d -p 3000:3000 \&#13;
+   -e OPENAI_API_KEY=sk-xxxx \&#13;
+   -e CODE= \&#13;
+   yidadaa/chatgpt-next-web&#13;
+&#13;
+docker ps -a                             #查看docker容器状态&#13;
 ```&#13;
 &#13;
 ### 3. 打开网页，即开即用&#13;
