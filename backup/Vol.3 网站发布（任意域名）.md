@@ -11,7 +11,7 @@
 # 三、域名关联cloudflare的DNS服务
 在cloudflare里选择DNS服务栏，add domain，填入域名，获取Name Serve，
 复制，粘贴到域名服务商的网站，进行关联，稍等片刻cloudflare会自动check完成
-`Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns.png">`
+`Gmeek-html<img src="../imgs/cloudflare_dns.png">`
 
 # 四、cloudflare关联github
 
@@ -38,8 +38,8 @@
 2606:50c0:8003::153
 ```
 
-`Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns2.png">`
-`Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns3.png">`
+`Gmeek-html<img src="../imgs/cloudflare_dns2.png">`
+`Gmeek-html<img src="../imgs/cloudflare_dns3.png">`
 
 如图所示，填入IP，然后一路yes & 保存，另外SSL开启，证明书用的是默认的，
 
@@ -83,7 +83,7 @@ $ dig www.grapehut.us.kg +nostats +nocomments +nocmd
 
 
 # 五、github关联域名
-`Gmeek-html<img src="https://grapehut.us.kg/imgs/cloudflare_dns4.png">`
+`Gmeek-html<img src="../imgs/cloudflare_dns4.png">`
 
 > 单击 “设置”  -> 单击 侧边栏的“ Pages”  ->  在“自定义域”下，键入自定义域，然后单击“保存”。
 
