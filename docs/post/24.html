@@ -20,24 +20,18 @@ docker -v                                 #查看docker版本，检查是否安�
 
 ### 2. 安装NextChat
 ```
-docker pull yidadaa/chatgpt-next-web      #从docker拉取
+docker pull yidadaa/chatgpt-next-web      #从docker拉取（https://hub.docker.com/r/yidadaa/chatgpt-next-web）
 
 docker run -d -p 3000:3000 \             #启动chatgpt-next-web
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=页面访问密码 \
    yidadaa/chatgpt-next-web
-
-例：docker run -d -p 3000:3000 \
-   -e OPENAI_API_KEY=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 \
-   -e CODE= \
-   yidadaa/chatgpt-next-web
 ```
 
 > [!TIP]
-> 出典：https://hub.docker.com/r/yidadaa/chatgpt-next-web
-> port:：3000
+> port：                    3000:3000
 > OPENAI_API_KEY：通过获取 https://platform.openai.com/api-keys
-> CODE：可以为空
+> CODE：                  可以为空
 
 
 ### 3. 打开网页，即开即用
@@ -59,24 +53,18 @@ docker -v                                 #查看docker版本，检查是否安�
 
 ### 2. 安装NextChat
 ```
-docker pull yidadaa/chatgpt-next-web      #从docker拉取
+docker pull yidadaa/chatgpt-next-web      #从docker拉取（https://hub.docker.com/r/yidadaa/chatgpt-next-web）
 
 docker run -d -p 3000:3000 \             #启动chatgpt-next-web
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=页面访问密码 \
    yidadaa/chatgpt-next-web
-
-例：docker run -d -p 3000:3000 \
-   -e OPENAI_API_KEY=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 \
-   -e CODE= \
-   yidadaa/chatgpt-next-web
 ```
 
 > [!TIP]
-> 出典：https://hub.docker.com/r/yidadaa/chatgpt-next-web
-> port:：3000
+> port：                    3000:3000
 > OPENAI_API_KEY：通过获取 https://platform.openai.com/api-keys
-> CODE：可以为空
+> CODE：                  可以为空
 
 
 ### 3. 打开网页，即开即用
@@ -157,22 +145,16 @@ systemctl enable --now docker             #启动Docker服务
 docker -v                                 #查看docker版本，检查是否安装成功
 </code></pre>
 <h3>2. 安装NextChat</h3>
-<pre class="notranslate"><code class="notranslate">docker pull yidadaa/chatgpt-next-web      #从docker拉取
+<pre class="notranslate"><code class="notranslate">docker pull yidadaa/chatgpt-next-web      #从docker拉取（https://hub.docker.com/r/yidadaa/chatgpt-next-web）
 
 docker run -d -p 3000:3000 \             #启动chatgpt-next-web
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=页面访问密码 \
    yidadaa/chatgpt-next-web
-
-例：docker run -d -p 3000:3000 \
-   -e OPENAI_API_KEY=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 \
-   -e CODE= \
-   yidadaa/chatgpt-next-web
 </code></pre>
-<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>出典：<a href="https://hub.docker.com/r/yidadaa/chatgpt-next-web" rel="nofollow">https://hub.docker.com/r/yidadaa/chatgpt-next-web</a><br>
-port:：3000<br>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>port：                    3000:3000<br>
 OPENAI_API_KEY：通过获取 <a href="https://platform.openai.com/api-keys" rel="nofollow">https://platform.openai.com/api-keys</a><br>
-CODE：可以为空</p>
+CODE：                  可以为空</p>
 </div>
 <h3>3. 打开网页，即开即用</h3>
 <p><a href="http://127.0.0.1:3000/" rel="nofollow">http://127.0.0.1:3000/</a></p></div>
