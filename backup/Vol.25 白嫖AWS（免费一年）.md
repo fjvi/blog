@@ -46,7 +46,7 @@ status iptables.service
 ```
 类型：ICMP 协议：ICMP  端口范围：全部  来源：0.0.0.0/0
 ```
-`Gmeek-html<img src="img/aws_security_rull.png">`
+`Gmeek-html<img src="../imgs/aws_security_rull.png">`
 
 > [!TIP]
 > http 的默认端口: 80
