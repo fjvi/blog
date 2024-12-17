@@ -14,7 +14,7 @@ docker -v                                 #查看docker版本，检查是否安�
 ```
 docker pull yidadaa/chatgpt-next-web      #从docker拉取（https://hub.docker.com/r/yidadaa/chatgpt-next-web）
 
-docker run -d -p 3000:3000 \             #启动chatgpt-next-web
+docker run -d -p 3000:3000 \             #启动服务 端口号3000
    -e OPENAI_API_KEY=sk-xxxx \           #通过 https://platform.openai.com/api-keys 获取
    -e CODE=页面访问密码 \                 #可以为空
    yidadaa/chatgpt-next-web 
