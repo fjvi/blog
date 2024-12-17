@@ -65,7 +65,7 @@ $ dig grapehut.us.kg +noall +answer -t AAAA
 ### 配置 www 子域
 
 导航到 DNS 提供程序并为指向 GitHub Pages 默认域的 www 子域创建一条 CNAME 记录。
-例如，假设网站位于 <user>.github.io，则应创建一条将 www.grapehut.us.kg 指向 <user>.github.io 的 CNAME 记录。
+例如，github page网站位于 xxx.github.io，则应创建一条将 www.grapehut.us.kg 指向 xxx.github.io 的 CNAME 记录。
 
 
 要确认 DNS 记录配置正确，请使用 dig 命令
