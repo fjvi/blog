@@ -1,21 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Wed, 18 Dec 2024 15:04:30 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.26 白嫖Deepl（免开会员） 沉静式翻译设置Deeplx</title><link>https://www.grapehut.us.kg/post/26.html</link><description>&gt; 引用： https://linux.do/t/topic/111911&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Wed, 18 Dec 2024 15:30:44 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.26 白嫖Deepl（免开会员） 沉静式翻译设置Deeplx</title><link>https://www.grapehut.us.kg/post/26.html</link><description>&gt; 引用： https://linux.do/t/topic/111911&#13;
 &#13;
 1. 下载插件   沉静式翻译&#13;
 https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh&#13;
 &#13;
 2. 设置里面打开【开发者选项】&#13;
-`Gmeek-html&lt;img src='https://linux.do/uploads/default/original/3X/5/b/5b7076b22ded3b8531d96084e08fe7e0f032f4ae.png&#13;
-'&gt;`&#13;
+`Gmeek-html&lt;img src='../imgs/DeeplxKey1.png'&gt;`&#13;
 &#13;
 3. 翻译服务里面打开DeepLX(Beta)&#13;
-`Gmeek-html&lt;img src='https://linux.do/uploads/default/original/3X/f/6/f655e28f457f71e0a439196baf68ebf69ce30cbb.png&#13;
-'&gt;`&#13;
+`Gmeek-html&lt;img src='../imgs/DeeplxKey2.png'&gt;`&#13;
 &#13;
 4. 去基本设置里面你的URL&#13;
 ✖　`https://api.deeplx.org/translate`      #已不可用&#13;
 〇　`https://api.deeplx.org/&lt;api-key&gt;/translate`      #在liunx.do申请api-key&#13;
-`Gmeek-html&lt;img src='https://linux.do/uploads/default/original/3X/9/5/956c5c32dbdbd033fcb1e1e900f03f050fe5e7eb.png'&gt;`&#13;
+`Gmeek-html&lt;img src='../imgs/DeeplxKey3.png'&gt;`&#13;
+&#13;
 。</description><guid isPermaLink="true">https://www.grapehut.us.kg/post/26.html</guid><pubDate>Wed, 18 Dec 2024 15:04:02 +0000</pubDate></item><item><title>Vol.25 白嫖AWS（免费一年）</title><link>https://www.grapehut.us.kg/post/25.html</link><description># 注册&#13;
 1. 注册aws账号（需要信用卡，验证时会扣除1美元或等值的货币）&#13;
 https://aws.amazon.com/cn/campaigns/nc20241101/&#13;
