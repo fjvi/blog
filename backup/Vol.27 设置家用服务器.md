@@ -46,7 +46,7 @@ sudo systemctl restart gdm3
 ```
 sudo apt install openssh-server
 ```
-访问命令、输入密码
+输入ssh命令、然后输入密码
 ```
 ssh 用户名@192.168.0.100    ※服务器IP
 ```
