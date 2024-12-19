@@ -51,12 +51,12 @@
     "lived2D":1,
     "lived2D_script":"<script src='https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js'></script><script src='https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/dist/jquery-ui.min.js'></script><script src='https://cdn.jsdelivr.net/gh/hst1189/live2d-widget/autoload.js'></script>",    
 
-    "sakuraPlus":1,  
+    "sakuraPlus":1,
     "sakuraPlus_script":"<script src='../assets/sakuraPlus.js'></script>",
     
     "rssSplit":"sentence",
     "bottomText":"❤️ 转载文章请注明出处，谢谢！❤️",
-    "ogImage":"",  
+    "ogImage":"",
     "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
     "showPostSource":0,
     "needComment":1
