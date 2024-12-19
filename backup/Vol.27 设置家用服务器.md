@@ -9,7 +9,7 @@ https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-desktop-amd64.iso
 
 
 # 3. 安装RustDesk远程操作
-3-1. 通过githubu下载：https://github.com/rustdesk/rustdesk/releases
+3-1. 通过github下载：https://github.com/rustdesk/rustdesk/releases
 https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.deb       ※目前最新版本
 
 3-2. 将安装包`.deb` 放在桌面，右键打开命令行、执行以下两个命令
