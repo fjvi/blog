@@ -94,8 +94,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>打开路由器设置---&gt;局域网设置--&gt;DHCP静态IP设置，分配一个固定IP，比如192.168.0.100。配置完成后记得重启路由器。<br>
 这样即使重启服务器或者路由器，IP地址就不会变来变去了。</p>
 <h1>3. 安装RustDesk远程操作</h1>
-<p>3-1. 通过github下载：<a href="https://github.com/rustdesk/rustdesk/releases">https://github.com/rustdesk/rustdesk/releases</a><br>
-<a href="https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.deb">https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.deb</a>       ※目前最新版本</p>
+<p>3-1. 通过github下载Ubuntu版本：<a href="https://github.com/rustdesk/rustdesk/releases">https://github.com/rustdesk/rustdesk/releases</a><br>
+<a href="https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.deb">https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.deb</a>       ※目前最新版本1.3.5</p>
 <p>3-2. 将安装包<code class="notranslate">.deb</code> 放在桌面，右键打开命令行、执行以下两个命令</p>
 <pre class="notranslate"><code class="notranslate">sudo apt update
 sudo apt install ./rustdesk-1.3.5-x86_64.deb
@@ -105,7 +105,7 @@ sudo apt install ./rustdesk-1.3.5-x86_64.deb
 <pre class="notranslate"><code class="notranslate">sudo vi /etc/gdm3/custom.conf
 </code></pre>
 <p>修改下面这一行、将前面的注释去掉，然后点击<code class="notranslate">ESC</code>，然后输入 <code class="notranslate">:wq!</code> 保存文件</p>
-<pre class="notranslate"><code class="notranslate">#WaylandEnable=false
+<pre class="notranslate"><code class="notranslate"># WaylandEnable=false     ⇒　WaylandEnable=false
 </code></pre>
 <p>3-4. 然后重启桌面</p>
 <pre class="notranslate"><code class="notranslate">sudo systemctl restart gdm3
@@ -122,15 +122,19 @@ sudo apt install ./rustdesk-1.3.5-x86_64.deb
 <pre class="notranslate"><code class="notranslate">ssh 用户名@192.168.0.100    ※服务器IP
 </code></pre>
 <h1>5. SMB文件共享</h1>
-<p>我们可以在Ubuntu服务器上开启SMB文件共享，构建家庭影音服务，<br>
-这样可以很方便的在手机电脑上查看家庭服务器下载的电影，电视剧。</p>
+<p>可以在Ubuntu服务器上开启SMB文件共享，构建文件共享服务，<br>
+这样可以很方便的在手机电脑上查看服务器上文件（包括电影，电视剧等）</p>
 <pre class="notranslate"><code class="notranslate">sudo apt install samba
+</code></pre>
+<p>创建共享文件夹</p>
+<pre class="notranslate"><code class="notranslate">mkdir /home/用户名/share
+chmod 755 /home/用户名/share
 </code></pre>
 <p>修改配置文件、最下面粘贴这些内容</p>
 <pre class="notranslate"><code class="notranslate">sudo vi /etc/samba/smb.conf
 </code></pre>
 <pre class="notranslate"><code class="notranslate">[ubuntu_smb]
-path = 共享文件夹路径 ★
+path = /home/用户名/share   ★共享文件夹路径 
 available = yes 
 browseable = yes 
 public = yes 

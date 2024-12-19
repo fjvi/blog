@@ -9,8 +9,8 @@ https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-desktop-amd64.iso
 
 
 # 3. 安装RustDesk远程操作
-3-1. 通过github下载：https://github.com/rustdesk/rustdesk/releases
-https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.deb       ※目前最新版本
+3-1. 通过github下载Ubuntu版本：https://github.com/rustdesk/rustdesk/releases
+https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.deb       ※目前最新版本1.3.5
 
 3-2. 将安装包`.deb` 放在桌面，右键打开命令行、执行以下两个命令
 ```
@@ -25,7 +25,7 @@ sudo vi /etc/gdm3/custom.conf
 ```
 修改下面这一行、将前面的注释去掉，然后点击`ESC`，然后输入 `:wq!` 保存文件
 ```
-#WaylandEnable=false
+# WaylandEnable=false     ⇒　WaylandEnable=false
 ```
 
 3-4. 然后重启桌面
@@ -55,10 +55,16 @@ ssh 用户名@192.168.0.100    ※服务器IP
 
 
 # 5. SMB文件共享
-我们可以在Ubuntu服务器上开启SMB文件共享，构建家庭影音服务，
-这样可以很方便的在手机电脑上查看家庭服务器下载的电影，电视剧。
+可以在Ubuntu服务器上开启SMB文件共享，构建文件共享服务，
+这样可以很方便的在手机电脑上查看服务器上文件（包括电影，电视剧等）
 ```
 sudo apt install samba
+```
+
+创建共享文件夹
+```
+mkdir /home/用户名/share
+chmod 755 /home/用户名/share
 ```
 
 修改配置文件、最下面粘贴这些内容
@@ -68,7 +74,7 @@ sudo vi /etc/samba/smb.conf
 
 ```
 [ubuntu_smb]
-path = 共享文件夹路径 ★
+path = /home/用户名/share   ★共享文件夹路径 
 available = yes 
 browseable = yes 
 public = yes 
