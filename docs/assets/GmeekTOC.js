@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var css = `
     .toc {
         position:fixed;
-        top:130px;
+        top:150px;
         left:50%;
         transform: translateX(50%) translateX(320px);
         width:200px;
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         overflow-y: auto;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         max-height: 70vh;
+        margin-left:-100px;
     }
     .toc-title{
         font-weight: bold;
