@@ -113,8 +113,7 @@ docker ps -a                                 #查看docker中所有容器
 获取短Token：https://alist.nn.ci/zh/guide/drivers/aliyundrive.html
 获取长Token：https://alist.nn.ci/tool/aliyundrive/request.html
 
-获取File ID, 打开https://www.aliyundrive.com/s/rP9gP3h9asE
-转存 https://www.aliyundrive.com/s/rP9gP3h9asE到自己网盘，然后浏览器打开转存后的目录，https://www.aliyundrive.com/drive/file/resource/xxxxxxxxxxxxxxxxxxxxxxxxxx 红色这一串就是File ID
+获取FoldID：, 所需资源转存到自己网盘，然后浏览器打开转存后的目录，https://www.aliyundrive.com/drive/file/resource/`xxxxxxxxxxxxxxxxxxxxxxxxxx`  ←所显示的一串字符即为FoldID
 
 执行一键脚本
 ```
