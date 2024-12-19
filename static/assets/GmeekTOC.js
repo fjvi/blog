@@ -62,12 +62,12 @@ document.addEventListener("DOMContentLoaded", function() {
         background-color:var(--color-select-menu-tap-focus-bg);
     }
 
-    @media (max-width: 1249px) 
+    @media (max-width: 1290px)   
     {
         .toc{
             position:static;
             top:auto;
-            left:auto;
+            left:1200px;  
             transform:none;
             padding:10px;
             margin-bottom:20px;
