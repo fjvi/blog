@@ -99,6 +99,8 @@ sudo service smbd restart
 curl -fsSL https://get.docker.com | sh    #安装Docker
 systemctl enable --now docker             #启动Docker服务
 docker -v                                 #查看docker版本，检查是否安装成功
+docker ps -a                                 #查看docker中所有容器
+
 ```
 
 
