@@ -100,13 +100,13 @@ curl -fsSL https://get.docker.com | sh    #安装Docker
 systemctl enable --now docker             #启动Docker服务
 docker -v                                 #查看docker版本，检查是否安装成功
 docker ps -a                                 #查看docker中所有容器
-
 ```
 
 
 
 # 7. 安装小雅Alist
 小雅Alist是一个阿里云盘的资源聚合库。安装好它以后，可以瞬间多出几百T的影音资源。
+**默认端口 5678** 
 
 首先获取两个token:
 
@@ -119,12 +119,21 @@ docker ps -a                                 #查看docker中所有容器
 ```
 sudo bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)" -s host
 ```
-访问地址：http:// 192.168.0.100:5678   ※服务器IP
+要求输入token，依次输入短Token，长Token，FoldID
+
+
+【链接方式】地址栏输入IP
+```
+http:// 192.168.0.100:5678   ※服务器IP
+```
+
+
 
 
 
 # 安装HomeAssistant（可选择性安装）
-Home Assistant 是一个智能家居的终极解决方案，可以聚合各个厂商的设备，进行定制化管理。可以自己写代码扩展应用，也可以接入各类AI大语言模型等等  默认端口 8123
+Home Assistant 是一个智能家居的终极解决方案，可以聚合各个厂商的设备，进行定制化管理。可以自己写代码扩展应用，也可以接入各类AI大语言模型等等  
+**默认端口 8123**
 
 创建配置文件文件夹
 ```

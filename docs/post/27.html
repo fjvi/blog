@@ -153,10 +153,10 @@ force group =用户名 ★
 systemctl enable --now docker             #启动Docker服务
 docker -v                                 #查看docker版本，检查是否安装成功
 docker ps -a                                 #查看docker中所有容器
-
 </code></pre>
 <h1>7. 安装小雅Alist</h1>
-<p>小雅Alist是一个阿里云盘的资源聚合库。安装好它以后，可以瞬间多出几百T的影音资源。</p>
+<p>小雅Alist是一个阿里云盘的资源聚合库。安装好它以后，可以瞬间多出几百T的影音资源。<br>
+<strong>默认端口 5678</strong></p>
 <p>首先获取两个token:</p>
 <p>获取短Token：<a href="https://alist.nn.ci/zh/guide/drivers/aliyundrive.html" rel="nofollow">https://alist.nn.ci/zh/guide/drivers/aliyundrive.html</a><br>
 获取长Token：<a href="https://alist.nn.ci/tool/aliyundrive/request.html" rel="nofollow">https://alist.nn.ci/tool/aliyundrive/request.html</a></p>
@@ -164,9 +164,13 @@ docker ps -a                                 #查看docker中所有容器
 <p>执行一键脚本</p>
 <pre class="notranslate"><code class="notranslate">sudo bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)" -s host
 </code></pre>
-<p>访问地址：http:// 192.168.0.100:5678   ※服务器IP</p>
+<p>要求输入token，依次输入短Token，长Token，FoldID</p>
+<p>【链接方式】地址栏输入IP</p>
+<pre class="notranslate"><code class="notranslate">http:// 192.168.0.100:5678   ※服务器IP
+</code></pre>
 <h1>安装HomeAssistant（可选择性安装）</h1>
-<p>Home Assistant 是一个智能家居的终极解决方案，可以聚合各个厂商的设备，进行定制化管理。可以自己写代码扩展应用，也可以接入各类AI大语言模型等等  默认端口 8123</p>
+<p>Home Assistant 是一个智能家居的终极解决方案，可以聚合各个厂商的设备，进行定制化管理。可以自己写代码扩展应用，也可以接入各类AI大语言模型等等<br>
+<strong>默认端口 8123</strong></p>
 <p>创建配置文件文件夹</p>
 <pre class="notranslate"><code class="notranslate">mkdir -p /home/用户名/homeassistant
 
