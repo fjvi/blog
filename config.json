@@ -9,7 +9,7 @@
     "faviconUrl":"https://github.githubassets.com/favicons/favicon.svg",
     
     "email":"",
-    "startSite":"08/31/2024",  
+    "startSite":"08/31/2024",
     "filingNum":"<a href='https://icp.gov.moe/?keyword=20241189' target='_blank'>萌ICP备20241189号</a>",
     "onePageListNum":30,
     
@@ -48,16 +48,16 @@
 
     "spoiler":1,
 
-    "lived2D":1,  
-    "lived2D_script":"<script src='https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js'></script><script src='https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/dist/jquery-ui.min.js'></script><script src='https://cdn.jsdelivr.net/gh/hst1189/live2d-widget/autoload.js'></script>",  
+    "lived2D":1,
+    "lived2D_script":"<script src='https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js'></script><script src='https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/dist/jquery-ui.min.js'></script><script src='https://cdn.jsdelivr.net/gh/hst1189/live2d-widget/autoload.js'></script>",    
 
-    "sakuraPlus":1,
-    "sakuraPlus_script":"<script src='../assets/sakuraPlus.js'></script>",  
+    "sakuraPlus":1,  
+    "sakuraPlus_script":"<script src='../assets/sakuraPlus.js'></script>",
     
-    "rssSplit":"sentence",  
+    "rssSplit":"sentence",
     "bottomText":"❤️ 转载文章请注明出处，谢谢！❤️",
     "ogImage":"",  
-    "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",  
+    "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
     "showPostSource":0,
     "needComment":1
 }
