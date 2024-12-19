@@ -168,7 +168,6 @@ sudo apt install ./wechat-beta_1.0.0.238_amd64.deb
 ubuntu自带的文本编辑器是vi，很难用，我需要安装一个他的升级版vim
 打开命令行输入以下命令
 ```
-sudo apt update
 sudo apt install vim
 ```
 
