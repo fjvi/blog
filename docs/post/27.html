@@ -130,15 +130,15 @@ sudo apt install ./rustdesk-1.3.5-x86_64.deb
 <pre class="notranslate"><code class="notranslate">sudo vi /etc/samba/smb.conf
 </code></pre>
 <pre class="notranslate"><code class="notranslate">[ubuntu_smb]
-path = /home/用户名
+path = 共享文件夹路径 ★
 available = yes 
 browseable = yes 
 public = yes 
 writable = yes 
 create mask = 0755
 security = share
-force user = 用户名
-force group =用户名
+force user = 用户名 ★
+force group =用户名 ★
 </code></pre>
 <p>点击<code class="notranslate">ESC</code>，然后输入 <code class="notranslate">:wq!</code> 保存文件</p>
 <p>重启smb服务</p>

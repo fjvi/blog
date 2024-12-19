@@ -67,15 +67,15 @@ sudo vi /etc/samba/smb.conf
 
 ```
 [ubuntu_smb]
-path = /home/用户名
+path = 共享文件夹路径 ★
 available = yes 
 browseable = yes 
 public = yes 
 writable = yes 
 create mask = 0755
 security = share
-force user = 用户名
-force group =用户名
+force user = 用户名 ★
+force group =用户名 ★
 ```
 点击`ESC`，然后输入 `:wq!` 保存文件
 
