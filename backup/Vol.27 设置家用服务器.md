@@ -125,7 +125,7 @@ sudo bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)" -s host
 
 
 # 安装HomeAssistant（可选择性安装）
-Home Assistant 是一个智能家居的终极解决方案，可以聚合各个厂商的设备，进行定制化管理。可以自己写代码扩展应用，也可以接入各类AI大语言模型等等
+Home Assistant 是一个智能家居的终极解决方案，可以聚合各个厂商的设备，进行定制化管理。可以自己写代码扩展应用，也可以接入各类AI大语言模型等等  默认端口 8123
 
 创建配置文件文件夹
 ```
@@ -141,6 +141,11 @@ sudo docker run -d \
   --network=host \
   ghcr.io/home-assistant/home-assistant:stable
 ```
+【链接方式】地址栏输入IP，然后输入服务器的用户名和密码
+```
+https://192.168.0.100:8123    ※服务器IP
+```
+
 
 
 # Linux微信（可选择性安装）
