@@ -9,7 +9,7 @@
     "faviconUrl":"https://github.githubassets.com/favicons/favicon.svg",
     
     "email":"",
-    "startSite":"08/31/2024",
+    "startSite":"08/31/2024",  
     "filingNum":"<a href='https://icp.gov.moe/?keyword=20241189' target='_blank'>萌ICP备20241189号</a>",
     "onePageListNum":30,
     
@@ -40,23 +40,24 @@
     "urlMode":"issue",
     
     "style":"",
-    "script":"<script src='../assets/lightbox.js'></script><script>document.querySelectorAll('a').forEach(anchor => {const img = anchor.querySelector('img');if (img && img.hasAttribute('data-canonical-src')) {const canonicalSrc = img.getAttribute('data-canonical-src');anchor.setAttribute('href', canonicalSrc);img.setAttribute('src', canonicalSrc);img.removeAttribute('data-canonical-src');}});</script>",
+    "script":"<script src='../assets/lightbox.js'></script><script>document.querySelectorAll('a').forEach(anchor => {const img = anchor.querySelector('img');if (img && img.hasAttribute('data-canonical-src')) {const canonicalSrc = img.getAttribute('data-canonical-src');anchor.setAttribute('href', canonicalSrc);img.setAttribute('src', canonicalSrc);img.removeAttribute('data-canonical-src');}});</script>",  
     "allHead":"<script async src='https://cdn.seline.so/seline.js' data-token='5b15b5092d4879e'></script><script src='../assets/RonanTheme.js'></script><script src='../assets/GmeekVercount.js'></script><script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9661896697976587' crossorigin='anonymous'></script>",
     "head":"",
     "indexStyle":"",
     "indexScript":"",
     
-    "lived2D":0,
-    "lived2D_script":"<script src='https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js'></script><script src='https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/dist/jquery-ui.min.js'></script><script src='https://cdn.jsdelivr.net/gh/hst1189/live2d-widget/autoload.js'></script>",
+    "spoiler":1,
+    
+    "lived2D":1,  
+    "lived2D_script":"<script src='https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js'></script><script src='https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/dist/jquery-ui.min.js'></script><script src='https://cdn.jsdelivr.net/gh/hst1189/live2d-widget/autoload.js'></script>",  
 
     "sakuraPlus":1,
-    "sakuraPlus_script":"<script src='../assets/sakuraPlus.js'></script>",
+    "sakuraPlus_script":"<script src='../assets/sakuraPlus.js'></script>",  
     
-    "rssSplit":"sentence",
+    "rssSplit":"sentence",  
     "bottomText":"❤️ 转载文章请注明出处，谢谢！❤️",
-    "ogImage":"",
-    "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
-    "spoiler":1,
+    "ogImage":"",  
+    "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",  
     "showPostSource":0,
     "needComment":1
 }
