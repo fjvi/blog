@@ -35,7 +35,7 @@ sudo systemctl restart gdm3
 
 3-5. 设置Rustdesk
 打开Rustdesk 设置两个地方
-设置->安全->允许IP直接访问 `默认端口 21118`，这样在家里就可以不使用中继服务器，而是IP直连，提高速度
+设置->安全->允许IP直接访问 **默认端口 21118**，这样在家里就可以不使用中继服务器，而是IP直连，提高速度
 设置->安全->密码 使用固定密码，这样主控方就可以使用固定密码控制
 
 
@@ -105,32 +105,32 @@ sudo service smbd restart
 curl -fsSL https://get.docker.com | sh    #安装Docker
 systemctl enable --now docker             #启动Docker服务
 docker -v                                 #查看docker版本，检查是否安装成功
-docker ps -a                                 #查看docker中所有容器
+docker ps -a                            #查看docker中所有容器
 ```
 
 
 
 # 7. 安装小雅Alist
-小雅Alist是一个阿里云盘的资源聚合库。安装好它以后，可以瞬间多出几百T的影音资源。
+小雅Alist是一个阿里云盘等的资源聚合库。安装好它以后，可以瞬间多出几百T的影音资源。
 **默认端口 5678** 
 
-首先获取两个token:
+首先获取两个token，再获取要关联的FoldID
 
 获取短Token：https://alist.nn.ci/zh/guide/drivers/aliyundrive.html
 获取长Token：https://alist.nn.ci/tool/aliyundrive/request.html
 
 获取FoldID：, 所需资源转存到自己网盘，然后浏览器打开转存后的目录，https://www.aliyundrive.com/drive/file/resource/`xxxxxxxxxxxxxxxxxxxxxxxxxx`  ←所显示的一串字符即为FoldID
 
-执行一键脚本
+执行脚本
 ```
 sudo bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)" -s host
 ```
-要求输入token，依次输入短Token，长Token，FoldID
+按要求依次输入【短Token】，【长Token】，【FoldID】
 
 
 【链接方式】地址栏输入IP
 ```
-http:// 192.168.0.100:5678   ※服务器IP
+https:// 192.168.0.100:5678   ※服务器IP
 ```
 
 
