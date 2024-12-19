@@ -46,7 +46,8 @@ sudo systemctl restart gdm3
 ```
 sudo apt install openssh-server
 ```
-输入ssh命令、然后输入密码
+
+【链接方式】输入ssh命令、然后输入密码
 ```
 ssh 用户名@192.168.0.100    ※服务器IP
 ```
@@ -83,6 +84,14 @@ force group =用户名 ★
 ```
 sudo service smbd restart
 ```
+
+【链接方式】地址栏输入IP，然后输入服务器的用户名和密码
+```
+\\192.168.0.100    ※服务器IP
+```
+
+
+
 
 # 6. 安装Docker
 安装docker本体，需要执行以下命令。
