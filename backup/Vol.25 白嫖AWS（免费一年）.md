@@ -17,6 +17,27 @@ https://aws.amazon.com/cn/campaigns/nc20241101/
 
 5. `sudo -i`  进入root权限
 
+6. 安装Docker
+```
+curl -fsSL https://get.docker.com | sh    #安装Docker
+systemctl enable --now docker             #启动Docker服务
+docker -v                                 #查看docker版本，检查是否安装成功
+docker ps -a                            #查看docker中所有容器
+```
+
+
+7. 开放端口，设置安全组
+`Gmeek-html<img src="../imgs/aws_security_rull.png">`
+
+> [!TIP]
+> http 的默认端口: 80
+> https 的默认端口: 433
+> ssh 的默认端口: 22
+> telnet 的默认端口: 23
+> ftp 的默认端口: 20 和 21 ，  20负责连接，21负责传输数据
+> sftp 的默认端口: 22
+
+
 
 
 # 常见问题
@@ -52,18 +73,3 @@ status iptables.service
 类型：http 协议：TCP  端口范围：80   来源：0.0.0.0/0
 类型：https 协议：TCP 端口范围：433  来源：0.0.0.0/0
 ```
-
-### 参考设置
-`Gmeek-html<img src="../imgs/aws_security_rull.png">`
-
-
-> [!TIP]
-> http 的默认端口: 80
-> https 的默认端口: 433
-> ssh 的默认端口: 22
-> telnet 的默认端口: 23
-> ftp 的默认端口: 20 和 21 ，  20负责连接，21负责传输数据
-> sftp 的默认端口: 22
-
-
-
