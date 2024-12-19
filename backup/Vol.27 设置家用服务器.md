@@ -44,9 +44,9 @@ sudo systemctl restart gdm3
 # 4. OpenSSH
 添加ssh的远程访问功能、这样就可以通过ssh的方式链接。
 ```
-sudo apt openssh-server
+sudo apt install openssh-server
 ```
-访问命令
+访问命令、输入密码
 ```
 ssh 用户名@192.168.0.100    ※服务器IP
 ```
@@ -87,11 +87,12 @@ sudo service smbd restart
 # 6. 安装Docker
 安装docker本体，需要执行以下命令。
 ```
-sudo apt-get install ca-certificates curl
-curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+curl -fsSL https://get.docker.com | sh    #安装Docker
+systemctl enable --now docker             #启动Docker服务
+docker -v                                 #查看docker版本，检查是否安装成功
 ```
+
+
 
 # 7. 安装小雅Alist
 小雅Alist是一个阿里云盘的资源聚合库。安装好它以后，可以瞬间多出几百T的影音资源。

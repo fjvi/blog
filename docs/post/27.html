@@ -116,9 +116,9 @@ sudo apt install ./rustdesk-1.3.5-x86_64.deb
 设置-&gt;安全-&gt;密码 使用固定密码，这样主控方就可以使用固定密码控制</p>
 <h1>4. OpenSSH</h1>
 <p>添加ssh的远程访问功能、这样就可以通过ssh的方式链接。</p>
-<pre class="notranslate"><code class="notranslate">sudo apt openssh-server
+<pre class="notranslate"><code class="notranslate">sudo apt install openssh-server
 </code></pre>
-<p>访问命令</p>
+<p>访问命令、输入密码</p>
 <pre class="notranslate"><code class="notranslate">ssh 用户名@192.168.0.100    ※服务器IP
 </code></pre>
 <h1>5. SMB文件共享</h1>
@@ -146,10 +146,9 @@ force group =用户名
 </code></pre>
 <h1>6. 安装Docker</h1>
 <p>安装docker本体，需要执行以下命令。</p>
-<pre class="notranslate"><code class="notranslate">sudo apt-get install ca-certificates curl
-curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+<pre class="notranslate"><code class="notranslate">curl -fsSL https://get.docker.com | sh    #安装Docker
+systemctl enable --now docker             #启动Docker服务
+docker -v                                 #查看docker版本，检查是否安装成功
 </code></pre>
 <h1>7. 安装小雅Alist</h1>
 <p>小雅Alist是一个阿里云盘的资源聚合库。安装好它以后，可以瞬间多出几百T的影音资源。</p>
