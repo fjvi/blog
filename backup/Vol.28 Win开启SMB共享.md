@@ -1,12 +1,12 @@
 # Windows 10/ 11 下安全并正确地使用 SMB 共享
 
-# 一、不要使用 SMB1
+# 不要使用 SMB1
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
 如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭
 
 
-# 二、安全使用 SMB 共享的步骤
+# 安全使用 SMB 共享的步骤
 这里提供一个简单的，可以在工作或家庭的局域网中显著提高安全性且不会太复杂的 SMB 共享设置方法
 
 I. 新建一个用户专门用于共享文件的授权，并合理设置此用户的权限
@@ -19,29 +19,29 @@ III. 开启共享，授权指定用户
 右键我的电脑⇒管理⇒本地用户和组⇒用户⇒右键空白处，点击“新用户”
 新建账号为 "joker" 的用户为例，相关设置如下：
 只用于共享，因此设置不能更改密码，密码不会过期
-
 `Gmeek-html<img src="../imgs/smb/smb0.png">`
 `Gmeek-html<img src="../imgs/smb/smb1.png">`
 `Gmeek-html<img src="../imgs/smb/smb2.png">`
 `Gmeek-html<img src="../imgs/smb/smb3.png">`
 `Gmeek-html<img src="../imgs/smb/smb4.png">`
-`Gmeek-html<img src="../imgs/smb/smb5.png">`
+
 
 
 ## II. 合理设置网络共享和系统安全的相关设置
+
 ### 1. 禁用“启用不安全的来宾登录”
 默认情况下，在 SMB2 和 SMB3 版本中，Windows 10 / 11 系统下是禁用此服务的，
 如果开启了建议关闭，步骤如下：
-
 按住 win + R，在“运行”窗口中输入 `gpedit.msc`, 打开“本地组策略编辑器”：
 管理模板⇒网络⇒lanman工作站⇒启用不安全的来宾登录⇒**已禁用**
-https://post.smzdm.com/p/akxwkxqk/pic_12/
+`Gmeek-html<img src="../imgs/smb/smb5.png">`
+`Gmeek-html<img src="../imgs/smb/smb6.png">`
 
 为什么要禁用？
 在使用 SMB1 协议去共享文件时，虽然别人访问你的共享文件时 SMB1 会去验证访问者提供的用户证书是否有效，但是如果验证此证书为无效之后，SMB1 将会尝试开启“来宾”（guest）登录模式，允许访问者以“来宾”（guest）的身份进行登录。
 换句话说，就相当于“我不认识你，也不知道你是好人还是坏人，但是来者皆视为宾客”。
 
-https://post.smzdm.com/p/akxwkxqk/pic_13/
+`Gmeek-html<img src="../imgs/smb/smb7.png">`
 上图产生的错误，就是因为我们禁用了“来宾”身份的登录，
 但是不要认为这是不好的结果，恰恰相反，禁用此项功能就是为了实现更好地保护SMB 共享资料
 
@@ -54,11 +54,20 @@ https://post.smzdm.com/p/akxwkxqk/pic_13/
 （1）授予用户“从网络访问此计算机”的权限：
 本地策略⇒用户权限分配
 > 从网络访问此计算机：只有授权的用户能够通过网络来访问到本机上的共享文件资源（包括共享的打印机）
+`Gmeek-html<img src="../imgs/smb/smb8.png">`
+`Gmeek-html<img src="../imgs/smb/smb9.png">`
+`Gmeek-html<img src="../imgs/smb/smb10.png">`
+`Gmeek-html<img src="../imgs/smb/smb11.png">`
+`Gmeek-html<img src="../imgs/smb/smb12.png">`
+`Gmeek-html<img src="../imgs/smb/smb13.png">`
+
 
 （2）限制此用户登录到系统上：“拒绝本地登录”和“拒绝通过远程桌面服务登录”
 本地策略⇒用户权限分配⇒从拒绝本地登录
 > 拒绝本地登录：即不允许特定用户在本电脑上进行登录
 > 拒绝通过远程桌面服务登录：即不允许此账户使用远程桌面登录到本系统
+`Gmeek-html<img src="../imgs/smb/smb14.png">`
+`Gmeek-html<img src="../imgs/smb/smb15.png">`
 
 设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，
 因为我们的目的就是让 joker 只能用来使用 SMB 共享。
@@ -70,6 +79,8 @@ https://post.smzdm.com/p/akxwkxqk/pic_13/
 
 按住 win + R，在“运行”窗口中输入 `gpedit.msc`, 打开“本地组策略编辑器”：
 windows设置⇒安全设置⇒本地策略⇒安全选项⇒**已禁用**
+`Gmeek-html<img src="../imgs/smb/smb16.png">`
+`Gmeek-html<img src="../imgs/smb/smb17.png">`
 
 （1）Microsoft网络服务器端：对通信进行数字签名(始终) —— 禁用
 默认情况下此项设置处于禁用状态，一般情况下也不需要打开。
@@ -81,14 +92,14 @@ windows设置⇒安全设置⇒本地策略⇒安全选项⇒**已禁用**
 （3）Microsoft网络客户端：对通信进行数字签名(始终) —— 禁用
 默认情况下是关闭的，建议不要打开。如果开启了，并且服务器端没有启用数字签名，那么将无法实现访问 —— 因为我们坚持要对 SMB 数据包进行数字签名，不签名不访问。
 
-
 （4）设备：防止用户安装打印机驱动程序 —— 禁用
 假如开启了此项设置，那么当你共享了一个打印机让别人来使用时，别人将没有办法直接从你这边下载这个打印机的驱动（除非别人用的是你电脑的管理员账号，否则无法下载驱动），建议关闭（默认也是关闭的）。
 
-[!import]重点
+[! import]
 请将  “网络访问：本地账户的共享和安全模型”  设置为  “经典-对本地用户进行身份验证，不改变其本来身份”
 很多教程会教你选择第二个选项 —— “仅来宾-对本地用户进行身份验证，其身份为来宾”来解决某些问题，
 但正如前面说的，“来宾”身份存在很大的安全漏洞，不建议设置。
+`Gmeek-html<img src="../imgs/smb/smb18.png">`
 
 微软在这一项设置中也明确说明了具体的细节：
 “经典”模型能够对资源的访问权限进行精细的控制。
@@ -112,10 +123,26 @@ windows设置⇒安全设置⇒本地策略⇒安全选项⇒**已禁用**
 3. 启用密码保护
 这就不必多说了，密码保护必定要开启。
 
-4. 设置文件夹
+`Gmeek-html<img src="../imgs/smb/smb20.png">`
+`Gmeek-html<img src="../imgs/smb/smb21.png">`
+`Gmeek-html<img src="../imgs/smb/smb22.png">`
+`Gmeek-html<img src="../imgs/smb/smb23.png">`
+`Gmeek-html<img src="../imgs/smb/smb24.png">`
+
+
+4 . 设置文件夹
 这里我们新建了一个 "share" 文件夹，我们将对此文件夹开启共享：
 右键文件夹，点击“属性”右键文件夹，点击“属性”，点击“高级共享”
 删除 Everyone 用户，添加上述新建用户
+`Gmeek-html<img src="../imgs/smb/smb19.png">`
+`Gmeek-html<img src="../imgs/smb/smb25.png">`
+`Gmeek-html<img src="../imgs/smb/smb26.png">`
+`Gmeek-html<img src="../imgs/smb/smb27.png">`
+`Gmeek-html<img src="../imgs/smb/smb28.png">`
+`Gmeek-html<img src="../imgs/smb/smb29.png">`
+`Gmeek-html<img src="../imgs/smb/smb30.png">`
+`Gmeek-html<img src="../imgs/smb/smb31.png">`
+
 
 “网络路径”：我们可以在资源管理器的地址栏中输入此地址来访问
 设置好的共享，并且此文件夹只有 "joker" 用户以及我们管理员用户才能进行访问
