@@ -40,7 +40,7 @@ III. 开启共享，授权指定用户
 在使用 SMB1 协议去共享文件时，虽然别人访问你的共享文件时 SMB1 会去验证访问者提供的用户证书是否有效，但是如果验证此证书为无效之后，SMB1 将会尝试开启“来宾”（guest）登录模式，允许访问者以“来宾”（guest）的身份进行登录。
 换句话说，就相当于“我不认识你，也不知道你是好人还是坏人，但是来者皆视为宾客”。
 
-`Gmeek-html<img src="../imgs/smb/smb7.png">`
+`Gmeek-html<img src="../imgs/smb/smb7.jpg">`
 上图产生的错误，就是因为我们禁用了“来宾”身份的登录，
 但是不要认为这是不好的结果，恰恰相反，禁用此项功能就是为了实现更好地保护SMB 共享资料
 
@@ -49,23 +49,22 @@ III. 开启共享，授权指定用户
 ### 2. 合理分配用户权限
 > 按住 win + R，在“运行”窗口中输入  `secpol.msc`, 打开 “本地安全策略”设置窗口：
 
-（1）授予用户“从网络访问此计算机”的权限：
-> 本地策略⇒用户权限分配
-从网络访问此计算机：只有授权的用户能够通过网络来访问到本机上的共享文件资源（包括共享的打印机）
 `Gmeek-html<img src="../imgs/smb/smb8.png">`
 `Gmeek-html<img src="../imgs/smb/smb9.png">`
+`Gmeek-html<img src="../imgs/smb/smb14.png">`
 `Gmeek-html<img src="../imgs/smb/smb10.png">`
 `Gmeek-html<img src="../imgs/smb/smb11.png">`
 `Gmeek-html<img src="../imgs/smb/smb12.png">`
 `Gmeek-html<img src="../imgs/smb/smb13.png">`
 
+（1）授予用户“从网络访问此计算机”的权限：
+> 本地策略⇒用户权限分配
+从网络访问此计算机：只有授权的用户能够通过网络来访问到本机上的共享文件资源（包括共享的打印机）
 
 （2）限制此用户登录到系统上：“拒绝本地登录”和“拒绝通过远程桌面服务登录”
 > 本地策略⇒用户权限分配⇒从拒绝本地登录
 拒绝本地登录：即不允许特定用户在本电脑上进行登录
 拒绝通过远程桌面服务登录：即不允许此账户使用远程桌面登录到本系统
-`Gmeek-html<img src="../imgs/smb/smb14.png">`
-`Gmeek-html<img src="../imgs/smb/smb15.png">`
 
 设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，因为目的就是让 joker 只能用来使用 SMB 共享。
 
