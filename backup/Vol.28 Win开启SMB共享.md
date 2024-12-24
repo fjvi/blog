@@ -20,11 +20,12 @@ III. 开启共享，授权指定用户
 新建账号为 "joker" 的用户为例，相关设置如下：
 只用于共享，因此设置不能更改密码，密码不会过期
 
-https://post.smzdm.com/p/akxwkxqk/pic_6
-https://post.smzdm.com/p/akxwkxqk/pic_7
-https://post.smzdm.com/p/akxwkxqk/pic_8
-https://post.smzdm.com/p/akxwkxqk/pic_9
-
+`Gmeek-html<img src="../imgs/smb/smb0.png">`
+`Gmeek-html<img src="../imgs/smb/smb1.png">`
+`Gmeek-html<img src="../imgs/smb/smb2.png">`
+`Gmeek-html<img src="../imgs/smb/smb3.png">`
+`Gmeek-html<img src="../imgs/smb/smb4.png">`
+`Gmeek-html<img src="../imgs/smb/smb5.png">`
 
 
 ## II. 合理设置网络共享和系统安全的相关设置

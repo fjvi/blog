@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Tue, 24 Dec 2024 09:01:57 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.28 Win开启SMB共享</title><link>https://www.grapehut.us.kg/post/28.html</link><description># Windows 10/ 11 下安全并正确地使用 SMB 共享&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Tue, 24 Dec 2024 12:10:25 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.28 Win开启SMB共享</title><link>https://www.grapehut.us.kg/post/28.html</link><description># Windows 10/ 11 下安全并正确地使用 SMB 共享&#13;
 &#13;
 # 一、不要使用 SMB1&#13;
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代&#13;
@@ -21,11 +21,12 @@ III. 开启共享，授权指定用户&#13;
 新建账号为 'joker' 的用户为例，相关设置如下：&#13;
 只用于共享，因此设置不能更改密码，密码不会过期&#13;
 &#13;
-https://post.smzdm.com/p/akxwkxqk/pic_6&#13;
-https://post.smzdm.com/p/akxwkxqk/pic_7&#13;
-https://post.smzdm.com/p/akxwkxqk/pic_8&#13;
-https://post.smzdm.com/p/akxwkxqk/pic_9&#13;
-&#13;
+`Gmeek-html&lt;img src='../imgs/smb/smb0.png'&gt;`&#13;
+`Gmeek-html&lt;img src='../imgs/smb/smb1.png'&gt;`&#13;
+`Gmeek-html&lt;img src='../imgs/smb/smb2.png'&gt;`&#13;
+`Gmeek-html&lt;img src='../imgs/smb/smb3.png'&gt;`&#13;
+`Gmeek-html&lt;img src='../imgs/smb/smb4.png'&gt;`&#13;
+`Gmeek-html&lt;img src='../imgs/smb/smb5.png'&gt;`&#13;
 &#13;
 &#13;
 ## II. 合理设置网络共享和系统安全的相关设置&#13;
