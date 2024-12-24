@@ -15,17 +15,20 @@ SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1
 # 安全使用 SMB 共享的步骤
 这里提供一个简单的，可以在工作或家庭的局域网中显著提高安全性且不会太复杂的 SMB 共享设置方法
 
-I. 新建一个用户专门用于共享文件的授权，并设置此用户的权限
-II. 设置网络共享和系统安全的相关设置
-III. 开启共享，授权指定用户
+1. 新建一个用户专门用于共享文件的授权，并设置此用户的权限
+2. 设置网络共享和系统安全的相关设置
+3. 开启共享，授权指定用户
 
 
-## I. 创建专用的用户
+## 1. 创建专用的用户
 新建一个本地用户，此用户只用在 SMB 共享
-> 右键我的电脑⇒ 管理⇒ 本地用户和组⇒ 用户⇒ 右键空白处，点击“新用户”
+```
+ 右键我的电脑⇒　管理⇒　本地用户和组⇒　用户⇒　右键空白处，点击“新用户”
+```
 
-新建账号为 'joker' 的用户为例，相关设置如下：
-只用于共享，因此设置不能更改密码，密码不会过期
+新建账号为 'joker' 的用户为例，相关设置如下：　
+只用于共享，因此设置**不能更改密码**，**密码不会过期**
+
 `Gmeek-html<img src='../imgs/smb/smb0.png'>`
 `Gmeek-html<img src='../imgs/smb/smb1.png'>`
 `Gmeek-html<img src='../imgs/smb/smb2.png'>`
@@ -33,19 +36,27 @@ III. 开启共享，授权指定用户
 `Gmeek-html<img src='../imgs/smb/smb4.png'>`
 
 
+## 2. 设置网络共享和系统安全的相关设置
 
-## II. 设置网络共享和系统安全的相关设置
+#### 分配用户权限
+```
+按住 win + R，在“运行”窗口中输入  `secpol.msc`, 打开 “本地安全策略”设置窗口：
+本地策略⇒　用户权限分配
+```
+- 从网络访问此计算机：只有授权的用户能够通过网络来访问到本机上的共享文件资源（包括共享的打印机）
+- 拒绝本地登录：即不允许特定用户在本电脑上进行登录
+- 拒绝通过远程桌面服务登录：即不允许此账户使用远程桌面登录到本系统
 
-### 1. 禁用“启用不安全的来宾登录”
-默认情况下，在 SMB2 和 SMB3 版本中，Windows 10 / 11 系统下是禁用此服务的，
-如果开启了建议关闭，步骤如下：
-> 按住 win + R，在“运行”窗口中输入 `gpedit.msc`, 打开“本地组策略编辑器”：
-> 管理模板⇒ 网络⇒ lanman工作站⇒ 启用不安全的来宾登录⇒ **已禁用**
-`Gmeek-html<img src='../imgs/smb/smb5.png'>`
-`Gmeek-html<img src='../imgs/smb/smb6.png'>`
+`Gmeek-html<img src='../imgs/smb/smb8.png'>`
+`Gmeek-html<img src='../imgs/smb/smb9.png'>`
+`Gmeek-html<img src='../imgs/smb/smb14.png'>`
+`Gmeek-html<img src='../imgs/smb/smb10.png'>`
+`Gmeek-html<img src='../imgs/smb/smb11.png'>`
+`Gmeek-html<img src='../imgs/smb/smb12.png'>`
+`Gmeek-html<img src='../imgs/smb/smb13.png'>`
 
-为什么要禁用？
-在使用 SMB1 协议去共享文件时，虽然别人访问你的共享文件时 SMB1 会去验证访问者提供的用户证书是否有效，但是如果验证此证书为无效之后，SMB1 将会尝试开启“来宾”（guest）登录模式，允许访问者以“来宾”（guest）的身份进行登录。">
+设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，
+目的就是让 joker 只能用来 SMB 共享。">
 <meta property="og:title" content="Vol.28 Win开启SMB共享">
 <meta property="og:description" content="# 不要使用 SMB1
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
@@ -56,17 +67,20 @@ SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1
 # 安全使用 SMB 共享的步骤
 这里提供一个简单的，可以在工作或家庭的局域网中显著提高安全性且不会太复杂的 SMB 共享设置方法
 
-I. 新建一个用户专门用于共享文件的授权，并设置此用户的权限
-II. 设置网络共享和系统安全的相关设置
-III. 开启共享，授权指定用户
+1. 新建一个用户专门用于共享文件的授权，并设置此用户的权限
+2. 设置网络共享和系统安全的相关设置
+3. 开启共享，授权指定用户
 
 
-## I. 创建专用的用户
+## 1. 创建专用的用户
 新建一个本地用户，此用户只用在 SMB 共享
-> 右键我的电脑⇒ 管理⇒ 本地用户和组⇒ 用户⇒ 右键空白处，点击“新用户”
+```
+ 右键我的电脑⇒　管理⇒　本地用户和组⇒　用户⇒　右键空白处，点击“新用户”
+```
 
-新建账号为 'joker' 的用户为例，相关设置如下：
-只用于共享，因此设置不能更改密码，密码不会过期
+新建账号为 'joker' 的用户为例，相关设置如下：　
+只用于共享，因此设置**不能更改密码**，**密码不会过期**
+
 `Gmeek-html<img src='../imgs/smb/smb0.png'>`
 `Gmeek-html<img src='../imgs/smb/smb1.png'>`
 `Gmeek-html<img src='../imgs/smb/smb2.png'>`
@@ -74,19 +88,27 @@ III. 开启共享，授权指定用户
 `Gmeek-html<img src='../imgs/smb/smb4.png'>`
 
 
+## 2. 设置网络共享和系统安全的相关设置
 
-## II. 设置网络共享和系统安全的相关设置
+#### 分配用户权限
+```
+按住 win + R，在“运行”窗口中输入  `secpol.msc`, 打开 “本地安全策略”设置窗口：
+本地策略⇒　用户权限分配
+```
+- 从网络访问此计算机：只有授权的用户能够通过网络来访问到本机上的共享文件资源（包括共享的打印机）
+- 拒绝本地登录：即不允许特定用户在本电脑上进行登录
+- 拒绝通过远程桌面服务登录：即不允许此账户使用远程桌面登录到本系统
 
-### 1. 禁用“启用不安全的来宾登录”
-默认情况下，在 SMB2 和 SMB3 版本中，Windows 10 / 11 系统下是禁用此服务的，
-如果开启了建议关闭，步骤如下：
-> 按住 win + R，在“运行”窗口中输入 `gpedit.msc`, 打开“本地组策略编辑器”：
-> 管理模板⇒ 网络⇒ lanman工作站⇒ 启用不安全的来宾登录⇒ **已禁用**
-`Gmeek-html<img src='../imgs/smb/smb5.png'>`
-`Gmeek-html<img src='../imgs/smb/smb6.png'>`
+`Gmeek-html<img src='../imgs/smb/smb8.png'>`
+`Gmeek-html<img src='../imgs/smb/smb9.png'>`
+`Gmeek-html<img src='../imgs/smb/smb14.png'>`
+`Gmeek-html<img src='../imgs/smb/smb10.png'>`
+`Gmeek-html<img src='../imgs/smb/smb11.png'>`
+`Gmeek-html<img src='../imgs/smb/smb12.png'>`
+`Gmeek-html<img src='../imgs/smb/smb13.png'>`
 
-为什么要禁用？
-在使用 SMB1 协议去共享文件时，虽然别人访问你的共享文件时 SMB1 会去验证访问者提供的用户证书是否有效，但是如果验证此证书为无效之后，SMB1 将会尝试开启“来宾”（guest）登录模式，允许访问者以“来宾”（guest）的身份进行登录。">
+设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，
+目的就是让 joker 只能用来 SMB 共享。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.grapehut.us.kg/post/28.html">
 <meta property="og:image" content="">
@@ -116,7 +138,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     body {padding: 8px;}
     .postTitle{font-size:24px;}
 }
-
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
 </style>
 
 
@@ -149,41 +181,32 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭</p>
 <h1>安全使用 SMB 共享的步骤</h1>
 <p>这里提供一个简单的，可以在工作或家庭的局域网中显著提高安全性且不会太复杂的 SMB 共享设置方法</p>
-<p>I. 新建一个用户专门用于共享文件的授权，并设置此用户的权限<br>
-II. 设置网络共享和系统安全的相关设置<br>
-III. 开启共享，授权指定用户</p>
-<h2>I. 创建专用的用户</h2>
+<ol>
+<li>新建一个用户专门用于共享文件的授权，并设置此用户的权限</li>
+<li>设置网络共享和系统安全的相关设置</li>
+<li>开启共享，授权指定用户</li>
+</ol>
+<h2>1. 创建专用的用户</h2>
 <p>新建一个本地用户，此用户只用在 SMB 共享</p>
-<blockquote>
-<p>右键我的电脑⇒ 管理⇒ 本地用户和组⇒ 用户⇒ 右键空白处，点击“新用户”</p>
-</blockquote>
-<p>新建账号为 "joker" 的用户为例，相关设置如下：<br>
-只用于共享，因此设置不能更改密码，密码不会过期<br>
-<img src="../imgs/smb/smb0.png"><br>
+<pre class="notranslate"><code class="notranslate"> 右键我的电脑⇒　管理⇒　本地用户和组⇒　用户⇒　右键空白处，点击“新用户”
+</code></pre>
+<p>新建账号为 "joker" 的用户为例，相关设置如下：　<br>
+只用于共享，因此设置<strong>不能更改密码</strong>，<strong>密码不会过期</strong></p>
+<p><img src="../imgs/smb/smb0.png"><br>
 <img src="../imgs/smb/smb1.png"><br>
 <img src="../imgs/smb/smb2.png"><br>
 <img src="../imgs/smb/smb3.png"><br>
 <img src="../imgs/smb/smb4.png"></p>
-<h2>II. 设置网络共享和系统安全的相关设置</h2>
-<h3>1. 禁用“启用不安全的来宾登录”</h3>
-<p>默认情况下，在 SMB2 和 SMB3 版本中，Windows 10 / 11 系统下是禁用此服务的，<br>
-如果开启了建议关闭，步骤如下：</p>
-<blockquote>
-<p>按住 win + R，在“运行”窗口中输入 <code class="notranslate">gpedit.msc</code>, 打开“本地组策略编辑器”：<br>
-管理模板⇒ 网络⇒ lanman工作站⇒ 启用不安全的来宾登录⇒ <strong>已禁用</strong><br>
-<img src="../imgs/smb/smb5.png"><br>
-<img src="../imgs/smb/smb6.png"></p>
-</blockquote>
-<p>为什么要禁用？<br>
-在使用 SMB1 协议去共享文件时，虽然别人访问你的共享文件时 SMB1 会去验证访问者提供的用户证书是否有效，但是如果验证此证书为无效之后，SMB1 将会尝试开启“来宾”（guest）登录模式，允许访问者以“来宾”（guest）的身份进行登录。<br>
-换句话说，就相当于“我不认识你，也不知道你是好人还是坏人，但是来者皆视为宾客”。</p>
-<p><img src="../imgs/smb/smb7.jpg"><br>
-上图产生的错误，就是因为我们禁用了“来宾”身份的登录，<br>
-但是不要认为这是不好的结果，恰恰相反，禁用此项功能就是为了实现更好地保护SMB 共享资料</p>
-<h3>2. 合理分配用户权限</h3>
-<blockquote>
-<p>按住 win + R，在“运行”窗口中输入  <code class="notranslate">secpol.msc</code>, 打开 “本地安全策略”设置窗口：</p>
-</blockquote>
+<h2>2. 设置网络共享和系统安全的相关设置</h2>
+<h4>分配用户权限</h4>
+<pre class="notranslate"><code class="notranslate">按住 win + R，在“运行”窗口中输入  `secpol.msc`, 打开 “本地安全策略”设置窗口：
+本地策略⇒　用户权限分配
+</code></pre>
+<ul>
+<li>从网络访问此计算机：只有授权的用户能够通过网络来访问到本机上的共享文件资源（包括共享的打印机）</li>
+<li>拒绝本地登录：即不允许特定用户在本电脑上进行登录</li>
+<li>拒绝通过远程桌面服务登录：即不允许此账户使用远程桌面登录到本系统</li>
+</ul>
 <p><img src="../imgs/smb/smb8.png"><br>
 <img src="../imgs/smb/smb9.png"><br>
 <img src="../imgs/smb/smb14.png"><br>
@@ -191,26 +214,28 @@ III. 开启共享，授权指定用户</p>
 <img src="../imgs/smb/smb11.png"><br>
 <img src="../imgs/smb/smb12.png"><br>
 <img src="../imgs/smb/smb13.png"></p>
-<p>（1）授予用户“从网络访问此计算机”的权限：</p>
-<blockquote>
-<p>本地策略⇒用户权限分配<br>
-从网络访问此计算机：只有授权的用户能够通过网络来访问到本机上的共享文件资源（包括共享的打印机）</p>
-</blockquote>
-<p>（2）限制此用户登录到系统上：“拒绝本地登录”和“拒绝通过远程桌面服务登录”</p>
-<blockquote>
-<p>本地策略⇒用户权限分配⇒从拒绝本地登录<br>
-拒绝本地登录：即不允许特定用户在本电脑上进行登录<br>
-拒绝通过远程桌面服务登录：即不允许此账户使用远程桌面登录到本系统</p>
-</blockquote>
-<p>设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，因为目的就是让 joker 只能用来使用 SMB 共享。</p>
-<h3>3. 本地安全选项设置</h3>
-<p>请参考下图的设置进行设置：</p>
-<blockquote>
-<p>按住 win + R，在“运行”窗口中输入 <code class="notranslate">gpedit.msc</code>, 打开“本地组策略编辑器”：<br>
-windows设置⇒ 安全设置⇒ 本地策略⇒ 安全选项⇒ <strong>已禁用</strong><br>
-<img src="../imgs/smb/smb16.png"><br>
+<p>设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，<br>
+目的就是让 joker 只能用来 SMB 共享。</p>
+<h4>禁用 “启用不安全的来宾登录”</h4>
+<p>默认情况下，在 SMB2 和 SMB3 版本中，Windows 10 / 11 系统下是禁用此服务的，<br>
+如果开启了建议关闭，步骤如下：</p>
+<pre class="notranslate"><code class="notranslate">按住 win + R，在“运行”窗口中输入 `gpedit.msc`, 打开“本地组策略编辑器”：
+管理模板⇒　网络⇒　lanman工作站⇒　启用不安全的来宾登录⇒　已禁用
+</code></pre>
+<p><img src="../imgs/smb/smb5.png"><br>
+<img src="../imgs/smb/smb6.png"></p>
+<p>为什么要禁用？<br>
+在使用 SMB1 协议去共享文件时，虽然别人访问你的共享文件时 SMB1 会去验证访问者提供的用户证书是否有效，但是如果验证此证书为无效之后，SMB1 将会尝试开启“来宾”（guest）登录模式，允许访问者以“来宾”（guest）的身份进行登录。<br>
+换句话说，就相当于“我不认识你，也不知道你是好人还是坏人，但是来者皆视为宾客”。</p>
+<p><img src="../imgs/smb/smb7.jpg"><br>
+上图产生的错误，就是因为我们禁用了“来宾”身份的登录，<br>
+但是不要认为这是不好的结果，恰恰相反，禁用此项功能就是为了实现更好地保护SMB 共享资料</p>
+<h4>本地安全选项设置</h4>
+<pre class="notranslate"><code class="notranslate">按住 win + R，在“运行”窗口中输入 `gpedit.msc`, 打开“本地组策略编辑器”：
+windows设置⇒　安全设置⇒　本地策略⇒　安全选项⇒　已禁用
+</code></pre>
+<p><img src="../imgs/smb/smb16.png"><br>
 <img src="../imgs/smb/smb17.png"></p>
-</blockquote>
 <p>（1）Microsoft网络服务器端：对通信进行数字签名(始终) —— 禁用<br>
 默认情况下此项设置处于禁用状态，一般情况下也不需要打开。<br>
 此项设置用来确定 SMB 的数据包是否需要进行数字签名（类似于加密的意思），用来防止中间人攻击。比如说当我们设置了一个文件夹的 SMB 共享，那么当网络里面的其他人（相当于客户端）来想要访问我们的这个文件夹时，我们（相当于服务端）就会要求其他人也开启 SMB 数字签名的功能，否则我们不允许他们来访问我们的文件夹（不允许建立连接）。对于一般人来说是不需要开启的，除非你有很明确的理由。</p>
@@ -230,7 +255,7 @@ windows设置⇒ 安全设置⇒ 本地策略⇒ 安全选项⇒ <strong>已禁�
 微软在这一项设置中也明确说明了具体的细节：<br>
 “经典”模型能够对资源的访问权限进行精细的控制。通过使用“经典”模型，你可以针对同一个资源为不同用户授予不同类型的访问权限。<br>
 使用“经典”模型时，本地帐户必须受密码保护。如果使用“仅来宾”模型时，所有可以通过网络访问计算机的用户(包括匿名 Internet 用户)都可以访问共享资源。你必须使用 Windows 防火墙或其他类似设备来防止对计算机进行未经授权的访问。</p>
-<h2>III. “网络和共享中心”：开启有保护的共享</h2>
+<h2>3. “网络和共享中心”：开启有保护的共享</h2>
 <p>打开共享设置：</p>
 <ol>
 <li>
@@ -301,7 +326,7 @@ if("08/31/2024"!=""){
 </div>
 </body>
 <script>
-var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
 var utterancesLoad=0;
 
 console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
@@ -365,7 +390,70 @@ function iFrameLoading(){
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
 
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
 
 </script>
 <script src='../assets/GmeekTOC.js'></script><script src='../assets/lightbox.js'></script><script>document.querySelectorAll('a').forEach(anchor => {const img = anchor.querySelector('img');if (img && img.hasAttribute('data-canonical-src')) {const canonicalSrc = img.getAttribute('data-canonical-src');anchor.setAttribute('href', canonicalSrc);img.setAttribute('src', canonicalSrc);img.removeAttribute('data-canonical-src');}});</script>
