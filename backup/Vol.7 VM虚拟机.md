@@ -1,15 +1,15 @@
-# 常用虚拟机软件一览
+# 常用VM虚拟机软件一览
 
 虚拟机的使用场景很多，如搭建测试环境、在Windows系统中安装Linux、在Mac机器上运行Windows系统
 虚拟机的关键优势在于实现了跟原生系统的完全隔离，这使得我们可以在虚拟机上做各类测试。
 目前市面上适合个人用户使用的9款虚拟化软件。
 
-1. VMware🔥
+1. VMware
   1.1. VMware Worstation Pro
   1.2. VMware Workstation Player
   1.3. VMware Fusion
-2. VirtualBox🔥
-3. Microsoft Hyper-V🔥
+2. VirtualBox
+3. Microsoft Hyper-V
 4. Parallels Desktop
 5. KVM
 6. Xen
@@ -26,8 +26,8 @@
 |VMware Workstation Player|Windows、Linux|免费|中|中|★★★★|
 |VirtualBox|Windows、Linux、MacOS|免费&开源|低|低|★★★|
 |Microsoft Hyper-V🔥|Windows|免费|高|高|★★★★★|
-|VMware Fusion|MacOS|有料|||
-|Parallels Desktop|MacOS|有料|||
+|VMware Fusion|MacOS|有料|不详||
+|Parallels Desktop|MacOS|有料|不详||
 |KVM|Linux|不详|不详||
 |Xen|Linux|不详|不详||
 |QEMU|Linux|不详|不详||

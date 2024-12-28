@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Sat, 28 Dec 2024 05:56:32 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.28 Win开启SMB共享</title><link>https://www.grapehut.us.kg/post/28.html</link><description># 不要使用 SMB1&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部屋</title><link>https://www.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部屋</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://www.grapehut.us.kg</link></image><lastBuildDate>Sat, 28 Dec 2024 05:57:48 +0000</lastBuildDate><managingEditor>小饅頭の部屋</managingEditor><ttl>60</ttl><webMaster>小饅頭の部屋</webMaster><item><title>Vol.28 Win开启SMB共享</title><link>https://www.grapehut.us.kg/post/28.html</link><description># 不要使用 SMB1&#13;
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代&#13;
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题&#13;
 如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭&#13;
@@ -1031,7 +1031,7 @@ Personal                       C:\Users\win11\Documents&#13;
 常见的字体类型与格式有 “ ttf、otf、ttc、vf、woff/woff2、可变字体、EOT、BDF、SVG ” 8种&#13;
 &#13;
 #### 1. TTF（TrueType）&#13;
-由Apple和Microsoft在20世纪80年代后期开发的轮廓字体标准，.ttf结尾的字体具有TrueType轮廓，Windows和MacOS都支持TTF格式的字体，它已成为最常用的字体格式。</description><guid isPermaLink="true">https://www.grapehut.us.kg/post/9.html</guid><pubDate>Mon, 23 Sep 2024 12:20:16 +0000</pubDate></item><item><title>Vol.7 VM虚拟机</title><link>https://www.grapehut.us.kg/post/8.html</link><description># 常用虚拟机软件一览&#13;
+由Apple和Microsoft在20世纪80年代后期开发的轮廓字体标准，.ttf结尾的字体具有TrueType轮廓，Windows和MacOS都支持TTF格式的字体，它已成为最常用的字体格式。</description><guid isPermaLink="true">https://www.grapehut.us.kg/post/9.html</guid><pubDate>Mon, 23 Sep 2024 12:20:16 +0000</pubDate></item><item><title>Vol.7 VM虚拟机</title><link>https://www.grapehut.us.kg/post/8.html</link><description># 常用VM虚拟机软件一览&#13;
 &#13;
 虚拟机的使用场景很多，如搭建测试环境、在Windows系统中安装Linux、在Mac机器上运行Windows系统&#13;
 虚拟机的关键优势在于实现了跟原生系统的完全隔离，这使得我们可以在虚拟机上做各类测试。</description><guid isPermaLink="true">https://www.grapehut.us.kg/post/8.html</guid><pubDate>Mon, 23 Sep 2024 02:36:28 +0000</pubDate></item><item><title>Vol.6 PowerShell命令</title><link>https://www.grapehut.us.kg/post/7.html</link><description>`Gmeek-html&lt;img src='https://erainnovator.com/wp-content/uploads/2021/04/PowerShell.png'&gt;`&#13;
