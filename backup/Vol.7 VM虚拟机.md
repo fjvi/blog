@@ -24,7 +24,7 @@
 |---|---|---|---|---|---|
 |VMware Workstation Pro|Windows、Linux|免费|中|中||
 |VMware Workstation Player|Windows、Linux|免费|中|中||
-|VirtualBox|Windows、Linux、MacOS|免费&开源|低|低||
+|VirtualBox|Windows、Linux、MacOS|开源免费|低|低||
 |Microsoft Hyper-V🔥|Windows|免费|高|高|★★★★★|
 |VMware Fusion|MacOS|有料|不详||
 |Parallels Desktop|MacOS|有料|不详||
