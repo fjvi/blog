@@ -65,6 +65,17 @@ VirtualBox是一款免费开源的虚拟化软件，由Oracle公司开发。Virt
 
 Microsoft Hyper-V是一款虚拟化软件，内置于Windows Server 2008及其以后的服务器操作系统中。它可以在同一台物理服务器上运行多个虚拟机，支持Windows和Linux等多种操作系统，并提供多种虚拟化技术，如动态内存、动态磁盘等。Microsoft Hyper-V还具有卓越的可靠性、性能和安全性，并且具有高度的适应性，可以在各种企业环境中广泛应用。
 
+### 在 Windows 上使用 Hyper-V
+> 引用：https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+
+> [!NOTE]
+> 开启hyper-v
+
+`Gmeek-html<img src="https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/media/enable-hyper-v.png">`
+
+
+
+
 
 
 
