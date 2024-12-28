@@ -34,6 +34,18 @@
 |Multipass|Linux|不详|不详||
 |Citrix Hypervisor|Windows|不详|不详||
 
+##  📖 Microsoft Hyper-V
+> 官网：https://learn.microsoft.com/zh-cn/virtualization
+
+Microsoft Hyper-V是一款虚拟化软件，内置于Windows Server 2008及其以后的服务器操作系统中。它可以在同一台物理服务器上运行多个虚拟机，支持Windows和Linux等多种操作系统，并提供多种虚拟化技术，如动态内存、动态磁盘等。Microsoft Hyper-V还具有卓越的可靠性、性能和安全性，并且具有高度的适应性，可以在各种企业环境中广泛应用。
+
+### 在 Windows 上使用 Hyper-V
+> 引用：https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+
+> [!NOTE]
+> 开启hyper-v
+
+`Gmeek-html<img src="https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/media/enable-hyper-v.png">`
 
 
 
@@ -56,25 +68,6 @@ VMWare Fusion 13 Pro 是 macOS 优秀的虚拟机软件「同类软件 Parallels
 > 官网：https://www.virtualbox.org
 
 VirtualBox是一款免费开源的虚拟化软件，由Oracle公司开发。VirtualBox 是一个用于 x86 硬件的通用全虚拟器，面向服务器、桌面和嵌入式应用，相对 VMware 来说 ，VirtualBox 是轻量级的虚拟软件。它可以在同一台电脑上运行多个操作系统，使用户可以在不同的操作系统之间切换，并且创建不同的虚拟机。它支持Windows、Linux、MacOS和Solaris等多种操作系统，并提供多种虚拟化技术，如桥接、NAT和Host-Only等。VirtualBox是一款功能强大的虚拟化软件，被广泛应用于开发、测试、学习等领域。 
-
-
-
-
-##  📖 Microsoft Hyper-V
-> 官网：https://learn.microsoft.com/zh-cn/virtualization
-
-Microsoft Hyper-V是一款虚拟化软件，内置于Windows Server 2008及其以后的服务器操作系统中。它可以在同一台物理服务器上运行多个虚拟机，支持Windows和Linux等多种操作系统，并提供多种虚拟化技术，如动态内存、动态磁盘等。Microsoft Hyper-V还具有卓越的可靠性、性能和安全性，并且具有高度的适应性，可以在各种企业环境中广泛应用。
-
-### 在 Windows 上使用 Hyper-V
-> 引用：https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
-
-> [!NOTE]
-> 开启hyper-v
-
-`Gmeek-html<img src="https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/media/enable-hyper-v.png">`
-
-
-
 
 
 
