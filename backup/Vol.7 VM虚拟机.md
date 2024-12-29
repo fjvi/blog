@@ -40,12 +40,93 @@
 Microsoft Hyper-V是一款虚拟化软件，内置于Windows Server 2008及其以后的服务器操作系统中。它可以在同一台物理服务器上运行多个虚拟机，支持Windows和Linux等多种操作系统，并提供多种虚拟化技术，如动态内存、动态磁盘等。Microsoft Hyper-V还具有卓越的可靠性、性能和安全性，并且具有高度的适应性，可以在各种企业环境中广泛应用。
 
 ### 在 Windows 上使用 Hyper-V
-> 引用：https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+> 引用：https://www.depthbomb.net/?p=3786
 
-> [!NOTE]
-> 开启hyper-v
+> [!TIP]
+> ①开启CPU虚拟功能（可以在「BIOS」里开启）
+> ②开启「hyper-v功能」、「虚拟机平台」（可以在「windows其他功能」里开启）
 
 `Gmeek-html<img src="https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/media/enable-hyper-v.png">`
+
+
+### Hyper-V 独立显卡虚拟化 vGPU显卡直通
+1. Powershell 输入下列命令
+```
+$vm = "虚拟机的名字"
+Add-VMGpuPartitionAdapter -VMName $vm
+Set-VMGpuPartitionAdapter -VMName $vm -MinPartitionVRAM 80000000 -MaxPartitionVRAM 100000000 -OptimalPartitionVRAM 100000000 -MinPartitionEncode 80000000 -MaxPartitionEncode 100000000 -OptimalPartitionEncode 100000000 -MinPartitionDecode 80000000 -MaxPartitionDecode 100000000 -OptimalPartitionDecode 100000000 -MinPartitionCompute 80000000 -MaxPartitionCompute 100000000 -OptimalPartitionCompute 100000000
+Set-VM -GuestControlledCacheTypes $true -VMName $vm
+Set-VM -LowMemoryMappedIoSpace 1Gb -VMName $vm
+Set-VM -HighMemoryMappedIoSpace 32GB -VMName $vm
+```
+
+2. 驱动拷贝目录
+ 宿主机驱动路径：C:\Windows\System32\DriverStore\FileRepository\
+ 虚拟机拷贝路径：C:\Windows\System32\HostDriverStore\FileRepository\
+
+3. NVIDA卡操作
+宿主机文件路径：C:\Windows\System32\nvapi64.dll
+虚拟机拷贝路径：C:\Windows\System32\nvapi64.dll
+
+4. AMD卡操作
+所有宿主机，驱动管理器，显卡驱动信息里的文件都必须全部拷贝到虚拟机里（路径和宿主机相同）
+
+
+
+### Hyper-Vマネージャーの起動
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv03.jpg">`
+
+### 「仮想スイッチマネージャー」の起動
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv30.jpg">`
+
+### 「新規仮想スイッチ」の作成
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv14.jpg">`
+
+> [!NOTE]
+> 仮想スイッチの種類の違い
+> 外部：
+>　仮想マシンを対ホストやホスト以外の周辺物理機器と相互に通信させる場合はこちらです。
+>　例えば、Hyper-V上で作成した仮想マシンを、ホストOSであるWindows10が居るネットワークの他のパソコンやネットワーク機器とも相互に通信できるようにするには「外部」を選択する必要があります。
+> 
+> 内部：
+>　仮想マシンを対ホストや同じ内部スイッチで繋がる仮想マシン間でしか相互通信させない場合はこちらです。
+>　仮想マシンがインターネット接続できる必要がなく、また、ホストが所属するネットワーク上の他の機器から見える必要が無い場合は、「内部」を選択します。
+> 
+>プライベート：
+>　仮想マシンを同じプライベートスイッチで繋がる仮想マシン間でしか相互通信させない場合はこちらです。
+>　仮想マシンがインターネットに繋がる必要もなく、ホストとの通信も不要で、仮想マシン間だけの閉じたネットワークを使用したい場合は「プライベート」を選択します。
+
+
+### 「仮想スイッチマネージャー」設定と仮想スイッチ解説
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv15.jpg">`
+
+尚、上記仮想スイッチが作成されると、Hyper-Vのホストである、Windows10のNICには以下の仮想NICが作成されます。
+「vEthernet」はHyper-Vによって作成された仮想NICであり、括弧で対象の仮想スイッチ名が表示されています。
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv16.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv24.jpg">`
+
+
+### 「仮想マシンの新規作成ウィザード」の起動
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv04.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv05.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv06.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv07.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv08.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv09.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv10.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv12.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv13.jpg">`
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv23.jpg">`
+
+> [!NOTE]
+> チェックポイントの設定
+>　Hyper-Vでは、特定の時点の仮想マシンの状態を保存する「チェックポイント」という機能があり、後からそのチェックポイントを取得した状態まで仮想マシンを戻すことができます。
+>　特に必要が無ければ、自動的にチェックポイントを作成する機能は無効化しておいた方が良いです。
+
+`Gmeek-html<img src="https://www.depthbomb.net/wp-content/uploads/2021/01/hyperv22.jpg">`
+
+
+
 
 
 
