@@ -5,7 +5,7 @@
     "GMEEK_VERSION":"last",
     
     "displayTitle":"小饅頭の部落格",
-    "homeUrl":"https://www.grapehut.us.kg",
+    "homeUrl":"https://blog.grapehut.us.kg",
     "faviconUrl":"https://github.githubassets.com/favicons/favicon.svg",
     
     "email":"",
@@ -22,9 +22,6 @@
     },
 
     "exlink":{
-        "Webstack":"https://webstack.grapehut.us.kg/",
-        "RSS-Reader":"https://gmerss.grapehut.us.kg/",
-        "Music":"https://music.alang.run/"
     },
     
     "commentLabelColor":"#006b75",
@@ -57,7 +54,7 @@
     "rssSplit":"sentence",
     "bottomText":"❤️ 转载文章请注明出处，谢谢！❤️",
     "ogImage":"",
-    "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
+    "primerCSS":"<link href='https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css' rel='stylesheet' />",
     "showPostSource":0,
     "needComment":1
 }
