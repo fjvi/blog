@@ -8,7 +8,7 @@ Windows で動くパッケージマネージャー。コマンドプロンプト
 Windows でのパッケージマネージャーといえば、
 [winget](https://learn.microsoft.com/ja-jp/windows/package-manager/winget/) や 
 [chocolatey](https://chocolatey.org/) が有名ですが、
-Scoop はよりデベロッパーフレンドリーなんだとか。
+[Scoop](https://scoop.sh/) はよりデベロッパーフレンドリーなんだとか。
 また、winget だとコマンドでインストールしたもの以外も管理下に置かれますが、scoop だと scoop でインストールしたもののみを管理できます (この点は、chocolaty と同様かもしれません)。
 
 
