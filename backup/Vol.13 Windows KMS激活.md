@@ -1,17 +1,25 @@
 ```
 # Windows 11 LTSC 2024
-https://archive.org/details/tiny11-2409 
-certutil -hashfile tiny11_24H2_AMD64.iso SHA256
-87c926dcb9c2927a0d67c5f4084308c61a29581e259e6f4d9ebd36f44c79559a
+tiny11_24H2
+　https://archive.org/details/tiny11-2409 
+　✓tiny11 24H2 AMD64.iso
+　SHA256：87c926dcb9c2927a0d67c5f4084308c61a29581e259e6f4d9ebd36f44c79559a
 
-https://archive.org/details/26100-ltsc-x64-enus
+Windows 11 Insider Preview Build 26100 Enterprise LTSC English x86-64
+　https://archive.org/details/26100-ltsc-x64-enus
+　✓26100.1.240331-1435.ge_release_CLIENT_ENTERPRISES_OEM_x64FRE_en-us.iso
+```
 
 ```
-```
-# Windows 11 （24H2）LTSC KMS激活
+# Windows 11 LTSC KMS激活
 slmgr -ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D
 slmgr -skms kms.0t.net.cn
 slmgr -ato
+```
+
+```
+# Windows MAS激活
+irm https://massgrave.dev/get | iex
 ```
 
 ```
