@@ -51,7 +51,7 @@ irm "https://christitus.com/win" | iex
 reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ````
 
-# 恢复成Win11的右键菜单
+# 切换成Win11的右键菜单（不推荐）
 ```
 reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f 
 ```
@@ -61,7 +61,10 @@ reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" 
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v FlightSettingsMaxPauseDays /t reg_dword /d 9999 /f
 ```
 
-# Windows家庭版开启hyper-v
+
+# Windows家庭版，强制开启hyper-v
+`Gmeek-html<img src="https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png">`
+
 ```
 pushd "%~dp0"
 dir /b %SystemRoot%servicingPackages*Hyper-V*.mum >hv.txt
@@ -69,12 +72,51 @@ for /f %%i in ('findstr /i . hv.txt 2^>nul') do dism /online /norestart /add-pac
 del hv.txt
 Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL
 pause
-```
-
-`Gmeek-html<img src="https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png">`
 
 将文本文档改名为"xxx.bat"，需注意.bat是扩展名
-完成后重启电脑
+运行完成后，重启电脑
+```
+
+
+
+
+# Powershell 控制鼠标移动
+
+```
+# .NET Frameworkの宣言
+[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") 
+[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") 
+
+# Windows APIの宣言
+$signature=@'
+[DllImport("user32.dll",CharSet=CharSet.Auto,CallingConvention=CallingConvention.StdCall)]
+public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+'@
+$SendMouseClick = Add-Type -memberDefinition $signature -name "Win32MouseEventNew" -namespace Win32Functions -passThru
+
+while ($true) {
+
+    # マウスカーソル移動
+    [System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(627, 379)
+    # 左クリック
+    $SendMouseClick::mouse_event(0x0002, 0, 0, 0, 0);
+    $SendMouseClick::mouse_event(0x0004, 0, 0, 0, 0);
+    Start-Sleep -s 3
+
+    # マウスカーソル移動
+    [System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(859, 194)
+    # 左クリック
+    $SendMouseClick::mouse_event(0x0002, 0, 0, 0, 0);
+    $SendMouseClick::mouse_event(0x0004, 0, 0, 0, 0);
+    Start-Sleep -s 3
+}
+```
+
+
+
+
+
+
 
 # Windows特殊文件夹
 - System.Environmentを使って特殊フォルダ一覧リストを出力
