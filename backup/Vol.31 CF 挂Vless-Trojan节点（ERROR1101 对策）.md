@@ -48,10 +48,12 @@ https://cf996.hst1189.workers.dev/8cda8d90-9c66-4f59-8f98-d433d6238a8c
 
 # 绑定域名（可选，被墙对策）
 CF的worker 域名（https://*. workers.dev）被墙的话，可以通过绑定域名回避
-1. 添加网站 cf996.ip-ddns.com（通过clouDNS免费获得）
-2. 添加DNS解释   A2个，NS2个
-3. 将上述worker 绑定自定义域名（test.cf996.ip-ddns.com、※必须添加前缀，clouDNS的根域名无法绑定）
-4. 添加worker的DNS解释 CNAME1个
+1. CF里添加网站 cf996.ip-ddns.com（通过clouDNS免费获得）
+2. clouDNS 添加DNS解释 A2个，NS2个（双向解析，如下图，必须和CF设置同步一致）
+3. CF里的worker 绑定自定义域名（test.cf996.ip-ddns.com、※必须添加前缀，clouDNS的根域名无法绑定）
+4. CF里自动添加 worker解析  ，相应的在clouDNS添加  worker的DNS解释 CNAME1个
+5. 添加TSL的DNS解析  TXT2个（等待几分钟~数小时）
+
 
 下图绑定 clouDNS的免费域名为例：
 `Gmeek-html<img src="../imgs/vlessnode/clouDNS1.PNG">`

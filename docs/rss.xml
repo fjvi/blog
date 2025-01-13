@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Mon, 13 Jan 2025 15:40:49 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.32 免费获取OpenAI API</title><link>https://blog.grapehut.us.kg/post/32.html</link><description># gpt-4o-mini&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Mon, 13 Jan 2025 15:53:51 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.32 免费获取OpenAI API</title><link>https://blog.grapehut.us.kg/post/32.html</link><description># gpt-4o-mini&#13;
 ### 1. https://github.com/chatanywhere/GPT_API_free&#13;
 支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理&#13;
 ```&#13;
@@ -60,10 +60,12 @@ https://cf996.hst1189.workers.dev/8cda8d90-9c66-4f59-8f98-d433d6238a8c&#13;
 &#13;
 # 绑定域名（可选，被墙对策）&#13;
 CF的worker 域名（https://*. workers.dev）被墙的话，可以通过绑定域名回避&#13;
-1. 添加网站 cf996.ip-ddns.com（通过clouDNS免费获得）&#13;
-2. 添加DNS解释   A2个，NS2个&#13;
-3. 将上述worker 绑定自定义域名（test.cf996.ip-ddns.com、※必须添加前缀，clouDNS的根域名无法绑定）&#13;
-4. 添加worker的DNS解释 CNAME1个&#13;
+1. CF里添加网站 cf996.ip-ddns.com（通过clouDNS免费获得）&#13;
+2. clouDNS 添加DNS解释 A2个，NS2个（双向解析，如下图，必须和CF设置同步一致）&#13;
+3. CF里的worker 绑定自定义域名（test.cf996.ip-ddns.com、※必须添加前缀，clouDNS的根域名无法绑定）&#13;
+4. CF里自动添加 worker解析  ，相应的在clouDNS添加  worker的DNS解释 CNAME1个&#13;
+5. 添加TSL的DNS解析  TXT2个（等待几分钟~数小时）&#13;
+&#13;
 &#13;
 下图绑定 clouDNS的免费域名为例：&#13;
 `Gmeek-html&lt;img src='../imgs/vlessnode/clouDNS1.PNG'&gt;`&#13;
