@@ -40,7 +40,21 @@ https://cf996.hst1189.workers.dev/8cda8d90-9c66-4f59-8f98-d433d6238a8c
 
 
 # 绑定域名
-CF的域名被墙的话，可以通过绑定域名回避
+CF的worker 域名（*. workers.dev）被墙的话，可以通过绑定域名回避
+```
+原始网址：
+https://cf996.hst1189.workers.dev/8cda8d90-9c66-4f59-8f98-d433d6238a8c
+
+绑定域名后：
+https://test.cf996.ip-ddns.com/8cda8d90-9c66-4f59-8f98-d433d6238a8c
+```
+
+下图绑定 clouDNS的免费域名为例：
+`[]()`
+`[]()`
+
+
+
 
 
 
