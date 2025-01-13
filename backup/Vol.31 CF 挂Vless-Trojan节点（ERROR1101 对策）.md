@@ -1,17 +1,21 @@
 # 新建Worker
-创建一个worker（worker名字任意，如 cf996），替换默认的脚本 work.js 后，按部署
-CF会自动生成网址   如：https://cf996.hst1189.workers.dev
-`Gmeek-html<img src="../imgs/vlessnode/clouDNS0.PNG">`
+CF里创建一个worker（worker名字任意，如 cf996），初始脚本（work.js） 为默认Helloworld 即可
+CF会自动生成worker网址   如：https://cf996.hst1189.workers.dev
 
 
 # 脚本地址
+替换默认脚本 work.js 后部署
 为了防止ERROR1101 , 建议使用以下混淆代码
 https://github.com/yonggekkk/Cloudflare_vless_trojan
 ✓[Vless_workers_pages](https://github.com/yonggekkk/Cloudflare_vless_trojan/tree/main/Vless_workers_pages)
 ✓[Trojan_workers_pages](https://github.com/yonggekkk/Cloudflare_vless_trojan/tree/main/Trojan_workers_pages)
 
-# 添加变量
+
+# Worker添加变量
 ### 1. Vless节点的变量设置
+
+`Gmeek-html<img src="../imgs/vlessnode/clouDNS0.PNG">`
+
 ```
 建议修改） uuid ⇒ 8cda8d90-9c66-4f59-8f98-d433d6238a8c
 默认即可）proxyip ⇒ 默认443端口：ipv4地址、ipv6地址、域名（非443端口：ipv4地址/ipv6地址/域名：端口）
@@ -25,6 +29,8 @@ https://github.com/yonggekkk/Cloudflare_vless_trojan
 cmd ⇒ Powershell -NoExit -Command "[guid]::NewGuid()
 ```
 
+
+
 ### 2. Trojan节点的变量设置
 ```
 建议修改）pswd ⇒ 万人骑密码：trojan
@@ -35,13 +41,24 @@ cmd ⇒ Powershell -NoExit -Command "[guid]::NewGuid()
 
 
 # 获取链接地址
-上述变量设置以后，按部署，再次生成网址
-打开网址，点击复制里面的链接，黏贴到软件里
+上述变量设置以后，部署，更新网址 ↓
 https://cf996.hst1189.workers.dev/8cda8d90-9c66-4f59-8f98-d433d6238a8c
+打开此网址，找到里面的链接，黏贴到软件里即可
 
 
-# 绑定域名
-CF的worker 域名（*. workers.dev）被墙的话，可以通过绑定域名回避
+# 绑定域名（可选，被墙对策）
+CF的worker 域名（https://*. workers.dev）被墙的话，可以通过绑定域名回避
+1. 添加网站 cf996.ip-ddns.com（通过clouDNS免费获得）
+2. 添加DNS解释   A2个，NS2个
+3. 将上述worker 绑定自定义域名（test.cf996.ip-ddns.com、※必须添加前缀，clouDNS的根域名无法绑定）
+4. 添加worker的DNS解释 CNAME1个
+
+下图绑定 clouDNS的免费域名为例：
+`Gmeek-html<img src="../imgs/vlessnode/clouDNS1.PNG">`
+`Gmeek-html<img src="../imgs/vlessnode/clouDNS2.PNG">`
+`Gmeek-html<img src="../imgs/vlessnode/clouDNS3.PNG">`
+
+ 
 ```
 原始网址：
 https://cf996.hst1189.workers.dev/8cda8d90-9c66-4f59-8f98-d433d6238a8c
@@ -50,10 +67,8 @@ https://cf996.hst1189.workers.dev/8cda8d90-9c66-4f59-8f98-d433d6238a8c
 https://test.cf996.ip-ddns.com/8cda8d90-9c66-4f59-8f98-d433d6238a8c
 ```
 
-下图绑定 clouDNS的免费域名为例：
-`Gmeek-html<img src="../imgs/vlessnode/clouDNS1.PNG">`
-`Gmeek-html<img src="../imgs/vlessnode/clouDNS2.PNG">`
-`Gmeek-html<img src="../imgs/vlessnode/clouDNS3.PNG">`
+
+
 
 
 
