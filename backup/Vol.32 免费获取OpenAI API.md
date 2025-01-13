@@ -12,6 +12,7 @@
 　免费版支持gpt-4，一天3次；
 ★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。
 ```
+模型：gpt-4o-mini
 获取KEY：[申请内测免费Key](https://api.chatanywhere.org/v1/oauth/free/render)
 API地址： https://api.chatanywhere.tech (国内中转，延时更低)
 　　　　　https://api.chatanywhere.org (国外使用)
@@ -33,11 +34,15 @@ API地址： https://api.chatanywhere.tech (国内中转，延时更低)
  　×付费版API支持OpenAI所有模型，包括（联网、绘画、聊天、向量、图片分析、文件分析、GPTs等）
  　×付费版API支持Midjourney专业绘画、Suno音乐生成、PPT生成、多种视频模型。
 ```
+模型：gpt-4o-mini
 获取KEY：[立即领取免费KEY](https://free.v36.cm/github)
 API地址： https://free.v36.cm (无需代理，直接可用）
 
 
 # Grok API 
+模型：grok-beta
+获取KEY：https://console.x.ai/
+API地址： https://api.x.ai/v1 (无需代理，直接可用）
 
 
 
