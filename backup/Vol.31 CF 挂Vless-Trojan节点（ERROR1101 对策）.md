@@ -1,7 +1,7 @@
 # 新建Worker
 创建一个worker（worker名字任意，如 cf996），替换默认的脚本 work.js 后，按部署
 CF会自动生成网址   如：https://cf996.hst1189.workers.dev
-`Gmeek-html<img src="imgs/vlessnode/clouDNS0.png">`
+`Gmeek-html<img src="../imgs/vlessnode/clouDNS0.png">`
 
 
 # 脚本地址
@@ -51,9 +51,9 @@ https://test.cf996.ip-ddns.com/8cda8d90-9c66-4f59-8f98-d433d6238a8c
 ```
 
 下图绑定 clouDNS的免费域名为例：
-`Gmeek-html<img src="imgs/vlessnode/clouDNS1.png">`
-`Gmeek-html<img src="imgs/vlessnode/clouDNS2.png">`
-`Gmeek-html<img src="imgs/vlessnode/clouDNS3.png">`
+`Gmeek-html<img src="../imgs/vlessnode/clouDNS1.png">`
+`Gmeek-html<img src="../imgs/vlessnode/clouDNS2.png">`
+`Gmeek-html<img src="../imgs/vlessnode/clouDNS3.png">`
 
 
 
