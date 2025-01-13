@@ -1,16 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Mon, 13 Jan 2025 15:53:51 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.32 免费获取OpenAI API</title><link>https://blog.grapehut.us.kg/post/32.html</link><description># gpt-4o-mini&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Mon, 13 Jan 2025 16:03:46 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.32 免费获取OpenAI API</title><link>https://blog.grapehut.us.kg/post/32.html</link><description># OpenAI API&#13;
 ### 1. https://github.com/chatanywhere/GPT_API_free&#13;
 支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理&#13;
 ```&#13;
 支持Models, &#13;
-Embedding, &#13;
-text-davinci(免费版不支持), &#13;
-GPT-3.5-Turbo, GPT-3.5-Turbo-16K(免费版不支持), &#13;
-GPT-4, DALLE(免费版不支持), &#13;
-Whisper(免费版不支持)&#13;
-免费版就可以支持AutoGPT, gpt_academic, langchain等&#13;
-免费版支持gpt-4，一天3次；支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/32.html</guid><pubDate>Mon, 13 Jan 2025 14:12:12 +0000</pubDate></item><item><title>Vol.31 CF 挂Vless/Trojan节点（ERROR1101 对策）</title><link>https://blog.grapehut.us.kg/post/31.html</link><description># 新建Worker&#13;
+　Embedding, &#13;
+　text-davinci(免费版不支持), &#13;
+　GPT-3.5-Turbo, GPT-3.5-Turbo-16K(免费版不支持), &#13;
+　GPT-4, DALLE(免费版不支持), &#13;
+　Whisper(免费版不支持)&#13;
+　免费版就可以支持AutoGPT, gpt_academic, langchain等&#13;
+　免费版支持gpt-4，一天3次；&#13;
+★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/32.html</guid><pubDate>Mon, 13 Jan 2025 14:12:12 +0000</pubDate></item><item><title>Vol.31 CF 挂Vless/Trojan节点（ERROR1101 对策）</title><link>https://blog.grapehut.us.kg/post/31.html</link><description># 新建Worker&#13;
 CF里创建一个worker（worker名字任意，如 cf996），初始脚本（work.js） 为默认Helloworld 即可&#13;
 CF会自动生成worker网址   如：https://cf996.hst1189.workers.dev&#13;
 &#13;
