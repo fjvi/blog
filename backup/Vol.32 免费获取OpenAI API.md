@@ -49,5 +49,19 @@ https://x.com/i/grok （有X账号就可以使用）
 
 
 # gemini2.0
+模型：gemini-2.0-flash-exp
+获取KEY：https://aistudio.google.com/apikey
+API地址： https://generativelanguage.googleapis.com（需要自建代理）
+[openai-gemini](https://github.com/PublicAffairs/openai-gemini)
+此项目通过Github Actions功能，在Cloudflare创建Worker，充当中转。需要绑定自定义域名
+
+设置参数：
+1. 方法一：选择OpenAI
+API地址填入Cloudflare Worker的自定义域名
+模型添加gemini-2.0-flash-exp
+
+2. 方法二：选择自定义
+API地址地址填入自定义域名/v1/chat/completions
+模型添加gemini-2.0-flash-exp
 
 
