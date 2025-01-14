@@ -21,7 +21,7 @@ API地址： https://api.chatanywhere.tech (国内中转，延时更低)
 ### 2. https://github.com/popjane/free_chatgpt_api
 ```
 完全免费使用以下勾选模型：
-★ ✓gpt-4o-mini（速度一般，若要体验极速回复，可购买付费API）
+★ ✓gpt-4o-mini（不限量 无门槛）
  　✓gpt-3.5-turbo-0125
  　✓gpt-3.5-turbo-1106
  　✓gpt-3.5-turbo
@@ -41,9 +41,10 @@ API地址： https://free.v36.cm (无需代理，直接可用）
 
 # Grok API 
 模型：grok-beta
-获取KEY：https://console.x.ai/
+获取KEY：https://console.x.ai/ (免费赠送25USD/mo活动 2024/12已结束)
 API地址： https://api.x.ai/v1 (无需代理，直接可用）
 
+https://x.com/i/grok （有X账号就可以使用）
 
 
 # gemini2.0
