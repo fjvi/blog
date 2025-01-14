@@ -39,11 +39,12 @@ API地址： https://api.chatanywhere.tech (国内中转，延时更低)
 API地址： https://free.v36.cm (无需代理，直接可用）
 
 
-# Grok API 
+# Grok API
 模型：grok-beta
 获取KEY：https://console.x.ai/ (免费赠送25USD/mo活动 2024/12已结束)
 API地址： https://api.x.ai/v1 (无需代理，直接可用）
 
+Gork2 可在X直接使用
 https://x.com/i/grok （有X账号就可以使用）
 
 
