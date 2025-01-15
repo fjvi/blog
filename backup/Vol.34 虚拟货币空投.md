@@ -16,6 +16,8 @@ https://wipter.com/en/register?via=E7248B8406
 
 # NodePay
 https://app.nodepay.ai/register?ref=ngE8T22GWhdwHlw
+Wallet　SOL(Solana)：BWMDv46owqpA3XRXpbT8pkap9fZotcFx6E7QSx2dVANJ
+https://solscan.io/account/BWMDv46owqpA3XRXpbT8pkap9fZotcFx6E7QSx2dVANJ
 Season1,Season2空头结束,  Season3进行中
 
 
