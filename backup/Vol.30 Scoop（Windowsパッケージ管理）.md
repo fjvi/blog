@@ -1,33 +1,40 @@
 # 🔖 Windows でのパッケージ管理は Scoop
 
+什么是 Scoop？它是一个在 Windows 上运行的软件包管理器。 它可以在 cmd 或 Powershell 中使用
 
-Scoop とは？
-Windows で動くパッケージマネージャー。コマンドプロンプトや Powershell で使用できる。
-Windows でのパッケージマネージャーといえば、
-[winget](https://learn.microsoft.com/ja-jp/windows/package-manager/winget/) や 
-[chocolatey](https://chocolatey.org/) が有名ですが、
-[Scoop](https://scoop.sh/) はよりデベロッパーフレンドリーなんだとか。
-また、winget だとコマンドでインストールしたもの以外も管理下に置かれますが、scoop だと scoop でインストールしたもののみを管理できます (この点は、chocolaty と同様かもしれません)。
+Windows 上的软件包管理器包括
+- [winget](https://learn.microsoft.com/ja-jp/windows/package-manager/winget/)   
+- [chocolatey](https://chocolatey.org/) 
+- [Scoop](https://scoop.sh/)
+
+区别：使用 winget，除使用命令安装的软件包外，其他软件包也会被置于管理之下，
+但使用 scoop，只有使用 scoop 安装的软件包才能被管理（这与 chocolaty 类似）。
+
+使用管理工具的好处，例如：
+安装 Windows 版 Git 时，需要下载并运行安装程序，然后点击 “下一步 ”按钮
+使用 Scoop 时，只需使用 scoop install git 命令即可。 卸载时，也同样可以用命令完成。
 
 
-例えば、Git for Windows をインストールする場合、インストーラーをダウンロードして実行して Next ボタンをポチポチして… みたいな形ですが、Scoop だと scoop install git コマンドで一発。アンインストールする際も同様にコマンドだけで完結できます。
+# 🔖 安装scoop
+https://scoop.sh/
+Quickstart に従って、Powershell でコマンドを実行するだけ
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
 
 
-# 🔖 インストール方法
-上記リンク先の、Quickstart に従って、Powershell でコマンドを実行するだけ。それだけ。
-
-# 🔖 使い方
-上でもちょっと書きましたが、何かインストールする際には以下コマンド。
-
+# 🔖 使用方法
+安装：
 ```
 scoop install {package_name}
 ```
-
-アンインストールは以下。
-
+卸载：
 ```
 scoop uninstall {package_name}
 ```
+
+
 他のオプションは以下の通り。
 
 ```

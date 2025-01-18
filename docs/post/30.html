@@ -8,15 +8,11 @@
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
 <meta name="description" content="# 🔖 Windows でのパッケージ管理は Scoop
 
-
-Scoop とは？
-Windows で動くパッケージマネージャー。">
+什么是 Scoop？它是一个在 Windows 上运行的软件包管理器。">
 <meta property="og:title" content="Vol.30 Scoop（Windowsパッケージ管理）">
 <meta property="og:description" content="# 🔖 Windows でのパッケージ管理は Scoop
 
-
-Scoop とは？
-Windows で動くパッケージマネージャー。">
+什么是 Scoop？它是一个在 Windows 上运行的软件包管理器。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.grapehut.us.kg/post/30.html">
 <meta property="og:image" content="">
@@ -84,21 +80,29 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
 <div class="markdown-body spoiler" id="postBody"><h1>🔖 Windows でのパッケージ管理は Scoop</h1>
-<p>Scoop とは？<br>
-Windows で動くパッケージマネージャー。コマンドプロンプトや Powershell で使用できる。<br>
-Windows でのパッケージマネージャーといえば、<br>
-<a href="https://learn.microsoft.com/ja-jp/windows/package-manager/winget/" rel="nofollow">winget</a> や<br>
-<a href="https://chocolatey.org/" rel="nofollow">chocolatey</a> が有名ですが、<br>
-<a href="https://scoop.sh/" rel="nofollow">Scoop</a> はよりデベロッパーフレンドリーなんだとか。<br>
-また、winget だとコマンドでインストールしたもの以外も管理下に置かれますが、scoop だと scoop でインストールしたもののみを管理できます (この点は、chocolaty と同様かもしれません)。</p>
-<p>例えば、Git for Windows をインストールする場合、インストーラーをダウンロードして実行して Next ボタンをポチポチして… みたいな形ですが、Scoop だと scoop install git コマンドで一発。アンインストールする際も同様にコマンドだけで完結できます。</p>
-<h1>🔖 インストール方法</h1>
-<p>上記リンク先の、Quickstart に従って、Powershell でコマンドを実行するだけ。それだけ。</p>
-<h1>🔖 使い方</h1>
-<p>上でもちょっと書きましたが、何かインストールする際には以下コマンド。</p>
+<p>什么是 Scoop？它是一个在 Windows 上运行的软件包管理器。 它可以在 cmd 或 Powershell 中使用</p>
+<p>Windows 上的软件包管理器包括</p>
+<ul>
+<li><a href="https://learn.microsoft.com/ja-jp/windows/package-manager/winget/" rel="nofollow">winget</a></li>
+<li><a href="https://chocolatey.org/" rel="nofollow">chocolatey</a></li>
+<li><a href="https://scoop.sh/" rel="nofollow">Scoop</a></li>
+</ul>
+<p>区别：使用 winget，除使用命令安装的软件包外，其他软件包也会被置于管理之下，<br>
+但使用 scoop，只有使用 scoop 安装的软件包才能被管理（这与 chocolaty 类似）。</p>
+<p>使用管理工具的好处，例如：<br>
+安装 Windows 版 Git 时，需要下载并运行安装程序，然后点击 “下一步 ”按钮<br>
+使用 Scoop 时，只需使用 scoop install git 命令即可。 卸载时，也同样可以用命令完成。</p>
+<h1>🔖 安装scoop</h1>
+<p><a href="https://scoop.sh/" rel="nofollow">https://scoop.sh/</a><br>
+Quickstart に従って、Powershell でコマンドを実行するだけ</p>
+<pre class="notranslate"><code class="notranslate">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+</code></pre>
+<h1>🔖 使用方法</h1>
+<p>安装：</p>
 <pre class="notranslate"><code class="notranslate">scoop install {package_name}
 </code></pre>
-<p>アンインストールは以下。</p>
+<p>卸载：</p>
 <pre class="notranslate"><code class="notranslate">scoop uninstall {package_name}
 </code></pre>
 <p>他のオプションは以下の通り。</p>
