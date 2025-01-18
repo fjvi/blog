@@ -71,23 +71,25 @@ API地址： https://generativelanguage.googleapis.com（国内无法直接访�
 ChatBox：https://github.com/Bin-Huang/chatbox
 ```
 下载安装后设置
-　模型提供：OPENAI API
-　API         ：API密钥
-　API域名  ：https://gemini.grapehut.us.kg/v1/models    ※上面第１步中指定的域名
-　模型       ：自定义模型
-　自定义模型名称：gemini-2.0-flash-exp
-　※编程模型可选：gemini exp-1206 　
-
+　模型提供：OpenAI API
+　API  Key ：API密钥
+　API域名  ：https://gemini.grapehut.us.kg/
+　模型       ：gemini-2.0-flash-exp（选择自定义模型，手动输入）
+　　　　　　gemini-2.0-flash-exp
+　　　　　　gemini exp-1206 　
 
 设置参数：
 1. 方法一：选择OpenAI
-API地址填入 Cloudflare Worker的自定义域名
-模型添加gemini-2.0-flash-exp
+API  Key ：API密钥
+API域名 ： https://gemini.grapehut.us.kg（Cloudflare Worker的自定义域名）
+模型添加 ：gemini-2.0-flash-exp
 
-2. 方法二：选择自定义
-API地址填入  自定义域名/v1/chat/completions
-模型添加gemini-2.0-flash-exp
+2. 方法二：选择自定义 (OpenAI API兼容)
+API  Key ：API密钥
+API域名 ： https://gemini.grapehut.us.kg/v1
+API路径 ： chat/completions
 
+模型添加：gemini-2.0-flash-exp
 
 ```
 
