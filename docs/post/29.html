@@ -10,28 +10,12 @@
 ### 1. https://github.com/chatanywhere/GPT_API_free
 支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理
 ```
-支持Models, 
-　Embedding, 
-　text-davinci(免费版不支持), 
-　GPT-3.5-Turbo, GPT-3.5-Turbo-16K(免费版不支持), 
-　GPT-4, DALLE(免费版不支持), 
-　Whisper(免费版不支持)
-　免费版就可以支持AutoGPT, gpt_academic, langchain等
-　免费版支持gpt-4，一天3次；
 ★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。">
 <meta property="og:title" content="Vol.29 免费获取Open API & 利用实例">
 <meta property="og:description" content="# OpenAI API
 ### 1. https://github.com/chatanywhere/GPT_API_free
 支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理
 ```
-支持Models, 
-　Embedding, 
-　text-davinci(免费版不支持), 
-　GPT-3.5-Turbo, GPT-3.5-Turbo-16K(免费版不支持), 
-　GPT-4, DALLE(免费版不支持), 
-　Whisper(免费版不支持)
-　免费版就可以支持AutoGPT, gpt_academic, langchain等
-　免费版支持gpt-4，一天3次；
 ★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.grapehut.us.kg/post/29.html">
@@ -102,15 +86,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body spoiler" id="postBody"><h1>OpenAI API</h1>
 <h3>1. <a href="https://github.com/chatanywhere/GPT_API_free">https://github.com/chatanywhere/GPT_API_free</a></h3>
 <p>支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理</p>
-<pre class="notranslate"><code class="notranslate">支持Models, 
-　Embedding, 
-　text-davinci(免费版不支持), 
-　GPT-3.5-Turbo, GPT-3.5-Turbo-16K(免费版不支持), 
-　GPT-4, DALLE(免费版不支持), 
-　Whisper(免费版不支持)
-　免费版就可以支持AutoGPT, gpt_academic, langchain等
-　免费版支持gpt-4，一天3次；
-★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。
+<pre class="notranslate"><code class="notranslate">★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。
 </code></pre>
 <p>模型：gpt-4o-mini<br>
 获取KEY：<a href="https://api.chatanywhere.org/v1/oauth/free/render" rel="nofollow">申请内测免费Key</a><br>
@@ -143,25 +119,10 @@ API地址： <a href="https://api.x.ai/v1" rel="nofollow">https://api.x.ai/v1</a
 <h1>Gemini API</h1>
 <p>模型：gemini-2.0-flash-exp<br>
 获取KEY：<a href="https://aistudio.google.com/apikey" rel="nofollow">https://aistudio.google.com/apikey</a><br>
-API地址： <a href="https://generativelanguage.googleapis.com%EF%BC%88%E5%9B%BD%E5%86%85%E9%9C%80%E8%A6%81%E8%87%AA%E5%BB%BA%E4%BB%A3%E7%90%86%EF%BC%89" rel="nofollow">https://generativelanguage.googleapis.com（国内需要自建代理）</a><br>
-<a href="https://github.com/PublicAffairs/openai-gemini">openai-gemini</a><br>
-此项目通过Github Actions功能，在Cloudflare创建Worker，充当中转。需要绑定自定义域名</p>
-<p>设置参数：</p>
-<ol>
-<li>
-<p>方法一：选择OpenAI<br>
-API地址填入Cloudflare Worker的自定义域名<br>
-模型添加gemini-2.0-flash-exp</p>
-</li>
-<li>
-<p>方法二：选择自定义<br>
-API地址地址填入自定义域名/v1/chat/completions<br>
-模型添加gemini-2.0-flash-exp</p>
-</li>
-<li>
-<p>Gemini 转OpenAI格式： <a href="https://github.com/PublicAffairs/openai-gemini">https://github.com/PublicAffairs/openai-gemini</a></p>
-</li>
-</ol>
+API地址： <a href="https://generativelanguage.googleapis.com%EF%BC%88%E5%9B%BD%E5%86%85%E9%9C%80%E8%A6%81%E8%87%AA%E5%BB%BA%E4%BB%A3%E7%90%86%EF%BC%89" rel="nofollow">https://generativelanguage.googleapis.com（国内需要自建代理）</a></p>
+<h3>不支持Gemini 接口的，通过下面可以转成OpenAI接口</h3>
+<p><a href="https://github.com/PublicAffairs/openai-gemini">openai-gemini</a><br>
+通过Github Actions功能，在Cloudflare创建Worker，充当中转。需要绑定自定义域名</p>
 <pre class="notranslate"><code class="notranslate">选择 Deploy to Cloudflare
 ・Account ID
 ・API Token  所有账户，所有区域
@@ -172,9 +133,21 @@ github workflower 会自动运行
 
 最后绑定域名（例如：gemini.grapehut.us.kg）
 </code></pre>
-<ol start="2">
-<li>ChatBox：<a href="https://github.com/Bin-Huang/chatbox">https://github.com/Bin-Huang/chatbox</a></li>
+<p>设置参数：</p>
+<ol>
+<li>
+<p>方法一：选择OpenAI<br>
+API地址填入 Cloudflare Worker的自定义域名<br>
+模型添加gemini-2.0-flash-exp</p>
+</li>
+<li>
+<p>方法二：选择自定义<br>
+API地址填入  自定义域名/v1/chat/completions<br>
+模型添加gemini-2.0-flash-exp</p>
+</li>
 </ol>
+<h1>利用实例</h1>
+<p>ChatBox：<a href="https://github.com/Bin-Huang/chatbox">https://github.com/Bin-Huang/chatbox</a></p>
 <pre class="notranslate"><code class="notranslate">下载安装后设置
 　模型提供：OPENAI API
 　API         ：API密钥
@@ -183,9 +156,7 @@ github workflower 会自动运行
 　自定义模型名称：gemini-2.0-flash-exp
 　※编程模型可选：gemini exp-1206 　
 </code></pre>
-<ol start="3">
-<li>Gemini多模态客户端：<a href="https://github.com/ViaAnthroposBenevolentia/gemini-2-live-api-demo">https://github.com/ViaAnthroposBenevolentia/gemini-2-live-api-demo</a></li>
-</ol>
+<p>Gemini多模态客户端：<a href="https://github.com/ViaAnthroposBenevolentia/gemini-2-live-api-demo">https://github.com/ViaAnthroposBenevolentia/gemini-2-live-api-demo</a></p>
 <pre class="notranslate"><code class="notranslate">下载source
 cd gemini-2-live-api-demo-main
 cp js/config/config.example.js js/config/config.js  
@@ -193,9 +164,7 @@ Edit js/config/config.js with your API key ★
 python -m http.server 8000
 http://127.0.0.1:8000/
 </code></pre>
-<ol start="4">
-<li>Worker代理：<a href="https://github.com/tech-shrimp/gemini-proxy">https://github.com/tech-shrimp/gemini-proxy</a></li>
-</ol>
+<p>Worker代理：<a href="https://github.com/tech-shrimp/gemini-proxy">https://github.com/tech-shrimp/gemini-proxy</a></p>
 <pre class="notranslate"><code class="notranslate">cloudflare里创建一个 worker 用于websocket-proxy （例如：gemini-proxy）
 绑定域名（例如：gemini-proxy.grapehut.us.kg）
 コード編集：将worker.js 的内容黏贴到 cloudflare worker
