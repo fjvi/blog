@@ -6,34 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css' rel='stylesheet' />
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="# 🔖 查看Windows機能一覧
+<meta name="description" content="# 🔖 打开Windows機能开闭面板
 ```
-dism /online /Get-Features
+cmd ⇒ OptionalFeatures.exe
 ```
 
 
-# 🔖 不要使用 SMB1
+# 🔖 禁用 SMB1
+强烈建议关闭
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
-如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭
+如今版本的 windows 10/11 都默认禁用了 SMB1
 
 
 # 🔖 安全使用 SMB 共享的步骤
-这里提供一个简单的，可以在工作或家庭的局域网中显著提高安全性且不会太复杂的 SMB 共享设置方法
-
 1. 新建一个用户专门用于共享文件的授权，并设置此用户的权限
 2. 设置网络共享和系统安全的相关设置
 3. 开启共享，授权指定用户
+4. 删除 %User% 默认共享
 
 
 ## 🐻 1. 创建专用的用户
-新建一个本地用户，此用户只用在 SMB 共享
+新建一个本地用户，设置只用于 SMB 共享
 ```
  右键我的电脑⇒　管理⇒　本地用户和组⇒　用户⇒　右键空白处，点击“新用户”
 ```
 
 新建账号为 'joker' 的用户为例，相关设置如下：　
-只用于共享，因此设置**不能更改密码**，**密码不会过期**
+只用于共享，设置**不能更改密码**，**密码不会过期**
 
 `Gmeek-html<img src='../imgs/smb/smb0.png'>`
 `Gmeek-html<img src='../imgs/smb/smb1.png'>`
@@ -64,34 +64,34 @@ SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1
 设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，
 目的就是让 joker 只能用来 SMB 共享。">
 <meta property="og:title" content="Vol.28 Win开启SMB共享">
-<meta property="og:description" content="# 🔖 查看Windows機能一覧
+<meta property="og:description" content="# 🔖 打开Windows機能开闭面板
 ```
-dism /online /Get-Features
+cmd ⇒ OptionalFeatures.exe
 ```
 
 
-# 🔖 不要使用 SMB1
+# 🔖 禁用 SMB1
+强烈建议关闭
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
-如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭
+如今版本的 windows 10/11 都默认禁用了 SMB1
 
 
 # 🔖 安全使用 SMB 共享的步骤
-这里提供一个简单的，可以在工作或家庭的局域网中显著提高安全性且不会太复杂的 SMB 共享设置方法
-
 1. 新建一个用户专门用于共享文件的授权，并设置此用户的权限
 2. 设置网络共享和系统安全的相关设置
 3. 开启共享，授权指定用户
+4. 删除 %User% 默认共享
 
 
 ## 🐻 1. 创建专用的用户
-新建一个本地用户，此用户只用在 SMB 共享
+新建一个本地用户，设置只用于 SMB 共享
 ```
  右键我的电脑⇒　管理⇒　本地用户和组⇒　用户⇒　右键空白处，点击“新用户”
 ```
 
 新建账号为 'joker' 的用户为例，相关设置如下：　
-只用于共享，因此设置**不能更改密码**，**密码不会过期**
+只用于共享，设置**不能更改密码**，**密码不会过期**
 
 `Gmeek-html<img src='../imgs/smb/smb0.png'>`
 `Gmeek-html<img src='../imgs/smb/smb1.png'>`
@@ -187,26 +187,27 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
-<div class="markdown-body spoiler" id="postBody"><h1>🔖 查看Windows機能一覧</h1>
-<pre class="notranslate"><code class="notranslate">dism /online /Get-Features
+<div class="markdown-body spoiler" id="postBody"><h1>🔖 打开Windows機能开闭面板</h1>
+<pre class="notranslate"><code class="notranslate">cmd ⇒ OptionalFeatures.exe
 </code></pre>
-<h1>🔖 不要使用 SMB1</h1>
-<p>SMB1 可以追溯到20世纪80年代 IBM 和 <a href="https://pinpai.smzdm.com/1461/" rel="nofollow">微软</a>的DOS 时代<br>
+<h1>🔖 禁用 SMB1</h1>
+<p>强烈建议关闭<br>
+SMB1 可以追溯到20世纪80年代 IBM 和 <a href="https://pinpai.smzdm.com/1461/" rel="nofollow">微软</a>的DOS 时代<br>
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题<br>
-如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭</p>
+如今版本的 windows 10/11 都默认禁用了 SMB1</p>
 <h1>🔖 安全使用 SMB 共享的步骤</h1>
-<p>这里提供一个简单的，可以在工作或家庭的局域网中显著提高安全性且不会太复杂的 SMB 共享设置方法</p>
 <ol>
 <li>新建一个用户专门用于共享文件的授权，并设置此用户的权限</li>
 <li>设置网络共享和系统安全的相关设置</li>
 <li>开启共享，授权指定用户</li>
+<li>删除 %User% 默认共享</li>
 </ol>
 <h2>🐻 1. 创建专用的用户</h2>
-<p>新建一个本地用户，此用户只用在 SMB 共享</p>
+<p>新建一个本地用户，设置只用于 SMB 共享</p>
 <pre class="notranslate"><code class="notranslate"> 右键我的电脑⇒　管理⇒　本地用户和组⇒　用户⇒　右键空白处，点击“新用户”
 </code></pre>
 <p>新建账号为 "joker" 的用户为例，相关设置如下：　<br>
-只用于共享，因此设置<strong>不能更改密码</strong>，<strong>密码不会过期</strong></p>
+只用于共享，设置<strong>不能更改密码</strong>，<strong>密码不会过期</strong></p>
 <p><img src="../imgs/smb/smb0.png"><br>
 <img src="../imgs/smb/smb1.png"><br>
 <img src="../imgs/smb/smb2.png"><br>
