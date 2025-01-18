@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css' rel='stylesheet' />
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="# 🔖 不要使用 SMB1
+<meta name="description" content="# 🔖 查看Windows機能一覧
+```
+dism /online /Get-Features
+```
+
+
+# 🔖 不要使用 SMB1
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
 如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭
@@ -58,7 +64,13 @@ SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1
 设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，
 目的就是让 joker 只能用来 SMB 共享。">
 <meta property="og:title" content="Vol.28 Win开启SMB共享">
-<meta property="og:description" content="# 🔖 不要使用 SMB1
+<meta property="og:description" content="# 🔖 查看Windows機能一覧
+```
+dism /online /Get-Features
+```
+
+
+# 🔖 不要使用 SMB1
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
 如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭
@@ -175,7 +187,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
-<div class="markdown-body spoiler" id="postBody"><h1>🔖 不要使用 SMB1</h1>
+<div class="markdown-body spoiler" id="postBody"><h1>🔖 查看Windows機能一覧</h1>
+<pre class="notranslate"><code class="notranslate">dism /online /Get-Features
+</code></pre>
+<h1>🔖 不要使用 SMB1</h1>
 <p>SMB1 可以追溯到20世纪80年代 IBM 和 <a href="https://pinpai.smzdm.com/1461/" rel="nofollow">微软</a>的DOS 时代<br>
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题<br>
 如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭</p>

@@ -1,3 +1,9 @@
+# 🔖 查看Windows機能一覧
+```
+dism /online /Get-Features
+```
+
+
 # 🔖 不要使用 SMB1
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
