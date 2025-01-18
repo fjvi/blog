@@ -1,4 +1,4 @@
-# OpenAI API
+# 🔖 OpenAI API
 ### 1. https://github.com/chatanywhere/GPT_API_free （一天200次）
 支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理
 ```
@@ -32,7 +32,7 @@ API地址： https://free.v36.cm (无需代理，直接可用）
 
 
 
-# Grok API   (免费赠送25USD/mo活动 2024/12已结束)
+# 🔖 Grok API   (免费赠送25USD/mo活动 2024/12已结束)
 模型：grok-beta
 获取KEY：https://console.x.ai/
 API地址： https://api.x.ai/v1 (无需代理，直接可用）
@@ -42,7 +42,7 @@ https://x.com/i/grok （有X账号就可以使用）
 
 
 
-# Gemini API  （限制10次/分、不适用于沉浸式翻译）
+# 🔖 Gemini API  （限制10次/分、不适用于沉浸式翻译）
 模型：gemini-2.0-flash-exp
 获取KEY：https://aistudio.google.com/apikey
 API地址： https://generativelanguage.googleapis.com（国内无法直接访问，需要自建代理）
@@ -66,7 +66,7 @@ API地址： https://generativelanguage.googleapis.com（国内无法直接访�
 
 
 
-# 利用实例
+# 🔖 利用实例
 
 ChatBox：https://github.com/Bin-Huang/chatbox
 ```
