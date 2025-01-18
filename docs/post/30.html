@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css' rel='stylesheet' />
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="# Windows でのパッケージ管理は Scoop
+<meta name="description" content="# 🔖 Windows でのパッケージ管理は Scoop
 
 
-最近、Windows 上で Powershell を使ってちょっとした開発を行った際に、Powershell のコマンド分からん…! となっていたんですが、Scoop というパッケージマネージャーを使って Linux 系のコマンドだったりパッケージをインストールすることで開発しやすくなりました。">
+Scoop とは？
+Windows で動くパッケージマネージャー。">
 <meta property="og:title" content="Vol.30 Windowsパッケージ管理 Scoop">
-<meta property="og:description" content="# Windows でのパッケージ管理は Scoop
+<meta property="og:description" content="# 🔖 Windows でのパッケージ管理は Scoop
 
 
-最近、Windows 上で Powershell を使ってちょっとした開発を行った際に、Powershell のコマンド分からん…! となっていたんですが、Scoop というパッケージマネージャーを使って Linux 系のコマンドだったりパッケージをインストールすることで開発しやすくなりました。">
+Scoop とは？
+Windows で動くパッケージマネージャー。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.grapehut.us.kg/post/30.html">
 <meta property="og:image" content="">
@@ -81,8 +83,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
-<div class="markdown-body spoiler" id="postBody"><h1>Windows でのパッケージ管理は Scoop</h1>
-<p>最近、Windows 上で Powershell を使ってちょっとした開発を行った際に、Powershell のコマンド分からん…! となっていたんですが、Scoop というパッケージマネージャーを使って Linux 系のコマンドだったりパッケージをインストールすることで開発しやすくなりました。その内容を記事にしてみます。</p>
+<div class="markdown-body spoiler" id="postBody"><h1>🔖 Windows でのパッケージ管理は Scoop</h1>
 <p>Scoop とは？<br>
 Windows で動くパッケージマネージャー。コマンドプロンプトや Powershell で使用できる。<br>
 Windows でのパッケージマネージャーといえば、<br>
@@ -91,9 +92,9 @@ Windows でのパッケージマネージャーといえば、<br>
 <a href="https://scoop.sh/" rel="nofollow">Scoop</a> はよりデベロッパーフレンドリーなんだとか。<br>
 また、winget だとコマンドでインストールしたもの以外も管理下に置かれますが、scoop だと scoop でインストールしたもののみを管理できます (この点は、chocolaty と同様かもしれません)。</p>
 <p>例えば、Git for Windows をインストールする場合、インストーラーをダウンロードして実行して Next ボタンをポチポチして… みたいな形ですが、Scoop だと scoop install git コマンドで一発。アンインストールする際も同様にコマンドだけで完結できます。</p>
-<h1>インストール方法</h1>
+<h1>🔖 インストール方法</h1>
 <p>上記リンク先の、Quickstart に従って、Powershell でコマンドを実行するだけ。それだけ。</p>
-<h1>使い方</h1>
+<h1>🔖 使い方</h1>
 <p>上でもちょっと書きましたが、何かインストールする際には以下コマンド。</p>
 <pre class="notranslate"><code class="notranslate">scoop install {package_name}
 </code></pre>
