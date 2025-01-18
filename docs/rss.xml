@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Wed, 15 Jan 2025 13:59:30 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟货币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># Grass&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Sat, 18 Jan 2025 05:36:39 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟货币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># Grass&#13;
 https://app.getgrass.io/&#13;
 Wallet　SOL(Solana)：BWMDv46owqpA3XRXpbT8pkap9fZotcFx6E7QSx2dVANJ&#13;
 https://solscan.io/account/BWMDv46owqpA3XRXpbT8pkap9fZotcFx6E7QSx2dVANJ&#13;
@@ -133,7 +133,19 @@ https://test.cf996.ip-ddns.com/8cda8d90-9c66-4f59-8f98-d433d6238a8c&#13;
 注意：Shadowrocket(小火箭)、v2box、v2rayn、v2rayng客户端对trojan+ws有强制开启TLS问题，造成trojan+ws不通。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/31.html</guid><pubDate>Mon, 13 Jan 2025 06:08:14 +0000</pubDate></item><item><title>Vol.30 Windowsパッケージ管理 Scoop</title><link>https://blog.grapehut.us.kg/post/30.html</link><description># Windows でのパッケージ管理は Scoop&#13;
 &#13;
 &#13;
-最近、Windows 上で Powershell を使ってちょっとした開発を行った際に、Powershell のコマンド分からん…! となっていたんですが、Scoop というパッケージマネージャーを使って Linux 系のコマンドだったりパッケージをインストールすることで開発しやすくなりました。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/30.html</guid><pubDate>Sat, 11 Jan 2025 13:13:52 +0000</pubDate></item><item><title>Vol.29 Gemini API 利用实例</title><link>https://blog.grapehut.us.kg/post/29.html</link><description>Google Gemini 是所有一线顶级大模型当中，唯一一个 API可以免费白嫖的。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/29.html</guid><pubDate>Sun, 05 Jan 2025 13:33:04 +0000</pubDate></item><item><title>Vol.28 Win开启SMB共享</title><link>https://blog.grapehut.us.kg/post/28.html</link><description># 不要使用 SMB1&#13;
+最近、Windows 上で Powershell を使ってちょっとした開発を行った際に、Powershell のコマンド分からん…! となっていたんですが、Scoop というパッケージマネージャーを使って Linux 系のコマンドだったりパッケージをインストールすることで開発しやすくなりました。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/30.html</guid><pubDate>Sat, 11 Jan 2025 13:13:52 +0000</pubDate></item><item><title>Vol.29 Gemini API 利用实例</title><link>https://blog.grapehut.us.kg/post/29.html</link><description># OpenAI API
+### 1. https://github.com/chatanywhere/GPT_API_free
+支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理
+```
+支持Models, 
+　Embedding, 
+　text-davinci(免费版不支持), 
+　GPT-3.5-Turbo, GPT-3.5-Turbo-16K(免费版不支持), 
+　GPT-4, DALLE(免费版不支持), 
+　Whisper(免费版不支持)
+　免费版就可以支持AutoGPT, gpt_academic, langchain等
+　免费版支持gpt-4，一天3次；
+★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/29.html</guid><pubDate>Sun, 05 Jan 2025 13:33:04 +0000</pubDate></item><item><title>Vol.28 Win开启SMB共享</title><link>https://blog.grapehut.us.kg/post/28.html</link><description># 不要使用 SMB1&#13;
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代&#13;
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题&#13;
 如今版本的 windows 10/11 都默认禁用了 SMB1，因此如果还在使用这一协议的话，强烈建议关闭&#13;
