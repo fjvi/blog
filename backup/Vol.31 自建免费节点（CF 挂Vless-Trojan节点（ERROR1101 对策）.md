@@ -1,9 +1,9 @@
-# 新建Worker
+# 🔖 新建Worker
 CF里创建一个worker（worker名字任意，如 cf996），初始脚本（work.js） 为默认Helloworld 即可
 CF会自动生成worker网址   如：https://cf996.hst1189.workers.dev
 
 
-# 脚本地址
+# 🔖 脚本地址
 替换默认脚本 work.js 后部署
 为了防止ERROR1101 , 建议使用以下混淆代码
 https://github.com/yonggekkk/Cloudflare_vless_trojan
@@ -11,7 +11,7 @@ https://github.com/yonggekkk/Cloudflare_vless_trojan
 ✓[Trojan_workers_pages](https://github.com/yonggekkk/Cloudflare_vless_trojan/tree/main/Trojan_workers_pages)
 
 
-# Worker添加变量
+# 🔖 Worker添加变量
 ### 1. Vless节点的变量设置
 
 `Gmeek-html<img src="../imgs/vlessnode/clouDNS0.PNG">`
@@ -40,13 +40,13 @@ cmd ⇒ Powershell -NoExit -Command "[guid]::NewGuid()
 ```
 
 
-# 获取链接地址
+# 🔖 获取链接地址
 上述变量设置以后，部署，更新网址 ↓
 https://cf996.hst1189.workers.dev/8cda8d90-9c66-4f59-8f98-d433d6238a8c
 打开此网址，找到里面的链接，黏贴到软件里即可
 
 
-# 绑定域名（可选，被墙对策）
+# 🔖 绑定域名（可选，被墙对策）
 CF的worker 域名（https://*. workers.dev）被墙的话，可以通过绑定域名回避
 1. CF里添加网站 cf996.ip-ddns.com（通过clouDNS免费获得）
 2. clouDNS 添加DNS解释 A2个，NS2个（双向解析，如下图，必须和CF设置同步一致）
@@ -73,11 +73,7 @@ https://test.cf996.ip-ddns.com/8cda8d90-9c66-4f59-8f98-d433d6238a8c
 
 
 
-
-
-
-
-# 常用软件
+# 🔖 常用软件
 1、安卓Android：[v2rayNG](https://github.com/2dust/v2rayNG/tags)、[Nekobox](https://github.com/starifly/NekoBoxForAndroid/releases)、[Karing](https://github.com/KaringX/karing/tags)、v2box
 
 2、电脑Windows：[v2rayN](https://github.com/2dust/v2rayN/tags)、[Hiddify](https://github.com/hiddify/hiddify-next/tags)、[Karing](https://github.com/KaringX/karing/tags)
