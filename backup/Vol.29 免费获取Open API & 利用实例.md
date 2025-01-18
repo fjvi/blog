@@ -48,8 +48,7 @@ https://x.com/i/grok （有X账号就可以使用）
 API地址： https://generativelanguage.googleapis.com（国内需要自建代理）
 
 
-### 不支持Gemini 接口的，通过下面可以转成OpenAI接口
-[openai-gemini](https://github.com/PublicAffairs/openai-gemini)
+### 不支持Gemini 接口的，通过下面可以转成OpenAI接口[openai-gemini](https://github.com/PublicAffairs/openai-gemini)
 通过Github Actions功能，在Cloudflare创建Worker，充当中转。需要绑定自定义域名
 ```
 选择 Deploy to Cloudflare
