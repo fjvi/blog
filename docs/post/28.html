@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://cdn.jsdelivr.net/npm/@primer/css@21.5.1/dist/primer.min.css' rel='stylesheet' />
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-<meta name="description" content="# 🔖 打开Windows機能面板
+<meta name="description" content="# 🔖 禁用 SMB1
+强烈建议关闭，打开Windows機能面板
 ```
 cmd ⇒ OptionalFeatures.exe
 ```
-
-
-# 🔖 禁用 SMB1
-强烈建议关闭
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
 如今版本的 windows 10/11 都默认禁用了 SMB1
+
+
 
 
 # 🔖 安全使用 SMB 共享的步骤
@@ -49,17 +48,16 @@ cmd ⇒ compmgmt.msc  打开计算机管理面板
 设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，
 目的就是让 joker 只能用来 SMB 共享。">
 <meta property="og:title" content="Vol.28 Win安全开启SMB共享">
-<meta property="og:description" content="# 🔖 打开Windows機能面板
+<meta property="og:description" content="# 🔖 禁用 SMB1
+强烈建议关闭，打开Windows機能面板
 ```
 cmd ⇒ OptionalFeatures.exe
 ```
-
-
-# 🔖 禁用 SMB1
-强烈建议关闭
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
 如今版本的 windows 10/11 都默认禁用了 SMB1
+
+
 
 
 # 🔖 安全使用 SMB 共享的步骤
@@ -157,12 +155,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
-<div class="markdown-body spoiler" id="postBody"><h1>🔖 打开Windows機能面板</h1>
+<div class="markdown-body spoiler" id="postBody"><h1>🔖 禁用 SMB1</h1>
+<p>强烈建议关闭，打开Windows機能面板</p>
 <pre class="notranslate"><code class="notranslate">cmd ⇒ OptionalFeatures.exe
 </code></pre>
-<h1>🔖 禁用 SMB1</h1>
-<p>强烈建议关闭<br>
-SMB1 可以追溯到20世纪80年代 IBM 和 <a href="https://pinpai.smzdm.com/1461/" rel="nofollow">微软</a>的DOS 时代<br>
+<p>SMB1 可以追溯到20世纪80年代 IBM 和 <a href="https://pinpai.smzdm.com/1461/" rel="nofollow">微软</a>的DOS 时代<br>
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题<br>
 如今版本的 windows 10/11 都默认禁用了 SMB1</p>
 <h1>🔖 安全使用 SMB 共享的步骤</h1>
@@ -269,8 +266,14 @@ windows设置⇒　安全设置⇒　本地策略⇒　安全选项⇒　已禁�
 <img src="../imgs/smb/smb31.png"></p>
 <p>查看共享的文件</p>
 <pre class="notranslate"><code class="notranslate">cmd ⇒  net share
+或者cmd ⇒ fsmgmt.msc
+或者cmd ⇒ compmgmt.msc
+
 </code></pre>
-<h2>4.删除 %User% 默认共享</h2></div>
+<h2>4.删除 %User% 默认共享</h2>
+<p>查看共享的文件</p>
+<pre class="notranslate"><code class="notranslate">cmd ⇒  net share ＜共有名＞ /d
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

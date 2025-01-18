@@ -1,14 +1,13 @@
-# 🔖 打开Windows機能面板
+# 🔖 禁用 SMB1
+强烈建议关闭，打开Windows機能面板
 ```
 cmd ⇒ OptionalFeatures.exe
 ```
-
-
-# 🔖 禁用 SMB1
-强烈建议关闭
 SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1461/)的DOS 时代
 距离今天已经有三十多年的时间，当时计算机安全还不存在，它在拦截攻击方面有重大的架构问题
 如今版本的 windows 10/11 都默认禁用了 SMB1
+
+
 
 
 # 🔖 安全使用 SMB 共享的步骤
@@ -148,9 +147,15 @@ cmd ⇒  gpedit.msc   打开“本地组策略编辑器
 查看共享的文件
 ```
 cmd ⇒  net share
+或者cmd ⇒ fsmgmt.msc
+或者cmd ⇒ compmgmt.msc
+
 ```
 
 ## 4.删除 %User% 默认共享
-
+查看共享的文件
+```
+cmd ⇒  net share ＜共有名＞ /d
+```
 
 
