@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Sat, 18 Jan 2025 09:44:06 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟货币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># Grass&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Sat, 18 Jan 2025 10:27:27 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟货币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># Grass&#13;
 https://app.getgrass.io/&#13;
 Wallet　SOL(Solana)：BWMDv46owqpA3XRXpbT8pkap9fZotcFx6E7QSx2dVANJ&#13;
 https://solscan.io/account/BWMDv46owqpA3XRXpbT8pkap9fZotcFx6E7QSx2dVANJ&#13;
@@ -124,7 +124,7 @@ https://test.cf996.ip-ddns.com/8cda8d90-9c66-4f59-8f98-d433d6238a8c&#13;
 ### 1. https://github.com/chatanywhere/GPT_API_free （一天200次）
 支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理
 ```
-★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/29.html</guid><pubDate>Sun, 05 Jan 2025 13:33:04 +0000</pubDate></item><item><title>Vol.28 Win开启SMB共享</title><link>https://blog.grapehut.us.kg/post/28.html</link><description># 🔖 打开Windows機能开闭面板
+★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/29.html</guid><pubDate>Sun, 05 Jan 2025 13:33:04 +0000</pubDate></item><item><title>Vol.28 Win开启SMB共享</title><link>https://blog.grapehut.us.kg/post/28.html</link><description># 🔖 打开Windows機能面板
 ```
 cmd ⇒ OptionalFeatures.exe
 ```
@@ -147,7 +147,8 @@ SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1
 ## 🐻 1. 创建专用的用户
 新建一个本地用户，设置只用于 SMB 共享
 ```
- 右键我的电脑⇒　管理⇒　本地用户和组⇒　用户⇒　右键空白处，点击“新用户”
+cmd ⇒ compmgmt.msc  打开计算机管理面板
+本地用户和组⇒　用户⇒　右键空白处，点击“新用户”
 ```
 
 新建账号为 'joker' 的用户为例，相关设置如下：　
@@ -162,23 +163,7 @@ SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1
 
 ## 🐻 2. 设置网络共享和系统安全的相关设置
 
-#### 分配用户权限
-```
-按住 win + R，在“运行”窗口中输入  `secpol.msc`, 打开 “本地安全策略”设置窗口：
-本地策略⇒　用户权限分配
-```
-- 从网络访问此计算机：只有授权的用户能够通过网络来访问到本机上的共享文件资源（包括共享的打印机）
-- 拒绝本地登录：即不允许特定用户在本电脑上进行登录
-- 拒绝通过远程桌面服务登录：即不允许此账户使用远程桌面登录到本系统
-
-`Gmeek-html&lt;img src='../imgs/smb/smb8.png'&gt;`
-`Gmeek-html&lt;img src='../imgs/smb/smb9.png'&gt;`
-`Gmeek-html&lt;img src='../imgs/smb/smb14.png'&gt;`
-`Gmeek-html&lt;img src='../imgs/smb/smb10.png'&gt;`
-`Gmeek-html&lt;img src='../imgs/smb/smb11.png'&gt;`
-`Gmeek-html&lt;img src='../imgs/smb/smb12.png'&gt;`
-`Gmeek-html&lt;img src='../imgs/smb/smb13.png'&gt;`
-
+#### 2.1 分配用户权限
 设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，
 目的就是让 joker 只能用来 SMB 共享。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/28.html</guid><pubDate>Tue, 24 Dec 2024 06:00:06 +0000</pubDate></item><item><title>Vol.27 家用服务器（Ubuntu編）</title><link>https://blog.grapehut.us.kg/post/27.html</link><description># 1. 安装Ubuntu系统&#13;
 Linux发行版Ubuntu24.04LTS　　※LTS的意思是'长期支持'&#13;
