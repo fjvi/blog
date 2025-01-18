@@ -119,32 +119,19 @@ API地址： <a href="https://api.x.ai/v1" rel="nofollow">https://api.x.ai/v1</a
 <h1>Gemini API</h1>
 <p>模型：gemini-2.0-flash-exp<br>
 获取KEY：<a href="https://aistudio.google.com/apikey" rel="nofollow">https://aistudio.google.com/apikey</a><br>
-API地址： <a href="https://generativelanguage.googleapis.com%EF%BC%88%E5%9B%BD%E5%86%85%E9%9C%80%E8%A6%81%E8%87%AA%E5%BB%BA%E4%BB%A3%E7%90%86%EF%BC%89" rel="nofollow">https://generativelanguage.googleapis.com（国内需要自建代理）</a></p>
-<h3>不支持Gemini 接口的，通过下面可以转成OpenAI接口<a href="https://github.com/PublicAffairs/openai-gemini">openai-gemini</a></h3>
-<p>通过Github Actions功能，在Cloudflare创建Worker，充当中转。需要绑定自定义域名</p>
-<pre class="notranslate"><code class="notranslate">选择 Deploy to Cloudflare
-・Account ID
-・API Token  所有账户，所有区域
+API地址： <a href="https://generativelanguage.googleapis.com%EF%BC%88%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%EF%BC%8C%E9%9C%80%E8%A6%81%E8%87%AA%E5%BB%BA%E4%BB%A3%E7%90%86%EF%BC%89" rel="nofollow">https://generativelanguage.googleapis.com（国内无法直接访问，需要自建代理）</a></p>
+<h3>自建代理方法：</h3>
+<p>通过下面自建代理，同时能转成常用的 OpenAI格式接口<br>
+<a href="https://github.com/PublicAffairs/openai-gemini">openai-gemini</a>通过Github Actions功能，在Cloudflare创建Worker</p>
+<pre class="notranslate"><code class="notranslate">1. 选择VPS
+例：Deploy to Cloudflare
+・获取 Account ID
+・获取 API Token  选择所有账户，所有区域
 
-Fork repository
+2. Fork repository　运行github workflower， 自動部署 Cloudflare Worker（Worker默认名字为 gemini ） 
 
-github workflower 会自动运行
-
-最后绑定域名（例如：gemini.grapehut.us.kg）
+3. Worker绑定域名（例如：gemini.grapehut.us.kg） 　※然后就可以调用此域名了
 </code></pre>
-<p>设置参数：</p>
-<ol>
-<li>
-<p>方法一：选择OpenAI<br>
-API地址填入 Cloudflare Worker的自定义域名<br>
-模型添加gemini-2.0-flash-exp</p>
-</li>
-<li>
-<p>方法二：选择自定义<br>
-API地址填入  自定义域名/v1/chat/completions<br>
-模型添加gemini-2.0-flash-exp</p>
-</li>
-</ol>
 <h1>利用实例</h1>
 <p>ChatBox：<a href="https://github.com/Bin-Huang/chatbox">https://github.com/Bin-Huang/chatbox</a></p>
 <pre class="notranslate"><code class="notranslate">下载安装后设置
@@ -154,6 +141,18 @@ API地址填入  自定义域名/v1/chat/completions<br>
 　模型       ：自定义模型
 　自定义模型名称：gemini-2.0-flash-exp
 　※编程模型可选：gemini exp-1206 　
+
+
+设置参数：
+1. 方法一：选择OpenAI
+API地址填入 Cloudflare Worker的自定义域名
+模型添加gemini-2.0-flash-exp
+
+2. 方法二：选择自定义
+API地址填入  自定义域名/v1/chat/completions
+模型添加gemini-2.0-flash-exp
+
+
 </code></pre>
 <p>Gemini多模态客户端：<a href="https://github.com/ViaAnthroposBenevolentia/gemini-2-live-api-demo">https://github.com/ViaAnthroposBenevolentia/gemini-2-live-api-demo</a></p>
 <pre class="notranslate"><code class="notranslate">下载source
