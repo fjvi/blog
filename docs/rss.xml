@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Sat, 18 Jan 2025 09:01:32 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟货币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># Grass&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Sat, 18 Jan 2025 09:02:33 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟货币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># Grass&#13;
 https://app.getgrass.io/&#13;
 Wallet　SOL(Solana)：BWMDv46owqpA3XRXpbT8pkap9fZotcFx6E7QSx2dVANJ&#13;
 https://solscan.io/account/BWMDv46owqpA3XRXpbT8pkap9fZotcFx6E7QSx2dVANJ&#13;
@@ -187,7 +187,7 @@ SMB1 可以追溯到20世纪80年代 IBM 和 [微软](https://pinpai.smzdm.com/1
 `Gmeek-html&lt;img src='../imgs/smb/smb13.png'&gt;`&#13;
 &#13;
 设置好之后，joker 用户就无法本地登录到系统，同时也无法通过远程桌面的形式登录到本机，&#13;
-目的就是让 joker 只能用来 SMB 共享。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/28.html</guid><pubDate>Tue, 24 Dec 2024 06:00:06 +0000</pubDate></item><item><title>Vol.27 设置家用服务器</title><link>https://blog.grapehut.us.kg/post/27.html</link><description># 1. 安装Ubuntu系统&#13;
+目的就是让 joker 只能用来 SMB 共享。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/28.html</guid><pubDate>Tue, 24 Dec 2024 06:00:06 +0000</pubDate></item><item><title>Vol.27 设置家用服务器（Ubuntu編）</title><link>https://blog.grapehut.us.kg/post/27.html</link><description># 1. 安装Ubuntu系统&#13;
 Linux发行版Ubuntu24.04LTS　　※LTS的意思是'长期支持'&#13;
 https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-desktop-amd64.iso&#13;
 &#13;
