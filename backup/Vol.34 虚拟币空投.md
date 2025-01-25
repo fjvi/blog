@@ -1,3 +1,11 @@
+# 🎏 pump.fun
+https://pump.fun/board
+
+
+# 🎏 DEX
+https://universalx.app/home
+
+
 # 🎏 Grass
 官网：https://app.getgrass.io/dashboard
 邀请：https://app.getgrass.io/register?referralCode=C2dcRb4zqSEJhOb
