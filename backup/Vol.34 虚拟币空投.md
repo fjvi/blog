@@ -4,6 +4,7 @@ https://pump.fun/board
 
 # 🎏 DEX
 https://universalx.app/home
+https://jup.ag/zh-SG
 
 
 # 🎏 Grass
