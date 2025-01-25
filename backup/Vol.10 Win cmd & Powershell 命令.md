@@ -6,6 +6,12 @@ shell:startup
 shell:commmon startup
 ```
 
+## 打开开机自启动程序文件夹
+```
+shell:programs
+shell:commmon programs
+```
+
 ## 打开字体文件夹
 ```
 shell:fonts
