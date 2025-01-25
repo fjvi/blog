@@ -8,7 +8,7 @@ WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高
 - WSL（Windows Subsystem for Linux）
 - 虚拟机平台
 
-或者，执行 PowerShell （管理者身份）
+或者执行 PowerShell 开启 （管理者身份）
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -48,7 +48,7 @@ $ wsl --help
 
 ### 安装 WSL
 ```
-$ wsl --install　                                      ※默认安装Ubuntu  
+$ wsl --install　                              ※默认安装Ubuntu  
 $ wsl --install -d <DistributionName>   ※指定系统
 ```
 

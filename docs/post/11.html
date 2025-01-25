@@ -86,7 +86,7 @@ WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高
 <li>WSL（Windows Subsystem for Linux）</li>
 <li>虚拟机平台</li>
 </ul>
-<p>或者，执行 PowerShell （管理者身份）</p>
+<p>或者执行 PowerShell 开启 （管理者身份）</p>
 <pre class="notranslate"><code class="notranslate">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 </code></pre>
@@ -117,7 +117,7 @@ Windows バージョン: 10.0.26100.863
 <pre class="notranslate"><code class="notranslate">$ wsl --help
 </code></pre>
 <h3>安装 WSL</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl --install　                                      ※默认安装Ubuntu  
+<pre class="notranslate"><code class="notranslate">$ wsl --install　                              ※默认安装Ubuntu  
 $ wsl --install -d &lt;DistributionName&gt;   ※指定系统
 </code></pre>
 <h3>查看已安装系统</h3>
