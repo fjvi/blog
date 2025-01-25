@@ -6,10 +6,15 @@ shell:startup
 shell:commmon startup
 ```
 
-## 打开开机自启动程序文件夹
+## 打开开始菜单程序一览
 ```
 shell:programs
 shell:commmon programs
+```
+
+## 打开程序文件夹
+```
+shell:appsfolder
 ```
 
 ## 打开字体文件夹
