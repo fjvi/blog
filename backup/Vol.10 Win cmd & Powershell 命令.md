@@ -8,7 +8,12 @@ shell:commmon startup
 
 ## 打开字体文件夹
 ```
-shell:font
+shell:fonts
+```
+
+## 打开字发送到文件夹
+```
+shell:sendto
 ```
 
 ## 查看内网IP
