@@ -1,5 +1,6 @@
 # 关于 WSL（Windows Subsystem for Linux）
-Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。 WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高效的体验。
+Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。 
+WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高效的体验。
 
 
 # 前提条件
@@ -7,16 +8,23 @@ Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境�
 - WSL（Windows Subsystem for Linux）
 - 虚拟机平台
 
+或者，执行 PowerShell （管理者身份）
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
-# WSL命令
+# 微软官网
+> https://learn.microsoft.com/ja-jp/windows/wsl/install-manual
 > https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands
 
 
+# WSL命令
 ### 查看wsl版本
 ```
 $ wsl --version
 
-WSL バージョン: 2.3.26.0                    ←wsl2
+WSL バージョン: 2.3.26.0
 カーネル バージョン: 5.15.167.4-1
 WSLg バージョン: 1.0.65
 MSRDC バージョン: 1.2.5620
@@ -44,21 +52,26 @@ $ wsl --install　                                      ※默认安装Ubuntu
 $ wsl --install -d <DistributionName>   ※指定系统
 ```
 
+### 查看已安装系统
+```
+$ wsl --list --verbose    或者  $ wsl -l -v　
+```
+
+
 ### 查看可安装系统
 ```
-$ wsl --list --online
-$ wsl -l -o　
+$ wsl --list --online   或者   $ wsl -l -o　
 ```
 
 |NAME|FRIENDLY NAME|Default|
 |---|---|---|
-|Ubuntu                        |Ubuntu |★|
+|Ubuntu                        |Ubuntu ||
 |Debian                         |Debian GNU/Linux||
 |kali-linux                      |Kali Linux Rolling||
 |Ubuntu-18.04              |Ubuntu 18.04 LTS||
 |Ubuntu-20.04              |Ubuntu 20.04 LTS||
 |Ubuntu-22.04              |Ubuntu 22.04 LTS||
-|Ubuntu-24.04              |Ubuntu 24.04 LTS||
+|Ubuntu-24.04              |Ubuntu 24.04 LTS|★|
 |OracleLinux_7_9           |Oracle Linux 7.9||
 |OracleLinux_8_7           |Oracle Linux 8.7||
 |OracleLinux_9_1           |Oracle Linux 9.1||
@@ -68,18 +81,11 @@ $ wsl -l -o　
 |openSUSE-Tumbleweed             |openSUSE Tumbleweed||
 
 
-### 查看已安装系统
-```
-$ wsl --list --verbose
-$ wsl -l -v　
-```
-
 
 ### 设置默认系统
 ```
 $ wsl --set-default <Distribution Name>
 $ wsl -s <DistributionName>
-
 ```
 
 ### 切换系统

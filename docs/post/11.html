@@ -78,21 +78,28 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <!--<nav class="SideNav border"></nav>-->
 <div class="markdown-body spoiler" id="postBody"><h1>关于 WSL（Windows Subsystem for Linux）</h1>
-<p>Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。 WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高效的体验。</p>
+<p>Windows 的一项功能，可用于在 Windows 计算机上运行 Linux 环境，而无需单独的虚拟机或双引导。<br>
+WSL 旨在为希望同时使用 Windows 和 Linux 的开发人员提供无缝高效的体验。</p>
 <h1>前提条件</h1>
 <p>开启以下2个功能 （系统 &gt; 附加功能 &gt; 其他功能 ）</p>
 <ul>
 <li>WSL（Windows Subsystem for Linux）</li>
 <li>虚拟机平台</li>
 </ul>
-<h1>WSL命令</h1>
+<p>或者，执行 PowerShell （管理者身份）</p>
+<pre class="notranslate"><code class="notranslate">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre>
+<h1>微软官网</h1>
 <blockquote>
-<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands</a></p>
+<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/install-manual" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/install-manual</a><br>
+<a href="https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands" rel="nofollow">https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands</a></p>
 </blockquote>
+<h1>WSL命令</h1>
 <h3>查看wsl版本</h3>
 <pre class="notranslate"><code class="notranslate">$ wsl --version
 
-WSL バージョン: 2.3.26.0                    ←wsl2
+WSL バージョン: 2.3.26.0
 カーネル バージョン: 5.15.167.4-1
 WSLg バージョン: 1.0.65
 MSRDC バージョン: 1.2.5620
@@ -113,9 +120,11 @@ Windows バージョン: 10.0.26100.863
 <pre class="notranslate"><code class="notranslate">$ wsl --install　                                      ※默认安装Ubuntu  
 $ wsl --install -d &lt;DistributionName&gt;   ※指定系统
 </code></pre>
+<h3>查看已安装系统</h3>
+<pre class="notranslate"><code class="notranslate">$ wsl --list --verbose    或者  $ wsl -l -v　
+</code></pre>
 <h3>查看可安装系统</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl --list --online
-$ wsl -l -o　
+<pre class="notranslate"><code class="notranslate">$ wsl --list --online   或者   $ wsl -l -o　
 </code></pre>
 <markdown-accessiblity-table><table role="table">
 <thead>
@@ -129,7 +138,7 @@ $ wsl -l -o　
 <tr>
 <td>Ubuntu</td>
 <td>Ubuntu</td>
-<td>★</td>
+<td></td>
 </tr>
 <tr>
 <td>Debian</td>
@@ -159,7 +168,7 @@ $ wsl -l -o　
 <tr>
 <td>Ubuntu-24.04</td>
 <td>Ubuntu 24.04 LTS</td>
-<td></td>
+<td>★</td>
 </tr>
 <tr>
 <td>OracleLinux_7_9</td>
@@ -198,14 +207,9 @@ $ wsl -l -o　
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
-<h3>查看已安装系统</h3>
-<pre class="notranslate"><code class="notranslate">$ wsl --list --verbose
-$ wsl -l -v　
-</code></pre>
 <h3>设置默认系统</h3>
 <pre class="notranslate"><code class="notranslate">$ wsl --set-default &lt;Distribution Name&gt;
 $ wsl -s &lt;DistributionName&gt;
-
 </code></pre>
 <h3>切换系统</h3>
 <pre class="notranslate"><code class="notranslate">$ wsl --set-version &lt;distribution name&gt; &lt;versionNumber&gt;　
