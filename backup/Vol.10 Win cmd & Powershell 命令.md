@@ -1,5 +1,16 @@
 # cmd命令
 
+## 打开开机自启动程序文件夹
+```
+shell:startup
+shell:commmon startup
+```
+
+## 打开字体文件夹
+```
+shell:font
+```
+
 ## 查看内网IP
 ```
 ipconfig
