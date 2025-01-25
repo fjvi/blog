@@ -33,7 +33,6 @@ Microsoft Hyper-V是一款虚拟化软件，内置于Windows Server 2008及其�
 
 
 ### Windows家庭版，强制开启hyper-v
-`Gmeek-html<img src="https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png">`
 
 ```
 pushd "%~dp0"

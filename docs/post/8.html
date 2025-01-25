@@ -205,7 +205,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 <p><img src="https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/media/enable-hyper-v.png"></p>
 <h3>Windows家庭版，强制开启hyper-v</h3>
-<p><img src="https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png"></p>
 <pre class="notranslate"><code class="notranslate">pushd "%~dp0"
 dir /b %SystemRoot%servicingPackages*Hyper-V*.mum &gt;hv.txt
 for /f %%i in ('findstr /i . hv.txt 2^&gt;nul') do dism /online /norestart /add-package:"%SystemRoot%servicingPackages%%i"
