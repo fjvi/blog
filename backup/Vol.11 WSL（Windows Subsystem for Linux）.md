@@ -48,7 +48,7 @@ $ wsl --help
 
 ### 安装 WSL
 ```
-$ wsl --install　                        ※默认安装Ubuntu  
+$ wsl --install　                       ※默认安装Ubuntu  
 $ wsl --install -d <DistributionName>   ※指定系统
 ```
 
@@ -95,7 +95,7 @@ $ wsl --set-version <distribution name> <versionNumber>　
 
 ### 启动wsl
 ```
-$ wsl 　                    ※启动默认版本
+$ wsl 　                     ※启动默认版本
 $ wsl ~　                    ※ユーザーのホーム ディレクトリから開始
 $ wsl -d <DistributionName>　※指定版本
 ```
@@ -104,7 +104,7 @@ $ wsl -d <DistributionName>　※指定版本
 
 ### 关闭wsl
 ```
-$ wsl --shutdown 　                      ※关闭所有wsl      
+$ wsl --shutdown 　                    ※关闭所有wsl      
 $ wsl --terminate <DistributionName> 　※关闭指定Linux版本
 ```
 
