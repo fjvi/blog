@@ -54,7 +54,6 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v Fli
 
 
 ## Windows家庭版，强制开启hyper-v
-`Gmeek-html<img src="https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png">`
 
 ```
 pushd "%~dp0"

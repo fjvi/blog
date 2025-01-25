@@ -62,7 +62,6 @@ reg add 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings' /v Fli
 
 
 ## Windows家庭版，强制开启hyper-v
-`Gmeek-html<img src='https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png'>`
 
 ```
 pushd '%~dp0'
@@ -141,7 +140,6 @@ reg add 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings' /v Fli
 
 
 ## Windows家庭版，强制开启hyper-v
-`Gmeek-html<img src='https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png'>`
 
 ```
 pushd '%~dp0'
@@ -263,7 +261,6 @@ netsh wlan show profiles name=xxxx key=clear        ←名字代入
 <pre class="notranslate"><code class="notranslate">reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v FlightSettingsMaxPauseDays /t reg_dword /d 9999 /f
 </code></pre>
 <h2>Windows家庭版，强制开启hyper-v</h2>
-<p><img src="https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png"></p>
 <pre class="notranslate"><code class="notranslate">pushd "%~dp0"
 dir /b %SystemRoot%servicingPackages*Hyper-V*.mum &gt;hv.txt
 for /f %%i in ('findstr /i . hv.txt 2^&gt;nul') do dism /online /norestart /add-package:"%SystemRoot%servicingPackages%%i"
