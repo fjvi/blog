@@ -4,35 +4,20 @@
 虚拟机的关键优势在于实现了跟原生系统的完全隔离，这使得我们可以在虚拟机上做各类测试。
 目前市面上适合个人用户使用的9款虚拟化软件。
 
-1. VMware
-  1.1. VMware Worstation Pro
-  1.2. VMware Workstation Player
-  1.3. VMware Fusion
-2. VirtualBox
-3. Microsoft Hyper-V
-4. Parallels Desktop
-5. KVM
-6. Xen
-7. Citrix Hypervisor
-8. QEMU
-9. Multipass
-
-
-# 比较
-
 |软件|操作系统|费用|稳定性|性能|推荐指数|
 |---|---|---|---|---|---|
-|VMware Workstation Pro|Windows、Linux|免费|中|中||
-|VMware Workstation Player|Windows、Linux|免费|中|中||
-|VirtualBox|Windows、Linux、MacOS|开源免费|低|低||
-|Microsoft Hyper-V🔥|Windows|免费|高|高|★★★★★|
-|VMware Fusion|MacOS|有料|不详||
-|Parallels Desktop|MacOS|有料|不详||
-|KVM|Linux|不详|不详||
-|Xen|Linux|不详|不详||
-|QEMU|Linux|不详|不详||
-|Multipass|Linux|不详|不详||
-|Citrix Hypervisor|Windows|不详|不详||
+|1 VMware|Windows、Linux、MacOS|||||
+|1.1 VMware Workstation Pro|Windows、Linux|免费|中|中||
+|1.2 VMware Workstation Player|Windows、Linux|免费|中|中||
+|1.3 VMware Fusion|MacOS|有料|不详||
+|2. VirtualBox|Windows、Linux、MacOS|开源免费|低|低||
+|3. Microsoft Hyper-V🔥|Windows|免费|高|高|★★★★★|
+|4. Parallels Desktop|MacOS|有料|不详||
+|5. KVM|Linux|不详|不详||
+|6. Xen|Linux|不详|不详||
+|7. Citrix Hypervisor|Windows|不详|不详||
+|8. QEMU|Linux|不详|不详||
+|9. Multipass|Linux|不详|不详||
 
 ##  📖 Microsoft Hyper-V
 > 官网：https://learn.microsoft.com/zh-cn/virtualization
@@ -47,6 +32,22 @@ Microsoft Hyper-V是一款虚拟化软件，内置于Windows Server 2008及其�
 > ②开启「hyper-v功能」、「虚拟机平台」（可以在「windows其他功能」里开启）
 
 `Gmeek-html<img src="https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/media/enable-hyper-v.png">`
+
+
+### Windows家庭版，强制开启hyper-v
+`Gmeek-html<img src="https://gitee.com/tech-shrimp/me/raw/master/doc/images/240119/3.png">`
+
+```
+pushd "%~dp0"
+dir /b %SystemRoot%servicingPackages*Hyper-V*.mum >hv.txt
+for /f %%i in ('findstr /i . hv.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%servicingPackages%%i"
+del hv.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL
+pause
+
+将文本文档改名为"xxx.bat"，需注意.bat是扩展名
+运行完成后，重启电脑
+```
 
 
 ### Hyper-V 独立显卡虚拟化 vGPU显卡直通
