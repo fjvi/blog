@@ -11,6 +11,7 @@
 
 
 ## 发邮件
+通过resend.com的API服务
 https://resend.com/onboarding
 
 ```
