@@ -1,13 +1,17 @@
 # 白嫖Cloudflare无限多企业邮箱
 
 ## 收邮件
-1. 选择已绑定的域名
-2. 启用email路由，选择添加4个DNS设置（3个MX，1个TXT）
-3. 设置email路由规则，编辑Catch-All， 添加転送邮箱，通过邮箱验证后，状态变为可用
+1. 进入cloudflare，选择一个已绑定的域名
+2. 启用email路由，自动生成4条DNS记录（3个MX，1个TXT），选择添加（添加结果可以在DNS面板里看到）
+3. 设置email路由规则，编辑Catch-All绑定一个転送邮箱，通过邮箱验证后，転送状态变为可用
 
 > [!TIP]
-> 邮箱「任意@ 绑定的域名」所受到的邮件，  都会転送到Catch-All绑定的邮箱
+> 邮箱「任意字符@ 上述绑定的域名」， 所接受到的邮件 都会転送到Catch-All绑定的邮箱
+> 例如绑定域名 grapehut.us.kg， 邮件 to:  asdaeres@grapehut.us.kg    都会転送到Catch-All绑定的邮箱
+
+> [!TIP]
 > cloudflare邮件设置的概要栏里，可以查看所有転送的邮件
+
 
 
 ## 发邮件
