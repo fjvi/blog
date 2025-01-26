@@ -19,19 +19,21 @@
 
 
 ## 发邮件
-通过resend.com的API服务
-https://resend.com/onboarding
+通过resend.com的API服务  https://resend.com/onboarding
 
+1. Add Domain，自动生成3条DNS（1条MX，2条TXT）
+2. 添加回 cloudflare
+3. 测试
 ```
 curl -X POST 'https://api.resend.com/emails' \
-  -H 'Authorization: Bearer ••••••••••••••••••••••••••••••••••••' \
-  -H 'Content-Type: application/json' \
-  -d $'{
-    'from': 'onboarding@resend.dev',
-    'to': 'asdaseas任意@ 绑定的域名',
-    'subject': 'Test',
-    'html': '<p>Congrats on sending your <strong>first email</strong>!</p>'
-  }'
+ -H 'Authorization: Bearer re_123456789' \
+ -H 'Content-Type: application/json' \
+ -d $'{
+  'from': 'Acme <onboarding@grapehut.us.kg>',
+  'to': ['delivered@resend.dev'],
+  'subject': 'hello world',
+  'html': '<p>it works!</p>'
+}'
 ```。">
 <meta property="og:title" content="Vol.32 XXXX">
 <meta property="og:description" content="# 白嫖Cloudflare无限多企业邮箱
@@ -47,19 +49,21 @@ curl -X POST 'https://api.resend.com/emails' \
 
 
 ## 发邮件
-通过resend.com的API服务
-https://resend.com/onboarding
+通过resend.com的API服务  https://resend.com/onboarding
 
+1. Add Domain，自动生成3条DNS（1条MX，2条TXT）
+2. 添加回 cloudflare
+3. 测试
 ```
 curl -X POST 'https://api.resend.com/emails' \
-  -H 'Authorization: Bearer ••••••••••••••••••••••••••••••••••••' \
-  -H 'Content-Type: application/json' \
-  -d $'{
-    'from': 'onboarding@resend.dev',
-    'to': 'asdaseas任意@ 绑定的域名',
-    'subject': 'Test',
-    'html': '<p>Congrats on sending your <strong>first email</strong>!</p>'
-  }'
+ -H 'Authorization: Bearer re_123456789' \
+ -H 'Content-Type: application/json' \
+ -d $'{
+  'from': 'Acme <onboarding@grapehut.us.kg>',
+  'to': ['delivered@resend.dev'],
+  'subject': 'hello world',
+  'html': '<p>it works!</p>'
+}'
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.grapehut.us.kg/post/32.html">
@@ -138,17 +142,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 cloudflare邮件设置的概要栏里，可以查看所有転送的邮件</p>
 </div>
 <h2>发邮件</h2>
-<p>通过resend.com的API服务<br>
-<a href="https://resend.com/onboarding" rel="nofollow">https://resend.com/onboarding</a></p>
+<p>通过resend.com的API服务  <a href="https://resend.com/onboarding" rel="nofollow">https://resend.com/onboarding</a></p>
+<ol>
+<li>Add Domain，自动生成3条DNS（1条MX，2条TXT）</li>
+<li>添加回 cloudflare</li>
+<li>测试</li>
+</ol>
 <pre class="notranslate"><code class="notranslate">curl -X POST 'https://api.resend.com/emails' \
-  -H 'Authorization: Bearer ••••••••••••••••••••••••••••••••••••' \
-  -H 'Content-Type: application/json' \
-  -d $'{
-    "from": "onboarding@resend.dev",
-    "to": "asdaseas任意@ 绑定的域名",
-    "subject": "Test",
-    "html": "&lt;p&gt;Congrats on sending your &lt;strong&gt;first email&lt;/strong&gt;!&lt;/p&gt;"
-  }'
+ -H 'Authorization: Bearer re_123456789' \
+ -H 'Content-Type: application/json' \
+ -d $'{
+  "from": "Acme &lt;onboarding@grapehut.us.kg&gt;",
+  "to": ["delivered@resend.dev"],
+  "subject": "hello world",
+  "html": "&lt;p&gt;it works!&lt;/p&gt;"
+}'
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
