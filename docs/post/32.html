@@ -29,7 +29,7 @@ curl -X POST 'https://api.resend.com/emails' \
  -H 'Authorization: Bearer re_123456789' \
  -H 'Content-Type: application/json' \
  -d $'{
-  'from': 'Acme <onboarding@grapehut.us.kg>',
+  'from': 'Acme <onboarding@resend.dev>',
   'to': ['delivered@resend.dev'],
   'subject': 'hello world',
   'html': '<p>it works!</p>'
@@ -59,7 +59,7 @@ curl -X POST 'https://api.resend.com/emails' \
  -H 'Authorization: Bearer re_123456789' \
  -H 'Content-Type: application/json' \
  -d $'{
-  'from': 'Acme <onboarding@grapehut.us.kg>',
+  'from': 'Acme <onboarding@resend.dev>',
   'to': ['delivered@resend.dev'],
   'subject': 'hello world',
   'html': '<p>it works!</p>'
@@ -152,7 +152,7 @@ cloudflare邮件设置的概要栏里，可以查看所有転送的邮件</p>
  -H 'Authorization: Bearer re_123456789' \
  -H 'Content-Type: application/json' \
  -d $'{
-  "from": "Acme &lt;onboarding@grapehut.us.kg&gt;",
+  "from": "Acme &lt;onboarding@resend.dev&gt;",
   "to": ["delivered@resend.dev"],
   "subject": "hello world",
   "html": "&lt;p&gt;it works!&lt;/p&gt;"
