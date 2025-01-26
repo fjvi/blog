@@ -25,14 +25,15 @@
 ## 发邮件
 通过resend.com的API服务  https://resend.com/onboarding
 
+1. Add Domain，自动生成3条DNS（1条MX，2条TXT）
 `Gmeek-html<img src='../imgs/resend/resend1.PNG'>`
+
+
+2. 添加回 cloudflare
 `Gmeek-html<img src='../imgs/resend/resend2.PNG'>`
 
 
-
-1. Add Domain，自动生成3条DNS（1条MX，2条TXT）
-2. 添加回 cloudflare
-3. 测试
+#### 测试
 ```
 curl -X POST 'https://api.resend.com/emails' \
  -H 'Authorization: Bearer re_123456789' \
@@ -64,14 +65,15 @@ curl -X POST 'https://api.resend.com/emails' \
 ## 发邮件
 通过resend.com的API服务  https://resend.com/onboarding
 
+1. Add Domain，自动生成3条DNS（1条MX，2条TXT）
 `Gmeek-html<img src='../imgs/resend/resend1.PNG'>`
+
+
+2. 添加回 cloudflare
 `Gmeek-html<img src='../imgs/resend/resend2.PNG'>`
 
 
-
-1. Add Domain，自动生成3条DNS（1条MX，2条TXT）
-2. 添加回 cloudflare
-3. 测试
+#### 测试
 ```
 curl -X POST 'https://api.resend.com/emails' \
  -H 'Authorization: Bearer re_123456789' \
@@ -163,13 +165,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 <h2>发邮件</h2>
 <p>通过resend.com的API服务  <a href="https://resend.com/onboarding" rel="nofollow">https://resend.com/onboarding</a></p>
-<p><img src="../imgs/resend/resend1.PNG"><br>
-<img src="../imgs/resend/resend2.PNG"></p>
 <ol>
-<li>Add Domain，自动生成3条DNS（1条MX，2条TXT）</li>
-<li>添加回 cloudflare</li>
-<li>测试</li>
+<li>
+<p>Add Domain，自动生成3条DNS（1条MX，2条TXT）<br>
+<img src="../imgs/resend/resend1.PNG"></p>
+</li>
+<li>
+<p>添加回 cloudflare<br>
+<img src="../imgs/resend/resend2.PNG"></p>
+</li>
 </ol>
+<h4>测试</h4>
 <pre class="notranslate"><code class="notranslate">curl -X POST 'https://api.resend.com/emails' \
  -H 'Authorization: Bearer re_123456789' \
  -H 'Content-Type: application/json' \
