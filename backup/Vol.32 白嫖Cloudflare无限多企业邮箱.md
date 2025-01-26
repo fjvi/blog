@@ -13,6 +13,11 @@
 ## 发邮件
 通过resend.com的API服务  https://resend.com/onboarding
 
+'Gmeek-html<img src="../imgs/resend/resend1.PNG">'
+'Gmeek-html<img src="../imgs/resend/resend2.PNG">'
+
+
+
 1. Add Domain，自动生成3条DNS（1条MX，2条TXT）
 2. 添加回 cloudflare
 3. 测试
