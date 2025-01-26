@@ -1,4 +1,4 @@
-# Gamil
+# 📫 Gamil
 例如：johndoe@gmail.com
 
 1. 任意位置添加「.」，都被视为同一个地址
@@ -27,9 +27,10 @@ john.doe+lable@googlemail.com
 
 
 
-# Outlook
+# 📫 Outlook
 通过为outlook设备别名的方式，一次获得10个outlook邮箱，outlook邮箱与真实的完全一样。
-※一周只能注册2个
+编辑帐户信息⇒　帐户别名（※一周只能注册2个）
+
 > [!TIP]
 > 无限套娃，白嫖的东西到期之后，释放旧的outlook邮箱别名，生成新的outlook邮箱别名，相当于无限邮箱
 > 当outlook邮箱泄露后，一键释放别名，可以避免被骚扰

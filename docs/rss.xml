@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Sun, 26 Jan 2025 08:07:15 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># 🎏 pump.fun
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Sun, 26 Jan 2025 14:26:34 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># 🎏 pump.fun
 https://pump.fun/board
 
 
@@ -231,7 +231,7 @@ https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-desktop-amd64.iso&#13;
 &#13;
 &#13;
 # 2. 绑定静态IP&#13;
-打开路由器设置---&gt;局域网设置--&gt;DHCP静态IP设置，分配一个固定IP，比如192.168.0.100。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/27.html</guid><pubDate>Thu, 19 Dec 2024 06:42:55 +0000</pubDate></item><item><title>Vol.26 白嫖批量注册gmail, outlook</title><link>https://blog.grapehut.us.kg/post/26.html</link><description># Gamil
+打开路由器设置---&gt;局域网设置--&gt;DHCP静态IP设置，分配一个固定IP，比如192.168.0.100。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/27.html</guid><pubDate>Thu, 19 Dec 2024 06:42:55 +0000</pubDate></item><item><title>Vol.26 白嫖批量注册gmail, outlook</title><link>https://blog.grapehut.us.kg/post/26.html</link><description># 📫 Gamil
 例如：johndoe@gmail.com
 
 1. 任意位置添加「.」，都被视为同一个地址
@@ -260,7 +260,7 @@ john.doe+lable@googlemail.com
 
 
 
-# Outlook
+# 📫 Outlook
 通过为outlook设备别名的方式，一次获得10个outlook邮箱，outlook邮箱与真实的完全一样。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/26.html</guid><pubDate>Wed, 18 Dec 2024 15:04:02 +0000</pubDate></item><item><title>Vol.25 白嫖AWS（免费一年）</title><link>https://blog.grapehut.us.kg/post/25.html</link><description># 注册&#13;
 1. 注册aws账号（需要信用卡，验证时会扣除1美元或等值的货币）&#13;
 https://aws.amazon.com/cn/campaigns/nc20241101/&#13;
