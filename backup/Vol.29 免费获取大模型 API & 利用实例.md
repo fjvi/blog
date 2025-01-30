@@ -1,8 +1,18 @@
+# 💯  代理地址
+https://api-proxy.me/
+
+
 # 🔖 OpenAI API
+### 0. https://api.openai.com（国内无法直接访问，需要自建代理）
+代理API地址：https://api-proxy.me/openai
+
+
+以下2个，大佬自建的代理服务
 ### 1. https://github.com/chatanywhere/GPT_API_free （一天200次）
-支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理
 ```
-★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。
+gpt-4o-mini，和gpt-3.5-turbo共享一天200次
+国内动态加速 直连无需代理
+支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等
 ```
 模型：gpt-4o-mini
 获取KEY：[申请内测免费Key](https://api.chatanywhere.org/v1/oauth/free/render)
@@ -35,18 +45,21 @@ API地址： https://free.v36.cm (无需代理，直接可用）
 # 🔖 Grok API   (免费赠送25USD/mo活动 2024/12已结束)
 模型：grok-beta
 获取KEY：https://console.x.ai/
-API地址： https://api.x.ai/v1 (无需代理，直接可用）
+API地址： https://api.x.ai/
+代理API地址： https://api-proxy.me/xai
+
 
 Gork2 可在X直接使用
 https://x.com/i/grok （有X账号就可以使用）
 
 
 
-# 🔖 Gemini API  （限制10次/分、不适用于沉浸式翻译）
+
+# 🔖 Gemini API  （国内无法直接访问，需要自建代理（限制10次/分、不适用于沉浸式翻译）
 模型：gemini-2.0-flash-exp
 获取KEY：https://aistudio.google.com/apikey
-API地址： https://generativelanguage.googleapis.com（国内无法直接访问，需要自建代理）
-
+API地址： https://generativelanguage.googleapis.com
+代理API地址： https://api-proxy.me/gemini
 
 ### 自建代理方法：
 通过下面自建代理，同时能转成常用的 OpenAI格式接口
@@ -64,17 +77,18 @@ API地址： https://generativelanguage.googleapis.com（国内无法直接访�
 ```
 
 
-# 🔖 Deepseek API
+# 🔖 Deepseek API（国内直接访问）
 模型：deepseek-r1
 获取KEY：https://www.deepseek.com/
-API地址： https://api.deepseek.com/openai/v1/chat/completions（国内直接访问）
+API地址： https://api.deepseek.com/openai/
 
 
 
-# 🔖 Groq API
+# 🔖 Groq API（国内无法直接访问，需要自建代理）
 模型：deepseek-r1-distill-llama-70b
 获取KEY：https://console.groq.com/keys
-API地址： https://api.groq.com/openai/v1/chat/completions（国内无法直接访问，需要自建代理）
+API地址： https://api.groq.com/openai
+代理API地址：https://api-proxy.me/groq
 
 
 

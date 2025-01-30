@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Sun, 26 Jan 2025 14:26:34 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># 🎏 pump.fun
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Thu, 30 Jan 2025 05:28:45 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># 🎏 pump.fun
 https://pump.fun/board
 
 
@@ -181,11 +181,43 @@ https://test.cf996.ip-ddns.com/8cda8d90-9c66-4f59-8f98-d433d6238a8c
 
 注意：Shadowrocket(小火箭)、v2box、v2rayn、v2rayng客户端对trojan+ws有强制开启TLS问题，造成trojan+ws不通。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/31.html</guid><pubDate>Mon, 13 Jan 2025 06:08:14 +0000</pubDate></item><item><title>Vol.30 Scoop（Windowsパッケージ管理）</title><link>https://blog.grapehut.us.kg/post/30.html</link><description># 🔖 Windows でのパッケージ管理は Scoop
 
-什么是 Scoop？它是一个在 Windows 上运行的软件包管理器。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/30.html</guid><pubDate>Sat, 11 Jan 2025 13:13:52 +0000</pubDate></item><item><title>Vol.29 免费获取大模型 API &amp; 利用实例</title><link>https://blog.grapehut.us.kg/post/29.html</link><description># 🔖 OpenAI API
+什么是 Scoop？它是一个在 Windows 上运行的软件包管理器。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/30.html</guid><pubDate>Sat, 11 Jan 2025 13:13:52 +0000</pubDate></item><item><title>Vol.29 免费获取大模型 API &amp; 利用实例</title><link>https://blog.grapehut.us.kg/post/29.html</link><description># 💯  代理地址
+https://api-proxy.me/
+
+
+# 🔖 OpenAI API
+### 0. https://api.openai.com（国内无法直接访问，需要自建代理）
+代理API地址：https://api-proxy.me/openai
+
+
+以下2个，大佬自建的代理服务
 ### 1. https://github.com/chatanywhere/GPT_API_free （一天200次）
-支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等，国内动态加速 直连无需代理
 ```
-★支持gpt-4o-mini，和gpt-3.5-turbo共享一天200次。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/29.html</guid><pubDate>Sun, 05 Jan 2025 13:33:04 +0000</pubDate></item><item><title>Vol.28 Win安全开启SMB共享</title><link>https://blog.grapehut.us.kg/post/28.html</link><description># 🔖 禁用 SMB1
+gpt-4o-mini，和gpt-3.5-turbo共享一天200次
+国内动态加速 直连无需代理
+支持 gpt-3.5-turbo系列 / gpt-4系列 / gpt-4o系列 / gpt-4o-audio-preview / embeddings / DALL·E / whisper 等
+```
+模型：gpt-4o-mini
+获取KEY：[申请内测免费Key](https://api.chatanywhere.org/v1/oauth/free/render)
+API地址： https://api.chatanywhere.tech (国内中转，延时更低)
+　　　　　https://api.chatanywhere.org (国外使用)
+
+
+### 2. https://github.com/popjane/free_chatgpt_api （不限量 无门槛）
+```
+完全免费使用以下勾选模型：
+★ ✓gpt-4o-mini（不限量 无门槛）
+ 　✓gpt-3.5-turbo-0125
+ 　✓gpt-3.5-turbo-1106
+ 　✓gpt-3.5-turbo
+ 　✓gpt-3.5-turbo-16k
+ 　✓net-gpt-3.5-turbo (可联网搜索模型-稳定性稍差)
+ 　✓whisper-1
+ 　✓dall-e-2
+ 　×text-开头系列模型，例如：text-davinci（免费版已取消text系列模型）
+ 　×gpt-4全系列（只定期限量开放）
+ 　×付费版API支持OpenAI所有模型，包括（联网、绘画、聊天、向量、图片分析、文件分析、GPTs等）
+ 　×付费版API支持Midjourney专业绘画、Suno音乐生成、PPT生成、多种视频模型。</description><guid isPermaLink="true">https://blog.grapehut.us.kg/post/29.html</guid><pubDate>Sun, 05 Jan 2025 13:33:04 +0000</pubDate></item><item><title>Vol.28 Win安全开启SMB共享</title><link>https://blog.grapehut.us.kg/post/28.html</link><description># 🔖 禁用 SMB1
 强烈建议关闭，打开Windows機能面板
 ```
 cmd ⇒ OptionalFeatures.exe
