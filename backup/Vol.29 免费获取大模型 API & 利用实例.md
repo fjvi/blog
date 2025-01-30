@@ -64,6 +64,18 @@ API地址： https://generativelanguage.googleapis.com（国内无法直接访�
 ```
 
 
+# 🔖 Deepseek API
+模型：deepseek-r1
+获取KEY：https://www.deepseek.com/
+API地址： https://api.deepseek.com/openai/v1/chat/completions（国内直接访问）
+
+
+
+# 🔖 Groq API
+模型：deepseek-r1-distill-llama-70b
+获取KEY：https://console.groq.com/keys
+API地址： https://api.groq.com/openai/v1/chat/completions（国内无法直接访问，需要自建代理）
+
 
 
 # 🔖 利用实例
