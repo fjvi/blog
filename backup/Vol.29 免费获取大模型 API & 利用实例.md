@@ -5,6 +5,7 @@ https://api-proxy.me/
 # 🔖 OpenAI API
 ### 0. https://api.openai.com（国内无法直接访问，需要自建代理）
 代理API地址：https://api-proxy.me/openai
+模型：gpt-4o-mini
 
 
 以下2个，大佬自建的代理服务
@@ -56,11 +57,12 @@ https://x.com/i/grok （有X账号就可以使用）
 
 
 # 🔖 Gemini API  （国内无法直接访问，需要自建代理（限制10次/分、不适用于沉浸式翻译）
-模型：gemini-2.0-flash-exp
 获取KEY：https://aistudio.google.com/apikey
 API地址： https://generativelanguage.googleapis.com
 代理API地址： https://gemini.grapehut.us.kg
 代理API地址： https://api-proxy.me/gemini
+模型：gemini-2.0-flash-exp
+
 
 ### 自建代理方法：
 通过下面自建代理，同时能转成常用的 OpenAI格式接口
@@ -79,17 +81,16 @@ API地址： https://generativelanguage.googleapis.com
 
 
 # 🔖 Deepseek API（国内直接访问）
+获取KEY：https://platform.deepseek.com/api_keys
+API地址： https://api.deepseek.com/chat/completions
 模型：deepseek-r1
-获取KEY：https://www.deepseek.com/
-API地址： https://api.deepseek.com/openai/
-
 
 
 # 🔖 Groq API（国内无法直接访问，需要自建代理）
-模型：deepseek-r1-distill-llama-70b
 获取KEY：https://console.groq.com/keys
 API地址： https://api.groq.com/openai
 代理API地址：https://api-proxy.me/groq
+模型：deepseek-r1-distill-llama-70b
 
 
 
