@@ -59,6 +59,7 @@ https://x.com/i/grok （有X账号就可以使用）
 模型：gemini-2.0-flash-exp
 获取KEY：https://aistudio.google.com/apikey
 API地址： https://generativelanguage.googleapis.com
+代理API地址： https://gemini.grapehut.us.kg
 代理API地址： https://api-proxy.me/gemini
 
 ### 自建代理方法：
