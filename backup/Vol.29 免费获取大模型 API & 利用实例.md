@@ -1,6 +1,5 @@
 # 💯  代理地址
 https://api-proxy.me/
-https://openrouter.ai/
 
 
 # 🔖 OpenAI API
@@ -85,6 +84,13 @@ API地址： https://generativelanguage.googleapis.com
 获取KEY：https://platform.deepseek.com/api_keys
 API地址： https://api.deepseek.com/chat/completions
 模型：deepseek-r1
+
+
+# 🔖 Openrouter.ai
+获取KEY：https://openrouter.ai/settings/keys
+API地址： https://openrouter.ai/api/v1/chat/completions
+模型：deepseek/deepseek-r1:free
+
 
 
 # 🔖 Groq API（国内无法直接访问，需要自建代理）
