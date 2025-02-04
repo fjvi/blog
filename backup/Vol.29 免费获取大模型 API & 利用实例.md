@@ -1,5 +1,6 @@
 # 💯  代理地址
 https://api-proxy.me/
+https://openrouter.ai/
 
 
 # 🔖 OpenAI API
