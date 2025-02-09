@@ -72,9 +72,9 @@ chmod 755 /home/用户名/share
 ```
 
 5-3 samba添加用户
-可以添加SMB专用户，也可以系统默用户
+可以添加SMB专用户，也可以系统默用户，以下系统默用户为例
 ```
-sudo pdbedit -a -u ubuntu   #系统默用户为例
+sudo pdbedit -a -u ubuntu   #用户名=ubuntu
 sudo pdbedit -L             #确认用户
 ```
 
