@@ -73,7 +73,7 @@ chmod 755 /home/用户名/share
 可以添加SMB专用户，也可以系统默用户
 ```
 sudo pdbedit -a -u ubuntu   #系统默用户为例
-sudo pdbedit -L                      #确认用户
+sudo pdbedit -L                  #确认用户
 ```
 
 5-4 修改配置文件、最下面粘贴这些内容
@@ -114,7 +114,7 @@ sudo service smbd restart
 安装docker本体，需要执行以下命令。
 ```
 curl -fsSL https://get.docker.com | sh    #安装Docker
-sudo systemctl enable --now docker             #启动Docker服务
+sudo systemctl enable --now docker           #启动Docker服务
 sudo docker -v                                 #查看docker版本，检查是否安装成功
 sudo docker ps -a                            #查看docker中所有容器
 ```
