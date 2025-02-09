@@ -25,7 +25,9 @@ sudo vi /etc/gdm3/custom.conf
 ```
 修改下面这一行、将前面的注释去掉，然后点击`ESC`，然后输入 `:wq!` 保存文件
 ```
-# WaylandEnable=false     ⇒　WaylandEnable=false
+# WaylandEnable=false     
+⬇
+WaylandEnable=false
 ```
 
 3-4. 然后重启桌面
