@@ -84,7 +84,7 @@ sudo vi /etc/samba/smb.conf
 ```
 
 ```
-[share]  #共享文件夹名
+[share]  #对外显示的共享名
 path = /home/用户名/share  #指定共享文件夹
 available = yes
 browseable = yes
