@@ -49,7 +49,7 @@ sudo apt install openssh-server
 
 【链接方式】输入ssh命令、然后输入密码
 ```
-ssh 用户名@192.168.0.100    ※服务器IP
+ssh 用户名@192.168.0.100    #路由设置里所绑定的静态IP
 ```
 
 
@@ -57,43 +57,54 @@ ssh 用户名@192.168.0.100    ※服务器IP
 # 5. SMB文件共享
 可以在Ubuntu服务器上开启SMB文件共享，构建文件共享服务，
 这样可以很方便的在手机电脑上查看服务器上文件（包括电影，电视剧等）
+
+5-1. 安装
 ```
 sudo apt install samba
 ```
 
-创建共享文件夹
+5-2 创建共享文件夹
 ```
 mkdir /home/用户名/share
 chmod 755 /home/用户名/share
 ```
 
-修改配置文件、最下面粘贴这些内容
+5-3 samba添加用户
+可以添加SMB专用户，也可以系统默用户
+```
+sudo pdbedit -a -u ubuntu   #系统默用户为例
+sudo pdbedit -L                      #确认用户
+```
+
+5-4 修改配置文件、最下面粘贴这些内容
 ```
 sudo vi /etc/samba/smb.conf
 ```
 
 ```
-[ubuntu_smb]
-path = /home/用户名/share   ★共享文件夹路径 
-available = yes 
-browseable = yes 
-public = yes 
-writable = yes 
+[share]  #共享文件夹名
+path = /home/用户名/share  #指定共享文件夹
+available = yes
+browseable = yes
+public = yes
+writable = yes
 create mask = 0755
 security = share
-force user = 用户名 ★
-force group =用户名 ★
+force user = 用户名 #更改用户名
+force group =用户名 #更改用户名
 ```
 点击`ESC`，然后输入 `:wq!` 保存文件
 
-重启smb服务
+
+5-5.  重启smb服务
 ```
 sudo service smbd restart
 ```
 
-【链接方式】地址栏输入IP，然后输入服务器的用户名和密码
+5-6 Window链接方式：
+地址栏输入IP，然后输入服务器的用户名和密码
 ```
-\\192.168.0.100    ※服务器IP
+\\192.168.0.100\share    #路由设置里所绑定的静态IP
 ```
 
 
@@ -103,9 +114,9 @@ sudo service smbd restart
 安装docker本体，需要执行以下命令。
 ```
 curl -fsSL https://get.docker.com | sh    #安装Docker
-systemctl enable --now docker             #启动Docker服务
-docker -v                                 #查看docker版本，检查是否安装成功
-docker ps -a                            #查看docker中所有容器
+sudo systemctl enable --now docker             #启动Docker服务
+sudo docker -v                                 #查看docker版本，检查是否安装成功
+sudo docker ps -a                            #查看docker中所有容器
 ```
 
 
@@ -176,6 +187,8 @@ ubuntu自带的文本编辑器是vi，很难用，我需要安装一个他的升
 ```
 sudo apt install vim
 ```
+
+
 
 > 引用：https://www.bilibili.com/video/BV1Gb421a7BW/
 > 引用：https://gitee.com/tech-shrimp/me/blob/master/doc/240502.md
