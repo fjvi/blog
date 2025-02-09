@@ -8,6 +8,46 @@ https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-desktop-amd64.iso
 这样即使重启服务器或者路由器，IP地址就不会变来变去了。 
 
 
+
+# 设置笔记本合盖不休眠 
+配置文件
+```
+/etc/systemd/logind.conf
+```
+#HandleLidSwitch=suspend
+↓
+HandleLidSwitch=ignore
+
+重启服务
+```
+service systemd-logind restart
+```
+
+配置说明
+```
+HandlePowerKey: 按下电源键后的行为，默认power off
+HandleSleepKey: 按下挂起键后的行为，默认suspend
+HandleHibernateKey: 按下休眠键后的行为，默认hibernate
+HandleLidSwitch: 合上笔记本盖后的行为，默认suspend
+
+如果主机插入了一个扩展(docking station) 或者连接了多个显示器， 那么"合上盖子"将执行 HandleLidSwitchDocked= 动作；
+如果主机使用外部电源， 那么"合上盖子"将优先执行 HandleLidSwitchExternalPower= 动作, 否则将执行 HandleLidSwitch= 动作。
+
+参数说明:
+ignore(无操作),
+poweroff(关闭系统并切断电源),
+reboot(重新启动),
+halt(关闭系统但不切断电源),
+kexec(调用内核"kexec"函数),
+suspend(休眠到内存),
+hibernate(休眠到硬盘),
+hybrid-sleep(同时休眠到内存与硬盘),
+suspend-then-hibernate(先休眠到内存超时后再休眠到硬盘),
+lock(锁屏)
+```
+
+
+
 # 3. 安装RustDesk远程操作
 3-1. 通过github下载Ubuntu版本：https://github.com/rustdesk/rustdesk/releases
 https://github.com/rustdesk/rustdesk/releases/download/1.3.5/rustdesk-1.3.5-x86_64.deb       ※目前最新版本1.3.5
