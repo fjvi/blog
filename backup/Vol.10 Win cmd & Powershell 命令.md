@@ -2,37 +2,31 @@
 
 ```
 shell:start menu    用户的开始菜单
-shell:common start menu 
+shell:common start menu　通用的
 
 shell:startup       启动文件夹,用户登录时会自动运行这个文件夹中的程序
-shell:common startup
+shell:common startup　通用的
 
 shell:programs   "开始"菜单中的程序文件夹
-shell:common programs
+shell:common programs　通用的
 
 shell:desktop     用户的桌面文件夹
-shell:common desktop
+shell:common desktop　通用的
 
 shell:appdata      应用程序数据文件夹,存储应用程序的配置文件等
-shell:common appdata
+shell:common appdata　通用的
 
 shell:appsfolder   应用程序文件夹
-
 shell:sendto       "发送到"菜单中的文件夹
-
 shell:recent         最近使用的文件列表
-
 shell:fonts           字体文件夹
-
 shell:RecycleBinFolder  回收站
 
 shell:UsersFilesFolder  用户根目录
 
-
 shell:favorites     收藏夹文件夹
 shell:Libraries       公用库 （图片照片文档视频等）
 shell:UsersLibrariesFolder  用户的库（图片照片文档视频等）
-
 shell:my music    用户的音乐文件夹
 shell:my pictures 用户的图片文件夹
 shell:my videos    用户的视频文件夹
@@ -40,7 +34,7 @@ shell:templates    模板文件夹
 
 
 shell:ProgramFiles  用户的Program Files
-shell:ProgramFilesCommon   通用的的Program Files
+shell:ProgramFilesCommon   通用的Program Files
 
 shell:ProgramFilesX86   用户的Program Files(x86)
 shell:ProgramFilesCommonX86   通用的Program Files(x86)
