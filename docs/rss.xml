@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Thu, 20 Feb 2025 13:03:03 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># 🎏 pump.fun
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小饅頭の部落格</title><link>https://blog.grapehut.us.kg</link><description>Stay hungry. Stay foolish. --Steve Jobs</description><copyright>小饅頭の部落格</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://blog.grapehut.us.kg</link></image><lastBuildDate>Thu, 20 Feb 2025 13:35:30 +0000</lastBuildDate><managingEditor>小饅頭の部落格</managingEditor><ttl>60</ttl><webMaster>小饅頭の部落格</webMaster><item><title>Vol.34 虚拟币空投</title><link>https://blog.grapehut.us.kg/post/34.html</link><description># 🎏 pump.fun
 https://pump.fun/board
 
 
@@ -1099,8 +1099,9 @@ shell:ProgramFilesCommonX86   通用的Program Files(x86)
 機能の有効化  dism /online /Enable-Feature:役割名
 機能の無効化  dism /online /Disable-Feature:役割名
 ```
-Hyper-V 
+
 ```
+＜Hyper-V＞ 
 dism /online /enable-feature /featurename:Microsoft-Hyper-V/all /norestart
 dism /online /enable-feature /featurename:Microsoft-Hyper-V-All/all /norestart
 dism /online /enable-feature /featurename:Microsoft-Hyper-V-Hypervisor/all /norestart
@@ -1108,13 +1109,11 @@ dism /online /enable-feature /featurename:Microsoft-Hyper-V-Services/all /norest
 dism /online /enable-feature /featurename:Microsoft-Hyper-V-Tools-All/all /norestart
 dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-Clients/all /norestart
 dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-PowerShell/all /norestart
-```
-WSL
-```
+
+＜WSL＞
 dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-```
-仮想マシン プラットフォーム
-```
+
+＜虚拟机Platform＞
 dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
@@ -1137,14 +1136,28 @@ Linux 用 Windows サブシステム | Microsoft-Windows-Subsystem-Linux
 
 
 
-&lt;!--EndFragment--&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
 
 ## 环境变量
 ```
-sysdm.cpl
+winver  windows版本
+lusrmgr.msc  用户和组
+Netplwiz  用户账号管理
+compmgmt.msc  电脑管理
+devmgmt.msc　硬件管理
+diskmgmt.msc  磁盘管理
+dxdiag  DirectX診断
+regedit  注册表
+firewall.cpl  防火墙
+control　控制面板
+services.msc  服务进程
+taskmgr  任务管理
+appwiz.cpl  软件一览
+ComputerDefaults windows默认程序
+OptionalFeatures windows附加功能
+sysdm.cpl　环境变量
+fsmgmt.msc  共享文件夹
+mstsc  远程桌面
+fonts  字体
 ```
 
 ## 查看内网IP
