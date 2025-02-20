@@ -48,6 +48,60 @@ shell:ProgramFilesCommonX86   通用的Program Files(x86)
 ```
 
 
+## Window附加功能
+```
+機能の確認      dism /online /Get-Features
+機能の有効化  dism /online /Enable-Feature:役割名
+機能の無効化  dism /online /Disable-Feature:役割名
+```
+Hyper-V 
+```
+dism /online /enable-feature /featurename:Microsoft-Hyper-V/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-All/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Hypervisor/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Services/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Tools-All/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-Clients/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-PowerShell/all /norestart
+```
+WSL
+```
+dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+仮想マシン プラットフォーム
+```
+dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+表示名 | 機能名
+-- | --
+.NET Framework 3.5 (.NET 2.0 および 3.0 を含む) | NetFx3
+.NET Framework 4.8 Advanced Services | NetFx4-AdvSrvs
+-- | --
+Hyper-V | Microsoft-Hyper-V
+Hyper-V プラットフォーム | Microsoft-Hyper-V-All
+Hyper-V Hypervisor | Microsoft-Hyper-V-Hypervisor
+Hyper-V サービス | Microsoft-Hyper-V-Services
+Hyper-V 管理ツール | Microsoft-Hyper-V-Tools-All
+Hyper-V GUI 管理ツール | Microsoft-Hyper-V-Management-Clients
+Windows PowerShell 用 Hyper-V モジュール | Microsoft-Hyper-V-Management-PowerShell
+-- | --
+Linux 用 Windows サブシステム | Microsoft-Windows-Subsystem-Linux
+-- | --
+仮想マシン プラットフォーム | VirtualMachinePlatform
+
+
+
+<!--EndFragment-->
+</body>
+</html>
+
+
+## 环境变量
+```
+sysdm.cpl
+```
+
 ## 查看内网IP
 ```
 ipconfig
@@ -84,6 +138,8 @@ sfc /scannow
 ```
 wsreset -i
 ```
+
+
 
 ## 切换成Win10的右键菜单
 ```

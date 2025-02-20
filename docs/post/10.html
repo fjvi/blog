@@ -56,6 +56,60 @@ shell:ProgramFilesCommonX86   通用的Program Files(x86)
 ```
 
 
+## Window附加功能
+```
+機能の確認      dism /online /Get-Features
+機能の有効化  dism /online /Enable-Feature:役割名
+機能の無効化  dism /online /Disable-Feature:役割名
+```
+Hyper-V 
+```
+dism /online /enable-feature /featurename:Microsoft-Hyper-V/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-All/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Hypervisor/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Services/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Tools-All/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-Clients/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-PowerShell/all /norestart
+```
+WSL
+```
+dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+仮想マシン プラットフォーム
+```
+dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+表示名 | 機能名
+-- | --
+.NET Framework 3.5 (.NET 2.0 および 3.0 を含む) | NetFx3
+.NET Framework 4.8 Advanced Services | NetFx4-AdvSrvs
+-- | --
+Hyper-V | Microsoft-Hyper-V
+Hyper-V プラットフォーム | Microsoft-Hyper-V-All
+Hyper-V Hypervisor | Microsoft-Hyper-V-Hypervisor
+Hyper-V サービス | Microsoft-Hyper-V-Services
+Hyper-V 管理ツール | Microsoft-Hyper-V-Tools-All
+Hyper-V GUI 管理ツール | Microsoft-Hyper-V-Management-Clients
+Windows PowerShell 用 Hyper-V モジュール | Microsoft-Hyper-V-Management-PowerShell
+-- | --
+Linux 用 Windows サブシステム | Microsoft-Windows-Subsystem-Linux
+-- | --
+仮想マシン プラットフォーム | VirtualMachinePlatform
+
+
+
+<!--EndFragment-->
+</body>
+</html>
+
+
+## 环境变量
+```
+sysdm.cpl
+```
+
 ## 查看内网IP
 ```
 ipconfig
@@ -92,6 +146,8 @@ sfc /scannow
 ```
 wsreset -i
 ```
+
+
 
 ## 切换成Win10的右键菜单
 ```
@@ -182,6 +238,60 @@ shell:ProgramFilesCommonX86   通用的Program Files(x86)
 ```
 
 
+## Window附加功能
+```
+機能の確認      dism /online /Get-Features
+機能の有効化  dism /online /Enable-Feature:役割名
+機能の無効化  dism /online /Disable-Feature:役割名
+```
+Hyper-V 
+```
+dism /online /enable-feature /featurename:Microsoft-Hyper-V/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-All/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Hypervisor/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Services/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Tools-All/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-Clients/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-PowerShell/all /norestart
+```
+WSL
+```
+dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+仮想マシン プラットフォーム
+```
+dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+表示名 | 機能名
+-- | --
+.NET Framework 3.5 (.NET 2.0 および 3.0 を含む) | NetFx3
+.NET Framework 4.8 Advanced Services | NetFx4-AdvSrvs
+-- | --
+Hyper-V | Microsoft-Hyper-V
+Hyper-V プラットフォーム | Microsoft-Hyper-V-All
+Hyper-V Hypervisor | Microsoft-Hyper-V-Hypervisor
+Hyper-V サービス | Microsoft-Hyper-V-Services
+Hyper-V 管理ツール | Microsoft-Hyper-V-Tools-All
+Hyper-V GUI 管理ツール | Microsoft-Hyper-V-Management-Clients
+Windows PowerShell 用 Hyper-V モジュール | Microsoft-Hyper-V-Management-PowerShell
+-- | --
+Linux 用 Windows サブシステム | Microsoft-Windows-Subsystem-Linux
+-- | --
+仮想マシン プラットフォーム | VirtualMachinePlatform
+
+
+
+<!--EndFragment-->
+</body>
+</html>
+
+
+## 环境变量
+```
+sysdm.cpl
+```
+
 ## 查看内网IP
 ```
 ipconfig
@@ -218,6 +328,8 @@ sfc /scannow
 ```
 wsreset -i
 ```
+
+
 
 ## 切换成Win10的右键菜单
 ```
@@ -368,6 +480,98 @@ shell:ProgramFilesCommon   通用的的Program Files
 shell:ProgramFilesX86   用户的Program Files(x86)
 shell:ProgramFilesCommonX86   通用的Program Files(x86)
 
+</code></pre>
+<h2>Window附加功能</h2>
+<pre class="notranslate"><code class="notranslate">機能の確認      dism /online /Get-Features
+機能の有効化  dism /online /Enable-Feature:役割名
+機能の無効化  dism /online /Disable-Feature:役割名
+</code></pre>
+<p>Hyper-V</p>
+<pre class="notranslate"><code class="notranslate">dism /online /enable-feature /featurename:Microsoft-Hyper-V/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-All/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Hypervisor/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Services/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Tools-All/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-Clients/all /norestart
+dism /online /enable-feature /featurename:Microsoft-Hyper-V-Management-PowerShell/all /norestart
+</code></pre>
+<p>WSL</p>
+<pre class="notranslate"><code class="notranslate">dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre>
+<p>仮想マシン プラットフォーム</p>
+<pre class="notranslate"><code class="notranslate">dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>表示名</th>
+<th>機能名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.NET Framework 3.5 (.NET 2.0 および 3.0 を含む)</td>
+<td>NetFx3</td>
+</tr>
+<tr>
+<td>.NET Framework 4.8 Advanced Services</td>
+<td>NetFx4-AdvSrvs</td>
+</tr>
+<tr>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Hyper-V</td>
+<td>Microsoft-Hyper-V</td>
+</tr>
+<tr>
+<td>Hyper-V プラットフォーム</td>
+<td>Microsoft-Hyper-V-All</td>
+</tr>
+<tr>
+<td>Hyper-V Hypervisor</td>
+<td>Microsoft-Hyper-V-Hypervisor</td>
+</tr>
+<tr>
+<td>Hyper-V サービス</td>
+<td>Microsoft-Hyper-V-Services</td>
+</tr>
+<tr>
+<td>Hyper-V 管理ツール</td>
+<td>Microsoft-Hyper-V-Tools-All</td>
+</tr>
+<tr>
+<td>Hyper-V GUI 管理ツール</td>
+<td>Microsoft-Hyper-V-Management-Clients</td>
+</tr>
+<tr>
+<td>Windows PowerShell 用 Hyper-V モジュール</td>
+<td>Microsoft-Hyper-V-Management-PowerShell</td>
+</tr>
+<tr>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Linux 用 Windows サブシステム</td>
+<td>Microsoft-Windows-Subsystem-Linux</td>
+</tr>
+<tr>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>仮想マシン プラットフォーム</td>
+<td>VirtualMachinePlatform</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+
+
+
+<h2>环境变量</h2>
+<pre class="notranslate"><code class="notranslate">sysdm.cpl
 </code></pre>
 <h2>查看内网IP</h2>
 <pre class="notranslate"><code class="notranslate">ipconfig
