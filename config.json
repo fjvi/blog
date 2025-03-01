@@ -1,12 +1,12 @@
 {
     "title":"小饅頭の部落格",
     "subTitle":"Stay hungry. Stay foolish. --Steve Jobs",
-    "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
+    "avatarUrl":"../avatar.png",
     "GMEEK_VERSION":"last",
     
     "displayTitle":"小饅頭の部落格",
     "homeUrl":"https://blog.grapehut.xyz",
-    "faviconUrl":"https://github.githubassets.com/favicons/favicon.svg",
+    "faviconUrl":"../favicon.svg",
     
     "email":"<style>@font-face {font-family: 'CustomFont';src: '../fonts/975MaruSC-Bold.ttf') format('truetype');}#postBody {font-family: CustomFont;}</style>",
     "startSite":"08/31/2024",
