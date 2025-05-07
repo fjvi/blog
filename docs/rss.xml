@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>MGTnote</title><link>/note</link><description>My good time-我的好时光！</description><copyright>MGTnote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>favicon.ico</url><title>avatar</title><link>/note</link></image><lastBuildDate>Tue, 11 Mar 2025 16:16:37 +0000</lastBuildDate><managingEditor>MGTnote</managingEditor><ttl>60</ttl><webMaster>MGTnote</webMaster><item><title>Gmeek快速上手</title><link>/note/post/2.html</link><description>Gmeek快速上手
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>MGTnote</title><link>/note</link><description>My good time-我的好时光！</description><copyright>MGTnote</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>favicon.ico</url><title>avatar</title><link>/note</link></image><lastBuildDate>Wed, 07 May 2025 05:14:36 +0000</lastBuildDate><managingEditor>MGTnote</managingEditor><ttl>60</ttl><webMaster>MGTnote</webMaster><item><title>Gmeek构建网站（进阶篇）</title><link>/note/post/3.html</link><description># 一、主题配置 👀 
+
+### 1. 手动模式（默认）
+这种模式就是当访问者第一次打开博客页面时，呈现的是亮主题。</description><guid isPermaLink="true">/note/post/3.html</guid><pubDate>Wed, 07 May 2025 05:14:05 +0000</pubDate></item><item><title>Gmeek快速上手</title><link>/note/post/2.html</link><description>Gmeek快速上手
 ==========
 
 [](https://blog.meekdai.com/ '首页')[](https://github.com/Meekdai/meekdai.github.io/issues/39 'Issue')[](https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html '切换主题')
