@@ -1,14 +1,14 @@
 {
     "title":"MGTnote",
     "subTitle":"My good time-我的好时光！",
-    "avatarUrl":"favicon.ico",
+    "avatarUrl":"avatar.svg",
     "GMEEK_VERSION":"last",
     
     "displayTitle":"MGTnote",
-    "homeUrl":"/note",
-    "faviconUrl":"../favicon.ico",    
+    "homeUrl":"/blog",
+    "faviconUrl":"avatar.svg",    
     "startSite":"03/11/2025",
-    "onePageListNum":30,    
+    "onePageListNum":20,    
     "singlePage":["about","link"],
     "commentLabelColor":"#006b75",
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],    
